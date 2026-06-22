@@ -24,24 +24,26 @@ for /f %%d in ('powershell -NoProfile -Command "Get-Date -Format yyyy-MM-dd"') d
 git commit -m "update reports %TODAY%"
 
 :push
-echo [Pushing to GitHub...]
-git push -u origin main 2>&1
+echo [Pushing...]
+git push -u origin main 2>nul
+if %errorlevel% == 0 goto :done
 
-if %errorlevel% neq 0 (
-    echo.
-    echo [Pull then push...]
-    git pull origin main --rebase --allow-unrelated-histories 2>&1
-    git push -u origin main 2>&1
-)
+echo [Syncing with remote...]
+if exist "README.md" rename "README.md" "README.md.bak"
+git fetch origin main
+git rebase origin/main
+if exist "README.md.bak" rename "README.md.bak" "README.md"
 
-if %errorlevel% == 0 (
-    echo.
-    echo Done!
-    echo https://chenazhao.github.io/assets_dayily_report/reports/html/
-) else (
-    echo.
-    echo [FAILED] Run manually: git push origin main --force
-)
+git push -u origin main
+if %errorlevel% == 0 goto :done
 
+echo [FAILED] Please run: git push origin main --force
+goto :end
+
+:done
+echo Done!
+echo https://chenazhao.github.io/assets_dayily_report/reports/html/
+
+:end
 echo.
 pause
