@@ -1,0 +1,84 @@
+name: Update Index
+
+on:
+  push:
+    paths:
+      - 'reports/html/**.html'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate index.html
+        run: |
+          cd reports/html
+          python3 - <<'EOF'
+import os, re
+
+files = sorted(
+    [f for f in os.listdir('.') if f.endswith('.html') and f != 'index.html'],
+    reverse=True
+)
+
+items = '\n'.join(f'  "{f}",' for f in files).rstrip(',')
+# fix last item trailing comma
+lines = items.split('\n')
+lines[-1] = lines[-1].rstrip(',')
+items = '\n'.join(lines)
+
+html = f"""<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宏观&大类资产日复盘</title>
+<style>
+  body {{ font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f5f5; margin: 0; padding: 40px 20px; }}
+  .container {{ max-width: 680px; margin: 0 auto; }}
+  h1 {{ font-size: 22px; color: #1a1a1a; margin-bottom: 8px; }}
+  .subtitle {{ color: #888; font-size: 14px; margin-bottom: 32px; }}
+  .list {{ list-style: none; padding: 0; margin: 0; }}
+  .list li {{ background: #fff; border-radius: 8px; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }}
+  .list li a {{ display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; color: #1a1a1a; text-decoration: none; font-size: 15px; }}
+  .list li a:hover {{ background: #f0f7ff; border-radius: 8px; }}
+  .list li a .arrow {{ color: #999; font-size: 18px; }}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>宏观 &amp; 大类资产日复盘</h1>
+  <p class="subtitle">点击查看各期报告</p>
+  <ul class="list" id="reportList"></ul>
+</div>
+<script>
+const reports = [
+{items}
+];
+const list = document.getElementById("reportList");
+reports.forEach(name => {{
+  const date = name.replace(/^.*?(\d{{4}}-\d{{2}}-\d{{2}}).*$/, '$1');
+  const label = name.replace('.html', '');
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="${{encodeURIComponent(name)}}"><span>${{label}}</span><span class="arrow">›</span></a>`;
+  list.appendChild(li);
+}});
+</script>
+</body>
+</html>"""
+
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html)
+print(f"index.html updated with {len(files)} reports")
+EOF
+
+      - name: Commit index
+        run: |
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          git add reports/html/index.html
+          git diff --cached --quiet || git commit -m "auto: update index [skip ci]"
+          git push
