@@ -67,6 +67,7 @@
 <script>
 // FILE LIST — auto-updated by GitHub Actions on each push
 const files = [
+  "futures_daily_2026-06-23.html",
   "资产日复盘_2026-06-22.html",
   "资产日复盘_2026-06-18.html",
   "资产日复盘_2026-06-17.html",
@@ -81,6 +82,8 @@ function classify(name) {
 }
 
 function labelFromName(name) {
+  const futuresMatch = name.match(/^futures_daily_(\d{4}-\d{2}-\d{2})\.html$/);
+  if (futuresMatch) return `${futuresMatch[1]} ????`;
   return name.replace(".html", "");
 }
 
@@ -105,11 +108,5 @@ renderList("l-futures", "c-futures", buckets.futures);
 renderList("l-equity",  "c-equity",  buckets.equity);
 </script>
 
-<section class="report-section">
-  <h2>????</h2>
-  <ul>
-    <li><a href="futures_daily_2026-06-23.html">2026-06-23 ????</a></li>
-  </ul>
-</section>
 </body>
 </html>
