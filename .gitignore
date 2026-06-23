@@ -1,0 +1,21 @@
+# 公开仓库(GitHub Pages)只发布 reports/html/ 的成品 HTML。
+# 以下私有内容一律不上传(源码/数据/提示词/Excel/中间产物)，即便误用 git add -A 也不会泄露。
+/src/
+/data/
+/prompts/
+/assets/
+/.claude/
+/__pycache__/
+*.xlsx
+*.bak
+config.py
+run_data.py
+CLAUDE.md
+工作流说明.md
+
+# reports 下只发布 html 成品，md 原稿与归档不上传
+/reports/*.md
+/reports/archive/
+
+# 例外: reports/html/ 必须发布(下面显式取消忽略其内容)
+!/reports/html/
