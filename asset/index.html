@@ -6,67 +6,54 @@
 <title>资产层日报</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; min-height: 100vh; padding: 40px 20px; }
-  .container { max-width: 1100px; margin: 0 auto; }
-  .nav { font-size: 13px; color: #aaa; margin-bottom: 20px; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; min-height: 100vh; padding: 26px 14px 60px; }
+  .container { max-width: 640px; margin: 0 auto; }
+  .nav { font-size: 13px; color: #aaa; margin-bottom: 16px; }
   .nav a { color: #aaa; text-decoration: none; } .nav a:hover { color: #666; }
-  h1 { font-size: 22px; color: #1a1a1a; margin-bottom: 4px; }
-  .meta { color: #999; font-size: 13px; margin-bottom: 28px; }
-
-  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; align-items: start; }
-
+  h1 { font-size: 21px; color: #1a1a1a; margin-bottom: 4px; }
+  .meta { color: #999; font-size: 12.5px; margin-bottom: 20px; }
+  .stack { display: flex; flex-direction: column; gap: 14px; }
   .col { background: #fff; border-radius: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); overflow: hidden; }
-  .col-header { padding: 18px 20px 14px; border-bottom: 1px solid #f0f0f0; }
-  .col-title { font-size: 15px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
-  .tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; margin-bottom: 4px; }
+  .col-header { padding: 15px 18px 11px; border-bottom: 1px solid #f0f0f0; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 10px; }
   .tag-macro   { background: #e8f4fd; color: #1a6fa8; }
-  .tag-futures { background: #fdf3e8; color: #a86a1a; }
   .tag-equity  { background: #edf8ee; color: #1a8a2a; }
+  .tag-futures { background: #fdf3e8; color: #a86a1a; }
+  .col-title { font-size: 15px; font-weight: 600; color: #1a1a1a; margin: 6px 0 2px; }
   .col-count { font-size: 12px; color: #bbb; }
-
-  .report-list a { display: flex; justify-content: space-between; align-items: center; padding: 11px 20px; color: #333; text-decoration: none; font-size: 13px; border-bottom: 1px solid #f7f7f7; }
+  .report-list a { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; color: #333; text-decoration: none; font-size: 13.5px; border-bottom: 1px solid #f7f7f7; }
   .report-list a:last-child { border-bottom: none; }
   .report-list a:hover { background: #f5f9ff; }
   .report-list a .arrow { color: #ccc; flex-shrink: 0; margin-left: 8px; }
-  .empty { padding: 24px 20px; color: #bbb; font-size: 13px; }
+  .more-wrap { display: none; }
+  .more-btn { width: 100%; padding: 11px; background: #fafbfc; border: none; border-top: 1px solid #f0f0f0; color: #1a6fa8; font-size: 13px; cursor: pointer; }
+  .more-btn:hover { background: #eef6ff; }
+  .empty { padding: 22px 18px; color: #bbb; font-size: 13px; }
 </style>
 </head>
 <body>
 <div class="container">
   <div class="nav"><a href="../">← 返回首页</a></div>
   <h1>资产层日报</h1>
-  <p class="meta">内部使用</p>
-
-  <div class="grid">
+  <p class="meta">内部使用 · 每板块默认展示最新 2 篇，点"展开"看更多</p>
+  <div class="stack">
     <div class="col">
-      <div class="col-header">
-        <div><span class="tag tag-macro">宏观</span></div>
-        <div class="col-title">宏观 &amp; 大类资产日报</div>
-        <div class="col-count" id="c-macro"></div>
-      </div>
+      <div class="col-header"><span class="tag tag-macro">宏观</span><div class="col-title">宏观 &amp; 大类资产日报</div><div class="col-count" id="c-macro"></div></div>
       <div class="report-list" id="l-macro"></div>
     </div>
     <div class="col">
-      <div class="col-header">
-        <div><span class="tag tag-futures">期货</span></div>
-        <div class="col-title">期货日报</div>
-        <div class="col-count" id="c-futures"></div>
-      </div>
-      <div class="report-list" id="l-futures"></div>
+      <div class="col-header"><span class="tag tag-equity">权益</span><div class="col-title">权益日报</div><div class="col-count" id="c-equity"></div></div>
+      <div class="report-list" id="l-equity"></div>
     </div>
     <div class="col">
-      <div class="col-header">
-        <div><span class="tag tag-equity">权益</span></div>
-        <div class="col-title">权益日报</div>
-        <div class="col-count" id="c-equity"></div>
-      </div>
-      <div class="report-list" id="l-equity"></div>
+      <div class="col-header"><span class="tag tag-futures">期货</span><div class="col-title">期货日报</div><div class="col-count" id="c-futures"></div></div>
+      <div class="report-list" id="l-futures"></div>
     </div>
   </div>
 </div>
 
 <script>
-// FILE LISTS — auto-updated by GitHub Actions on each push
+// FILE LISTS — auto-updated by GitHub Actions / build_html on each push
 const macro = [
   "macro/资产日复盘_2026-06-26.html",
   "macro/资产日复盘_2026-06-25.html",
@@ -92,19 +79,29 @@ const equity = [
   "equity/equity_daily_report_2026-06-22.html"
 ];
 
-function labelFromPath(p) {
-  return decodeURIComponent(p.split("/").pop().replace(".html", ""));
-}
+function labelFromPath(p) { return decodeURIComponent(p.split("/").pop().replace(".html", "")); }
+function linkHtml(f) { return `<a href="${f}"><span>${labelFromPath(f)}</span><span class="arrow">›</span></a>`; }
 function renderList(listId, countId, items) {
-  document.getElementById(countId).textContent = items.length ? items.length + " 篇" : "";
-  document.getElementById(listId).innerHTML = items.length
-    ? items.map(f => `<a href="${f}"><span>${labelFromPath(f)}</span><span class="arrow">›</span></a>`).join("")
-    : '<div class="empty">暂无报告</div>';
+  const cnt = document.getElementById(countId);
+  cnt.textContent = items.length ? items.length + " 篇" : "";
+  const el = document.getElementById(listId);
+  if (!items.length) { el.innerHTML = '<div class="empty">暂无报告</div>'; return; }
+  const head = items.slice(0, 2), rest = items.slice(2);
+  let html = head.map(linkHtml).join("");
+  if (rest.length) {
+    html += `<div class="more-wrap">${rest.map(linkHtml).join("")}</div>`;
+    html += `<button class="more-btn" data-n="${rest.length}" onclick="toggleMore(this)">展开其余 ${rest.length} 篇 ▾</button>`;
+  }
+  el.innerHTML = html;
 }
-
+function toggleMore(btn) {
+  const wrap = btn.previousElementSibling, open = wrap.style.display === "block";
+  wrap.style.display = open ? "none" : "block";
+  btn.textContent = open ? `展开其余 ${btn.dataset.n} 篇 ▾` : "收起 ▴";
+}
 renderList("l-macro",   "c-macro",   macro);
-renderList("l-futures", "c-futures", futures);
 renderList("l-equity",  "c-equity",  equity);
+renderList("l-futures", "c-futures", futures);
 </script>
 </body>
 </html>
