@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-08 05:35",
+  "run_time": "2026-07-08 05:47",
   "tabs": [
     {
       "key": "model_update",
@@ -14,7 +14,7 @@
   ],
   "fingerprints": {
     "explain": "3ee55817f48e2dadffc2c05715dcbc10bc128b23a42a76a7b8ac113262682e90",
-    "model_update": "a5a5da920c211484a4412e91c92dba144d5c533e66ce0d264c6b6ec4938be7f5"
+    "model_update": "f8137ff36dbdd023988bbd03e1e633416401fc2eb258f11398170f83db097115"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
@@ -2140,7 +2140,7 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-08T05:35:51.247156+00:00",
+    "generated_at": "2026-07-08T05:47:30.244476+00:00",
     "as_of_range": {
       "start": "2026-07-08",
       "end": "2026-07-08",
@@ -2252,7 +2252,7 @@
             "gmm_boundary": true,
             "gmm_coverage": "104/104",
             "input_change_models": [],
-            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28919987652"
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28920520526"
           }
         ],
         "default_event_id": "2026-03__2026-07-08",
@@ -2332,7 +2332,7 @@
             "gmm_boundary": false,
             "gmm_coverage": "104/104",
             "input_change_models": [],
-            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28919987652"
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28920520526"
           }
         ],
         "default_event_id": "2026-04__2026-07-08",
@@ -2412,7 +2412,7 @@
             "gmm_boundary": true,
             "gmm_coverage": "97/104",
             "input_change_models": [],
-            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28919987652"
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28920520526"
           }
         ],
         "default_event_id": "2026-05__2026-07-08",
