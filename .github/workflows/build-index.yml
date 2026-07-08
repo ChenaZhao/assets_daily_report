@@ -18,35 +18,35 @@ jobs:
       - name: Generate asset/index.html
         run: |
           python3 - <<'EOF'
-import os, re
+          import os, re
 
-def list_files(subdir):
-    path = f"asset/{subdir}"
-    if not os.path.exists(path):
-        return []
-    files = sorted(
-        [f for f in os.listdir(path) if f.endswith(".html") and f != "index.html"],
-        reverse=True
-    )
-    return [f"{subdir}/{f}" for f in files]
+          def list_files(subdir):
+              path = f"asset/{subdir}"
+              if not os.path.exists(path):
+                  return []
+              files = sorted(
+                  [f for f in os.listdir(path) if f.endswith(".html") and f != "index.html"],
+                  reverse=True
+              )
+              return [f"{subdir}/{f}" for f in files]
 
-macro   = list_files("macro")
-futures = list_files("futures")
-equity  = list_files("equity")
+          macro   = list_files("macro")
+          futures = list_files("futures")
+          equity  = list_files("equity")
 
-def to_js_list(name, items):
-    lines = ",\n".join(f'  "{f}"' for f in items)
-    return f"const {name} = [\n{lines}\n];"
+          def to_js_list(name, items):
+              lines = ",\n".join(f'  "{f}"' for f in items)
+              return f"const {name} = [\n{lines}\n];"
 
-index_path = "asset/index.html"
-content = open(index_path, encoding="utf-8").read()
-content = re.sub(r"const macro = \[[\s\S]*?\];",   to_js_list("macro",   macro),   content)
-content = re.sub(r"const futures = \[[\s\S]*?\];", to_js_list("futures", futures), content)
-content = re.sub(r"const equity = \[[\s\S]*?\];",  to_js_list("equity",  equity),  content)
-open(index_path, "w", encoding="utf-8").write(content)
+          index_path = "asset/index.html"
+          content = open(index_path, encoding="utf-8").read()
+          content = re.sub(r"const macro = \[[\s\S]*?\];",   to_js_list("macro",   macro),   content)
+          content = re.sub(r"const futures = \[[\s\S]*?\];", to_js_list("futures", futures), content)
+          content = re.sub(r"const equity = \[[\s\S]*?\];",  to_js_list("equity",  equity),  content)
+          open(index_path, "w", encoding="utf-8").write(content)
 
-print(f"macro={len(macro)}, futures={len(futures)}, equity={len(equity)}")
-EOF
+          print(f"macro={len(macro)}, futures={len(futures)}, equity={len(equity)}")
+          EOF
 
       - name: Commit
         run: |
