@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-08 06:01",
+  "run_time": "2026-07-08 14:13 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -14,7 +14,7 @@
   ],
   "fingerprints": {
     "explain": "3ee55817f48e2dadffc2c05715dcbc10bc128b23a42a76a7b8ac113262682e90",
-    "model_update": "c8b26957c412bebf54ef91120829819ec72836522393048919826a529df62538"
+    "model_update": "68382a0be80541ffd0c5053223bb317216d8727b59425dac076c1fdaa87ddbb0"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
@@ -2140,7 +2140,7 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-08T06:01:44.150482+00:00",
+    "generated_at": "2026-07-08T06:13:07.175946+00:00",
     "as_of_range": {
       "start": "2026-04-01",
       "end": "2026-07-08",
@@ -5062,81 +5062,9 @@
               }
             ],
             "package_dir": "/Users/yulinwu/Documents/code_repos/macro_regime_framework/macro_quant_framework/files/output/us/20260626_model_update_history_clean1t_20260707_target_202605_asof_20260626"
-          },
-          {
-            "id": "2026-04__2026-07-08",
-            "as_of": "2026-07-08",
-            "target_month": "2026-04",
-            "kind": "baseline",
-            "states": {
-              "gmm": {
-                "state": "slow_growth",
-                "display": "放缓",
-                "css_class": "slow_growth",
-                "confidence": "0.46",
-                "coverage": "104/104"
-              },
-              "rule_based": {
-                "state": "heating_up",
-                "display": "过热",
-                "css_class": "heating_up",
-                "confidence": "",
-                "coverage": "10/10"
-              },
-              "sa_alex_full": {
-                "state": "goldilocks",
-                "display": "温和",
-                "css_class": "goldilocks",
-                "confidence": "0.56",
-                "coverage": "5/5"
-              },
-              "consensus": {
-                "state": "no_consensus",
-                "display": "分歧",
-                "css_class": "no_consensus",
-                "confidence": "",
-                "coverage": ""
-              }
-            },
-            "reason_type": "基准记录",
-            "reason": "该运行日作为本目标月的比较起点。",
-            "gmm_candidates": [
-              {
-                "state": "slow_growth",
-                "display": "放缓",
-                "score": 0.4605263158,
-                "score_text": "46.1%",
-                "css_class": "slow_growth"
-              },
-              {
-                "state": "goldilocks",
-                "display": "温和",
-                "score": 0.3157894737,
-                "score_text": "31.6%",
-                "css_class": "goldilocks"
-              },
-              {
-                "state": "heating_up",
-                "display": "过热",
-                "score": 0.1315789474,
-                "score_text": "13.2%",
-                "css_class": "heating_up"
-              },
-              {
-                "state": "stagflation",
-                "display": "滞胀",
-                "score": 0.0921052632,
-                "score_text": "9.2%",
-                "css_class": "stagflation"
-              }
-            ],
-            "gmm_boundary": false,
-            "gmm_coverage": "104/104",
-            "input_change_models": [],
-            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28921092733"
           }
         ],
-        "default_event_id": "2026-04__2026-07-08",
+        "default_event_id": "2026-04__2026-06-26",
         "eligibility_note": "",
         "stable": true
       },
@@ -6969,81 +6897,9 @@
               }
             ],
             "package_dir": "/Users/yulinwu/Documents/code_repos/macro_regime_framework/macro_quant_framework/files/output/us/20260701_model_update_history_clean1t_20260707_target_202606_asof_20260701"
-          },
-          {
-            "id": "2026-05__2026-07-08",
-            "as_of": "2026-07-08",
-            "target_month": "2026-05",
-            "kind": "baseline",
-            "states": {
-              "gmm": {
-                "state": "slow_growth",
-                "display": "放缓",
-                "css_class": "slow_growth",
-                "confidence": "0.36",
-                "coverage": "97/104"
-              },
-              "rule_based": {
-                "state": "heating_up",
-                "display": "过热",
-                "css_class": "heating_up",
-                "confidence": "",
-                "coverage": "10/10"
-              },
-              "sa_alex_full": {
-                "state": "goldilocks",
-                "display": "温和",
-                "css_class": "goldilocks",
-                "confidence": "0.52",
-                "coverage": "5/5"
-              },
-              "consensus": {
-                "state": "no_consensus",
-                "display": "分歧",
-                "css_class": "no_consensus",
-                "confidence": "",
-                "coverage": ""
-              }
-            },
-            "reason_type": "基准记录",
-            "reason": "该运行日作为本目标月的比较起点。",
-            "gmm_candidates": [
-              {
-                "state": "slow_growth",
-                "display": "放缓",
-                "score": 0.3631284916,
-                "score_text": "36.3%",
-                "css_class": "slow_growth"
-              },
-              {
-                "state": "goldilocks",
-                "display": "温和",
-                "score": 0.3072625698,
-                "score_text": "30.7%",
-                "css_class": "goldilocks"
-              },
-              {
-                "state": "stagflation",
-                "display": "滞胀",
-                "score": 0.1731843575,
-                "score_text": "17.3%",
-                "css_class": "stagflation"
-              },
-              {
-                "state": "heating_up",
-                "display": "过热",
-                "score": 0.156424581,
-                "score_text": "15.6%",
-                "css_class": "heating_up"
-              }
-            ],
-            "gmm_boundary": true,
-            "gmm_coverage": "97/104",
-            "input_change_models": [],
-            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260708_assets_daily_report_28921092733"
           }
         ],
-        "default_event_id": "2026-05__2026-07-08",
+        "default_event_id": "2026-05__2026-07-01",
         "eligibility_note": "",
         "stable": true
       }
