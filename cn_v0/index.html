@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>中国宏观场景状态-V0</title>
+<style>
+
+
+:root {
+  --bg: #f4f6f7; --panel: #fff; --ink: #1f2933; --muted: #687583; --line: #dce3e8;
+  --high: #b13d2b; --high-bg: #fff0eb; --low: #256c59; --low-bg: #e9f5ef;
+  --neutral: #596579; --neutral-bg: #eef2f6; --accent: #345a8a; --supp: #7a5a21; --supp-bg: #fff7df; --primary-bg: #e7f0fb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+.wrapper { max-width: 1320px; margin: 0 auto; padding: 18px 20px 30px; }
+header { display: flex; justify-content: space-between; align-items: flex-end; gap: 18px; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+h1 { margin: 0; font-size: 26px; line-height: 1.25; font-weight: 720; }
+.subtitle { margin: 6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.55; max-width: 940px; }
+.meta { text-align: right; color: var(--muted); font-size: 12px; white-space: nowrap; }
+.meta strong { display: block; color: var(--ink); font-size: 18px; margin-bottom: 2px; }
+.summary-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; max-width: 1080px; margin: 10px auto 16px; }
+.summary-cell { background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 9px 10px; min-height: 78px; }
+.summary-cell.high { border-color: #ecc0b6; } .summary-cell.low { border-color: #b9d8cd; }
+.sum-top { display: flex; justify-content: space-between; gap: 8px; align-items: center; }
+.sum-top strong { font-size: 13.5px; font-weight: 700; }
+.sum-top span { border-radius: 999px; padding: 2px 6px; background: var(--neutral-bg); color: var(--neutral); font-size: 11px; font-weight: 650; white-space: nowrap; }
+.summary-cell.high .sum-top span { background: var(--high-bg); color: var(--high); } .summary-cell.low .sum-top span { background: var(--low-bg); color: var(--low); }
+.sum-score { margin-top: 5px; font-size: 20px; font-weight: 740; display: flex; align-items: baseline; justify-content: space-between; }
+.sum-score em { font-style: normal; color: var(--muted); font-size: 11px; font-weight: 600; }
+.sparkline { width: 82px; height: 22px; display: block; margin-top: 3px; }
+.summary-cell .sparkline { width: 112px; max-width: 100%; height: 28px; margin-top: 4px; }
+.sparkline polyline { fill: none; stroke: var(--accent); stroke-width: 2.2; stroke-linejoin: round; stroke-linecap: round; }
+.sparkline line { stroke: #ccd5dc; stroke-width: 1; stroke-dasharray: 3 3; }
+.layer-heading { max-width: 1080px; margin: 16px auto 8px; }
+.layer-heading h2 { margin: 0; font-size: 21px; line-height: 1.25; font-weight: 720; }
+.layer-heading p { margin: 5px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.stacked-section { display: block; max-width: 1080px; margin: 10px auto 14px; }
+.dimension-overview { background: var(--panel); border: 1px solid var(--line); border-left: 4px solid #9aa5b1; border-radius: 7px 7px 0 0; border-bottom: none; padding: 11px 14px; margin-bottom: 0; }
+.dimension-overview.high { border-left-color: var(--high); border-color: #ecc0b6; }
+.dimension-overview.low { border-left-color: var(--low); border-color: #b9d8cd; }
+.dimension-overview-head { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.dimension-overview h2 { margin: 0; font-size: 20px; line-height: 1.2; font-weight: 720; }
+.dimension-overview p { margin: 5px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.45; }
+.dimension-overview-score { text-align: right; min-width: 190px; }
+.dimension-overview-score b { display: block; font-size: 28px; line-height: 1; font-weight: 760; }
+.dimension-overview-tags { display: flex; justify-content: flex-end; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+.dimension-overview-score span { display: inline-flex; border-radius: 999px; padding: 2px 8px; background: var(--neutral-bg); color: var(--neutral); font-size: 11.5px; font-weight: 650; white-space: nowrap; }
+.dimension-overview.high .dimension-status { background: var(--high-bg); color: var(--high); }
+.dimension-overview.low .dimension-status { background: var(--low-bg); color: var(--low); }
+.dimension-overview-delta { font-weight: 700 !important; }
+.dimension-overview-driver { color: #32475b !important; font-weight: 650; font-size: 12.5px !important; }
+.transmission-section .dimension-status { background: var(--supp-bg); color: var(--supp); }
+.table-wrap { min-width: 0; background: var(--panel); border: 1px solid var(--line); border-radius: 0 0 7px 7px; overflow: hidden; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; line-height: 1.35; }
+th, td { padding: 6.5px 8px; text-align: left; border-top: 1px solid #edf1f4; vertical-align: middle; }
+thead th { border-top: none; background: #f8fafb; color: var(--muted); font-weight: 650; }
+td b { display: block; font-size: 13px; line-height: 1.3; font-weight: 650; }
+.group-cell { width: 112px; color: #4f6070; background: #fbfcfd; font-weight: 650; font-size: 12px; border-right: 1px solid #edf1f4; }
+tr.high td.group-cell + td, tr.high td:first-child:not(.group-cell) { border-left: 3px solid var(--high); }
+tr.low td.group-cell + td, tr.low td:first-child:not(.group-cell) { border-left: 3px solid var(--low); }
+tr.neutral td.group-cell + td, tr.neutral td:first-child:not(.group-cell) { border-left: 3px solid #a5afba; }
+tr.missing { opacity: 0.58; }
+td strong { font-size: 13px; font-weight: 720; }
+.trend-cell { width: 104px; min-width: 94px; padding-right: 10px; }
+.trend-cell .sparkline { width: 88px; height: 22px; margin: 0; }
+.score-marker { position: relative; display: block; width: 70px; height: 7px; margin-top: 4px; border-radius: 999px; background: linear-gradient(90deg, var(--low-bg), #f4f5f6 50%, var(--high-bg)); border: 1px solid #dbe2e7; }
+.score-marker:before { content: ""; position: absolute; left: 50%; top: -2px; width: 1px; height: 9px; background: #b9c3cc; }
+.score-marker i { position: absolute; top: -4px; width: 5px; height: 13px; border-radius: 999px; transform: translateX(-50%); background: var(--neutral); }
+.score-marker i.high { background: var(--high); } .score-marker i.low { background: var(--low); }
+.tag { display: inline-flex; border-radius: 999px; padding: 2px 6px; font-size: 11px; font-weight: 650; white-space: nowrap; }
+.tag.primary { background: var(--primary-bg); color: #24496f; } .tag.supp { background: var(--supp-bg); color: var(--supp); }
+.mom-arrow { font-weight: 780; }
+.arrow-up { color: var(--high); } .arrow-down { color: var(--low); } .arrow-flat { color: var(--neutral); }
+.inline-note { margin: 0; padding: 7px 9px; border: 1px solid var(--line); border-top: none; border-radius: 0 0 7px 7px; background: var(--panel); color: var(--muted); font-size: 12px; line-height: 1.4; }
+details { margin: 12px auto 0; max-width: 1080px; background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 9px 10px; }
+summary { cursor: pointer; color: var(--muted); font-size: 12.5px; font-weight: 650; }
+details table { margin-top: 8px; font-size: 12px; line-height: 1.45; }
+footer { max-width: 1080px; margin: 14px auto 0; color: var(--muted); font-size: 11px; line-height: 1.45; }
+@media (max-width: 960px) {
+  .summary-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+  .summary-cell { padding: 6px; min-height: 62px; }
+  .sum-top { gap: 4px; } .sum-top strong { font-size: 12px; } .sum-top span { padding: 1px 4px; font-size: 10px; }
+  .sum-score { margin-top: 3px; font-size: 16px; } .sum-score em { font-size: 10px; }
+  .summary-cell .sparkline { width: 100%; height: 20px; }
+  header { align-items: flex-start; flex-direction: column; } .meta { text-align: left; }
+  .trend-cell { min-width: 76px; width: 82px; } .trend-cell .sparkline { width: 76px; height: 18px; }
+}
+@media (max-width: 680px) {
+  .wrapper { padding: 14px 12px 24px; }
+  .summary-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+  .summary-cell { padding: 5px 4px; min-height: 58px; }
+  .sum-top { display: block; } .sum-top strong, .sum-top span { display: block; overflow-wrap: anywhere; }
+  .sum-score { font-size: 14px; } .summary-cell .sparkline { height: 14px; }
+  .dimension-overview { padding: 10px; } .dimension-overview h2 { font-size: 18px; }
+  .dimension-overview-score { min-width: 132px; } .dimension-overview-score b { font-size: 24px; }
+  .dimension-overview-head { gap: 10px; } .dimension-overview-tags { gap: 4px; }
+  .dimension-overview-score span { padding: 2px 6px; font-size: 11px; }
+  .table-wrap { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
+  .table-wrap table { min-width: 760px; } details table { min-width: 720px; }
+  .trend-cell { min-width: 64px; width: 66px; padding-left: 4px; padding-right: 4px; }
+  .trend-cell .sparkline { width: 62px; height: 16px; }
+}
+
+
+td small { display:block; color: var(--muted); margin-top: 2px; font-size: 11px; line-height: 1.25; }
+
+
+/* Two-layer China V0 current state header */
+.state-layers { max-width: 1080px; margin: 10px auto 16px; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1.35fr); gap: 10px; }
+.state-layer-main { background: var(--panel); border: 1px solid #b9d8cd; border-left: 5px solid var(--low); border-radius: 8px; padding: 14px 16px; }
+.state-layer-transmission { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.state-kicker { display: inline-flex; align-items: center; border-radius: 999px; padding: 3px 8px; background: #f1f5f9; color: #536273; font-size: 11px; font-weight: 720; margin-bottom: 9px; }
+.state-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.state-title-row h3 { margin: 0; font-size: 18px; line-height: 1.25; }
+.state-title-row .state-pill { display: inline-flex; border-radius: 999px; padding: 3px 9px; background: var(--low-bg); color: var(--low); font-size: 12px; font-weight: 760; white-space: nowrap; }
+.state-main-text { margin: 9px 0 12px; color: #35475a; font-size: 12.5px; line-height: 1.55; font-weight: 650; }
+.state-factor-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; border-top: 1px solid #edf1f4; padding-top: 10px; }
+.state-factor { min-width: 0; }
+.state-factor span { display: block; color: var(--muted); font-size: 11.5px; font-weight: 650; }
+.state-factor b { display: block; margin-top: 2px; font-size: 22px; line-height: 1; }
+.state-factor-tags { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; margin-top: 6px; }
+.state-factor-tags em { display: inline-flex; align-items: center; border-radius: 999px; padding: 2px 7px; font-style: normal; font-size: 11px; line-height: 1.25; font-weight: 740; }
+.state-factor-tags .status-low { background: var(--low-bg); color: var(--low); }
+.state-factor-tags .status-neutral { background: var(--neutral-bg); color: var(--neutral); }
+.state-factor-tags .delta-flat { background: #eef2f6; color: #536273; }
+.state-factor-tags .delta-down { background: #eef2f6; color: #536273; }
+.state-factor small { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; line-height: 1.3; }
+.transmission-tile { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 11px 12px; min-height: 104px; }
+.transmission-tile.high { border-color: #ecc0b6; }
+.transmission-tile.low { border-color: #b9d8cd; }
+.transmission-tile .tile-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.transmission-tile strong { font-size: 13px; color: #233040; }
+.tile-metric-stack { display: flex; flex-direction: row; align-items: center; justify-content: flex-end; gap: 6px; min-width: 0; text-align: right; }
+.transmission-tile .tile-pill { padding: 0; background: transparent; color: var(--neutral); font-size: 17px; line-height: 1; font-weight: 820; white-space: nowrap; }
+.transmission-tile.high .tile-pill { color: var(--high); }
+.transmission-tile.low .tile-pill { color: var(--low); }
+.tile-status-row { display: inline-flex; align-items: center; margin: 0; white-space: nowrap; }
+.tile-status-row em { display: inline-flex; align-items: center; border-radius: 999px; padding: 2px 7px; font-style: normal; font-size: 11px; line-height: 1.25; font-weight: 760; }
+.tile-status-row .status-high { background: var(--high-bg); color: var(--high); }
+.tile-status-row .status-low { background: var(--low-bg); color: var(--low); }
+.tile-status-row .status-neutral { background: var(--neutral-bg); color: var(--neutral); }
+.transmission-tile p { margin: 0; color: var(--muted); font-size: 11.8px; line-height: 1.45; }
+.state-data-line { grid-column: 1 / -1; border: 1px solid var(--line); border-radius: 7px; background: #fbfcfd; color: var(--muted); font-size: 11.8px; line-height: 1.45; padding: 8px 10px; }
+.state-data-line strong { color: #263545; margin-right: 6px; }
+@media (max-width: 900px) { .state-layers { grid-template-columns: 1fr; } .state-layer-transmission { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .state-layer-transmission, .state-factor-row { grid-template-columns: 1fr; } }
+
+
+/* China V0 explanation additions */
+.judgement-chain, .transmission-map { max-width: 1080px; margin: 12px auto 16px; background: var(--panel); border: 1px solid var(--line); border-radius: 7px; padding: 14px; }
+.judgement-chain h2, .transmission-map h2 { margin: 0 0 10px; font-size: 18px; }
+.chain-grid, .map-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.chain-card, .map-card { border: 1px solid var(--line); border-radius: 6px; padding: 10px; background: #fff; min-height: 82px; }
+.chain-card strong, .map-card strong { display: block; font-size: 13px; margin-bottom: 5px; color: #1f2a36; }
+.chain-card p, .map-card p, .chain-result { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.chain-result { margin-top: 10px; color: #223140; font-weight: 650; }
+.summary-cell .sum-note { margin: 4px 0 0; color: var(--muted); font-size: 11.5px; line-height: 1.35; }
+.rule-hit { display: block; margin-top: 3px; color: var(--muted); font-weight: 500; font-size: 11px; line-height: 1.25; }
+.logic-callout { max-width: 1080px; margin: 0 auto 12px; color: #32475b; font-size: 12.5px; line-height: 1.55; }
+@media (max-width: 760px) { .chain-grid, .map-grid { grid-template-columns: 1fr; } .judgement-chain, .transmission-map { margin-left: 10px; margin-right: 10px; } }
+
+/* China V0 tri-state score control */
+.rule-widget { min-width: 126px; display: grid; gap: 5px; align-items: center; }
+.rule-topline { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.rule-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 30px; height: 22px; border-radius: 999px; font-size: 12px; font-weight: 760; border: 1px solid var(--line); background: #fff; color: #475569; }
+.rule-badge.low { background: var(--low-bg); color: var(--low); border-color: #b9d8cd; }
+.rule-badge.neutral { background: var(--neutral-bg); color: var(--neutral); border-color: #d4dbe3; }
+.rule-badge.high { background: var(--high-bg); color: var(--high); border-color: #ecc0b6; }
+.rule-arrow { font-size: 12px; font-weight: 750; color: #94a3b8; }
+.rule-arrow.arrow-up { color: var(--high); }
+.rule-arrow.arrow-down { color: var(--low); }
+.rule-track { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; padding: 3px; border: 1px solid #d8e0e8; border-radius: 999px; background: #f8fafc; }
+.rule-seg { display: inline-flex; align-items: center; justify-content: center; height: 22px; border-radius: 999px; color: #94a3b8; font-size: 10.5px; font-weight: 700; line-height: 1; }
+.rule-seg.active { color: #fff; box-shadow: 0 3px 8px rgba(31, 41, 55, 0.13); }
+.rule-seg.active.low { background: var(--low); }
+.rule-seg.active.neutral { background: #667085; }
+.rule-seg.active.high { background: var(--high); }
+.rule-threshold { display: block; color: #64748b; font-size: 10.8px; line-height: 1.28; font-weight: 560; }
+.rule-threshold b { color: #334155; font-weight: 720; }
+@media (max-width: 760px) { .rule-widget { min-width: 112px; } .rule-seg { height: 20px; font-size: 10px; } .rule-badge { height: 20px; min-width: 28px; } }
+
+/* Compact signal-only rule control */
+.rule-widget.signal-only { min-width: 84px; display: block; }
+.signal-only .rule-topline, .signal-only .rule-badge, .signal-only .rule-arrow, .signal-only .rule-threshold { display: none !important; }
+.signal-only .rule-track { width: 74px; grid-template-columns: repeat(3, 1fr); gap: 3px; padding: 3px; border-radius: 999px; background: #edf2f7; border: 1px solid #d7e0ea; }
+.signal-only .rule-seg { height: 10px; min-width: 0; border-radius: 999px; font-size: 0; color: transparent; background: #d8e1ea; }
+.signal-only .rule-seg.active.low { background: var(--low); }
+.signal-only .rule-seg.active.neutral { background: #667085; }
+.signal-only .rule-seg.active.high { background: var(--high); }
+@media (max-width: 760px) { .rule-widget.signal-only { min-width: 72px; } .signal-only .rule-track { width: 64px; } }
+
+/* Use one accent color per dimension block for table row guide lines */
+.dim-section { --section-accent: #a5afba; }
+.dim-section.section-tone-low { --section-accent: var(--low); }
+.dim-section.section-tone-high { --section-accent: var(--high); }
+.dim-section.section-tone-neutral { --section-accent: #8a96a3; }
+.dim-section tbody tr td.group-cell + td,
+.dim-section tbody tr td:first-child:not(.group-cell) { border-left-color: var(--section-accent) !important; }
+
+/* Compact appendix rule summary */
+.appendix-rule-summary { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 10px 0 12px; }
+.appendix-rule-card { border: 1px solid var(--line); border-radius: 6px; background: #fbfcfd; padding: 9px 10px; }
+.appendix-rule-card strong { display: block; color: #27364a; font-size: 12px; margin-bottom: 4px; }
+.appendix-rule-card span { display: block; color: var(--muted); font-size: 11.5px; line-height: 1.4; }
+@media (max-width: 900px) { .appendix-rule-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .appendix-rule-summary { grid-template-columns: 1fr; } }
+
+/* Appendix placement for judgement chain */
+details .judgement-chain { max-width: none; margin: 10px 0 2px; border-radius: 6px; }
+details .judgement-chain h2 { display: none; }
+
+/* V1 candidate explanation layer */
+.v1-candidate-heading { margin-top: 18px; }
+.v1-candidate-layer { max-width: 1080px; margin: 10px auto 14px; background: #fbfcfd; border: 1px solid var(--line); border-radius: 8px; padding: 12px; }
+.v1-boundary-note { display: flex; gap: 10px; align-items: flex-start; border: 1px solid #d7c58f; background: #fff9e8; color: #5f4b18; border-radius: 7px; padding: 9px 10px; font-size: 12px; line-height: 1.45; margin-bottom: 10px; }
+.v1-boundary-note strong { white-space: nowrap; color: #3f3413; }
+.v1-group-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.v1-group-card { background: #fff; border: 1px solid var(--line); border-left: 4px solid #8a96a3; border-radius: 7px; padding: 10px; min-height: 188px; }
+.v1-group-card.low { border-left-color: var(--low); }
+.v1-group-card.high { border-left-color: var(--high); }
+.v1-card-head { display: grid; gap: 3px; margin-bottom: 8px; }
+.v1-card-head span { color: var(--muted); font-size: 11px; font-weight: 680; }
+.v1-card-head strong { color: #243244; font-size: 14px; line-height: 1.25; }
+.v1-card-head i { justify-self: start; font-style: normal; border-radius: 999px; padding: 2px 7px; background: #eef2f6; color: #596579; font-size: 11px; font-weight: 720; }
+.v1-group-card p { margin: 0 0 9px; color: #425466; font-size: 11.8px; line-height: 1.45; }
+.v1-anchor-strip { display: grid; gap: 5px; margin: 0 0 9px; }
+.v1-anchor-strip span { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; align-items: baseline; color: #1f2933; font-size: 11.5px; line-height: 1.3; }
+.v1-anchor-strip b { color: #536273; font-size: 11px; font-weight: 680; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v1-anchor-strip em { font-style: normal; font-weight: 760; }
+.v1-group-card small, .v1-detail-note { display: block; color: var(--muted); font-size: 11.5px; line-height: 1.42; }
+.v1-candidate-details { border-color: #d6dde5; }
+.v1-candidate-details td small { display: block; color: var(--muted); margin-top: 2px; font-size: 10.8px; line-height: 1.25; }
+.v1-candidate-details .v1-spark { width: 82px; height: 20px; margin: 0; }
+.v1-detail-note { margin: 8px 0 0; }
+@media (max-width: 1040px) { .v1-group-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .v1-group-grid { grid-template-columns: 1fr; } .v1-boundary-note { display: block; } .v1-candidate-details table { min-width: 920px; } }
+
+
+/* Embedded V1 candidate rows */
+.v1-embedded-row td { background: #fbfcfd; border-top: 1px solid #d9e2ea; }
+.v1-inline-detail summary { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: center; cursor: pointer; color: #233040; }
+.v1-inline-detail summary b { display: inline; font-size: 13px; }
+.v1-inline-detail summary small { display: inline-flex; margin-left: 8px; border-radius: 999px; padding: 2px 7px; background: #eef2f6; color: #596579; font-size: 11px; font-weight: 720; }
+.v1-inline-detail summary em { font-style: normal; color: var(--muted); font-size: 11.5px; font-weight: 650; }
+.v1-inline-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 9px 0 6px; }
+.v1-inline-grid.compact { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.v1-metric { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 6px; align-items: baseline; border: 1px solid #dde5ec; border-radius: 6px; background: #fff; padding: 7px 8px; min-height: 50px; }
+.v1-metric b { color: #425466; font-size: 11.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v1-metric em { font-style: normal; color: #1f2933; font-size: 12px; font-weight: 720; white-space: nowrap; }
+.v1-metric i { font-style: normal; font-weight: 820; }
+.v1-metric small { grid-column: 1 / -1; color: var(--muted); font-size: 10.8px; line-height: 1.2; }
+.v1-inline-note { margin: 6px 0 0; color: var(--muted); font-size: 11.8px; line-height: 1.45; }
+.price-chain { display: grid; grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr) 26px minmax(0, 1fr) 26px minmax(0, 1fr) 26px minmax(0, 1fr); align-items: center; gap: 6px; margin: 10px 0; }
+.chain-node { min-height: 62px; border: 1px solid #dde5ec; border-radius: 6px; background: #fff; padding: 8px; }
+.chain-node strong { display: block; color: #425466; font-size: 11.5px; margin-bottom: 4px; }
+.chain-node span { display: block; color: #1f2933; font-weight: 760; font-size: 13px; }
+.chain-node small { color: var(--muted); font-size: 10.5px; }
+.chain-arrow { text-align: center; color: var(--high); font-weight: 860; font-size: 18px; }
+.chain-arrow.weak { color: #94a3b8; }
+@media (max-width: 820px) {
+  .v1-inline-detail summary { grid-template-columns: 1fr; }
+  .v1-inline-grid, .v1-inline-grid.compact { grid-template-columns: 1fr; }
+  .price-chain { grid-template-columns: 1fr; }
+  .chain-arrow { transform: rotate(90deg); justify-self: center; height: 18px; }
+}
+
+.price-story-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin: 10px 0 8px; }
+.price-story-card { border: 1px solid #dde5ec; border-radius: 7px; background: #fff; padding: 9px 10px; min-height: 98px; }
+.price-story-card h4 { margin: 0 0 7px; font-size: 12px; color: #2f3f52; }
+.price-story-card p { display: grid; gap: 4px; margin: 0; }
+.price-story-card b { font-size: 14px; color: #1f2933; }
+.price-story-card span { font-size: 12px; color: #425466; font-weight: 680; }
+.price-story-card small { display: block; margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.35; }
+.price-story-card.high { border-left: 4px solid var(--high); }
+.price-story-card.neutral { border-left: 4px solid var(--neutral); }
+.price-story-card.low { border-left: 4px solid var(--low); }
+.price-bridge { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 24px minmax(0, 1fr); gap: 6px; align-items: center; margin: 4px 0 8px; }
+.price-bridge span { border-radius: 999px; background: #f4f7fa; color: #334155; text-align: center; font-weight: 760; font-size: 11.5px; padding: 6px 8px; }
+.price-bridge b { text-align: center; color: #94a3b8; }
+@media (max-width: 820px) {
+  .price-story-grid, .price-bridge { grid-template-columns: 1fr; }
+  .price-bridge b { transform: rotate(90deg); height: 14px; }
+}
+
+.policy-chain-table .conclusion-cell { min-width: 168px; max-width: 240px; color: #334155; font-size: 11.6px; font-weight: 700; line-height: 1.45; background: #fbfcfd; }
+.policy-chain-table th:nth-child(2) { min-width: 150px; }
+
+/* Chain overview panels */
+.chain-overview { border: 1px solid #d9e2ea; border-radius: 7px; background: #fbfcfd; margin: 10px 0 12px; padding: 10px; }
+.chain-overview-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; margin-bottom: 8px; }
+.chain-overview-head h3 { margin: 0; font-size: 13px; color: #233040; }
+.chain-overview-head p { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.4; }
+.chain-step-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.chain-step { border: 1px solid #dde5ec; border-radius: 7px; background: #fff; padding: 9px; min-height: 132px; }
+.chain-step-top { display: flex; justify-content: space-between; gap: 8px; align-items: center; margin-bottom: 5px; }
+.chain-step-top span { color: #2f3f52; font-size: 12px; font-weight: 780; }
+.chain-step p { margin: 0 0 7px; color: #526273; font-size: 11.2px; line-height: 1.42; }
+.mini-indicators { display: grid; grid-template-columns: 1fr; gap: 5px; }
+.mini-metric { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px; align-items: baseline; border-radius: 6px; background: #f4f7fa; padding: 5px 7px; }
+.mini-metric em { font-style: normal; color: #475569; font-size: 10.8px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mini-metric b { color: #1f2933; font-size: 11.2px; font-weight: 780; white-space: nowrap; }
+.mini-metric small { grid-column: 1 / -1; color: #718096; font-size: 10px; line-height: 1.1; }
+.mini-metric.missing { background: #fff7ed; border: 1px dashed #fed7aa; }
+.mini-metric.missing b { color: #c05621; }
+.mini-metric.derived { background: #f1f5f9; }
+.chain-note { margin: 8px 0 0; color: var(--muted); font-size: 11px; }
+.missing-indicator-details table { min-width: 900px; }
+@media (max-width: 980px) { .chain-step-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .chain-overview-head { display: block; } .chain-step-grid { grid-template-columns: 1fr; } }
+
+</style>
+</head>
+<body>
+<div class="wrapper">
+<header><div><h1>中国宏观场景状态-V0</h1></div><div class="meta"><strong>观察月 2026-05</strong>运行日 2026-06-30</div></header>
+<section class="layer-heading"><h2>一、当前宏观状态</h2><p>采用两层读法：第一层只看增长与通胀如何闭合主状态；第二层只展示辅助模块分数和触发项，不额外加入表外推断。</p></section>
+<section class="state-layers">
+<div class="state-layer-main">
+<div class="state-kicker">第一层：主状态闭合</div>
+<div class="state-title-row"><h3>主状态</h3><span class="state-pill">放缓</span></div>
+<p class="state-main-text">本月主状态只由增长与通胀闭合：增长分 -0.60，通胀分 0.25，因此落在“放缓”。政策、信用、地产、外需只作为辅助解释，不与增长/通胀等权投票。</p>
+<div class="state-factor-row">
+<div class="state-factor"><span>增长输入</span><b>-0.60</b><div class="state-factor-tags"><em class="status-low">偏弱</em></div><small>5/5 可用；生产、消费、投资偏弱。</small></div>
+<div class="state-factor"><span>通胀输入</span><b>0.25</b><div class="state-factor-tags"><em class="status-neutral">温和偏上</em></div><small>4/4 可用；CPI/PPI中性，成本端偏高。</small></div>
+</div>
+</div>
+<div class="state-layer-transmission">
+<div class="transmission-tile neutral"><div class="tile-top"><strong>通胀结构</strong><div class="tile-metric-stack"><span class="tile-pill">0.25</span><div class="tile-status-row"><em class="status-neutral">温和偏上</em></div></div></div><p>4/4 可用；CPI、PPI、PMI 出厂价格为中性，PMI 原材料购进价格为偏高。</p></div>
+<div class="transmission-tile neutral"><div class="tile-top"><strong>信用传导</strong><div class="tile-metric-stack"><span class="tile-pill">-0.25</span><div class="tile-status-row"><em class="status-neutral">中性偏弱</em></div></div></div><p>4/4 可用；M1、M2、M1-M2 为中性，社融存量同比为偏弱。</p></div>
+<div class="transmission-tile high"><div class="tile-top"><strong>地产压力</strong><div class="tile-metric-stack"><span class="tile-pill">0.60</span><div class="tile-status-row"><em class="status-high">压力偏高</em></div></div></div><p>5/5 可用；投资、新开工和 70 城新房价格为压力高，销售面积和销售额为中性压力。</p></div>
+<div class="transmission-tile low"><div class="tile-top"><strong>外需链条</strong><div class="tile-metric-stack"><span class="tile-pill">0.67</span><div class="tile-status-row"><em class="status-low">偏强</em></div></div></div><p>3/3 可用；出口同比和出口 3 个月均值偏强，PMI 新出口订单为中性。</p></div>
+</div>
+<div class="state-data-line"><strong>数据口径</strong>当前页按 visible_time 做可见性过滤，数值仍为 Wind current-vintage/snapshot；不是 true vintage，也不把解释层候选自动升级为主 score。</div>
+</section>
+<section class="layer-heading"><h2>二、主状态拆解</h2><p>这部分只解释主状态闭合所需的增长与通胀。当前是“增长偏弱 + 通胀弱/温和”，因此闭合为放缓。</p></section><section class="dim-section stacked-section section-tone-low"><div class="dimension-overview low"><div class="dimension-overview-head"><div><h2>增长</h2><p>主状态核心输入之一：越高 = 生产、消费、投资和订单动能越强</p></div><div class="dimension-overview-score"><b>-0.6</b><div class="dimension-overview-tags"><span class="dimension-status">偏弱</span><span class="dimension-overview-delta arrow-flat">较上月 → +0.00</span></div></div></div><p class="dimension-overview-driver">增长分 -0.60，5/5 指标可用；工增、社零、固定资产投资为 -1，PMI 与新订单为 0，因此增长端判定为偏弱。</p></div><div class="table-wrap"><table><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="low"><td class="group-cell" rowspan="1">生产实现</td><td><b>工业增加值同比</b></td><td><span>4.5 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,3.0 10.5,9.5 17.9,12.5 25.4,4.8 32.8,14.3 40.3,14.9 47.7,12.5 55.2,6.0 62.6,6.0 70.1,9.5 77.5,19.0 85.0,16.6"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="low"><td class="group-cell" rowspan="1">消费需求</td><td><b>社会消费品零售总额同比</b></td><td><span>-0.6 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="17.2" y2="17.2"></line><polyline points="3.0,3.0 11.2,6.3 19.4,7.1 27.6,8.3 35.8,8.6 44.0,13.4 52.2,14.6 60.4,8.9 68.6,12.2 76.8,16.6 85.0,19.0"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="low"><td class="group-cell" rowspan="1">投资需求</td><td><b>固定资产投资累计同比</b></td><td><span>-4.1 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="9.5" y2="9.5"></line><polyline points="3.0,3.0 11.2,5.8 19.4,8.3 27.6,10.7 35.8,13.4 44.0,15.5 52.2,18.3 60.4,5.3 68.6,5.6 76.8,13.2 85.0,19.0"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="2">PMI 供需</td><td><b>制造业 PMI</b></td><td><span>50.0 点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,11.0 10.5,15.6 17.9,14.4 25.4,9.9 32.8,19.0 40.3,16.7 47.7,6.4 55.2,15.6 62.6,19.0 70.1,3.0 77.5,4.1 85.0,7.6"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-05-31<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td><b>制造业 PMI 新订单</b></td><td><span>49.9 点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,10.5 10.5,14.7 17.9,14.2 25.4,13.1 32.8,17.9 40.3,15.8 47.7,7.3 55.2,15.8 62.6,19.0 70.1,3.0 77.5,8.3 85.0,12.1"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-05-31<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">增长模块：5/5 个模型组件可用；模块分 = 5 个规则分等权平均 = (-1 -1 -1 +0 +0) / 5 = -0.60。</p></section><section class="dim-section stacked-section section-tone-neutral"><div class="dimension-overview neutral"><div class="dimension-overview-head"><div><h2>通胀</h2><p>主状态核心输入之一：按终端价格、工业品价格、上游成本和出厂价格观察价格传导。</p></div><div class="dimension-overview-score"><b>0.25</b><div class="dimension-overview-tags"><span class="dimension-status">温和偏上</span><span class="dimension-overview-delta arrow-down">较上月 ↓ -0.25</span></div></div></div><p class="dimension-overview-driver">通胀分 0.25，4/4 指标可用；CPI/PPI 中性，原材料价格压力为 +1，出厂价格回到 0，整体仍属于弱/温和通胀区间。</p></div><div class="table-wrap"><table><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="neutral"><td class="group-cell" rowspan="1">终端价格</td><td><b>CPI 同比</b></td><td><span>1.2 % <span class="mom-arrow arrow-flat">→</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="15.2" y2="15.2"></line><polyline points="3.0,14.3 10.5,15.2 17.9,19.0 25.4,18.1 32.8,13.4 40.3,8.6 47.7,7.7 55.2,13.4 62.6,3.0 70.1,5.8 77.5,3.9 85.0,3.9"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-10<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="1">工业品价格</td><td><b>PPI 同比</b></td><td><span>3.9 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="11.3" y2="11.3"></line><polyline points="3.0,19.0 10.5,19.0 17.9,17.5 25.4,16.2 32.8,15.8 40.3,16.0 47.7,15.4 55.2,14.3 62.6,13.2 70.1,10.3 77.5,5.3 85.0,3.0"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-10<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td class="group-cell" rowspan="1">上游成本</td><td><b>PMI 主要原材料购进价格</b></td><td><span>60.5 点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,19.0 10.5,15.8 17.9,13.9 25.4,14.0 32.8,14.8 40.3,13.6 47.7,14.1 55.2,11.1 62.6,12.4 70.1,3.0 77.5,3.2 85.0,6.5"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-05-31<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="1">出厂价格</td><td><b>PMI 出厂价格</b></td><td><span>51.9 点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,19.0 10.5,15.3 17.9,14.0 25.4,15.5 32.8,16.7 40.3,15.5 47.7,14.3 55.2,11.3 62.6,11.3 70.1,3.0 77.5,3.5 85.0,9.1"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-05-31<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">通胀模块：4/4 个模型组件可用；模块分 = (0 +0 +1 +0) / 4 = 0.25。CPI、PPI 和 PMI 出厂价格为中性，PMI 原材料购进价格为偏高。</p></section><section class="layer-heading"><h2>三、中国特色传导条件</h2><p>中国 V0 单列政策、信用、地产、外需和价格链条：这些模块解释状态如何传导、哪些辅助标签被触发，但不与增长/通胀等权投票决定主状态。</p></section><section class="dim-section stacked-section transmission-section section-tone-neutral"><div class="dimension-overview neutral"><div class="dimension-overview-head"><div><h2>政策传导</h2><p>越高 = 政策支持越强；判断政策是否形成托底。</p></div><div class="dimension-overview-score"><b>-0.17</b><div class="dimension-overview-tags"><span class="dimension-status">中性偏弱</span><span class="dimension-overview-delta arrow-flat">较上月 → +0.00</span></div></div></div><p class="dimension-overview-driver">政策链条读法：央行价格信号偏宽，但财政落地偏弱，债市没有确认“宽松+增长修复”预期；银行端传导只能说明流动性不紧。本月政策托底不完整。</p></div><div class="table-wrap"><table class="policy-chain-table"><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="high"><td class="group-cell" rowspan="2">政策意图</td><td><b>7 天逆回购利率</b></td><td><span>1.4 % <span class="mom-arrow arrow-flat">→</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,11.0 17.0,11.0 31.0,11.0 44.0,11.0 58.0,11.0 72.0,11.0 85.0,11.0"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-29</td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td><b>1 年期 LPR</b></td><td><span>3 % <span class="mom-arrow arrow-flat">→</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,11.0 17.0,11.0 31.0,11.0 44.0,11.0 58.0,11.0 72.0,11.0 85.0,11.0"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-22</td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="1">预期确认</td><td><b>10 年-1 年国债利差</b></td><td><span>0.55 百分点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,19.0 10.5,18.1 17.9,10.1 25.4,8.6 32.8,13.1 40.3,11.7 47.7,7.7 55.2,7.7 62.6,10.6 70.1,3.0 77.5,3.6 85.0,5.5"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-29</td><td><span class="tag primary">主指标</span></td></tr><tr class="low"><td class="group-cell" rowspan="2">财政落地</td><td><b>一般公共预算支出累计同比</b></td><td><span>0.8 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,4.1 11.2,4.1 19.4,5.9 27.6,5.9 35.8,12.1 44.0,15.6 52.2,17.9 60.4,3.0 68.6,8.7 76.8,16.1 85.0,19.0"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-22</td><td><span class="tag primary">主指标</span></td></tr><tr class="low"><td><b>预算支出-收入累计同比差</b></td><td><span>-3.2 百分点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="11.6" y2="11.6"></line><polyline points="3.0,3.0 11.2,3.9 19.4,5.1 27.6,5.6 35.8,8.8 44.0,10.2 52.2,5.3 60.4,4.9 68.6,11.1 76.8,16.7 85.0,19.0"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-22</td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">政策传导：货币子块 3/3 可用，财政子块 2/2 可用，两个子块均达标；政策分 = 货币子块均值 0.67 与财政子块均值 -1.00 等权合成 = -0.17。银行端传导为解释层候选，不进入当前 V0 主分。</p></section><section class="dim-section stacked-section section-tone-neutral"><div class="dimension-overview neutral"><div class="dimension-overview-head"><div><h2>信用传导</h2><p>越高 = 信用扩张越强；判断宽政策是否转成实体融资和货币活化。</p></div><div class="dimension-overview-score"><b>-0.25</b><div class="dimension-overview-tags"><span class="dimension-status">中性偏弱</span><span class="dimension-overview-delta arrow-flat">较上月 → +0.00</span></div></div></div><p class="dimension-overview-driver">信用分 -0.25，M1/M2 与 M1-M2 为中性，社融存量同比为 -1；说明信用仍未形成明显扩张。</p></div><div class="table-wrap"><table><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="neutral"><td class="group-cell" rowspan="2">货币量</td><td><b>M1 同比</b></td><td><span>5.5 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,15.2 10.5,10.5 17.9,8.6 25.4,3.0 32.8,7.7 40.3,13.8 47.7,19.0 55.2,13.8 62.6,9.1 70.1,12.9 77.5,13.4 85.0,11.0"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-12<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td><b>M2 同比</b></td><td><span>8.6 % <span class="mom-arrow arrow-flat">→</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,14.2 10.5,6.2 17.9,6.2 25.4,12.6 32.8,15.8 40.3,19.0 47.7,11.0 55.2,3.0 62.6,3.0 70.1,11.0 77.5,9.4 85.0,9.4"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-12<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="low"><td class="group-cell" rowspan="1">社融</td><td><b>社融存量同比</b></td><td><span>7.7 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,4.2 10.5,3.0 17.9,5.5 25.4,6.7 32.8,9.2 40.3,9.2 47.7,11.6 55.2,12.8 62.6,12.8 70.1,16.5 77.5,17.8 85.0,19.0"></polyline></svg></td><td><div class="rule-widget low signal-only"><div class="rule-topline"></div><div aria-label="规则分 -1" class="rule-track"><span class="rule-seg active low"></span><span class="rule-seg"></span><span class="rule-seg"></span></div></div></td><td>2026-06-12<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="1">结构差</td><td><b>M1-M2 同比差</b></td><td><span>-3.1 百分点 <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,14.4 10.5,12.1 17.9,10.3 25.4,3.0 32.8,6.7 40.3,11.7 47.7,19.0 55.2,16.3 62.6,11.7 70.1,13.1 77.5,14.0 85.0,11.7"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-12<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">信用传导：4/4 个模型组件可用；模块分 = (0 +0 -1 +0) / 4 = -0.25。信用分用于触发信用类辅助标签，不直接决定主状态。</p></section><section class="dim-section stacked-section section-tone-high"><div class="dimension-overview high"><div class="dimension-overview-head"><div><h2>地产链条</h2><p>越高 = 地产压力越强；判断地产对增长、信用和资产负债表的拖累。</p></div><div class="dimension-overview-score"><b>0.6</b><div class="dimension-overview-tags"><span class="dimension-status">压力偏高</span><span class="dimension-overview-delta arrow-flat">较上月 → +0.00</span></div></div></div><p class="dimension-overview-driver">地产压力分 0.60，投资、新开工和房价三项为压力高，销售面积/金额仍在中性压力区间；本月触发“地产压力急性”。</p></div><div class="table-wrap"><table><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="neutral"><td class="group-cell" rowspan="2">销售</td><td><b>商品房销售面积累计同比</b></td><td><span>-11.3 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,3.0 11.2,3.8 19.4,5.0 27.6,6.5 35.8,8.8 44.0,10.5 52.2,12.1 60.4,19.0 68.6,14.1 76.8,14.0 85.0,15.2"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td><b>商品房销售额累计同比</b></td><td><span>-13.9 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,3.0 11.2,4.0 19.4,5.0 27.6,5.7 35.8,7.6 44.0,9.4 52.2,11.1 60.4,19.0 68.6,15.4 76.8,13.0 85.0,11.8"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td class="group-cell" rowspan="2">投资施工</td><td><b>房地产开发投资累计同比</b></td><td><span>-16.2 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,4.9 11.2,6.7 19.4,8.9 27.6,11.1 35.8,13.0 44.0,15.9 52.2,19.0 60.4,3.0 68.6,4.4 76.8,10.3 85.0,16.3"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td><b>房屋新开工面积累计同比</b></td><td><span>-22.6 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,7.2 11.2,4.9 19.4,5.3 27.6,3.0 35.8,6.4 44.0,9.1 52.2,8.7 60.4,19.0 68.6,8.3 76.8,14.8 85.0,17.1"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td class="group-cell" rowspan="1">价格</td><td><b>70 城新房价格同比</b></td><td><span>-3.6 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,19.0 10.5,14.6 17.9,8.8 25.4,4.5 32.8,3.0 40.3,5.9 47.7,8.8 55.2,13.2 62.6,16.1 70.1,17.5 77.5,19.0 85.0,17.5"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-16<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">地产链条：5/5 个模型组件可用；模块分 = (0 +0 +1 +1 +1) / 5 = 0.60。该分数触发“地产压力急性”辅助标签。</p></section><section class="dim-section stacked-section section-tone-high"><div class="dimension-overview high"><div class="dimension-overview-head"><div><h2>外需链条</h2><p>越高 = 外需景气越强；判断外需能否对冲内需偏弱。</p></div><div class="dimension-overview-score"><b>0.67</b><div class="dimension-overview-tags"><span class="dimension-status">偏强</span><span class="dimension-overview-delta arrow-down">较上月 ↓ -0.33</span></div></div></div><p class="dimension-overview-driver">外需分 0.67，出口同比和 3 个月均值偏强，但 PMI 新出口订单回落到中性；外需提供对冲，但没有改变主状态闭合。</p></div><div class="table-wrap"><table><thead><tr><th>分组</th><th>指标</th><th>最新值</th><th>趋势</th><th>信号</th><th>可见日</th><th>类型</th></tr></thead><tbody><tr class="high"><td class="group-cell" rowspan="2">出口</td><td><b>出口金额同比</b></td><td><span>19.4 % <span class="mom-arrow arrow-up">↑</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><line x1="0" x2="88" y1="18.5" y2="18.5"></line><polyline points="3.0,16.3 10.5,15.8 17.9,16.8 25.4,15.3 32.8,19.0 40.3,16.2 47.7,16.0 55.2,14.6 62.6,3.0 70.1,17.5 77.5,13.0 85.0,10.9"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-09<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="high"><td><b>出口金额同比 3 个月均值</b></td><td><span>12.0 % <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,16.4 10.5,16.8 17.9,16.9 25.4,16.0 32.8,18.9 40.3,18.4 47.7,19.0 55.2,15.0 62.6,3.0 70.1,4.4 77.5,3.0 85.0,10.2"></polyline></svg></td><td><div class="rule-widget high signal-only"><div class="rule-topline"></div><div aria-label="规则分 1" class="rule-track"><span class="rule-seg"></span><span class="rule-seg"></span><span class="rule-seg active high"></span></div></div></td><td>2026-06-09<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr><tr class="neutral"><td class="group-cell" rowspan="1">PMI 外需</td><td><b>PMI 新出口订单</b></td><td><span>48.6 点 <span class="mom-arrow arrow-down">↓</span></span></td><td class="trend-cell"><svg class="sparkline" viewbox="0 0 88 22"><polyline points="3.0,10.8 10.5,12.7 17.9,12.4 25.4,10.5 32.8,16.3 40.3,11.2 47.7,6.9 55.2,10.5 62.6,19.0 70.1,6.6 77.5,3.0 85.0,8.1"></polyline></svg></td><td><div class="rule-widget neutral signal-only"><div class="rule-topline"></div><div aria-label="规则分 0" class="rule-track"><span class="rule-seg"></span><span class="rule-seg active neutral"></span><span class="rule-seg"></span></div></div></td><td>2026-05-31<small>发布日历估算；官方发布时间重建</small></td><td><span class="tag primary">主指标</span></td></tr></tbody></table></div><p class="inline-note">外需链条：3/3 个模型组件可用；模块分 = (1 +1 +0) / 3 = 0.67。外需偏强解释增长压力的部分对冲，不自动改写主状态。</p></section>
+<section class="layer-heading"><h2>四、数据与规则附录</h2><p>附录保留 26 个指标阈值、较上月变化明细、数据覆盖和 release/visible time 口径，便于审计但不打断主阅读路径。</p></section><details class="judgement-chain-details"><summary>本月判定链与模型计算链路</summary><section class="judgement-chain">
+<h2>本月判定链</h2>
+<div class="chain-grid">
+<div class="chain-card"><strong>1. 原始值</strong><p>25 个底层 Wind/source code 转成 26 个 CN_* 主评分指标；派生项如 M1-M2、出口 3 月均值、10Y-1Y 利差按既定公式生成。</p></div>
+<div class="chain-card"><strong>2. 规则分</strong><p>每个指标先按固定阈值转成 -1 / 0 / +1；不是 z-score、不是回归权重、不是机器学习分数。</p></div>
+<div class="chain-card"><strong>3. 模块分</strong><p>增长、通胀、信用、外需、地产压力在组内等权平均；政策先算货币和财政两个子块，再等权合成。</p></div>
+<div class="chain-card"><strong>4. 状态标签</strong><p>主状态由增长和通胀闭合；信用、政策、地产、外需主要解释传导和辅助标签。</p></div>
+</div>
+<p class="chain-result">2026-05：增长 -0.60（偏弱） + 通胀 0.25（弱/温和） =&gt; 主状态“放缓”；地产压力 0.60 =&gt; 辅助标签“地产压力急性”。外需偏强只解释对冲，不改变主状态闭合。</p>
+</section></details><details><summary>主状态语义与判断规则</summary><div class="table-wrap"><table><thead><tr><th>展示名</th><th>内部标签</th><th>判断规则</th><th>语义</th></tr></thead><tbody><tr><td>放缓</td><td>cn_v0.deflation_recession</td><td>增长分 &lt;= -0.3，且通胀分 &lt; 0.5</td><td>增长偏弱，通胀或价格压力不是主要约束；对应美国 slow_growth / 放缓语义。</td></tr><tr><td>滞胀</td><td>cn_v0.stagflation_pressure</td><td>增长分 &lt;= -0.3，且通胀分 &gt;= 0.5</td><td>增长偏弱，同时通胀或成本压力偏高。</td></tr><tr><td>温和</td><td>cn_v0.stable_expansion</td><td>增长分 &gt; -0.3，且通胀分 &lt; 0.5</td><td>增长不弱，通胀压力可控；对应美国 goldilocks / 温和语义。</td></tr><tr><td>过热</td><td>cn_v0.reflation_overheat</td><td>增长分 &gt; -0.3，且通胀分 &gt;= 0.5</td><td>增长不弱，同时通胀或成本压力偏高。</td></tr><tr><td>未运行</td><td>cn_v0.not_run</td><td>增长分或通胀分缺失</td><td>运行状态，不作为宏观主状态。</td></tr></tbody></table></div></details><details><summary>26 个指标阈值与规则分说明</summary><div class="appendix-rule-summary">
+<div class="appendix-rule-card"><strong>指标范围</strong><span>本附录 26 项均为主模型指标，全部进入 V0 主 score。</span></div>
+<div class="appendix-rule-card"><strong>展示变换</strong><span>原始值直读；不做 z-score、分位数或滚动标准化。</span></div>
+<div class="appendix-rule-card"><strong>信号生成</strong><span>每项按固定阈值转为 -1 / 0 / +1，方向由指标口径决定。</span></div>
+<div class="appendix-rule-card"><strong>状态合成</strong><span>信号进入模块均值；政策先做货币/财政 subblock。</span></div>
+<div class="appendix-rule-card"><strong>数据期规则</strong><span>月频为主；利率、国债利差按最新可见市场/事件日映射。</span></div>
+</div><table><thead><tr><th>模块</th><th>分组</th><th>指标</th><th>方向</th><th>阈值规则</th><th>解释</th></tr></thead><tbody><tr><td>增长</td><td>生产实现</td><td>工业增加值同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 6.5；0: 5.0 &lt; x &lt; 6.5；-1: x &lt;= 5.0</td><td>观察工业生产端动能，判断需求是否兑现为实体生产。</td></tr><tr><td>增长</td><td>消费需求</td><td>社会消费品零售总额同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 8.0；0: 3.0 &lt; x &lt; 8.0；-1: x &lt;= 3.0</td><td>观察社会消费需求强弱，是内需景气的直接读数。</td></tr><tr><td>增长</td><td>投资需求</td><td>固定资产投资累计同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 6.0；0: 3.0 &lt; x &lt; 6.0；-1: x &lt;= 3.0</td><td>观察投资需求强弱，反映基建、制造业和地产投资的综合拖拽。</td></tr><tr><td>增长</td><td>PMI 供需</td><td>制造业 PMI</td><td>数值越高，信号越强</td><td>+1: x &gt;= 50.5；0: 49.5 &lt; x &lt; 50.5；-1: x &lt;= 49.5</td><td>观察制造业综合景气是否站上荣枯线附近。</td></tr><tr><td>增长</td><td>PMI 供需</td><td>制造业 PMI 新订单</td><td>数值越高，信号越强</td><td>+1: x &gt;= 51.0；0: 49.5 &lt; x &lt; 51.0；-1: x &lt;= 49.5</td><td>观察制造业新订单，是需求侧前置信号。</td></tr><tr><td>通胀</td><td>通胀结果</td><td>CPI 同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 3.0；0: 0.5 &lt; x &lt; 3.0；-1: x &lt;= 0.5</td><td>观察居民消费价格压力，识别通缩或通胀约束。</td></tr><tr><td>通胀</td><td>通胀结果</td><td>PPI 同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 5.0；0: -2.0 &lt; x &lt; 5.0；-1: x &lt;= -2.0</td><td>观察工业品价格和上游利润环境，辅助判断价格传导。</td></tr><tr><td>通胀</td><td>PMI 价格链</td><td>PMI 主要原材料购进价格</td><td>数值越高，信号越强</td><td>+1: x &gt;= 55.0；0: 48.0 &lt; x &lt; 55.0；-1: x &lt;= 48.0</td><td>观察制造业原材料购进价格，识别成本端压力。</td></tr><tr><td>通胀</td><td>PMI 价格链</td><td>PMI 出厂价格</td><td>数值越高，信号越强</td><td>+1: x &gt;= 53.0；0: 48.0 &lt; x &lt; 53.0；-1: x &lt;= 48.0</td><td>观察制造业出厂价格，识别成本向下游传导程度。</td></tr><tr><td>信用</td><td>货币量</td><td>M1 同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 8.0；0: 3.0 &lt; x &lt; 8.0；-1: x &lt;= 3.0</td><td>观察活化货币增速，反映企业和居民交易动能。</td></tr><tr><td>信用</td><td>货币量</td><td>M2 同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 10.5；0: 8.5 &lt; x &lt; 10.5；-1: x &lt;= 8.5</td><td>观察广义货币环境，是总量流动性的基础指标。</td></tr><tr><td>信用</td><td>社融</td><td>社融存量同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 11.5；0: 9.5 &lt; x &lt; 11.5；-1: x &lt;= 9.5</td><td>观察实体融资扩张速度，判断宽信用是否形成。</td></tr><tr><td>信用</td><td>结构差</td><td>M1-M2 同比差</td><td>数值越高，信号越强</td><td>+1: x &gt;= 0.0；0: -4.0 &lt; x &lt; 0.0；-1: x &lt;= -4.0</td><td>观察货币结构活化程度，M1 弱于 M2 时通常代表信用传导不畅。</td></tr><tr><td>外需</td><td>出口</td><td>出口金额同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 10.0；0: -8.0 &lt; x &lt; 10.0；-1: x &lt;= -8.0</td><td>观察出口当月景气，对增长外需项直接贡献。</td></tr><tr><td>外需</td><td>出口</td><td>出口金额同比 3 个月均值</td><td>数值越高，信号越强</td><td>+1: x &gt;= 8.0；0: -5.0 &lt; x &lt; 8.0；-1: x &lt;= -5.0</td><td>平滑出口单月波动，观察外需趋势是否持续。</td></tr><tr><td>外需</td><td>PMI 外需</td><td>PMI 新出口订单</td><td>数值越高，信号越强</td><td>+1: x &gt;= 50.0；0: 47.0 &lt; x &lt; 50.0；-1: x &lt;= 47.0</td><td>观察制造业外需订单，是出口前瞻信号。</td></tr><tr><td>地产压力</td><td>销售</td><td>商品房销售面积累计同比</td><td>数值越低，地产压力越高</td><td>+1: x &lt;= -15.0；0: -15.0 &lt; x &lt; 0.0；-1: x &gt;= 0.0</td><td>观察地产销售量压力，销售面积走弱会影响后续投资和信用链条。</td></tr><tr><td>地产压力</td><td>销售</td><td>商品房销售额累计同比</td><td>数值越低，地产压力越高</td><td>+1: x &lt;= -15.0；0: -15.0 &lt; x &lt; 0.0；-1: x &gt;= 0.0</td><td>观察地产销售金额压力，同时反映量价组合。</td></tr><tr><td>地产压力</td><td>投资施工</td><td>房地产开发投资累计同比</td><td>数值越低，地产压力越高</td><td>+1: x &lt;= -10.0；0: -10.0 &lt; x &lt; 0.0；-1: x &gt;= 0.0</td><td>观察地产投资拖累，是地产对增长的核心硬数据。</td></tr><tr><td>地产压力</td><td>投资施工</td><td>房屋新开工面积累计同比</td><td>数值越低，地产压力越高</td><td>+1: x &lt;= -20.0；0: -20.0 &lt; x &lt; 0.0；-1: x &gt;= 0.0</td><td>观察新开工压力，是房企拿地、融资和施工预期的领先信号。</td></tr><tr><td>地产压力</td><td>价格</td><td>70 城新房价格同比</td><td>数值越低，地产压力越高</td><td>+1: x &lt;= -3.0；0: -3.0 &lt; x &lt; 0.0；-1: x &gt;= 0.0</td><td>观察房价压力，价格下行会通过财富效应和资产负债表传导。</td></tr><tr><td>政策</td><td>货币利率</td><td>7 天逆回购利率</td><td>数值越低，政策越宽松</td><td>+1: x &lt;= 1.8；0: 1.8 &lt; x &lt; 2.55；-1: x &gt;= 2.55</td><td>观察短端政策利率，利率越低表示货币支持越强。</td></tr><tr><td>政策</td><td>货币利率</td><td>1 年期 LPR</td><td>数值越低，政策越宽松</td><td>+1: x &lt;= 3.55；0: 3.55 &lt; x &lt; 4.3；-1: x &gt;= 4.3</td><td>观察贷款基准利率，反映实体融资成本边际变化。</td></tr><tr><td>政策</td><td>曲线</td><td>10 年-1 年国债利差</td><td>数值越高，信号越强</td><td>+1: x &gt;= 0.8；0: 0.2 &lt; x &lt; 0.8；-1: x &lt;= 0.2</td><td>观察期限利差和曲线形态，利差过窄说明增长/政策预期压力仍在。</td></tr><tr><td>政策</td><td>财政</td><td>一般公共预算支出累计同比</td><td>数值越高，信号越强</td><td>+1: x &gt;= 10.0；0: 3.5 &lt; x &lt; 10.0；-1: x &lt;= 3.5</td><td>观察财政支出力度，是积极财政是否落地的直接指标。</td></tr><tr><td>政策</td><td>财政</td><td>预算支出-收入累计同比差</td><td>数值越高，信号越强</td><td>+1: x &gt;= 5.0；0: 0.0 &lt; x &lt; 5.0；-1: x &lt;= 0.0</td><td>观察支出相对收入的扩张程度，反映财政主动发力。</td></tr></tbody></table></details><details><summary>较上月变化明细</summary><table><thead><tr><th>维度</th><th>分组</th><th>指标</th><th>最新值变化</th><th>规则分变化</th></tr></thead><tbody><tr><td>增长</td><td>生产实现</td><td>工业增加值同比</td><td>4.5 % 前月 4.1 % · ↑ +0.40</td><td>-1 较上月 → +0.00</td></tr><tr><td>增长</td><td>消费需求</td><td>社会消费品零售总额同比</td><td>-0.6 % 前月 0.2 % · ↓ -0.80</td><td>-1 较上月 → +0.00</td></tr><tr><td>增长</td><td>投资需求</td><td>固定资产投资累计同比</td><td>-4.1 % 前月 -1.6 % · ↓ -2.50</td><td>-1 较上月 → +0.00</td></tr><tr><td>增长</td><td>PMI 供需</td><td>制造业 PMI</td><td>50.0 点 前月 50.3 点 · ↓ -0.30</td><td>0 较上月 → +0.00</td></tr><tr><td>增长</td><td>PMI 供需</td><td>制造业 PMI 新订单</td><td>49.9 点 前月 50.6 点 · ↓ -0.70</td><td>0 较上月 → +0.00</td></tr><tr><td>通胀</td><td>通胀结果</td><td>CPI 同比</td><td>1.2 % 前月 1.2 % · → +0.00</td><td>0 较上月 → +0.00</td></tr><tr><td>通胀</td><td>通胀结果</td><td>PPI 同比</td><td>3.9 % 前月 2.8 % · ↑ +1.10</td><td>0 较上月 → +0.00</td></tr><tr><td>通胀</td><td>PMI 价格链</td><td>PMI 主要原材料购进价格</td><td>60.5 点 前月 63.7 点 · ↓ -3.20</td><td>1 较上月 → +0.00</td></tr><tr><td>通胀</td><td>PMI 价格链</td><td>PMI 出厂价格</td><td>51.9 点 前月 55.1 点 · ↓ -3.20</td><td>0 较上月 ↓ -1.00</td></tr><tr><td>信用</td><td>货币量</td><td>M1 同比</td><td>5.5 % 前月 5 % · ↑ +0.50</td><td>0 较上月 → +0.00</td></tr><tr><td>信用</td><td>货币量</td><td>M2 同比</td><td>8.6 % 前月 8.6 % · → +0.00</td><td>0 较上月 → +0.00</td></tr><tr><td>信用</td><td>社融</td><td>社融存量同比</td><td>7.7 % 前月 7.8 % · ↓ -0.10</td><td>-1 较上月 → +0.00</td></tr><tr><td>信用</td><td>结构差</td><td>M1-M2 同比差</td><td>-3.1 百分点 前月 -3.6 百分点 · ↑ +0.50</td><td>0 较上月 → +0.00</td></tr><tr><td>外需</td><td>出口</td><td>出口金额同比</td><td>19.4 % 前月 14.0 % · ↑ +5.40</td><td>1 较上月 → +0.00</td></tr><tr><td>外需</td><td>出口</td><td>出口金额同比 3 个月均值</td><td>12.0 % 前月 18.7 % · ↓ -6.73</td><td>1 较上月 → +0.00</td></tr><tr><td>外需</td><td>PMI 外需</td><td>PMI 新出口订单</td><td>48.6 点 前月 50.3 点 · ↓ -1.70</td><td>0 较上月 ↓ -1.00</td></tr><tr><td>地产压力</td><td>销售</td><td>商品房销售面积累计同比</td><td>-11.3 % 前月 -10.6 % · ↓ -0.68</td><td>0 较上月 → +0.00</td></tr><tr><td>地产压力</td><td>销售</td><td>商品房销售额累计同比</td><td>-13.9 % 前月 -14.9 % · ↑ +1.06</td><td>0 较上月 → +0.00</td></tr><tr><td>地产压力</td><td>投资施工</td><td>房地产开发投资累计同比</td><td>-16.2 % 前月 -13.6 % · ↓ -2.66</td><td>1 较上月 → +0.00</td></tr><tr><td>地产压力</td><td>投资施工</td><td>房屋新开工面积累计同比</td><td>-22.6 % 前月 -22.0 % · ↓ -0.60</td><td>1 较上月 → +0.00</td></tr><tr><td>地产压力</td><td>价格</td><td>70 城新房价格同比</td><td>-3.6 % 前月 -3.7 % · ↑ +0.10</td><td>1 较上月 → +0.00</td></tr><tr><td>政策</td><td>货币利率</td><td>7 天逆回购利率</td><td>1.4 % 前月 1.4 % · → +0.00</td><td>1 较上月 → +0.00</td></tr><tr><td>政策</td><td>货币利率</td><td>1 年期 LPR</td><td>3 % 前月 3 % · → +0.00</td><td>1 较上月 → +0.00</td></tr><tr><td>政策</td><td>曲线</td><td>10 年-1 年国债利差</td><td>0.55 百分点 前月 0.59 百分点 · ↓ -0.03</td><td>0 较上月 → +0.00</td></tr><tr><td>政策</td><td>财政</td><td>一般公共预算支出累计同比</td><td>0.8 % 前月 1.3 % · ↓ -0.50</td><td>-1 较上月 → +0.00</td></tr><tr><td>政策</td><td>财政</td><td>预算支出-收入累计同比差</td><td>-3.2 百分点 前月 -2.2 百分点 · ↓ -1.00</td><td>-1 较上月 → +0.00</td></tr></tbody></table></details><details><summary>数据覆盖、候选池与可见时间口径</summary><table><thead><tr><th>层级</th><th>范围</th><th>处理</th></tr></thead><tbody><tr><td>Wind 指标池</td><td>251 个中国 Wind 指标池</td><td>用于解释层、辅助驱动和后续筛选；稳定前不自动影响主状态。</td></tr><tr><td>消费/解释层读取检查</td><td>130 个进入当前 V0 消费/解释层读取检查</td><td>用于解释层、辅助驱动和后续筛选；稳定前不自动影响主状态。</td></tr><tr><td>V0 主状态分类</td><td>4 个可运行主状态 + 1 个未运行状态</td><td>主状态由增长弱/不弱 × 通胀强/不强闭合；not_run 只表示核心输入缺失，不作为宏观状态。展示名与美国四象限保持一致；内部 label id 不改。</td></tr><tr><td>当前 V0 主模型</td><td>26 个冻结 score feature</td><td>本页逐项展示 26 个主模型指标及 -1/0/+1 规则信号。</td></tr><tr><td>可见时间口径</td><td>官方/事件发布时间 + 市场观察日 + 规则估算 release_date</td><td>用于 current-vintage 类 PIT 可见性模拟；不声明为 true vintage。</td></tr></tbody></table></details>
+<footer>来源：cn_v0_source_tcode_model_output_20260630.csv + cn_v0_26模型指标中文索引_20260630.csv + v0规则阈值。数值来自 Wind current-vintage/snapshot；可见日来自官方/事件发布时间、市场观察日和规则估算 release_date overlay。本页按美国 generated explain HTML 模式生成，仅展示中国 V0 冻结主模型与解释层口径。</footer>
+</div>
+</body>
+</html>
