@@ -158,7 +158,7 @@
       "label": "偏弱",
       "delta_text": "较上期持平",
       "delta_direction": "flat",
-      "driver_note": "增长链条读法：工业增加值同比、社零当月同比、固定资产投资累计同比偏弱，制造业 PMI、制造业 PMI 新订单仍在中性区间；说明实体活动和需求订单尚未形成同步修复，增长输入对主状态构成拖累。",
+      "driver_note": "增长链条读法：生产、消费、投资三条实体链条偏弱，但 PMI 供需仍在中性区间；说明硬数据已经拖累增长，景气调查尚未进一步恶化。",
       "status_class": "low",
       "trend": [
         -0.2,
@@ -178,7 +178,7 @@
       "rows": [
         {
           "module": "growth",
-          "group": "实体增长",
+          "group": "生产实现",
           "indicator": "工业增加值同比",
           "code": "CN_GROWTH_INDUSTRIAL_YOY",
           "latest": "4.5",
@@ -210,7 +210,7 @@
         },
         {
           "module": "growth",
-          "group": "实体增长",
+          "group": "消费需求",
           "indicator": "社零当月同比",
           "code": "CN_GROWTH_RETAIL_YOY",
           "latest": "-0.6",
@@ -242,7 +242,7 @@
         },
         {
           "module": "growth",
-          "group": "实体增长",
+          "group": "投资需求",
           "indicator": "固定资产投资累计同比",
           "code": "CN_GROWTH_FAI_YOY",
           "latest": "-4.1",
@@ -274,7 +274,7 @@
         },
         {
           "module": "growth",
-          "group": "实体增长",
+          "group": "PMI 供需",
           "indicator": "制造业 PMI",
           "code": "CN_GROWTH_MFG_PMI",
           "latest": "50",
@@ -306,7 +306,7 @@
         },
         {
           "module": "growth",
-          "group": "订单景气",
+          "group": "PMI 供需",
           "indicator": "制造业 PMI 新订单",
           "code": "CN_GROWTH_NEW_ORDERS",
           "latest": "49.9",
@@ -347,7 +347,7 @@
       "label": "中性",
       "delta_text": "较上期 -0.25",
       "delta_direction": "down",
-      "driver_note": "价格链条读法：CPI 当月同比、PPI 当月同比、PMI 出厂价格仍在中性区间，但成本端（PMI 原材料购进价格）偏强；说明价格压力更多来自上游成本，不是全面终端通胀。",
+      "driver_note": "价格链条读法：上游成本偏强，但终端价格、工业品价格、出厂价格未同步偏强；说明压力更多停留在成本端，不是全面通胀。",
       "status_class": "high",
       "trend": [
         -0.75,
@@ -367,7 +367,7 @@
       "rows": [
         {
           "module": "inflation",
-          "group": "价格结果",
+          "group": "终端价格",
           "indicator": "CPI 当月同比",
           "code": "CN_INFLATION_CPI_YOY",
           "latest": "1.2",
@@ -399,7 +399,7 @@
         },
         {
           "module": "inflation",
-          "group": "价格结果",
+          "group": "工业品价格",
           "indicator": "PPI 当月同比",
           "code": "CN_INFLATION_PPI_YOY",
           "latest": "3.9",
@@ -431,7 +431,7 @@
         },
         {
           "module": "inflation",
-          "group": "成本压力",
+          "group": "上游成本",
           "indicator": "PMI 原材料购进价格",
           "code": "CN_INFLATION_PMI_INPUT_PRICE",
           "latest": "60.5",
@@ -463,7 +463,7 @@
         },
         {
           "module": "inflation",
-          "group": "成本压力",
+          "group": "出厂价格",
           "indicator": "PMI 出厂价格",
           "code": "CN_INFLATION_PMI_OUTPUT_PRICE",
           "latest": "51.9",
@@ -504,7 +504,7 @@
       "label": "中性",
       "delta_text": "较上期持平",
       "delta_direction": "flat",
-      "driver_note": "信用链条读法：M1 同比、M2 同比、M1-M2 剪刀差大多中性，但社融存量同比偏弱；说明流动性尚未稳定转化为实体信用扩张。",
+      "driver_note": "信用链条读法：货币量和结构差仍在中性区间，但社融偏弱；说明流动性尚未稳定转化为实体融资扩张。",
       "status_class": "low",
       "trend": [
         -0.5,
@@ -524,7 +524,7 @@
       "rows": [
         {
           "module": "credit",
-          "group": "信用总量",
+          "group": "货币量",
           "indicator": "M1 同比",
           "code": "CN_CREDIT_M1_YOY",
           "latest": "5.5",
@@ -556,7 +556,7 @@
         },
         {
           "module": "credit",
-          "group": "信用总量",
+          "group": "货币量",
           "indicator": "M2 同比",
           "code": "CN_CREDIT_M2_YOY",
           "latest": "8.6",
@@ -588,7 +588,7 @@
         },
         {
           "module": "credit",
-          "group": "信用总量",
+          "group": "社融",
           "indicator": "社融存量同比",
           "code": "CN_CREDIT_TSF_STOCK_YOY",
           "latest": "7.7",
@@ -620,7 +620,7 @@
         },
         {
           "module": "credit",
-          "group": "信用结构",
+          "group": "结构差",
           "indicator": "M1-M2 剪刀差",
           "code": "CN_CREDIT_M1_M2_SPREAD",
           "latest": "-3.1",
@@ -661,7 +661,7 @@
       "label": "中性",
       "delta_text": "较上期持平",
       "delta_direction": "flat",
-      "driver_note": "政策链条读法：货币端（7 天逆回购利率、1 年 LPR）偏支持，但财政端（一般公共预算支出累计同比、财政支出-收入同比差）偏弱；政策托底不完整，只作为传导解释，不改写主状态。",
+      "driver_note": "政策链条读法：政策意图偏支持，财政落地偏弱，预期确认仍在中性区间；说明货币价格信号已经偏松，但财政和市场预期没有形成完整托底。",
       "status_class": "low",
       "trend": [
         0.3333,
@@ -681,7 +681,7 @@
       "rows": [
         {
           "module": "policy_mix",
-          "group": "货币条件",
+          "group": "政策意图",
           "indicator": "7 天逆回购利率",
           "code": "CN_POLICY_OMO_7D",
           "latest": "1.4",
@@ -713,7 +713,7 @@
         },
         {
           "module": "policy_mix",
-          "group": "货币条件",
+          "group": "政策意图",
           "indicator": "1 年 LPR",
           "code": "CN_POLICY_LPR_1Y",
           "latest": "3",
@@ -745,7 +745,7 @@
         },
         {
           "module": "policy_mix",
-          "group": "货币条件",
+          "group": "预期确认",
           "indicator": "10Y-1Y 国债期限利差",
           "code": "CN_POLICY_10Y_1Y_SPREAD",
           "latest": "0.55",
@@ -777,7 +777,7 @@
         },
         {
           "module": "policy_mix",
-          "group": "财政条件",
+          "group": "财政落地",
           "indicator": "一般公共预算支出累计同比",
           "code": "CN_POLICY_BUDGET_EXP_YOY",
           "latest": "0.8",
@@ -809,7 +809,7 @@
         },
         {
           "module": "policy_mix",
-          "group": "财政条件",
+          "group": "财政落地",
           "indicator": "财政支出-收入同比差",
           "code": "CN_POLICY_BUDGET_EXP_INCOME_SPREAD",
           "latest": "-3.2",
@@ -850,7 +850,7 @@
       "label": "偏强",
       "delta_text": "较上期 -0.33",
       "delta_direction": "down",
-      "driver_note": "外需链条读法：出口金额当月同比、出口同比 3 个月均值偏强，但订单端（PMI 新出口订单）尚未同步强化；外需对增长形成对冲，但不改写增长/通胀闭合。",
+      "driver_note": "外需链条读法：出口偏强，但 PMI 外需仍在中性区间；说明已实现出口对增长形成对冲，订单调查尚未同步强化。",
       "status_class": "high",
       "trend": [
         0.0,
@@ -870,7 +870,7 @@
       "rows": [
         {
           "module": "external",
-          "group": "出口增长",
+          "group": "出口",
           "indicator": "出口金额当月同比",
           "code": "CN_EXTERNAL_EXPORT_YOY",
           "latest": "19.4",
@@ -902,7 +902,7 @@
         },
         {
           "module": "external",
-          "group": "出口增长",
+          "group": "出口",
           "indicator": "出口同比 3 个月均值",
           "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
           "latest": "11.97",
@@ -934,7 +934,7 @@
         },
         {
           "module": "external",
-          "group": "外需订单",
+          "group": "PMI 外需",
           "indicator": "PMI 新出口订单",
           "code": "CN_EXTERNAL_PMI_EXPORT_ORDERS",
           "latest": "48.6",
@@ -975,7 +975,7 @@
       "label": "压力高",
       "delta_text": "较上期持平",
       "delta_direction": "flat",
-      "driver_note": "地产链条读法：房地产开发投资累计同比、房屋新开工面积累计同比、70 城新房价格同比压力较高，商品房销售面积累计同比、商品房销售额累计同比仍处中性压力；地产压力主要通过投资施工、价格或销售链条拖累增长和信用。",
+      "driver_note": "地产链条读法：投资施工、新开工、价格压力偏高，销售仍在中性区间；说明压力主要落在投资施工、开工或价格链条，而不是销售端进一步恶化。",
       "status_class": "high",
       "trend": [
         0.6,
@@ -995,7 +995,7 @@
       "rows": [
         {
           "module": "housing_stress",
-          "group": "销售压力",
+          "group": "销售",
           "indicator": "商品房销售面积累计同比",
           "code": "CN_HOUSING_SALES_AREA_YTD_YOY",
           "latest": "-11.31",
@@ -1027,7 +1027,7 @@
         },
         {
           "module": "housing_stress",
-          "group": "销售压力",
+          "group": "销售",
           "indicator": "商品房销售额累计同比",
           "code": "CN_HOUSING_SALES_VALUE_YTD_YOY",
           "latest": "-13.86",
@@ -1059,7 +1059,7 @@
         },
         {
           "module": "housing_stress",
-          "group": "投资压力",
+          "group": "投资施工",
           "indicator": "房地产开发投资累计同比",
           "code": "CN_HOUSING_INVESTMENT_YTD_YOY",
           "latest": "-16.22",
@@ -1091,7 +1091,7 @@
         },
         {
           "module": "housing_stress",
-          "group": "开工压力",
+          "group": "新开工",
           "indicator": "房屋新开工面积累计同比",
           "code": "CN_HOUSING_NEW_START_YTD_YOY",
           "latest": "-22.6",
@@ -1123,7 +1123,7 @@
         },
         {
           "module": "housing_stress",
-          "group": "价格压力",
+          "group": "价格",
           "indicator": "70 城新房价格同比",
           "code": "CN_HOUSING_NEW_HOME_PRICE_YOY",
           "latest": "-3.6",
@@ -1214,7 +1214,7 @@
       "rows": [
         {
           "模块": "增长动能",
-          "分组": "实体增长",
+          "分组": "生产实现",
           "指标": "工业增加值同比",
           "代码": "CN_GROWTH_INDUSTRIAL_YOY",
           "角色": "核心",
@@ -1224,7 +1224,7 @@
         },
         {
           "模块": "增长动能",
-          "分组": "实体增长",
+          "分组": "消费需求",
           "指标": "社零当月同比",
           "代码": "CN_GROWTH_RETAIL_YOY",
           "角色": "核心",
@@ -1234,7 +1234,7 @@
         },
         {
           "模块": "增长动能",
-          "分组": "实体增长",
+          "分组": "投资需求",
           "指标": "固定资产投资累计同比",
           "代码": "CN_GROWTH_FAI_YOY",
           "角色": "核心",
@@ -1244,7 +1244,7 @@
         },
         {
           "模块": "增长动能",
-          "分组": "实体增长",
+          "分组": "PMI 供需",
           "指标": "制造业 PMI",
           "代码": "CN_GROWTH_MFG_PMI",
           "角色": "核心",
@@ -1254,7 +1254,7 @@
         },
         {
           "模块": "增长动能",
-          "分组": "订单景气",
+          "分组": "PMI 供需",
           "指标": "制造业 PMI 新订单",
           "代码": "CN_GROWTH_NEW_ORDERS",
           "角色": "辅助",
@@ -1264,7 +1264,7 @@
         },
         {
           "模块": "通胀压力",
-          "分组": "价格结果",
+          "分组": "终端价格",
           "指标": "CPI 当月同比",
           "代码": "CN_INFLATION_CPI_YOY",
           "角色": "核心",
@@ -1274,7 +1274,7 @@
         },
         {
           "模块": "通胀压力",
-          "分组": "价格结果",
+          "分组": "工业品价格",
           "指标": "PPI 当月同比",
           "代码": "CN_INFLATION_PPI_YOY",
           "角色": "核心",
@@ -1284,7 +1284,7 @@
         },
         {
           "模块": "通胀压力",
-          "分组": "成本压力",
+          "分组": "上游成本",
           "指标": "PMI 原材料购进价格",
           "代码": "CN_INFLATION_PMI_INPUT_PRICE",
           "角色": "成本压力",
@@ -1294,7 +1294,7 @@
         },
         {
           "模块": "通胀压力",
-          "分组": "成本压力",
+          "分组": "出厂价格",
           "指标": "PMI 出厂价格",
           "代码": "CN_INFLATION_PMI_OUTPUT_PRICE",
           "角色": "成本压力",
@@ -1304,7 +1304,7 @@
         },
         {
           "模块": "信用条件",
-          "分组": "信用总量",
+          "分组": "货币量",
           "指标": "M1 同比",
           "代码": "CN_CREDIT_M1_YOY",
           "角色": "核心",
@@ -1314,7 +1314,7 @@
         },
         {
           "模块": "信用条件",
-          "分组": "信用总量",
+          "分组": "货币量",
           "指标": "M2 同比",
           "代码": "CN_CREDIT_M2_YOY",
           "角色": "核心",
@@ -1324,7 +1324,7 @@
         },
         {
           "模块": "信用条件",
-          "分组": "信用总量",
+          "分组": "社融",
           "指标": "社融存量同比",
           "代码": "CN_CREDIT_TSF_STOCK_YOY",
           "角色": "核心",
@@ -1334,7 +1334,7 @@
         },
         {
           "模块": "信用条件",
-          "分组": "信用结构",
+          "分组": "结构差",
           "指标": "M1-M2 剪刀差",
           "代码": "CN_CREDIT_M1_M2_SPREAD",
           "角色": "辅助",
@@ -1344,7 +1344,7 @@
         },
         {
           "模块": "政策组合",
-          "分组": "货币条件",
+          "分组": "政策意图",
           "指标": "7 天逆回购利率",
           "代码": "CN_POLICY_OMO_7D",
           "角色": "货币",
@@ -1354,7 +1354,7 @@
         },
         {
           "模块": "政策组合",
-          "分组": "货币条件",
+          "分组": "政策意图",
           "指标": "1 年 LPR",
           "代码": "CN_POLICY_LPR_1Y",
           "角色": "货币",
@@ -1364,7 +1364,7 @@
         },
         {
           "模块": "政策组合",
-          "分组": "货币条件",
+          "分组": "预期确认",
           "指标": "10Y-1Y 国债期限利差",
           "代码": "CN_POLICY_10Y_1Y_SPREAD",
           "角色": "货币",
@@ -1374,7 +1374,7 @@
         },
         {
           "模块": "政策组合",
-          "分组": "财政条件",
+          "分组": "财政落地",
           "指标": "一般公共预算支出累计同比",
           "代码": "CN_POLICY_BUDGET_EXP_YOY",
           "角色": "财政",
@@ -1384,7 +1384,7 @@
         },
         {
           "模块": "政策组合",
-          "分组": "财政条件",
+          "分组": "财政落地",
           "指标": "财政支出-收入同比差",
           "代码": "CN_POLICY_BUDGET_EXP_INCOME_SPREAD",
           "角色": "财政",
@@ -1394,7 +1394,7 @@
         },
         {
           "模块": "外需环境",
-          "分组": "出口增长",
+          "分组": "出口",
           "指标": "出口金额当月同比",
           "代码": "CN_EXTERNAL_EXPORT_YOY",
           "角色": "核心",
@@ -1404,7 +1404,7 @@
         },
         {
           "模块": "外需环境",
-          "分组": "出口增长",
+          "分组": "出口",
           "指标": "出口同比 3 个月均值",
           "代码": "CN_EXTERNAL_EXPORT_YOY_MA3",
           "角色": "核心",
@@ -1414,7 +1414,7 @@
         },
         {
           "模块": "外需环境",
-          "分组": "外需订单",
+          "分组": "PMI 外需",
           "指标": "PMI 新出口订单",
           "代码": "CN_EXTERNAL_PMI_EXPORT_ORDERS",
           "角色": "辅助",
@@ -1424,7 +1424,7 @@
         },
         {
           "模块": "地产压力",
-          "分组": "销售压力",
+          "分组": "销售",
           "指标": "商品房销售面积累计同比",
           "代码": "CN_HOUSING_SALES_AREA_YTD_YOY",
           "角色": "核心",
@@ -1434,7 +1434,7 @@
         },
         {
           "模块": "地产压力",
-          "分组": "销售压力",
+          "分组": "销售",
           "指标": "商品房销售额累计同比",
           "代码": "CN_HOUSING_SALES_VALUE_YTD_YOY",
           "角色": "核心",
@@ -1444,7 +1444,7 @@
         },
         {
           "模块": "地产压力",
-          "分组": "投资压力",
+          "分组": "投资施工",
           "指标": "房地产开发投资累计同比",
           "代码": "CN_HOUSING_INVESTMENT_YTD_YOY",
           "角色": "核心",
@@ -1454,7 +1454,7 @@
         },
         {
           "模块": "地产压力",
-          "分组": "开工压力",
+          "分组": "新开工",
           "指标": "房屋新开工面积累计同比",
           "代码": "CN_HOUSING_NEW_START_YTD_YOY",
           "角色": "辅助",
@@ -1464,7 +1464,7 @@
         },
         {
           "模块": "地产压力",
-          "分组": "价格压力",
+          "分组": "价格",
           "指标": "70 城新房价格同比",
           "代码": "CN_HOUSING_NEW_HOME_PRICE_YOY",
           "角色": "辅助",
