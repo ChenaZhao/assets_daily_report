@@ -15,9 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate asset/index.html
+      - name: Generate and commit asset/index.html
         run: |
-          python3 - <<'EOF'
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
+          # 防竞态: 索引内容是目录清单的纯派生结果, 每次重试都从最新 origin/main
+          # 重新生成再提交, 不做文本级合并(rebase/stash), 从根源上排除冲突标记误提交的可能
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+
+            python3 - <<'EOF'
           import os, re
 
           def list_files(subdir):
@@ -48,12 +56,18 @@ jobs:
           print(f"macro={len(macro)}, futures={len(futures)}, equity={len(equity)}")
           EOF
 
-      - name: Commit
-        run: |
-          git config user.email "actions@github.com"
-          git config user.name "GitHub Actions"
-          # 防竞态: 报告推送方可能已同步重建索引并抢先push, 先rebase到最新(autostash保住本次生成结果)
-          git pull --rebase --autostash origin main
-          git add asset/index.html
-          git diff --cached --quiet || git commit -m "auto: update asset index [skip ci]"
-          git push
+            git add asset/index.html
+            if git diff --cached --quiet; then
+              echo "no changes to index"
+              exit 0
+            fi
+            git commit -m "auto: update asset index [skip ci]"
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected, retrying (attempt $attempt)..."
+            sleep $((attempt * 3))
+          done
+          echo "::error::failed to push asset/index.html after retries"
+          exit 1
