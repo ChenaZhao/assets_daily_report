@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-12 10:02 北京时间",
+  "run_time": "2026-07-13 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "87dcabf17db3678bb3707c7f8fd6ab41c8f57cbee6f2d54a9629a7ac2ab5bcb1",
-    "model_update": "c53bfe58212f648190a5f05fe611976b7f11a6847a000bee318fb2171a0628b0"
+    "explain": "200add2a5f1fffba2ef0ffb508eaf093c7d92ac8e3f8490b318d16fb435debad",
+    "model_update": "407bee7e60599f29fc76363b8688083eaf706f7c99e581be9c4c3ca07036bca1"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-05",
-    "data_cutoff_time": "2026-07-12",
+    "data_cutoff_time": "2026-07-13",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -2045,7 +2045,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-12",
+        "data_cutoff_time": "2026-07-13",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -3993,7 +3993,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-12",
+        "data_cutoff_time": "2026-07-13",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -5970,7 +5970,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-12",
+        "data_cutoff_time": "2026-07-13",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -7983,11 +7983,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-12T02:02:57.574269+00:00",
+    "generated_at": "2026-07-13T02:02:25.395348+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-12",
-      "run_count": 103
+      "end": "2026-07-13",
+      "run_count": 104
     },
     "target_months": [
       {
