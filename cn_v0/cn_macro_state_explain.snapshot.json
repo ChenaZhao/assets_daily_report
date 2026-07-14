@@ -2,7 +2,7 @@
   "title": "中国宏观场景状态",
   "subtitle": "",
   "observation_month": "2026-05",
-  "data_cutoff_time": "2026-07-08",
+  "data_cutoff_time": "2026-07-13",
   "primary_label": "cn_v0.deflation_recession",
   "secondary_labels": "cn_v0.housing_stress_acute",
   "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
