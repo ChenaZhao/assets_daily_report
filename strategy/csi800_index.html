@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTA策略-中证800指数量价择时</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f0f2f5; min-height: 100vh; padding: 26px 14px 60px; }
+  .container { max-width: 560px; margin: 0 auto; }
+  .nav { font-size: 13px; color: #aaa; margin-bottom: 16px; }
+  .nav a { color: #aaa; text-decoration: none; } .nav a:hover { color: #666; }
+  h1 { font-size: 21px; color: #1a1a1a; margin-bottom: 4px; }
+  .meta { color: #999; font-size: 12.5px; margin-bottom: 20px; }
+  .stack { display: flex; flex-direction: column; gap: 14px; }
+  .mod { position: relative; display: flex; align-items: center; gap: 15px; padding: 18px 16px 18px 20px;
+         background: #fff; border: 1px solid #eee; border-radius: 14px; text-decoration: none; color: inherit;
+         box-shadow: 0 1px 4px rgba(0,0,0,0.06); overflow: hidden; transition: transform .16s, box-shadow .16s; }
+  .mod::before { content: ''; position: absolute; left: 0; top: 12px; bottom: 12px; width: 3px; border-radius: 0 3px 3px 0; background: #1a8a2a; }
+  .mod:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,138,42,0.14); }
+  .mod-icon { width: 50px; height: 50px; border-radius: 12px; background: #edf8ee; display: flex; align-items: center; justify-content: center; font-size: 23px; flex-shrink: 0; }
+  .mod-body { flex: 1; min-width: 0; }
+  .mod-tag { display: inline-block; font-size: 10.5px; font-weight: 600; letter-spacing: .04em; color: #1a8a2a; background: #edf8ee; padding: 2px 8px; border-radius: 10px; margin-bottom: 6px; }
+  .mod-title { font-size: 16px; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+  .mod-desc { font-size: 12px; color: #888; line-height: 1.6; }
+  .mod-arrow { color: #ccc; font-size: 18px; flex-shrink: 0; }
+  .mod:hover .mod-arrow { color: #1a8a2a; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="nav"><a href="index.html">&#8592; 返回策略层</a></div>
+  <h1>CTA策略-中证800指数量价择时</h1>
+  <p class="meta">基于波动率与价格趋势的中证800指数择时策略</p>
+  <div class="stack">
+    <a class="mod" href="csi800_volatility_timing.html">
+      <div class="mod-icon">&#128310;</div>
+      <div class="mod-body">
+        <div class="mod-tag">量价择时</div>
+        <div class="mod-title">均线 + 波动率择时策略</div>
+        <div class="mod-desc">波动率收缩 + MA20趋势确认 · 空仓DR007计息 · 2005-2025回测 · 123笔交易 · 胜率64.2%</div>
+      </div>
+      <span class="mod-arrow">&rsaquo;</span>
+    </a>
+  </div>
+</div>
+</body>
+</html>
