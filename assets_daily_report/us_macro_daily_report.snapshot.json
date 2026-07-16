@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-15 15:52 北京时间",
+  "run_time": "2026-07-16 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "34c5048d6acfc0ce6cc2c116cb0c791859c29de90cf427c1f55a8beadeb4fc35",
-    "model_update": "7c8363d1ffdb2fef31cea8996dd7a111ab7b5ec4cbe71fa24d4a967d61b29dea"
+    "explain": "a5561434699addc566034142e48a9ebab3147a97f8bb917fd604af2368cffa0c",
+    "model_update": "4998062be22323a76a55e1e4a0df85540f4772184b2ef0ab5f734d1700a52f52"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-15",
+    "data_cutoff_time": "2026-07-16",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -65,8 +65,8 @@
       {
         "name": "通胀",
         "label": "压力偏高",
-        "score": "0.65",
-        "coverage": "3/5",
+        "score": "0.71",
+        "coverage": "4/5",
         "status_class": "high",
         "trend": [
           0.143,
@@ -78,8 +78,8 @@
           0.067,
           0.615,
           0.977,
-          1.211,
-          0.647
+          1.205,
+          0.706
         ]
       },
       {
@@ -557,13 +557,13 @@
       {
         "name": "通胀",
         "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-        "score": "0.65",
+        "score": "0.71",
         "label": "压力偏高",
-        "coverage": "3/5",
+        "coverage": "4/5",
         "status_class": "high",
-        "delta_text": "较上月 ↓ -0.56",
+        "delta_text": "较上月 ↓ -0.50",
         "delta_direction": "down",
-        "driver_note": "较上月：边际走弱；主要变化来自油价压力、5Y breakeven 通胀预期、核心 CPI 通胀率。",
+        "driver_note": "较上月：边际走弱；主要变化来自油价压力、PPI 成本压力、5Y breakeven 通胀预期。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -719,8 +719,8 @@
             "group": "成本压力",
             "indicator": "PPI 成本压力",
             "code": "WPSFD49207",
-            "latest": "283.45",
-            "latest_direction": "flat",
+            "latest": "278.81",
+            "latest_direction": "down",
             "trend": [
               262.934,
               265.093,
@@ -728,20 +728,21 @@
               266.434,
               266.271,
               264.837,
-              267.185,
-              271.809,
-              276.174,
-              283.447
+              267.162,
+              271.794,
+              276.183,
+              282.727,
+              278.809
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-11",
+            "score": "1.21",
+            "score_direction": "down",
+            "state": "压力高",
+            "visible_date": "2026-06-30 / 2026-07-15",
             "type": "主指标",
-            "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "283.45 前月 283.45 · → +0.00",
-            "score_change_detail": "NA",
+            "status_class": "high",
+            "missing": false,
+            "latest_change_detail": "278.81 前月 282.73 · ↓ -3.92",
+            "score_change_detail": "1.21 较上月 ↓ -0.55",
             "logic": "观察上游和中间投入成本是否向通胀传导。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_yoy",
@@ -1901,8 +1902,8 @@
             "维度": "通胀",
             "分组": "成本压力",
             "指标": "PPI 成本压力",
-            "最新值变化": "283.45 前月 283.45 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "278.81 前月 282.73 · ↓ -3.92",
+            "规则分变化": "1.21 较上月 ↓ -0.55"
           },
           {
             "维度": "通胀",
@@ -2087,12 +2088,6 @@
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
           {
-            "维度": "通胀",
-            "指标": "PPI 成本压力",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
             "维度": "地产",
             "指标": "新屋销售",
             "状态": "当月值暂缺",
@@ -2149,7 +2144,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-15",
+        "data_cutoff_time": "2026-07-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2207,8 +2202,8 @@
               0.067,
               0.615,
               0.977,
-              1.211,
-              0.647
+              1.205,
+              0.706
             ]
           },
           {
@@ -2820,7 +2815,7 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "271.81",
+                "latest": "271.79",
                 "latest_direction": "up",
                 "trend": [
                   262.934,
@@ -2829,17 +2824,17 @@
                   266.434,
                   266.271,
                   264.837,
-                  267.185,
-                  271.809
+                  267.162,
+                  271.794
                 ],
                 "score": "0.61",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-03-31 / 2026-06-11",
+                "visible_date": "2026-03-31 / 2026-07-15",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "271.81 前月 267.19 · ↑ +4.62",
+                "latest_change_detail": "271.79 前月 267.16 · ↑ +4.63",
                 "score_change_detail": "0.61 较上月 ↑ +0.82",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
@@ -3958,7 +3953,7 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "271.81 前月 267.19 · ↑ +4.62",
+                "最新值变化": "271.79 前月 267.16 · ↑ +4.63",
                 "规则分变化": "0.61 较上月 ↑ +0.82"
               },
               {
@@ -4098,7 +4093,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-15",
+        "data_cutoff_time": "2026-07-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4156,8 +4151,8 @@
               0.067,
               0.615,
               0.977,
-              1.211,
-              0.647
+              1.205,
+              0.706
             ]
           },
           {
@@ -4782,7 +4777,7 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "276.17",
+                "latest": "276.18",
                 "latest_direction": "up",
                 "trend": [
                   262.934,
@@ -4791,18 +4786,18 @@
                   266.434,
                   266.271,
                   264.837,
-                  267.185,
-                  271.809,
-                  276.174
+                  267.162,
+                  271.794,
+                  276.183
                 ],
                 "score": "1.16",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-04-30 / 2026-06-11",
+                "visible_date": "2026-04-30 / 2026-07-15",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "276.17 前月 271.81 · ↑ +4.36",
+                "latest_change_detail": "276.18 前月 271.79 · ↑ +4.39",
                 "score_change_detail": "1.16 较上月 ↑ +0.55",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
@@ -5936,7 +5931,7 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "276.17 前月 271.81 · ↑ +4.36",
+                "最新值变化": "276.18 前月 271.79 · ↑ +4.39",
                 "规则分变化": "1.16 较上月 ↑ +0.55"
               },
               {
@@ -6076,7 +6071,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-15",
+        "data_cutoff_time": "2026-07-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6134,8 +6129,8 @@
               0.067,
               0.615,
               0.977,
-              1.211,
-              0.647
+              1.205,
+              0.706
             ]
           },
           {
@@ -6772,7 +6767,7 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "283.45",
+                "latest": "282.73",
                 "latest_direction": "up",
                 "trend": [
                   262.934,
@@ -6781,20 +6776,20 @@
                   266.434,
                   266.271,
                   264.837,
-                  267.185,
-                  271.809,
-                  276.174,
-                  283.447
+                  267.162,
+                  271.794,
+                  276.183,
+                  282.727
                 ],
-                "score": "1.84",
+                "score": "1.76",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-05-31 / 2026-06-11",
+                "visible_date": "2026-05-31 / 2026-07-15",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "283.45 前月 276.17 · ↑ +7.27",
-                "score_change_detail": "1.84 较上月 ↑ +0.68",
+                "latest_change_detail": "282.73 前月 276.18 · ↑ +6.54",
+                "score_change_detail": "1.76 较上月 ↑ +0.60",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -7942,8 +7937,8 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "283.45 前月 276.17 · ↑ +7.27",
-                "规则分变化": "1.84 较上月 ↑ +0.68"
+                "最新值变化": "282.73 前月 276.18 · ↑ +6.54",
+                "规则分变化": "1.76 较上月 ↑ +0.60"
               },
               {
                 "维度": "通胀",
@@ -8088,7 +8083,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-15",
+        "data_cutoff_time": "2026-07-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8133,8 +8128,8 @@
           {
             "name": "通胀",
             "label": "压力偏高",
-            "score": "0.65",
-            "coverage": "3/5",
+            "score": "0.71",
+            "coverage": "4/5",
             "status_class": "high",
             "trend": [
               0.143,
@@ -8146,8 +8141,8 @@
               0.067,
               0.615,
               0.977,
-              1.211,
-              0.647
+              1.205,
+              0.706
             ]
           },
           {
@@ -8625,13 +8620,13 @@
           {
             "name": "通胀",
             "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-            "score": "0.65",
+            "score": "0.71",
             "label": "压力偏高",
-            "coverage": "3/5",
+            "coverage": "4/5",
             "status_class": "high",
-            "delta_text": "较上月 ↓ -0.56",
+            "delta_text": "较上月 ↓ -0.50",
             "delta_direction": "down",
-            "driver_note": "较上月：边际走弱；主要变化来自油价压力、5Y breakeven 通胀预期、核心 CPI 通胀率。",
+            "driver_note": "较上月：边际走弱；主要变化来自油价压力、PPI 成本压力、5Y breakeven 通胀预期。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -8787,8 +8782,8 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "283.45",
-                "latest_direction": "flat",
+                "latest": "278.81",
+                "latest_direction": "down",
                 "trend": [
                   262.934,
                   265.093,
@@ -8796,20 +8791,21 @@
                   266.434,
                   266.271,
                   264.837,
-                  267.185,
-                  271.809,
-                  276.174,
-                  283.447
+                  267.162,
+                  271.794,
+                  276.183,
+                  282.727,
+                  278.809
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-11",
+                "score": "1.21",
+                "score_direction": "down",
+                "state": "压力高",
+                "visible_date": "2026-06-30 / 2026-07-15",
                 "type": "主指标",
-                "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "283.45 前月 283.45 · → +0.00",
-                "score_change_detail": "NA",
+                "status_class": "high",
+                "missing": false,
+                "latest_change_detail": "278.81 前月 282.73 · ↓ -3.92",
+                "score_change_detail": "1.21 较上月 ↓ -0.55",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -9969,8 +9965,8 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "283.45 前月 283.45 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "278.81 前月 282.73 · ↓ -3.92",
+                "规则分变化": "1.21 较上月 ↓ -0.55"
               },
               {
                 "维度": "通胀",
@@ -10155,12 +10151,6 @@
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
               {
-                "维度": "通胀",
-                "指标": "PPI 成本压力",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
                 "维度": "地产",
                 "指标": "新屋销售",
                 "状态": "当月值暂缺",
@@ -10201,11 +10191,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-15T07:52:13.186839+00:00",
+    "generated_at": "2026-07-16T02:03:15.829859+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-15",
-      "run_count": 106
+      "end": "2026-07-16",
+      "run_count": 107
     },
     "target_months": [
       {
@@ -18766,9 +18756,300 @@
               }
             ],
             "package_dir": "/Users/yulinwu/Library/Caches/macro_regime/enriched_us_model_history_badges_20260712/20260701_model_update_history_clean1t_20260707_target_202606_asof_20260701"
+          },
+          {
+            "id": "2026-05__2026-07-16",
+            "as_of": "2026-07-16",
+            "target_month": "2026-05",
+            "kind": "baseline",
+            "states": {
+              "gmm": {
+                "state": "slow_growth",
+                "display": "放缓",
+                "css_class": "slow_growth",
+                "confidence": "0.36",
+                "coverage": "99/104",
+                "distribution": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.35911602210000004,
+                    "score_text": "35.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.30386740330000006,
+                    "score_text": "30.4%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.17679558010000002,
+                    "score_text": "17.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.16022099450000002,
+                    "score_text": "16.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "0.53",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.528742132,
+                    "score_text": "52.9%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2773839346,
+                    "score_text": "27.7%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1455638131,
+                    "score_text": "14.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0483101203,
+                    "score_text": "4.8%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.6108698451,
+                    "score_text": "61.1%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.21216665223333334,
+                    "score_text": "21.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.10192826920000002,
+                    "score_text": "10.2%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.07503523346666667,
+                    "score_text": "7.5%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": "0.61"
+              }
+            },
+            "reason_type": "基准记录",
+            "reason": "该运行日作为本目标月的比较起点。",
+            "gmm_candidates": [
+              {
+                "state": "slow_growth",
+                "display": "放缓",
+                "score": 0.35911602210000004,
+                "score_text": "35.9%",
+                "css_class": "slow_growth"
+              },
+              {
+                "state": "goldilocks",
+                "display": "温和",
+                "score": 0.30386740330000006,
+                "score_text": "30.4%",
+                "css_class": "goldilocks"
+              },
+              {
+                "state": "stagflation",
+                "display": "滞胀",
+                "score": 0.17679558010000002,
+                "score_text": "17.7%",
+                "css_class": "stagflation"
+              },
+              {
+                "state": "heating_up",
+                "display": "过热",
+                "score": 0.16022099450000002,
+                "score_text": "16.0%",
+                "css_class": "heating_up"
+              }
+            ],
+            "gmm_boundary": true,
+            "gmm_coverage": "99/104",
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "放缓",
+                "state_after": "放缓",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "99/104",
+                "coverage": "99/104",
+                "candidates": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.35911602210000004,
+                    "score_text": "35.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.30386740330000006,
+                    "score_text": "30.4%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.17679558010000002,
+                    "score_text": "17.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.16022099450000002,
+                    "score_text": "16.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.528742132,
+                    "score_text": "52.9%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2773839346,
+                    "score_text": "27.7%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1455638131,
+                    "score_text": "14.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0483101203,
+                    "score_text": "4.8%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "changes": []
+              }
+            ],
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260716_assets_daily_report_29465519699"
           }
         ],
-        "default_event_id": "2026-05__2026-07-01",
+        "default_event_id": "2026-05__2026-07-16",
         "eligibility_note": "",
         "stable": true
       },
