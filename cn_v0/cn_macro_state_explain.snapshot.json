@@ -2,7 +2,7 @@
   "title": "中国宏观场景状态",
   "subtitle": "",
   "observation_month": "2026-05",
-  "data_cutoff_time": "2026-07-16",
+  "data_cutoff_time": "2026-07-17",
   "primary_label": "cn_v0.deflation_recession",
   "secondary_labels": "cn_v0.housing_stress_acute",
   "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -1528,7 +1528,7 @@
       "title": "中国宏观场景状态",
       "subtitle": "",
       "observation_month": "2026-03",
-      "data_cutoff_time": "2026-07-16",
+      "data_cutoff_time": "2026-07-17",
       "primary_label": "cn_v0.reflation_overheat",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3040,7 +3040,7 @@
       "title": "中国宏观场景状态",
       "subtitle": "",
       "observation_month": "2026-04",
-      "data_cutoff_time": "2026-07-16",
+      "data_cutoff_time": "2026-07-17",
       "primary_label": "cn_v0.stagflation_pressure",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -4552,7 +4552,7 @@
       "title": "中国宏观场景状态",
       "subtitle": "",
       "observation_month": "2026-05",
-      "data_cutoff_time": "2026-07-16",
+      "data_cutoff_time": "2026-07-17",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6106,5 +6106,5 @@
       }
     ]
   },
-  "run_date": "2026-07-17"
+  "run_date": "2026-07-18"
 }
