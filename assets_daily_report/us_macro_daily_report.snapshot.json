@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-17 14:20 北京时间",
+  "run_time": "2026-07-18 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "ec934cc872dba49dd45293baa6a5c29c9b1a6f79ec49d59abf692466528ad48e",
-    "model_update": "999c750aff7e75a69b52cbc22108caf8c4740dd1cbaa6cdfa1791295f1182e3f"
+    "explain": "6fd752041afcafa87c4ef50b8d1d5729e1b0c4ef2bc2a93ec60cd189f6c45dde",
+    "model_update": "550acaf70ec892fd15b8733459c5b399259a9aa803bde86ed73cb93338a2158c"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-17",
+    "data_cutoff_time": "2026-07-18",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -47,7 +47,7 @@
         "name": "增长",
         "label": "insufficient_coverage",
         "score": "NA",
-        "coverage": "1/7",
+        "coverage": "3/7",
         "status_class": "neutral",
         "trend": [
           -0.071,
@@ -55,11 +55,11 @@
           -0.523,
           0.241,
           -0.075,
-          -0.338,
-          0.015,
-          -0.172,
-          0.621,
-          -0.529
+          -0.347,
+          0.028,
+          -0.162,
+          0.552,
+          -0.531
         ]
       },
       {
@@ -104,9 +104,9 @@
       },
       {
         "name": "地产",
-        "label": "insufficient_coverage",
-        "score": "NA",
-        "coverage": "0/2",
+        "label": "中性",
+        "score": "0.12",
+        "coverage": "2/2",
         "status_class": "neutral",
         "trend": [
           -0.066,
@@ -117,8 +117,9 @@
           0.107,
           0.227,
           0.227,
-          0.15,
-          -0.146
+          0.176,
+          -0.115,
+          0.124
         ]
       },
       {
@@ -148,11 +149,11 @@
         "semantics": "越高 = 实体活动与需求订单动能越强",
         "score": "NA",
         "label": "insufficient_coverage",
-        "coverage": "1/7",
+        "coverage": "3/7",
         "status_class": "neutral",
         "delta_text": "较上月 → NA",
         "delta_direction": "flat",
-        "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、汽车销售。",
+        "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、最终产品工业生产增速。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -415,29 +416,30 @@
             "group": "生产实现",
             "indicator": "工业生产增速",
             "code": "INDPRO",
-            "latest": "102.65",
-            "latest_direction": "flat",
+            "latest": "102.64",
+            "latest_direction": "up",
             "trend": [
               101.6247,
               101.668,
               101.2195,
               101.0344,
               101.4941,
-              101.1235,
-              101.9493,
-              101.6273,
-              102.509,
-              102.6475
+              101.0388,
+              101.9263,
+              101.6172,
+              102.4196,
+              102.5606,
+              102.6395
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-15",
+            "score": "-0.11",
+            "score_direction": "down",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-17",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "102.65 前月 102.65 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "102.64 前月 102.56 · ↑ +0.08",
+            "score_change_detail": "-0.11 较上月 ↓ -0.06",
             "logic": "观察需求是否兑现为实际生产，是实体活动的硬数据。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -451,29 +453,30 @@
             "group": "生产实现",
             "indicator": "最终产品工业生产增速",
             "code": "IPFINAL",
-            "latest": "98.50",
-            "latest_direction": "flat",
+            "latest": "98.32",
+            "latest_direction": "up",
             "trend": [
               97.814,
               97.8749,
               97.393,
               96.8085,
               97.7654,
-              96.5861,
-              97.9264,
-              97.2669,
-              98.6226,
-              98.4975
+              96.6155,
+              97.9844,
+              97.3817,
+              98.321,
+              98.1789,
+              98.3172
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-15",
+            "score": "-0.04",
+            "score_direction": "up",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-17",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "98.50 前月 98.50 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "98.32 前月 98.18 · ↑ +0.14",
+            "score_change_detail": "-0.04 较上月 ↑ +0.27",
             "logic": "观察最终产品生产端动能，减少中间品波动干扰。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -955,13 +958,13 @@
       {
         "name": "地产",
         "semantics": "越高 = 地产活动水平越强",
-        "score": "NA",
-        "label": "insufficient_coverage",
-        "coverage": "0/2",
+        "score": "0.12",
+        "label": "中性",
+        "coverage": "2/2",
         "status_class": "neutral",
-        "delta_text": "较上月 → NA",
-        "delta_direction": "flat",
-        "driver_note": "较上月：整体稳定。",
+        "delta_text": "较上月 ↑ +0.24",
+        "delta_direction": "up",
+        "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -1005,8 +1008,8 @@
             "group": "未来供给",
             "indicator": "营建许可水平",
             "code": "PERMIT",
-            "latest": "1,410",
-            "latest_direction": "flat",
+            "latest": "1,367",
+            "latest_direction": "down",
             "trend": [
               1347.0,
               1444.0,
@@ -1017,17 +1020,18 @@
               1540.0,
               1363.0,
               1423.0,
-              1410.0
+              1410.0,
+              1367.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-24",
+            "score": "0.12",
+            "score_direction": "down",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-17",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "1,410 前月 1,410 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "1,367 前月 1,410 · ↓ -43.00",
+            "score_change_detail": "0.12 较上月 ↓ -0.10",
             "logic": "观察未来开工和供给计划，是地产活动的前置信号。",
             "include_in_dimension_score": "是",
             "transform_rule": "log",
@@ -1041,8 +1045,8 @@
             "group": "当前建设活动",
             "indicator": "新屋开工水平",
             "code": "HOUST",
-            "latest": "1,177",
-            "latest_direction": "flat",
+            "latest": "1,427",
+            "latest_direction": "up",
             "trend": [
               1291.0,
               1319.0,
@@ -1052,18 +1056,19 @@
               1385.0,
               1346.0,
               1522.0,
-              1392.0,
-              1177.0
+              1414.0,
+              1199.0,
+              1427.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-16",
+            "score": "0.13",
+            "score_direction": "up",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-17",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "1,177 前月 1,177 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "1,427 前月 1,199 · ↑ +228.00",
+            "score_change_detail": "0.13 较上月 ↑ +0.58",
             "logic": "观察当前地产建设活动强弱。",
             "include_in_dimension_score": "是",
             "transform_rule": "log",
@@ -1847,15 +1852,15 @@
             "维度": "增长",
             "分组": "生产实现",
             "指标": "工业生产增速",
-            "最新值变化": "102.65 前月 102.65 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "102.64 前月 102.56 · ↑ +0.08",
+            "规则分变化": "-0.11 较上月 ↓ -0.06"
           },
           {
             "维度": "增长",
             "分组": "生产实现",
             "指标": "最终产品工业生产增速",
-            "最新值变化": "98.50 前月 98.50 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "98.32 前月 98.18 · ↑ +0.14",
+            "规则分变化": "-0.04 较上月 ↑ +0.27"
           },
           {
             "维度": "增长",
@@ -1952,15 +1957,15 @@
             "维度": "地产",
             "分组": "未来供给",
             "指标": "营建许可水平",
-            "最新值变化": "1,410 前月 1,410 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "1,367 前月 1,410 · ↓ -43.00",
+            "规则分变化": "0.12 较上月 ↓ -0.10"
           },
           {
             "维度": "地产",
             "分组": "当前建设活动",
             "指标": "新屋开工水平",
-            "最新值变化": "1,177 前月 1,177 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "1,427 前月 1,199 · ↑ +228.00",
+            "规则分变化": "0.13 较上月 ↑ +0.58"
           },
           {
             "维度": "市场风险",
@@ -2048,18 +2053,6 @@
           },
           {
             "维度": "增长",
-            "指标": "工业生产增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
-            "指标": "最终产品工业生产增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
             "指标": "实际个人收入增速",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -2085,18 +2078,6 @@
           {
             "维度": "地产",
             "指标": "新屋销售",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "地产",
-            "指标": "营建许可水平",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "地产",
-            "指标": "新屋开工水平",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
@@ -2139,7 +2120,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-17",
+        "data_cutoff_time": "2026-07-18",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2165,7 +2146,7 @@
           {
             "name": "增长",
             "label": "中性",
-            "score": "-0.17",
+            "score": "-0.16",
             "coverage": "7/7",
             "status_class": "neutral",
             "trend": [
@@ -2174,11 +2155,11 @@
               -0.523,
               0.241,
               -0.075,
-              -0.338,
-              0.015,
-              -0.172,
-              0.621,
-              -0.529
+              -0.347,
+              0.028,
+              -0.162,
+              0.552,
+              -0.531
             ]
           },
           {
@@ -2236,8 +2217,9 @@
               0.107,
               0.227,
               0.227,
-              0.15,
-              -0.146
+              0.176,
+              -0.115,
+              0.124
             ]
           },
           {
@@ -2265,7 +2247,7 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.17",
+            "score": "-0.16",
             "label": "中性",
             "coverage": "7/7",
             "status_class": "neutral",
@@ -2517,7 +2499,7 @@
                 "group": "生产实现",
                 "indicator": "工业生产增速",
                 "code": "INDPRO",
-                "latest": "101.63",
+                "latest": "101.62",
                 "latest_direction": "down",
                 "trend": [
                   101.6247,
@@ -2525,19 +2507,19 @@
                   101.2195,
                   101.0344,
                   101.4941,
-                  101.1235,
-                  101.9493,
-                  101.6273
+                  101.0388,
+                  101.9263,
+                  101.6172
                 ],
-                "score": "-0.53",
+                "score": "-0.51",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-03-31 / 2026-06-15",
+                "visible_date": "2026-03-31 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "101.63 前月 101.95 · ↓ -0.32",
-                "score_change_detail": "-0.53 较上月 ↓ -1.19",
+                "latest_change_detail": "101.62 前月 101.93 · ↓ -0.31",
+                "score_change_detail": "-0.51 较上月 ↓ -1.24",
                 "logic": "观察需求是否兑现为实际生产，是实体活动的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -2551,7 +2533,7 @@
                 "group": "生产实现",
                 "indicator": "最终产品工业生产增速",
                 "code": "IPFINAL",
-                "latest": "97.27",
+                "latest": "97.38",
                 "latest_direction": "down",
                 "trend": [
                   97.814,
@@ -2559,19 +2541,19 @@
                   97.393,
                   96.8085,
                   97.7654,
-                  96.5861,
-                  97.9264,
-                  97.2669
+                  96.6155,
+                  97.9844,
+                  97.3817
                 ],
-                "score": "-0.82",
+                "score": "-0.76",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-03-31 / 2026-06-15",
+                "visible_date": "2026-03-31 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "97.27 前月 97.93 · ↓ -0.66",
-                "score_change_detail": "-0.82 较上月 ↓ -1.96",
+                "latest_change_detail": "97.38 前月 97.98 · ↓ -0.60",
+                "score_change_detail": "-0.76 较上月 ↓ -1.93",
                 "logic": "观察最终产品生产端动能，减少中间品波动干扰。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -3892,15 +3874,15 @@
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "工业生产增速",
-                "最新值变化": "101.63 前月 101.95 · ↓ -0.32",
-                "规则分变化": "-0.53 较上月 ↓ -1.19"
+                "最新值变化": "101.62 前月 101.93 · ↓ -0.31",
+                "规则分变化": "-0.51 较上月 ↓ -1.24"
               },
               {
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "最终产品工业生产增速",
-                "最新值变化": "97.27 前月 97.93 · ↓ -0.66",
-                "规则分变化": "-0.82 较上月 ↓ -1.96"
+                "最新值变化": "97.38 前月 97.98 · ↓ -0.60",
+                "规则分变化": "-0.76 较上月 ↓ -1.93"
               },
               {
                 "维度": "增长",
@@ -4088,7 +4070,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-17",
+        "data_cutoff_time": "2026-07-18",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4114,7 +4096,7 @@
           {
             "name": "增长",
             "label": "动能偏强",
-            "score": "0.62",
+            "score": "0.55",
             "coverage": "7/7",
             "status_class": "high",
             "trend": [
@@ -4123,11 +4105,11 @@
               -0.523,
               0.241,
               -0.075,
-              -0.338,
-              0.015,
-              -0.172,
-              0.621,
-              -0.529
+              -0.347,
+              0.028,
+              -0.162,
+              0.552,
+              -0.531
             ]
           },
           {
@@ -4173,7 +4155,7 @@
           {
             "name": "地产",
             "label": "中性",
-            "score": "0.15",
+            "score": "0.18",
             "coverage": "2/2",
             "status_class": "neutral",
             "trend": [
@@ -4185,8 +4167,9 @@
               0.107,
               0.227,
               0.227,
-              0.15,
-              -0.146
+              0.176,
+              -0.115,
+              0.124
             ]
           },
           {
@@ -4214,13 +4197,13 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "0.62",
+            "score": "0.55",
             "label": "动能偏强",
             "coverage": "7/7",
             "status_class": "high",
-            "delta_text": "较上月 ↑ +0.79",
+            "delta_text": "较上月 ↑ +0.71",
             "delta_direction": "up",
-            "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、最终产品工业生产增速、耐用品新订单增速。",
+            "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、最终产品工业生产增速。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -4473,7 +4456,7 @@
                 "group": "生产实现",
                 "indicator": "工业生产增速",
                 "code": "INDPRO",
-                "latest": "102.51",
+                "latest": "102.42",
                 "latest_direction": "up",
                 "trend": [
                   101.6247,
@@ -4481,20 +4464,20 @@
                   101.2195,
                   101.0344,
                   101.4941,
-                  101.1235,
-                  101.9493,
-                  101.6273,
-                  102.509
+                  101.0388,
+                  101.9263,
+                  101.6172,
+                  102.4196
                 ],
-                "score": "0.71",
+                "score": "0.63",
                 "score_direction": "up",
                 "state": "偏强",
-                "visible_date": "2026-04-30 / 2026-06-15",
+                "visible_date": "2026-04-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "102.51 前月 101.63 · ↑ +0.88",
-                "score_change_detail": "0.71 较上月 ↑ +1.24",
+                "latest_change_detail": "102.42 前月 101.62 · ↑ +0.80",
+                "score_change_detail": "0.63 较上月 ↑ +1.14",
                 "logic": "观察需求是否兑现为实际生产，是实体活动的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4508,7 +4491,7 @@
                 "group": "生产实现",
                 "indicator": "最终产品工业生产增速",
                 "code": "IPFINAL",
-                "latest": "98.62",
+                "latest": "98.32",
                 "latest_direction": "up",
                 "trend": [
                   97.814,
@@ -4516,20 +4499,20 @@
                   97.393,
                   96.8085,
                   97.7654,
-                  96.5861,
-                  97.9264,
-                  97.2669,
-                  98.6226
+                  96.6155,
+                  97.9844,
+                  97.3817,
+                  98.321
                 ],
-                "score": "1.15",
+                "score": "0.75",
                 "score_direction": "up",
                 "state": "偏强",
-                "visible_date": "2026-04-30 / 2026-06-15",
+                "visible_date": "2026-04-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "98.62 前月 97.27 · ↑ +1.36",
-                "score_change_detail": "1.15 较上月 ↑ +1.97",
+                "latest_change_detail": "98.32 前月 97.38 · ↑ +0.94",
+                "score_change_detail": "0.75 较上月 ↑ +1.51",
                 "logic": "观察最终产品生产端动能，减少中间品波动干扰。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4995,11 +4978,11 @@
           {
             "name": "地产",
             "semantics": "越高 = 地产活动水平越强",
-            "score": "0.15",
+            "score": "0.18",
             "label": "中性",
             "coverage": "2/2",
             "status_class": "neutral",
-            "delta_text": "较上月 ↓ -0.08",
+            "delta_text": "较上月 ↓ -0.05",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自新屋开工水平、新屋销售、营建许可水平。",
             "is_transmission_layer": false,
@@ -5079,7 +5062,7 @@
                 "group": "当前建设活动",
                 "indicator": "新屋开工水平",
                 "code": "HOUST",
-                "latest": "1,392",
+                "latest": "1,414",
                 "latest_direction": "down",
                 "trend": [
                   1291.0,
@@ -5090,17 +5073,17 @@
                   1385.0,
                   1346.0,
                   1522.0,
-                  1392.0
+                  1414.0
                 ],
-                "score": "0.05",
+                "score": "0.10",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-04-30 / 2026-06-16",
+                "visible_date": "2026-04-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "1,392 前月 1,522 · ↓ -130.00",
-                "score_change_detail": "0.05 较上月 ↓ -0.30",
+                "latest_change_detail": "1,414 前月 1,522 · ↓ -108.00",
+                "score_change_detail": "0.10 较上月 ↓ -0.25",
                 "logic": "观察当前地产建设活动强弱。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log",
@@ -5870,15 +5853,15 @@
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "工业生产增速",
-                "最新值变化": "102.51 前月 101.63 · ↑ +0.88",
-                "规则分变化": "0.71 较上月 ↑ +1.24"
+                "最新值变化": "102.42 前月 101.62 · ↑ +0.80",
+                "规则分变化": "0.63 较上月 ↑ +1.14"
               },
               {
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "最终产品工业生产增速",
-                "最新值变化": "98.62 前月 97.27 · ↑ +1.36",
-                "规则分变化": "1.15 较上月 ↑ +1.97"
+                "最新值变化": "98.32 前月 97.38 · ↑ +0.94",
+                "规则分变化": "0.75 较上月 ↑ +1.51"
               },
               {
                 "维度": "增长",
@@ -5982,8 +5965,8 @@
                 "维度": "地产",
                 "分组": "当前建设活动",
                 "指标": "新屋开工水平",
-                "最新值变化": "1,392 前月 1,522 · ↓ -130.00",
-                "规则分变化": "0.05 较上月 ↓ -0.30"
+                "最新值变化": "1,414 前月 1,522 · ↓ -108.00",
+                "规则分变化": "0.10 较上月 ↓ -0.25"
               },
               {
                 "维度": "市场风险",
@@ -6066,7 +6049,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-17",
+        "data_cutoff_time": "2026-07-18",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6101,11 +6084,11 @@
               -0.523,
               0.241,
               -0.075,
-              -0.338,
-              0.015,
-              -0.172,
-              0.621,
-              -0.529
+              -0.347,
+              0.028,
+              -0.162,
+              0.552,
+              -0.531
             ]
           },
           {
@@ -6151,7 +6134,7 @@
           {
             "name": "地产",
             "label": "中性",
-            "score": "-0.15",
+            "score": "-0.12",
             "coverage": "2/2",
             "status_class": "neutral",
             "trend": [
@@ -6163,8 +6146,9 @@
               0.107,
               0.227,
               0.227,
-              0.15,
-              -0.146
+              0.176,
+              -0.115,
+              0.124
             ]
           },
           {
@@ -6196,9 +6180,9 @@
             "label": "动能偏弱",
             "coverage": "6/7",
             "status_class": "low",
-            "delta_text": "较上月 ↓ -1.15",
+            "delta_text": "较上月 ↓ -1.08",
             "delta_direction": "down",
-            "driver_note": "较上月：边际走弱；主要变化来自非国防资本品新订单增速、耐用品新订单增速、最终产品工业生产增速。",
+            "driver_note": "较上月：边际走弱；主要变化来自非国防资本品新订单增速、耐用品新订单增速、实际个人收入增速。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -6458,7 +6442,7 @@
                 "group": "生产实现",
                 "indicator": "工业生产增速",
                 "code": "INDPRO",
-                "latest": "102.65",
+                "latest": "102.56",
                 "latest_direction": "up",
                 "trend": [
                   101.6247,
@@ -6466,21 +6450,21 @@
                   101.2195,
                   101.0344,
                   101.4941,
-                  101.1235,
-                  101.9493,
-                  101.6273,
-                  102.509,
-                  102.6475
+                  101.0388,
+                  101.9263,
+                  101.6172,
+                  102.4196,
+                  102.5606
                 ],
                 "score": "-0.05",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-05-31 / 2026-06-15",
+                "visible_date": "2026-05-31 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "102.65 前月 102.51 · ↑ +0.14",
-                "score_change_detail": "-0.05 较上月 ↓ -0.77",
+                "latest_change_detail": "102.56 前月 102.42 · ↑ +0.14",
+                "score_change_detail": "-0.05 较上月 ↓ -0.68",
                 "logic": "观察需求是否兑现为实际生产，是实体活动的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6494,7 +6478,7 @@
                 "group": "生产实现",
                 "indicator": "最终产品工业生产增速",
                 "code": "IPFINAL",
-                "latest": "98.50",
+                "latest": "98.18",
                 "latest_direction": "down",
                 "trend": [
                   97.814,
@@ -6502,21 +6486,21 @@
                   97.393,
                   96.8085,
                   97.7654,
-                  96.5861,
-                  97.9264,
-                  97.2669,
-                  98.6226,
-                  98.4975
+                  96.6155,
+                  97.9844,
+                  97.3817,
+                  98.321,
+                  98.1789
                 ],
-                "score": "-0.29",
+                "score": "-0.31",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-05-31 / 2026-06-15",
+                "visible_date": "2026-05-31 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "98.50 前月 98.62 · ↓ -0.13",
-                "score_change_detail": "-0.29 较上月 ↓ -1.44",
+                "latest_change_detail": "98.18 前月 98.32 · ↓ -0.14",
+                "score_change_detail": "-0.31 较上月 ↓ -1.06",
                 "logic": "观察最终产品生产端动能，减少中间品波动干扰。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6991,11 +6975,11 @@
           {
             "name": "地产",
             "semantics": "越高 = 地产活动水平越强",
-            "score": "-0.15",
+            "score": "-0.12",
             "label": "中性",
             "coverage": "2/2",
             "status_class": "neutral",
-            "delta_text": "较上月 ↓ -0.30",
+            "delta_text": "较上月 ↓ -0.29",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自新屋开工水平、新屋销售、营建许可水平。",
             "is_transmission_layer": false,
@@ -7077,7 +7061,7 @@
                 "group": "当前建设活动",
                 "indicator": "新屋开工水平",
                 "code": "HOUST",
-                "latest": "1,177",
+                "latest": "1,199",
                 "latest_direction": "down",
                 "trend": [
                   1291.0,
@@ -7088,18 +7072,18 @@
                   1385.0,
                   1346.0,
                   1522.0,
-                  1392.0,
-                  1177.0
+                  1414.0,
+                  1199.0
                 ],
-                "score": "-0.52",
+                "score": "-0.45",
                 "score_direction": "down",
-                "state": "偏弱",
-                "visible_date": "2026-05-31 / 2026-06-16",
+                "state": "中性",
+                "visible_date": "2026-05-31 / 2026-07-17",
                 "type": "主指标",
-                "status_class": "low",
+                "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "1,177 前月 1,392 · ↓ -215.00",
-                "score_change_detail": "-0.52 较上月 ↓ -0.56",
+                "latest_change_detail": "1,199 前月 1,414 · ↓ -215.00",
+                "score_change_detail": "-0.45 较上月 ↓ -0.55",
                 "logic": "观察当前地产建设活动强弱。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log",
@@ -7876,15 +7860,15 @@
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "工业生产增速",
-                "最新值变化": "102.65 前月 102.51 · ↑ +0.14",
-                "规则分变化": "-0.05 较上月 ↓ -0.77"
+                "最新值变化": "102.56 前月 102.42 · ↑ +0.14",
+                "规则分变化": "-0.05 较上月 ↓ -0.68"
               },
               {
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "最终产品工业生产增速",
-                "最新值变化": "98.50 前月 98.62 · ↓ -0.13",
-                "规则分变化": "-0.29 较上月 ↓ -1.44"
+                "最新值变化": "98.18 前月 98.32 · ↓ -0.14",
+                "规则分变化": "-0.31 较上月 ↓ -1.06"
               },
               {
                 "维度": "增长",
@@ -7988,8 +7972,8 @@
                 "维度": "地产",
                 "分组": "当前建设活动",
                 "指标": "新屋开工水平",
-                "最新值变化": "1,177 前月 1,392 · ↓ -215.00",
-                "规则分变化": "-0.52 较上月 ↓ -0.56"
+                "最新值变化": "1,199 前月 1,414 · ↓ -215.00",
+                "规则分变化": "-0.45 较上月 ↓ -0.55"
               },
               {
                 "维度": "市场风险",
@@ -8078,7 +8062,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-17",
+        "data_cutoff_time": "2026-07-18",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8105,7 +8089,7 @@
             "name": "增长",
             "label": "insufficient_coverage",
             "score": "NA",
-            "coverage": "1/7",
+            "coverage": "3/7",
             "status_class": "neutral",
             "trend": [
               -0.071,
@@ -8113,11 +8097,11 @@
               -0.523,
               0.241,
               -0.075,
-              -0.338,
-              0.015,
-              -0.172,
-              0.621,
-              -0.529
+              -0.347,
+              0.028,
+              -0.162,
+              0.552,
+              -0.531
             ]
           },
           {
@@ -8162,9 +8146,9 @@
           },
           {
             "name": "地产",
-            "label": "insufficient_coverage",
-            "score": "NA",
-            "coverage": "0/2",
+            "label": "中性",
+            "score": "0.12",
+            "coverage": "2/2",
             "status_class": "neutral",
             "trend": [
               -0.066,
@@ -8175,8 +8159,9 @@
               0.107,
               0.227,
               0.227,
-              0.15,
-              -0.146
+              0.176,
+              -0.115,
+              0.124
             ]
           },
           {
@@ -8206,11 +8191,11 @@
             "semantics": "越高 = 实体活动与需求订单动能越强",
             "score": "NA",
             "label": "insufficient_coverage",
-            "coverage": "1/7",
+            "coverage": "3/7",
             "status_class": "neutral",
             "delta_text": "较上月 → NA",
             "delta_direction": "flat",
-            "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、汽车销售。",
+            "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、最终产品工业生产增速。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -8473,29 +8458,30 @@
                 "group": "生产实现",
                 "indicator": "工业生产增速",
                 "code": "INDPRO",
-                "latest": "102.65",
-                "latest_direction": "flat",
+                "latest": "102.64",
+                "latest_direction": "up",
                 "trend": [
                   101.6247,
                   101.668,
                   101.2195,
                   101.0344,
                   101.4941,
-                  101.1235,
-                  101.9493,
-                  101.6273,
-                  102.509,
-                  102.6475
+                  101.0388,
+                  101.9263,
+                  101.6172,
+                  102.4196,
+                  102.5606,
+                  102.6395
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-15",
+                "score": "-0.11",
+                "score_direction": "down",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "102.65 前月 102.65 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "102.64 前月 102.56 · ↑ +0.08",
+                "score_change_detail": "-0.11 较上月 ↓ -0.06",
                 "logic": "观察需求是否兑现为实际生产，是实体活动的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -8509,29 +8495,30 @@
                 "group": "生产实现",
                 "indicator": "最终产品工业生产增速",
                 "code": "IPFINAL",
-                "latest": "98.50",
-                "latest_direction": "flat",
+                "latest": "98.32",
+                "latest_direction": "up",
                 "trend": [
                   97.814,
                   97.8749,
                   97.393,
                   96.8085,
                   97.7654,
-                  96.5861,
-                  97.9264,
-                  97.2669,
-                  98.6226,
-                  98.4975
+                  96.6155,
+                  97.9844,
+                  97.3817,
+                  98.321,
+                  98.1789,
+                  98.3172
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-15",
+                "score": "-0.04",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "98.50 前月 98.50 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "98.32 前月 98.18 · ↑ +0.14",
+                "score_change_detail": "-0.04 较上月 ↑ +0.27",
                 "logic": "观察最终产品生产端动能，减少中间品波动干扰。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -9013,13 +9000,13 @@
           {
             "name": "地产",
             "semantics": "越高 = 地产活动水平越强",
-            "score": "NA",
-            "label": "insufficient_coverage",
-            "coverage": "0/2",
+            "score": "0.12",
+            "label": "中性",
+            "coverage": "2/2",
             "status_class": "neutral",
-            "delta_text": "较上月 → NA",
-            "delta_direction": "flat",
-            "driver_note": "较上月：整体稳定。",
+            "delta_text": "较上月 ↑ +0.24",
+            "delta_direction": "up",
+            "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -9063,8 +9050,8 @@
                 "group": "未来供给",
                 "indicator": "营建许可水平",
                 "code": "PERMIT",
-                "latest": "1,410",
-                "latest_direction": "flat",
+                "latest": "1,367",
+                "latest_direction": "down",
                 "trend": [
                   1347.0,
                   1444.0,
@@ -9075,17 +9062,18 @@
                   1540.0,
                   1363.0,
                   1423.0,
-                  1410.0
+                  1410.0,
+                  1367.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-24",
+                "score": "0.12",
+                "score_direction": "down",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "1,410 前月 1,410 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "1,367 前月 1,410 · ↓ -43.00",
+                "score_change_detail": "0.12 较上月 ↓ -0.10",
                 "logic": "观察未来开工和供给计划，是地产活动的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log",
@@ -9099,8 +9087,8 @@
                 "group": "当前建设活动",
                 "indicator": "新屋开工水平",
                 "code": "HOUST",
-                "latest": "1,177",
-                "latest_direction": "flat",
+                "latest": "1,427",
+                "latest_direction": "up",
                 "trend": [
                   1291.0,
                   1319.0,
@@ -9110,18 +9098,19 @@
                   1385.0,
                   1346.0,
                   1522.0,
-                  1392.0,
-                  1177.0
+                  1414.0,
+                  1199.0,
+                  1427.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-16",
+                "score": "0.13",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-17",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "1,177 前月 1,177 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "1,427 前月 1,199 · ↑ +228.00",
+                "score_change_detail": "0.13 较上月 ↑ +0.58",
                 "logic": "观察当前地产建设活动强弱。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log",
@@ -9905,15 +9894,15 @@
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "工业生产增速",
-                "最新值变化": "102.65 前月 102.65 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "102.64 前月 102.56 · ↑ +0.08",
+                "规则分变化": "-0.11 较上月 ↓ -0.06"
               },
               {
                 "维度": "增长",
                 "分组": "生产实现",
                 "指标": "最终产品工业生产增速",
-                "最新值变化": "98.50 前月 98.50 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "98.32 前月 98.18 · ↑ +0.14",
+                "规则分变化": "-0.04 较上月 ↑ +0.27"
               },
               {
                 "维度": "增长",
@@ -10010,15 +9999,15 @@
                 "维度": "地产",
                 "分组": "未来供给",
                 "指标": "营建许可水平",
-                "最新值变化": "1,410 前月 1,410 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "1,367 前月 1,410 · ↓ -43.00",
+                "规则分变化": "0.12 较上月 ↓ -0.10"
               },
               {
                 "维度": "地产",
                 "分组": "当前建设活动",
                 "指标": "新屋开工水平",
-                "最新值变化": "1,177 前月 1,177 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "1,427 前月 1,199 · ↑ +228.00",
+                "规则分变化": "0.13 较上月 ↑ +0.58"
               },
               {
                 "维度": "市场风险",
@@ -10106,18 +10095,6 @@
               },
               {
                 "维度": "增长",
-                "指标": "工业生产增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
-                "指标": "最终产品工业生产增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "实际个人收入增速",
                 "状态": "当月值暂缺",
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -10147,18 +10124,6 @@
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
               {
-                "维度": "地产",
-                "指标": "营建许可水平",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "地产",
-                "指标": "新屋开工水平",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
                 "维度": "增长",
                 "指标": "产能利用率",
                 "状态": "候选",
@@ -10181,11 +10146,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-17T06:20:08.423385+00:00",
+    "generated_at": "2026-07-18T02:02:43.222739+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-17",
-      "run_count": 108
+      "end": "2026-07-18",
+      "run_count": 109
     },
     "target_months": [
       {
