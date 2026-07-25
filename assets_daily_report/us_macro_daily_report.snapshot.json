@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-24 10:03 北京时间",
+  "run_time": "2026-07-25 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "4da61352ba56f4a63f1804a8ed26c7ed2d1863635bbb4c60a7dd837d7e497ac8",
-    "model_update": "279cb54d54ae26cda64fc8b1f0d93fedc98263e81e240782a712e80c68b22f48"
+    "explain": "e63557245c39b7bc97ca97fa34b28b66b7b8eeca75d402ba9460a06daa5fd602",
+    "model_update": "c3120ab0e3140bbc141388ce968a738293c4d81e17514cd04a717230987b7a2e"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-24",
+    "data_cutoff_time": "2026-07-25",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -105,7 +105,7 @@
       {
         "name": "地产",
         "label": "中性",
-        "score": "0.12",
+        "score": "0.13",
         "coverage": "2/2",
         "status_class": "neutral",
         "trend": [
@@ -119,7 +119,7 @@
           0.227,
           0.176,
           -0.115,
-          0.124
+          0.133
         ]
       },
       {
@@ -958,13 +958,13 @@
       {
         "name": "地产",
         "semantics": "越高 = 地产活动水平越强",
-        "score": "0.12",
+        "score": "0.13",
         "label": "中性",
         "coverage": "2/2",
         "status_class": "neutral",
-        "delta_text": "较上月 ↑ +0.24",
+        "delta_text": "较上月 ↑ +0.25",
         "delta_direction": "up",
-        "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平。",
+        "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平、新屋销售。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -972,8 +972,8 @@
             "group": "需求",
             "indicator": "新屋销售",
             "code": "HSN1F",
-            "latest": "580.00",
-            "latest_direction": "flat",
+            "latest": "628.00",
+            "latest_direction": "up",
             "trend": [
               698.0,
               714.0,
@@ -982,19 +982,20 @@
               723.0,
               576.0,
               630.0,
-              664.0,
-              626.0,
-              580.0
+              659.0,
+              646.0,
+              618.0,
+              628.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-24",
+            "score": "0.01",
+            "score_direction": "up",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-24",
             "type": "补充观察",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "580.00 前月 580.00 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "628.00 前月 618.00 · ↑ +10.00",
+            "score_change_detail": "0.01 较上月 ↑ +0.05",
             "logic": "观察地产终端需求是否改善。",
             "include_in_dimension_score": "否",
             "transform_rule": "log",
@@ -1008,7 +1009,7 @@
             "group": "未来供给",
             "indicator": "营建许可水平",
             "code": "PERMIT",
-            "latest": "1,367",
+            "latest": "1,374",
             "latest_direction": "down",
             "trend": [
               1347.0,
@@ -1021,17 +1022,17 @@
               1363.0,
               1423.0,
               1410.0,
-              1367.0
+              1374.0
             ],
-            "score": "0.12",
+            "score": "0.14",
             "score_direction": "down",
             "state": "中性",
-            "visible_date": "2026-06-30 / 2026-07-17",
+            "visible_date": "2026-06-30 / 2026-07-24",
             "type": "主指标",
             "status_class": "neutral",
             "missing": false,
-            "latest_change_detail": "1,367 前月 1,410 · ↓ -43.00",
-            "score_change_detail": "0.12 较上月 ↓ -0.10",
+            "latest_change_detail": "1,374 前月 1,410 · ↓ -36.00",
+            "score_change_detail": "0.14 较上月 ↓ -0.09",
             "logic": "观察未来开工和供给计划，是地产活动的前置信号。",
             "include_in_dimension_score": "是",
             "transform_rule": "log",
@@ -1950,15 +1951,15 @@
             "维度": "地产",
             "分组": "需求",
             "指标": "新屋销售",
-            "最新值变化": "580.00 前月 580.00 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "628.00 前月 618.00 · ↑ +10.00",
+            "规则分变化": "0.01 较上月 ↑ +0.05"
           },
           {
             "维度": "地产",
             "分组": "未来供给",
             "指标": "营建许可水平",
-            "最新值变化": "1,367 前月 1,410 · ↓ -43.00",
-            "规则分变化": "0.12 较上月 ↓ -0.10"
+            "最新值变化": "1,374 前月 1,410 · ↓ -36.00",
+            "规则分变化": "0.14 较上月 ↓ -0.09"
           },
           {
             "维度": "地产",
@@ -2076,12 +2077,6 @@
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
           {
-            "维度": "地产",
-            "指标": "新屋销售",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
             "维度": "增长",
             "指标": "产能利用率",
             "状态": "候选",
@@ -2120,7 +2115,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-24",
+        "data_cutoff_time": "2026-07-25",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2219,7 +2214,7 @@
               0.227,
               0.176,
               -0.115,
-              0.124
+              0.133
             ]
           },
           {
@@ -3023,7 +3018,7 @@
                 "group": "需求",
                 "indicator": "新屋销售",
                 "code": "HSN1F",
-                "latest": "664.00",
+                "latest": "659.00",
                 "latest_direction": "up",
                 "trend": [
                   698.0,
@@ -3033,17 +3028,17 @@
                   723.0,
                   576.0,
                   630.0,
-                  664.0
+                  659.0
                 ],
-                "score": "0.19",
+                "score": "0.17",
                 "score_direction": "up",
                 "state": "中性",
-                "visible_date": "2026-03-31 / 2026-06-24",
+                "visible_date": "2026-03-31 / 2026-07-24",
                 "type": "补充观察",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "664.00 前月 630.00 · ↑ +34.00",
-                "score_change_detail": "0.19 较上月 ↑ +0.17",
+                "latest_change_detail": "659.00 前月 630.00 · ↑ +29.00",
+                "score_change_detail": "0.17 较上月 ↑ +0.15",
                 "logic": "观察地产终端需求是否改善。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -3972,8 +3967,8 @@
                 "维度": "地产",
                 "分组": "需求",
                 "指标": "新屋销售",
-                "最新值变化": "664.00 前月 630.00 · ↑ +34.00",
-                "规则分变化": "0.19 较上月 ↑ +0.17"
+                "最新值变化": "659.00 前月 630.00 · ↑ +29.00",
+                "规则分变化": "0.17 较上月 ↑ +0.15"
               },
               {
                 "维度": "地产",
@@ -4070,7 +4065,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-24",
+        "data_cutoff_time": "2026-07-25",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4169,7 +4164,7 @@
               0.227,
               0.176,
               -0.115,
-              0.124
+              0.133
             ]
           },
           {
@@ -4984,7 +4979,7 @@
             "status_class": "neutral",
             "delta_text": "较上月 ↓ -0.05",
             "delta_direction": "down",
-            "driver_note": "较上月：边际走弱；主要变化来自新屋开工水平、新屋销售、营建许可水平。",
+            "driver_note": "较上月：边际走弱；主要变化来自新屋开工水平、营建许可水平、新屋销售。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -4992,7 +4987,7 @@
                 "group": "需求",
                 "indicator": "新屋销售",
                 "code": "HSN1F",
-                "latest": "626.00",
+                "latest": "646.00",
                 "latest_direction": "down",
                 "trend": [
                   698.0,
@@ -5002,18 +4997,18 @@
                   723.0,
                   576.0,
                   630.0,
-                  664.0,
-                  626.0
+                  659.0,
+                  646.0
                 ],
-                "score": "-0.00",
+                "score": "0.10",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-04-30 / 2026-06-24",
+                "visible_date": "2026-04-30 / 2026-07-24",
                 "type": "补充观察",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "626.00 前月 664.00 · ↓ -38.00",
-                "score_change_detail": "-0.00 较上月 ↓ -0.19",
+                "latest_change_detail": "646.00 前月 659.00 · ↓ -13.00",
+                "score_change_detail": "0.10 较上月 ↓ -0.06",
                 "logic": "观察地产终端需求是否改善。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -5951,8 +5946,8 @@
                 "维度": "地产",
                 "分组": "需求",
                 "指标": "新屋销售",
-                "最新值变化": "626.00 前月 664.00 · ↓ -38.00",
-                "规则分变化": "-0.00 较上月 ↓ -0.19"
+                "最新值变化": "646.00 前月 659.00 · ↓ -13.00",
+                "规则分变化": "0.10 较上月 ↓ -0.06"
               },
               {
                 "维度": "地产",
@@ -6049,7 +6044,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-24",
+        "data_cutoff_time": "2026-07-25",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6148,7 +6143,7 @@
               0.227,
               0.176,
               -0.115,
-              0.124
+              0.133
             ]
           },
           {
@@ -6989,7 +6984,7 @@
                 "group": "需求",
                 "indicator": "新屋销售",
                 "code": "HSN1F",
-                "latest": "580.00",
+                "latest": "618.00",
                 "latest_direction": "down",
                 "trend": [
                   698.0,
@@ -6999,19 +6994,19 @@
                   723.0,
                   576.0,
                   630.0,
-                  664.0,
-                  626.0,
-                  580.0
+                  659.0,
+                  646.0,
+                  618.0
                 ],
-                "score": "-0.25",
+                "score": "-0.04",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-05-31 / 2026-06-24",
+                "visible_date": "2026-05-31 / 2026-07-24",
                 "type": "补充观察",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "580.00 前月 626.00 · ↓ -46.00",
-                "score_change_detail": "-0.25 较上月 ↓ -0.25",
+                "latest_change_detail": "618.00 前月 646.00 · ↓ -28.00",
+                "score_change_detail": "-0.04 较上月 ↓ -0.14",
                 "logic": "观察地产终端需求是否改善。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -7958,8 +7953,8 @@
                 "维度": "地产",
                 "分组": "需求",
                 "指标": "新屋销售",
-                "最新值变化": "580.00 前月 626.00 · ↓ -46.00",
-                "规则分变化": "-0.25 较上月 ↓ -0.25"
+                "最新值变化": "618.00 前月 646.00 · ↓ -28.00",
+                "规则分变化": "-0.04 较上月 ↓ -0.14"
               },
               {
                 "维度": "地产",
@@ -8062,7 +8057,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-24",
+        "data_cutoff_time": "2026-07-25",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8147,7 +8142,7 @@
           {
             "name": "地产",
             "label": "中性",
-            "score": "0.12",
+            "score": "0.13",
             "coverage": "2/2",
             "status_class": "neutral",
             "trend": [
@@ -8161,7 +8156,7 @@
               0.227,
               0.176,
               -0.115,
-              0.124
+              0.133
             ]
           },
           {
@@ -9000,13 +8995,13 @@
           {
             "name": "地产",
             "semantics": "越高 = 地产活动水平越强",
-            "score": "0.12",
+            "score": "0.13",
             "label": "中性",
             "coverage": "2/2",
             "status_class": "neutral",
-            "delta_text": "较上月 ↑ +0.24",
+            "delta_text": "较上月 ↑ +0.25",
             "delta_direction": "up",
-            "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平。",
+            "driver_note": "较上月：边际走强；主要变化来自新屋开工水平、营建许可水平、新屋销售。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -9014,8 +9009,8 @@
                 "group": "需求",
                 "indicator": "新屋销售",
                 "code": "HSN1F",
-                "latest": "580.00",
-                "latest_direction": "flat",
+                "latest": "628.00",
+                "latest_direction": "up",
                 "trend": [
                   698.0,
                   714.0,
@@ -9024,19 +9019,20 @@
                   723.0,
                   576.0,
                   630.0,
-                  664.0,
-                  626.0,
-                  580.0
+                  659.0,
+                  646.0,
+                  618.0,
+                  628.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-24",
+                "score": "0.01",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-24",
                 "type": "补充观察",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "580.00 前月 580.00 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "628.00 前月 618.00 · ↑ +10.00",
+                "score_change_detail": "0.01 较上月 ↑ +0.05",
                 "logic": "观察地产终端需求是否改善。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -9050,7 +9046,7 @@
                 "group": "未来供给",
                 "indicator": "营建许可水平",
                 "code": "PERMIT",
-                "latest": "1,367",
+                "latest": "1,374",
                 "latest_direction": "down",
                 "trend": [
                   1347.0,
@@ -9063,17 +9059,17 @@
                   1363.0,
                   1423.0,
                   1410.0,
-                  1367.0
+                  1374.0
                 ],
-                "score": "0.12",
+                "score": "0.14",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-06-30 / 2026-07-17",
+                "visible_date": "2026-06-30 / 2026-07-24",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "1,367 前月 1,410 · ↓ -43.00",
-                "score_change_detail": "0.12 较上月 ↓ -0.10",
+                "latest_change_detail": "1,374 前月 1,410 · ↓ -36.00",
+                "score_change_detail": "0.14 较上月 ↓ -0.09",
                 "logic": "观察未来开工和供给计划，是地产活动的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log",
@@ -9992,15 +9988,15 @@
                 "维度": "地产",
                 "分组": "需求",
                 "指标": "新屋销售",
-                "最新值变化": "580.00 前月 580.00 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "628.00 前月 618.00 · ↑ +10.00",
+                "规则分变化": "0.01 较上月 ↑ +0.05"
               },
               {
                 "维度": "地产",
                 "分组": "未来供给",
                 "指标": "营建许可水平",
-                "最新值变化": "1,367 前月 1,410 · ↓ -43.00",
-                "规则分变化": "0.12 较上月 ↓ -0.10"
+                "最新值变化": "1,374 前月 1,410 · ↓ -36.00",
+                "规则分变化": "0.14 较上月 ↓ -0.09"
               },
               {
                 "维度": "地产",
@@ -10118,12 +10114,6 @@
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
               {
-                "维度": "地产",
-                "指标": "新屋销售",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
                 "维度": "增长",
                 "指标": "产能利用率",
                 "状态": "候选",
@@ -10146,11 +10136,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-24T02:03:09.656133+00:00",
+    "generated_at": "2026-07-25T02:02:29.343259+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-24",
-      "run_count": 115
+      "end": "2026-07-25",
+      "run_count": 116
     },
     "target_months": [
       {
