@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-25 10:02 北京时间",
+  "run_time": "2026-07-26 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "e63557245c39b7bc97ca97fa34b28b66b7b8eeca75d402ba9460a06daa5fd602",
-    "model_update": "c3120ab0e3140bbc141388ce968a738293c4d81e17514cd04a717230987b7a2e"
+    "explain": "d16e6bd0b02f8e67d8342f9312966785cbc961b251e83ddf24b2d847287219d5",
+    "model_update": "b9baedf98e705c3ae08155d83df3fe39d24de54389276b6cc5033c263cb03eb5"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-25",
+    "data_cutoff_time": "2026-07-26",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -2115,7 +2115,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-25",
+        "data_cutoff_time": "2026-07-26",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4065,7 +4065,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-25",
+        "data_cutoff_time": "2026-07-26",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6044,7 +6044,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-25",
+        "data_cutoff_time": "2026-07-26",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8057,7 +8057,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-25",
+        "data_cutoff_time": "2026-07-26",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -10136,11 +10136,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-25T02:02:29.343259+00:00",
+    "generated_at": "2026-07-26T02:03:05.066914+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-25",
-      "run_count": 116
+      "end": "2026-07-26",
+      "run_count": 117
     },
     "target_months": [
       {
