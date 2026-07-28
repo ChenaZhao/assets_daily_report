@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-27 10:02 北京时间",
+  "run_time": "2026-07-28 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "8ac4dec2dd7e31a6489065c321cff65f3d74e9124875caf98206d7b709847491",
-    "model_update": "57ccebbd6375ba0dd110aaa0168675ec9322d4e6881dc291376dc86b0e133d6c"
+    "explain": "f3a6b6cad37ec7c7bb28a6edbdcc6f1c9b7aa609ae7fb7ba89c39eef24b7cf12",
+    "model_update": "1e4916c9c7c097ea6286682c9d41893527c8b64fc96ccf4d341f39fdacb966b9"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-27",
+    "data_cutoff_time": "2026-07-28",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -45,9 +45,9 @@
     "summary_cards": [
       {
         "name": "增长",
-        "label": "insufficient_coverage",
-        "score": "NA",
-        "coverage": "3/7",
+        "label": "中性",
+        "score": "-0.05",
+        "coverage": "5/7",
         "status_class": "neutral",
         "trend": [
           -0.071,
@@ -59,7 +59,8 @@
           0.028,
           -0.162,
           0.552,
-          -0.531
+          -0.503,
+          -0.046
         ]
       },
       {
@@ -147,13 +148,13 @@
       {
         "name": "增长",
         "semantics": "越高 = 实体活动与需求订单动能越强",
-        "score": "NA",
-        "label": "insufficient_coverage",
-        "coverage": "3/7",
+        "score": "-0.05",
+        "label": "中性",
+        "coverage": "5/7",
         "status_class": "neutral",
-        "delta_text": "较上月 → NA",
-        "delta_direction": "flat",
-        "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、最终产品工业生产增速。",
+        "delta_text": "较上月 ↑ +0.46",
+        "delta_direction": "up",
+        "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、零售销售增速。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -308,8 +309,8 @@
             "group": "投资需求 / 企业订单",
             "indicator": "耐用品新订单增速",
             "code": "AMDMNOx",
-            "latest": "332,218",
-            "latest_direction": "flat",
+            "latest": "334,772",
+            "latest_direction": "up",
             "trend": [
               312138.0,
               314147.0,
@@ -320,17 +321,18 @@
               316233.0,
               320485.0,
               347767.0,
-              332218.0
+              333706.0,
+              334772.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-07-02",
+            "score": "-0.02",
+            "score_direction": "up",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-27",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "332,218 前月 332,218 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "334,772 前月 333,706 · ↑ +1066.00",
+            "score_change_detail": "-0.02 较上月 ↑ +1.12",
             "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -344,8 +346,8 @@
             "group": "投资需求 / 企业订单",
             "indicator": "非国防资本品新订单增速",
             "code": "ANDENOx",
-            "latest": "96,065",
-            "latest_direction": "flat",
+            "latest": "97,774",
+            "latest_direction": "up",
             "trend": [
               94843.0,
               93874.0,
@@ -356,17 +358,18 @@
               92412.0,
               91289.0,
               114066.0,
-              96065.0
+              96569.0,
+              97774.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-07-02",
+            "score": "0.10",
+            "score_direction": "up",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-27",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "96,065 前月 96,065 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "97,774 前月 96,569 · ↑ +1205.00",
+            "score_change_detail": "0.10 较上月 ↑ +2.00",
             "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -1832,15 +1835,15 @@
             "维度": "增长",
             "分组": "投资需求 / 企业订单",
             "指标": "耐用品新订单增速",
-            "最新值变化": "332,218 前月 332,218 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "334,772 前月 333,706 · ↑ +1066.00",
+            "规则分变化": "-0.02 较上月 ↑ +1.12"
           },
           {
             "维度": "增长",
             "分组": "投资需求 / 企业订单",
             "指标": "非国防资本品新订单增速",
-            "最新值变化": "96,065 前月 96,065 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "97,774 前月 96,569 · ↑ +1205.00",
+            "规则分变化": "0.10 较上月 ↑ +2.00"
           },
           {
             "维度": "增长",
@@ -2036,18 +2039,6 @@
           },
           {
             "维度": "增长",
-            "指标": "耐用品新订单增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
-            "指标": "非国防资本品新订单增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
             "指标": "贸易差额",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -2115,7 +2106,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-27",
+        "data_cutoff_time": "2026-07-28",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2154,7 +2145,8 @@
               0.028,
               -0.162,
               0.552,
-              -0.531
+              -0.503,
+              -0.046
             ]
           },
           {
@@ -4065,7 +4057,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-27",
+        "data_cutoff_time": "2026-07-28",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4104,7 +4096,8 @@
               0.028,
               -0.162,
               0.552,
-              -0.531
+              -0.503,
+              -0.046
             ]
           },
           {
@@ -6044,7 +6037,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-27",
+        "data_cutoff_time": "2026-07-28",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6070,7 +6063,7 @@
           {
             "name": "增长",
             "label": "动能偏弱",
-            "score": "-0.53",
+            "score": "-0.50",
             "coverage": "6/7",
             "status_class": "low",
             "trend": [
@@ -6083,7 +6076,8 @@
               0.028,
               -0.162,
               0.552,
-              -0.531
+              -0.503,
+              -0.046
             ]
           },
           {
@@ -6171,11 +6165,11 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.53",
+            "score": "-0.50",
             "label": "动能偏弱",
             "coverage": "6/7",
             "status_class": "low",
-            "delta_text": "较上月 ↓ -1.08",
+            "delta_text": "较上月 ↓ -1.06",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自非国防资本品新订单增速、耐用品新订单增速、实际个人收入增速。",
             "is_transmission_layer": false,
@@ -6329,7 +6323,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "耐用品新订单增速",
                 "code": "AMDMNOx",
-                "latest": "332,218",
+                "latest": "333,706",
                 "latest_direction": "down",
                 "trend": [
                   312138.0,
@@ -6341,17 +6335,17 @@
                   316233.0,
                   320485.0,
                   347767.0,
-                  332218.0
+                  333706.0
                 ],
-                "score": "-1.25",
+                "score": "-1.14",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-05-31 / 2026-07-02",
+                "visible_date": "2026-05-31 / 2026-07-27",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "332,218 前月 347,767 · ↓ -15549.00",
-                "score_change_detail": "-1.25 较上月 ↓ -3.21",
+                "latest_change_detail": "333,706 前月 347,767 · ↓ -14061.00",
+                "score_change_detail": "-1.14 较上月 ↓ -3.10",
                 "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6365,7 +6359,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "非国防资本品新订单增速",
                 "code": "ANDENOx",
-                "latest": "96,065",
+                "latest": "96,569",
                 "latest_direction": "down",
                 "trend": [
                   94843.0,
@@ -6377,17 +6371,17 @@
                   92412.0,
                   91289.0,
                   114066.0,
-                  96065.0
+                  96569.0
                 ],
-                "score": "-1.96",
+                "score": "-1.90",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-05-31 / 2026-07-02",
+                "visible_date": "2026-05-31 / 2026-07-27",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "96,065 前月 114,066 · ↓ -18001.00",
-                "score_change_detail": "-1.96 较上月 ↓ -4.42",
+                "latest_change_detail": "96,569 前月 114,066 · ↓ -17497.00",
+                "score_change_detail": "-1.90 较上月 ↓ -4.36",
                 "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -7834,15 +7828,15 @@
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "耐用品新订单增速",
-                "最新值变化": "332,218 前月 347,767 · ↓ -15549.00",
-                "规则分变化": "-1.25 较上月 ↓ -3.21"
+                "最新值变化": "333,706 前月 347,767 · ↓ -14061.00",
+                "规则分变化": "-1.14 较上月 ↓ -3.10"
               },
               {
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "非国防资本品新订单增速",
-                "最新值变化": "96,065 前月 114,066 · ↓ -18001.00",
-                "规则分变化": "-1.96 较上月 ↓ -4.42"
+                "最新值变化": "96,569 前月 114,066 · ↓ -17497.00",
+                "规则分变化": "-1.90 较上月 ↓ -4.36"
               },
               {
                 "维度": "增长",
@@ -8057,7 +8051,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-27",
+        "data_cutoff_time": "2026-07-28",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8082,9 +8076,9 @@
         "summary_cards": [
           {
             "name": "增长",
-            "label": "insufficient_coverage",
-            "score": "NA",
-            "coverage": "3/7",
+            "label": "中性",
+            "score": "-0.05",
+            "coverage": "5/7",
             "status_class": "neutral",
             "trend": [
               -0.071,
@@ -8096,7 +8090,8 @@
               0.028,
               -0.162,
               0.552,
-              -0.531
+              -0.503,
+              -0.046
             ]
           },
           {
@@ -8184,13 +8179,13 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "NA",
-            "label": "insufficient_coverage",
-            "coverage": "3/7",
+            "score": "-0.05",
+            "label": "中性",
+            "coverage": "5/7",
             "status_class": "neutral",
-            "delta_text": "较上月 → NA",
-            "delta_direction": "flat",
-            "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、最终产品工业生产增速。",
+            "delta_text": "较上月 ↑ +0.46",
+            "delta_direction": "up",
+            "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、零售销售增速。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -8345,8 +8340,8 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "耐用品新订单增速",
                 "code": "AMDMNOx",
-                "latest": "332,218",
-                "latest_direction": "flat",
+                "latest": "334,772",
+                "latest_direction": "up",
                 "trend": [
                   312138.0,
                   314147.0,
@@ -8357,17 +8352,18 @@
                   316233.0,
                   320485.0,
                   347767.0,
-                  332218.0
+                  333706.0,
+                  334772.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-07-02",
+                "score": "-0.02",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-27",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "332,218 前月 332,218 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "334,772 前月 333,706 · ↑ +1066.00",
+                "score_change_detail": "-0.02 较上月 ↑ +1.12",
                 "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -8381,8 +8377,8 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "非国防资本品新订单增速",
                 "code": "ANDENOx",
-                "latest": "96,065",
-                "latest_direction": "flat",
+                "latest": "97,774",
+                "latest_direction": "up",
                 "trend": [
                   94843.0,
                   93874.0,
@@ -8393,17 +8389,18 @@
                   92412.0,
                   91289.0,
                   114066.0,
-                  96065.0
+                  96569.0,
+                  97774.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-07-02",
+                "score": "0.10",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-27",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "96,065 前月 96,065 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "97,774 前月 96,569 · ↑ +1205.00",
+                "score_change_detail": "0.10 较上月 ↑ +2.00",
                 "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -9869,15 +9866,15 @@
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "耐用品新订单增速",
-                "最新值变化": "332,218 前月 332,218 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "334,772 前月 333,706 · ↑ +1066.00",
+                "规则分变化": "-0.02 较上月 ↑ +1.12"
               },
               {
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "非国防资本品新订单增速",
-                "最新值变化": "96,065 前月 96,065 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "97,774 前月 96,569 · ↑ +1205.00",
+                "规则分变化": "0.10 较上月 ↑ +2.00"
               },
               {
                 "维度": "增长",
@@ -10073,18 +10070,6 @@
               },
               {
                 "维度": "增长",
-                "指标": "耐用品新订单增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
-                "指标": "非国防资本品新订单增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "贸易差额",
                 "状态": "当月值暂缺",
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -10136,11 +10121,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-27T02:02:50.971518+00:00",
+    "generated_at": "2026-07-28T02:02:51.742187+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-27",
-      "run_count": 118
+      "end": "2026-07-28",
+      "run_count": 119
     },
     "target_months": [
       {
