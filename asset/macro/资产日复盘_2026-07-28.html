@@ -564,7 +564,7 @@ function colorCells(){
       tb.querySelectorAll('tbody tr').forEach(tr=>{
         const c=tr.children[ci]; if(!c)return;
         const v=parseFloat(c.textContent.replace(/[^0-9.\-+]/g,''));
-        if(!isNaN(v)) c.classList.add(v<0?'down':v>0?'up':'');
+        if(!isNaN(v)){const cls=v<0?'down':v>0?'up':null; if(cls) c.classList.add(cls);}
       });
     });
   });
