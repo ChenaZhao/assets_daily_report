@@ -669,6 +669,10 @@ function buildEvList(ch,names,scol){
     box.appendChild(chip);
   });
 }
-wrapTables();colorCells();impactBadges();probBars();riskChart();priceChart();
+// 每个渲染步骤单独try/catch: 任一步异常(如未来又出现某种边界数据触发的报错)
+// 只影响它自己, 不会连带炸掉后面的图表初始化(这条铁律因07-28的classList.add('')事故而定)
+[wrapTables,colorCells,impactBadges,probBars,riskChart,priceChart].forEach(fn=>{
+  try{fn();}catch(e){console.error('['+fn.name+'] render step failed:',e);}
+});
 </script>
 </body></html>
