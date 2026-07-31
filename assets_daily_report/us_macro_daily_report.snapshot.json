@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-30 10:02 北京时间",
+  "run_time": "2026-07-31 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "2c142861a28df5eac5d936bee93414e8f15ba1db28b7a32b085e8f205f56458a",
-    "model_update": "c6765b80842b9f1b9cf4c63a6d5dcd59a7bb6350fcb2bea613d80772a4f91c43"
+    "explain": "850ee64ba1c92dab23d1c5002b626ed79f4cc9915be1f5fee2e622237f96bdf5",
+    "model_update": "15158cbf2f1c5b8fefa3a2f1b56fc725061eeb467118a1fba5769aa756e61726"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-30",
+    "data_cutoff_time": "2026-07-31",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -46,8 +46,8 @@
       {
         "name": "增长",
         "label": "中性",
-        "score": "-0.05",
-        "coverage": "5/7",
+        "score": "-0.04",
+        "coverage": "6/7",
         "status_class": "neutral",
         "trend": [
           -0.071,
@@ -58,16 +58,16 @@
           -0.347,
           0.028,
           -0.162,
-          0.552,
-          -0.503,
-          -0.046
+          0.596,
+          -0.417,
+          -0.039
         ]
       },
       {
         "name": "通胀",
         "label": "压力偏高",
-        "score": "0.71",
-        "coverage": "4/5",
+        "score": "0.81",
+        "coverage": "5/5",
         "status_class": "high",
         "trend": [
           0.143,
@@ -78,9 +78,9 @@
           0.089,
           0.067,
           0.615,
-          0.977,
-          1.205,
-          0.706
+          0.976,
+          1.207,
+          0.813
         ]
       },
       {
@@ -148,11 +148,11 @@
       {
         "name": "增长",
         "semantics": "越高 = 实体活动与需求订单动能越强",
-        "score": "-0.05",
+        "score": "-0.04",
         "label": "中性",
-        "coverage": "5/7",
+        "coverage": "6/7",
         "status_class": "neutral",
-        "delta_text": "较上月 ↑ +0.46",
+        "delta_text": "较上月 ↑ +0.38",
         "delta_direction": "up",
         "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、零售销售增速。",
         "is_transmission_layer": false,
@@ -199,7 +199,7 @@
             "group": "消费需求",
             "indicator": "汽车销售",
             "code": "TOTALSA",
-            "latest": "16.95",
+            "latest": "17.04",
             "latest_direction": "up",
             "trend": [
               16.9,
@@ -207,22 +207,22 @@
               15.845,
               16.006,
               16.4,
-              14.987,
-              15.881,
-              16.676,
-              16.588,
-              16.506,
-              16.949
+              14.988,
+              15.883,
+              16.678,
+              16.605,
+              16.52,
+              17.037
             ],
-            "score": "0.77",
+            "score": "0.80",
             "score_direction": "up",
             "state": "偏强",
-            "visible_date": "2026-06-30 / 2026-07-03",
+            "visible_date": "2026-06-30 / 2026-07-30",
             "type": "补充观察",
             "status_class": "high",
             "missing": false,
-            "latest_change_detail": "16.95 前月 16.51 · ↑ +0.44",
-            "score_change_detail": "0.77 较上月 ↑ +0.17",
+            "latest_change_detail": "17.04 前月 16.52 · ↑ +0.52",
+            "score_change_detail": "0.80 较上月 ↑ +0.20",
             "logic": "观察耐用品消费强弱，辅助判断居民大额消费意愿。",
             "include_in_dimension_score": "否",
             "transform_rule": "log",
@@ -273,8 +273,8 @@
             "group": "消费需求",
             "indicator": "个人储蓄率",
             "code": "PSAVERT",
-            "latest": "3.00",
-            "latest_direction": "flat",
+            "latest": "2.70",
+            "latest_direction": "down",
             "trend": [
               4.4,
               4.3,
@@ -285,17 +285,18 @@
               3.8,
               3.5,
               3.0,
-              3.0
+              2.8,
+              2.7
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-25",
+            "score": "-2.08",
+            "score_direction": "up",
+            "state": "缓冲偏弱",
+            "visible_date": "2026-06-30 / 2026-07-30",
             "type": "补充观察",
-            "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "3.00 前月 3.00 · → +0.00",
-            "score_change_detail": "NA",
+            "status_class": "low",
+            "missing": false,
+            "latest_change_detail": "2.70 前月 2.80 · ↓ -0.10",
+            "score_change_detail": "-2.08 较上月 ↑ +0.13",
             "logic": "观察居民消费缓冲垫，储蓄偏低说明消费可持续性承压。",
             "include_in_dimension_score": "否",
             "transform_rule": "level",
@@ -493,8 +494,8 @@
             "group": "劳动力收入",
             "indicator": "实际个人收入增速",
             "code": "W875RX1",
-            "latest": "16,564",
-            "latest_direction": "flat",
+            "latest": "16,606",
+            "latest_direction": "up",
             "trend": [
               16699.7,
               16720.7,
@@ -504,18 +505,19 @@
               16667.0,
               16601.6,
               16598.1,
-              16522.3,
-              16564.1
+              16526.5,
+              16567.0,
+              16606.1
             ],
-            "score": "NA",
+            "score": "-0.00",
             "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-25",
+            "state": "中性",
+            "visible_date": "2026-06-30 / 2026-07-30",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "16,564 前月 16,564 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "16,606 前月 16,567 · ↑ +39.10",
+            "score_change_detail": "-0.00 较上月 → -0.01",
             "logic": "观察通胀调整后的收入购买力，判断内需基础。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -529,7 +531,7 @@
             "group": "综合销售确认",
             "indicator": "制造和贸易销售增速",
             "code": "CMRMTSPLx",
-            "latest": "1,575,604",
+            "latest": "1,586,429",
             "latest_direction": "flat",
             "trend": [
               1562681.0,
@@ -540,16 +542,17 @@
               1581144.0,
               1592277.0,
               1589933.0,
-              1575604.0
+              1580792.0,
+              1586429.0
             ],
             "score": "NA",
             "score_direction": "flat",
             "state": "当月暂缺",
-            "visible_date": "2026-04-30 / 2026-06-25",
+            "visible_date": "2026-05-31 / 2026-07-30",
             "type": "主指标",
             "status_class": "neutral",
             "missing": true,
-            "latest_change_detail": "1,575,604 前月 1,575,604 · → +0.00",
+            "latest_change_detail": "1,586,429 前月 1,586,429 · → +0.00",
             "score_change_detail": "NA",
             "logic": "观察制造、批发、零售链条的综合销售确认。",
             "include_in_dimension_score": "是",
@@ -564,11 +567,11 @@
       {
         "name": "通胀",
         "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-        "score": "0.71",
+        "score": "0.81",
         "label": "压力偏高",
-        "coverage": "4/5",
+        "coverage": "5/5",
         "status_class": "high",
-        "delta_text": "较上月 ↓ -0.50",
+        "delta_text": "较上月 ↓ -0.39",
         "delta_direction": "down",
         "driver_note": "较上月：边际走弱；主要变化来自油价压力、PPI 成本压力、5Y breakeven 通胀预期。",
         "is_transmission_layer": false,
@@ -652,31 +655,31 @@
             "group": "美联储口径",
             "indicator": "PCE 通胀率",
             "code": "PCEPI",
-            "latest": "131.53",
-            "latest_direction": "flat",
+            "latest": "131.39",
+            "latest_direction": "down",
             "trend": [
-              128.576,
-              128.576,
               129.023,
               129.023,
               129.539,
               129.539,
               130.403,
               130.403,
-              130.938,
-              130.938,
-              131.527,
-              131.527
+              130.932,
+              130.932,
+              131.535,
+              131.535,
+              131.392,
+              131.392
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-25",
+            "score": "1.08",
+            "score_direction": "down",
+            "state": "压力高",
+            "visible_date": "2026-06-30 / 2026-07-30",
             "type": "主指标",
-            "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "131.53 前月 131.53 · → +0.00",
-            "score_change_detail": "NA",
+            "status_class": "high",
+            "missing": false,
+            "latest_change_detail": "131.39 前月 131.53 · ↓ -0.14",
+            "score_change_detail": "1.08 较上月 ↓ -0.31",
             "logic": "观察美联储更关注的广义消费价格压力。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_yoy",
@@ -690,8 +693,8 @@
             "group": "美联储口径",
             "indicator": "核心 PCE 通胀率",
             "code": "PCEPILFE",
-            "latest": "130.08",
-            "latest_direction": "flat",
+            "latest": "130.27",
+            "latest_direction": "up",
             "trend": [
               126.714,
               126.954,
@@ -701,18 +704,19 @@
               128.455,
               128.961,
               129.343,
-              129.667,
-              130.082
+              129.663,
+              130.094,
+              130.266
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-05-31 / 2026-06-25",
+            "score": "1.11",
+            "score_direction": "down",
+            "state": "明显高于目标",
+            "visible_date": "2026-06-30 / 2026-07-30",
             "type": "补充观察",
-            "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "130.08 前月 130.08 · → +0.00",
-            "score_change_detail": "NA",
+            "status_class": "high",
+            "missing": false,
+            "latest_change_detail": "130.27 前月 130.09 · ↑ +0.17",
+            "score_change_detail": "1.11 较上月 ↓ -0.14",
             "logic": "观察美联储更关注的核心通胀黏性，辅助判断降息约束。",
             "include_in_dimension_score": "否",
             "transform_rule": "log_yoy",
@@ -1814,8 +1818,8 @@
             "维度": "增长",
             "分组": "消费需求",
             "指标": "汽车销售",
-            "最新值变化": "16.95 前月 16.51 · ↑ +0.44",
-            "规则分变化": "0.77 较上月 ↑ +0.17"
+            "最新值变化": "17.04 前月 16.52 · ↑ +0.52",
+            "规则分变化": "0.80 较上月 ↑ +0.20"
           },
           {
             "维度": "增长",
@@ -1828,8 +1832,8 @@
             "维度": "增长",
             "分组": "消费需求",
             "指标": "个人储蓄率",
-            "最新值变化": "3.00 前月 3.00 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "2.70 前月 2.80 · ↓ -0.10",
+            "规则分变化": "-2.08 较上月 ↑ +0.13"
           },
           {
             "维度": "增长",
@@ -1870,14 +1874,14 @@
             "维度": "增长",
             "分组": "劳动力收入",
             "指标": "实际个人收入增速",
-            "最新值变化": "16,564 前月 16,564 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "16,606 前月 16,567 · ↑ +39.10",
+            "规则分变化": "-0.00 较上月 → -0.01"
           },
           {
             "维度": "增长",
             "分组": "综合销售确认",
             "指标": "制造和贸易销售增速",
-            "最新值变化": "1,575,604 前月 1,575,604 · → +0.00",
+            "最新值变化": "1,586,429 前月 1,586,429 · → +0.00",
             "规则分变化": "NA"
           },
           {
@@ -1898,15 +1902,15 @@
             "维度": "通胀",
             "分组": "美联储口径",
             "指标": "PCE 通胀率",
-            "最新值变化": "131.53 前月 131.53 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "131.39 前月 131.53 · ↓ -0.14",
+            "规则分变化": "1.08 较上月 ↓ -0.31"
           },
           {
             "维度": "通胀",
             "分组": "美联储口径",
             "指标": "核心 PCE 通胀率",
-            "最新值变化": "130.08 前月 130.08 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "130.27 前月 130.09 · ↑ +0.17",
+            "规则分变化": "1.11 较上月 ↓ -0.14"
           },
           {
             "维度": "通胀",
@@ -2033,37 +2037,13 @@
         "rows": [
           {
             "维度": "增长",
-            "指标": "个人储蓄率",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
             "指标": "贸易差额",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
           {
             "维度": "增长",
-            "指标": "实际个人收入增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
             "指标": "制造和贸易销售增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "通胀",
-            "指标": "PCE 通胀率",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "通胀",
-            "指标": "核心 PCE 通胀率",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
@@ -2106,7 +2086,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-30",
+        "data_cutoff_time": "2026-07-31",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2144,9 +2124,9 @@
               -0.347,
               0.028,
               -0.162,
-              0.552,
-              -0.503,
-              -0.046
+              0.596,
+              -0.417,
+              -0.039
             ]
           },
           {
@@ -2164,9 +2144,9 @@
               0.089,
               0.067,
               0.615,
-              0.977,
-              1.205,
-              0.706
+              0.976,
+              1.207,
+              0.813
             ]
           },
           {
@@ -2290,18 +2270,18 @@
                   15.845,
                   16.006,
                   16.4,
-                  14.987,
-                  15.881,
-                  16.676
+                  14.988,
+                  15.883,
+                  16.678
                 ],
                 "score": "0.67",
                 "score_direction": "up",
                 "state": "偏强",
-                "visible_date": "2026-03-31 / 2026-07-03",
+                "visible_date": "2026-03-31 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "16.68 前月 15.88 · ↑ +0.79",
+                "latest_change_detail": "16.68 前月 15.88 · ↑ +0.80",
                 "score_change_detail": "0.67 较上月 ↑ +0.31",
                 "logic": "观察耐用品消费强弱，辅助判断居民大额消费意愿。",
                 "include_in_dimension_score": "否",
@@ -3819,7 +3799,7 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "汽车销售",
-                "最新值变化": "16.68 前月 15.88 · ↑ +0.79",
+                "最新值变化": "16.68 前月 15.88 · ↑ +0.80",
                 "规则分变化": "0.67 较上月 ↑ +0.31"
               },
               {
@@ -4057,7 +4037,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-30",
+        "data_cutoff_time": "2026-07-31",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4083,7 +4063,7 @@
           {
             "name": "增长",
             "label": "动能偏强",
-            "score": "0.55",
+            "score": "0.60",
             "coverage": "7/7",
             "status_class": "high",
             "trend": [
@@ -4095,9 +4075,9 @@
               -0.347,
               0.028,
               -0.162,
-              0.552,
-              -0.503,
-              -0.046
+              0.596,
+              -0.417,
+              -0.039
             ]
           },
           {
@@ -4115,9 +4095,9 @@
               0.089,
               0.067,
               0.615,
-              0.977,
-              1.205,
-              0.706
+              0.976,
+              1.207,
+              0.813
             ]
           },
           {
@@ -4185,11 +4165,11 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "0.55",
+            "score": "0.60",
             "label": "动能偏强",
             "coverage": "7/7",
             "status_class": "high",
-            "delta_text": "较上月 ↑ +0.71",
+            "delta_text": "较上月 ↑ +0.76",
             "delta_direction": "up",
             "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、最终产品工业生产增速。",
             "is_transmission_layer": false,
@@ -4234,7 +4214,7 @@
                 "group": "消费需求",
                 "indicator": "汽车销售",
                 "code": "TOTALSA",
-                "latest": "16.59",
+                "latest": "16.61",
                 "latest_direction": "down",
                 "trend": [
                   16.9,
@@ -4242,20 +4222,20 @@
                   15.845,
                   16.006,
                   16.4,
-                  14.987,
-                  15.881,
-                  16.676,
-                  16.588
+                  14.988,
+                  15.883,
+                  16.678,
+                  16.605
                 ],
-                "score": "0.63",
+                "score": "0.64",
                 "score_direction": "flat",
                 "state": "偏强",
-                "visible_date": "2026-04-30 / 2026-07-03",
+                "visible_date": "2026-04-30 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "16.59 前月 16.68 · ↓ -0.09",
-                "score_change_detail": "0.63 较上月 → -0.03",
+                "latest_change_detail": "16.61 前月 16.68 · ↓ -0.07",
+                "score_change_detail": "0.64 较上月 → -0.03",
                 "logic": "观察耐用品消费强弱，辅助判断居民大额消费意愿。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -4514,7 +4494,7 @@
                 "group": "劳动力收入",
                 "indicator": "实际个人收入增速",
                 "code": "W875RX1",
-                "latest": "16,522",
+                "latest": "16,526",
                 "latest_direction": "down",
                 "trend": [
                   16699.7,
@@ -4525,17 +4505,17 @@
                   16667.0,
                   16601.6,
                   16598.1,
-                  16522.3
+                  16526.5
                 ],
-                "score": "-1.13",
+                "score": "-1.09",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "visible_date": "2026-04-30 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "16,522 前月 16,598 · ↓ -75.80",
-                "score_change_detail": "-1.13 较上月 ↓ -0.71",
+                "latest_change_detail": "16,526 前月 16,598 · ↓ -71.60",
+                "score_change_detail": "-1.09 较上月 ↓ -0.67",
                 "logic": "观察通胀调整后的收入购买力，判断内需基础。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4549,7 +4529,7 @@
                 "group": "综合销售确认",
                 "indicator": "制造和贸易销售增速",
                 "code": "CMRMTSPLx",
-                "latest": "1,575,604",
+                "latest": "1,580,792",
                 "latest_direction": "down",
                 "trend": [
                   1562681.0,
@@ -4560,17 +4540,17 @@
                   1581144.0,
                   1592277.0,
                   1589933.0,
-                  1575604.0
+                  1580792.0
                 ],
-                "score": "-0.93",
+                "score": "-0.66",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "visible_date": "2026-04-30 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "1,575,604 前月 1,589,933 · ↓ -14329.00",
-                "score_change_detail": "-0.93 较上月 ↓ -0.63",
+                "latest_change_detail": "1,580,792 前月 1,589,933 · ↓ -9141.00",
+                "score_change_detail": "-0.66 较上月 ↓ -0.35",
                 "logic": "观察制造、批发、零售链条的综合销售确认。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4670,7 +4650,7 @@
                 "group": "美联储口径",
                 "indicator": "PCE 通胀率",
                 "code": "PCEPI",
-                "latest": "130.94",
+                "latest": "130.93",
                 "latest_direction": "up",
                 "trend": [
                   128.152,
@@ -4683,18 +4663,18 @@
                   129.539,
                   130.403,
                   130.403,
-                  130.938,
-                  130.938
+                  130.932,
+                  130.932
                 ],
-                "score": "1.19",
+                "score": "1.18",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "visible_date": "2026-04-30 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "130.94 前月 130.40 · ↑ +0.53",
-                "score_change_detail": "1.19 较上月 ↑ +0.19",
+                "latest_change_detail": "130.93 前月 130.40 · ↑ +0.53",
+                "score_change_detail": "1.18 较上月 ↑ +0.19",
                 "logic": "观察美联储更关注的广义消费价格压力。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -4708,7 +4688,7 @@
                 "group": "美联储口径",
                 "indicator": "核心 PCE 通胀率",
                 "code": "PCEPILFE",
-                "latest": "129.67",
+                "latest": "129.66",
                 "latest_direction": "up",
                 "trend": [
                   126.714,
@@ -4719,17 +4699,17 @@
                   128.455,
                   128.961,
                   129.343,
-                  129.667
+                  129.663
                 ],
-                "score": "1.15",
+                "score": "1.14",
                 "score_direction": "up",
                 "state": "明显高于目标",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "visible_date": "2026-04-30 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "129.67 前月 129.34 · ↑ +0.32",
-                "score_change_detail": "1.15 较上月 ↑ +0.06",
+                "latest_change_detail": "129.66 前月 129.34 · ↑ +0.32",
+                "score_change_detail": "1.14 较上月 ↑ +0.06",
                 "logic": "观察美联储更关注的核心通胀黏性，辅助判断降息约束。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log_yoy",
@@ -5799,8 +5779,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "汽车销售",
-                "最新值变化": "16.59 前月 16.68 · ↓ -0.09",
-                "规则分变化": "0.63 较上月 → -0.03"
+                "最新值变化": "16.61 前月 16.68 · ↓ -0.07",
+                "规则分变化": "0.64 较上月 → -0.03"
               },
               {
                 "维度": "增长",
@@ -5855,15 +5835,15 @@
                 "维度": "增长",
                 "分组": "劳动力收入",
                 "指标": "实际个人收入增速",
-                "最新值变化": "16,522 前月 16,598 · ↓ -75.80",
-                "规则分变化": "-1.13 较上月 ↓ -0.71"
+                "最新值变化": "16,526 前月 16,598 · ↓ -71.60",
+                "规则分变化": "-1.09 较上月 ↓ -0.67"
               },
               {
                 "维度": "增长",
                 "分组": "综合销售确认",
                 "指标": "制造和贸易销售增速",
-                "最新值变化": "1,575,604 前月 1,589,933 · ↓ -14329.00",
-                "规则分变化": "-0.93 较上月 ↓ -0.63"
+                "最新值变化": "1,580,792 前月 1,589,933 · ↓ -9141.00",
+                "规则分变化": "-0.66 较上月 ↓ -0.35"
               },
               {
                 "维度": "通胀",
@@ -5883,15 +5863,15 @@
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "PCE 通胀率",
-                "最新值变化": "130.94 前月 130.40 · ↑ +0.53",
-                "规则分变化": "1.19 较上月 ↑ +0.19"
+                "最新值变化": "130.93 前月 130.40 · ↑ +0.53",
+                "规则分变化": "1.18 较上月 ↑ +0.19"
               },
               {
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "核心 PCE 通胀率",
-                "最新值变化": "129.67 前月 129.34 · ↑ +0.32",
-                "规则分变化": "1.15 较上月 ↑ +0.06"
+                "最新值变化": "129.66 前月 129.34 · ↑ +0.32",
+                "规则分变化": "1.14 较上月 ↑ +0.06"
               },
               {
                 "维度": "通胀",
@@ -6037,7 +6017,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-30",
+        "data_cutoff_time": "2026-07-31",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6062,10 +6042,10 @@
         "summary_cards": [
           {
             "name": "增长",
-            "label": "动能偏弱",
-            "score": "-0.50",
-            "coverage": "6/7",
-            "status_class": "low",
+            "label": "中性",
+            "score": "-0.42",
+            "coverage": "7/7",
+            "status_class": "neutral",
             "trend": [
               -0.071,
               -0.223,
@@ -6075,9 +6055,9 @@
               -0.347,
               0.028,
               -0.162,
-              0.552,
-              -0.503,
-              -0.046
+              0.596,
+              -0.417,
+              -0.039
             ]
           },
           {
@@ -6095,9 +6075,9 @@
               0.089,
               0.067,
               0.615,
-              0.977,
-              1.205,
-              0.706
+              0.976,
+              1.207,
+              0.813
             ]
           },
           {
@@ -6165,11 +6145,11 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.50",
-            "label": "动能偏弱",
-            "coverage": "6/7",
-            "status_class": "low",
-            "delta_text": "较上月 ↓ -1.06",
+            "score": "-0.42",
+            "label": "中性",
+            "coverage": "7/7",
+            "status_class": "neutral",
+            "delta_text": "较上月 ↓ -1.01",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自非国防资本品新订单增速、耐用品新订单增速、实际个人收入增速。",
             "is_transmission_layer": false,
@@ -6215,7 +6195,7 @@
                 "group": "消费需求",
                 "indicator": "汽车销售",
                 "code": "TOTALSA",
-                "latest": "16.51",
+                "latest": "16.52",
                 "latest_direction": "down",
                 "trend": [
                   16.9,
@@ -6223,20 +6203,20 @@
                   15.845,
                   16.006,
                   16.4,
-                  14.987,
-                  15.881,
-                  16.676,
-                  16.588,
-                  16.506
+                  14.988,
+                  15.883,
+                  16.678,
+                  16.605,
+                  16.52
                 ],
                 "score": "0.60",
                 "score_direction": "flat",
                 "state": "偏强",
-                "visible_date": "2026-05-31 / 2026-07-03",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "16.51 前月 16.59 · ↓ -0.08",
+                "latest_change_detail": "16.52 前月 16.61 · ↓ -0.09",
                 "score_change_detail": "0.60 较上月 → -0.03",
                 "logic": "观察耐用品消费强弱，辅助判断居民大额消费意愿。",
                 "include_in_dimension_score": "否",
@@ -6287,8 +6267,8 @@
                 "group": "消费需求",
                 "indicator": "个人储蓄率",
                 "code": "PSAVERT",
-                "latest": "3.00",
-                "latest_direction": "flat",
+                "latest": "2.80",
+                "latest_direction": "down",
                 "trend": [
                   4.4,
                   4.3,
@@ -6299,17 +6279,17 @@
                   3.8,
                   3.5,
                   3.0,
-                  3.0
+                  2.8
                 ],
-                "score": "-2.01",
-                "score_direction": "up",
+                "score": "-2.22",
+                "score_direction": "flat",
                 "state": "缓冲偏弱",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "3.00 前月 3.00 · → +0.00",
-                "score_change_detail": "-2.01 较上月 ↑ +0.25",
+                "latest_change_detail": "2.80 前月 3.00 · ↓ -0.20",
+                "score_change_detail": "-2.22 较上月 → +0.05",
                 "logic": "观察居民消费缓冲垫，储蓄偏低说明消费可持续性承压。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "level",
@@ -6503,7 +6483,7 @@
                 "group": "劳动力收入",
                 "indicator": "实际个人收入增速",
                 "code": "W875RX1",
-                "latest": "16,564",
+                "latest": "16,567",
                 "latest_direction": "up",
                 "trend": [
                   16699.7,
@@ -6514,18 +6494,18 @@
                   16667.0,
                   16601.6,
                   16598.1,
-                  16522.3,
-                  16564.1
+                  16526.5,
+                  16567.0
                 ],
-                "score": "0.03",
+                "score": "0.01",
                 "score_direction": "up",
                 "state": "中性",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "16,564 前月 16,522 · ↑ +41.80",
-                "score_change_detail": "0.03 较上月 ↑ +1.16",
+                "latest_change_detail": "16,567 前月 16,526 · ↑ +40.50",
+                "score_change_detail": "0.01 较上月 ↑ +1.11",
                 "logic": "观察通胀调整后的收入购买力，判断内需基础。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6539,8 +6519,8 @@
                 "group": "综合销售确认",
                 "indicator": "制造和贸易销售增速",
                 "code": "CMRMTSPLx",
-                "latest": "1,575,604",
-                "latest_direction": "flat",
+                "latest": "1,586,429",
+                "latest_direction": "up",
                 "trend": [
                   1562681.0,
                   1551628.0,
@@ -6550,17 +6530,18 @@
                   1581144.0,
                   1592277.0,
                   1589933.0,
-                  1575604.0
+                  1580792.0,
+                  1586429.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "score": "0.12",
+                "score_direction": "up",
+                "state": "中性",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "1,575,604 前月 1,575,604 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "1,586,429 前月 1,580,792 · ↑ +5637.00",
+                "score_change_detail": "0.12 较上月 ↑ +0.77",
                 "logic": "观察制造、批发、零售链条的综合销售确认。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6672,20 +6653,20 @@
                   129.539,
                   130.403,
                   130.403,
-                  130.938,
-                  130.938,
-                  131.527,
-                  131.527
+                  130.932,
+                  130.932,
+                  131.535,
+                  131.535
                 ],
-                "score": "1.39",
+                "score": "1.40",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "131.53 前月 130.94 · ↑ +0.59",
-                "score_change_detail": "1.39 较上月 ↑ +0.21",
+                "latest_change_detail": "131.53 前月 130.93 · ↑ +0.60",
+                "score_change_detail": "1.40 较上月 ↑ +0.21",
                 "logic": "观察美联储更关注的广义消费价格压力。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -6699,7 +6680,7 @@
                 "group": "美联储口径",
                 "indicator": "核心 PCE 通胀率",
                 "code": "PCEPILFE",
-                "latest": "130.08",
+                "latest": "130.09",
                 "latest_direction": "up",
                 "trend": [
                   126.714,
@@ -6710,18 +6691,18 @@
                   128.455,
                   128.961,
                   129.343,
-                  129.667,
-                  130.082
+                  129.663,
+                  130.094
                 ],
-                "score": "1.24",
+                "score": "1.25",
                 "score_direction": "up",
                 "state": "明显高于目标",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "130.08 前月 129.67 · ↑ +0.41",
-                "score_change_detail": "1.24 较上月 ↑ +0.09",
+                "latest_change_detail": "130.09 前月 129.66 · ↑ +0.43",
+                "score_change_detail": "1.25 较上月 ↑ +0.10",
                 "logic": "观察美联储更关注的核心通胀黏性，辅助判断降息约束。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log_yoy",
@@ -7807,7 +7788,7 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "汽车销售",
-                "最新值变化": "16.51 前月 16.59 · ↓ -0.08",
+                "最新值变化": "16.52 前月 16.61 · ↓ -0.09",
                 "规则分变化": "0.60 较上月 → -0.03"
               },
               {
@@ -7821,8 +7802,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "个人储蓄率",
-                "最新值变化": "3.00 前月 3.00 · → +0.00",
-                "规则分变化": "-2.01 较上月 ↑ +0.25"
+                "最新值变化": "2.80 前月 3.00 · ↓ -0.20",
+                "规则分变化": "-2.22 较上月 → +0.05"
               },
               {
                 "维度": "增长",
@@ -7863,15 +7844,15 @@
                 "维度": "增长",
                 "分组": "劳动力收入",
                 "指标": "实际个人收入增速",
-                "最新值变化": "16,564 前月 16,522 · ↑ +41.80",
-                "规则分变化": "0.03 较上月 ↑ +1.16"
+                "最新值变化": "16,567 前月 16,526 · ↑ +40.50",
+                "规则分变化": "0.01 较上月 ↑ +1.11"
               },
               {
                 "维度": "增长",
                 "分组": "综合销售确认",
                 "指标": "制造和贸易销售增速",
-                "最新值变化": "1,575,604 前月 1,575,604 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "1,586,429 前月 1,580,792 · ↑ +5637.00",
+                "规则分变化": "0.12 较上月 ↑ +0.77"
               },
               {
                 "维度": "通胀",
@@ -7891,15 +7872,15 @@
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "PCE 通胀率",
-                "最新值变化": "131.53 前月 130.94 · ↑ +0.59",
-                "规则分变化": "1.39 较上月 ↑ +0.21"
+                "最新值变化": "131.53 前月 130.93 · ↑ +0.60",
+                "规则分变化": "1.40 较上月 ↑ +0.21"
               },
               {
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "核心 PCE 通胀率",
-                "最新值变化": "130.08 前月 129.67 · ↑ +0.41",
-                "规则分变化": "1.24 较上月 ↑ +0.09"
+                "最新值变化": "130.09 前月 129.66 · ↑ +0.43",
+                "规则分变化": "1.25 较上月 ↑ +0.10"
               },
               {
                 "维度": "通胀",
@@ -8026,12 +8007,6 @@
             "rows": [
               {
                 "维度": "增长",
-                "指标": "制造和贸易销售增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "产能利用率",
                 "状态": "候选",
                 "处理": "与工业生产信号重复，暂不放主视图。"
@@ -8051,7 +8026,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-30",
+        "data_cutoff_time": "2026-07-31",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8077,8 +8052,8 @@
           {
             "name": "增长",
             "label": "中性",
-            "score": "-0.05",
-            "coverage": "5/7",
+            "score": "-0.04",
+            "coverage": "6/7",
             "status_class": "neutral",
             "trend": [
               -0.071,
@@ -8089,16 +8064,16 @@
               -0.347,
               0.028,
               -0.162,
-              0.552,
-              -0.503,
-              -0.046
+              0.596,
+              -0.417,
+              -0.039
             ]
           },
           {
             "name": "通胀",
             "label": "压力偏高",
-            "score": "0.71",
-            "coverage": "4/5",
+            "score": "0.81",
+            "coverage": "5/5",
             "status_class": "high",
             "trend": [
               0.143,
@@ -8109,9 +8084,9 @@
               0.089,
               0.067,
               0.615,
-              0.977,
-              1.205,
-              0.706
+              0.976,
+              1.207,
+              0.813
             ]
           },
           {
@@ -8179,11 +8154,11 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.05",
+            "score": "-0.04",
             "label": "中性",
-            "coverage": "5/7",
+            "coverage": "6/7",
             "status_class": "neutral",
-            "delta_text": "较上月 ↑ +0.46",
+            "delta_text": "较上月 ↑ +0.38",
             "delta_direction": "up",
             "driver_note": "较上月：边际走强；主要变化来自非国防资本品新订单增速、耐用品新订单增速、零售销售增速。",
             "is_transmission_layer": false,
@@ -8230,7 +8205,7 @@
                 "group": "消费需求",
                 "indicator": "汽车销售",
                 "code": "TOTALSA",
-                "latest": "16.95",
+                "latest": "17.04",
                 "latest_direction": "up",
                 "trend": [
                   16.9,
@@ -8238,22 +8213,22 @@
                   15.845,
                   16.006,
                   16.4,
-                  14.987,
-                  15.881,
-                  16.676,
-                  16.588,
-                  16.506,
-                  16.949
+                  14.988,
+                  15.883,
+                  16.678,
+                  16.605,
+                  16.52,
+                  17.037
                 ],
-                "score": "0.77",
+                "score": "0.80",
                 "score_direction": "up",
                 "state": "偏强",
-                "visible_date": "2026-06-30 / 2026-07-03",
+                "visible_date": "2026-06-30 / 2026-07-30",
                 "type": "补充观察",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "16.95 前月 16.51 · ↑ +0.44",
-                "score_change_detail": "0.77 较上月 ↑ +0.17",
+                "latest_change_detail": "17.04 前月 16.52 · ↑ +0.52",
+                "score_change_detail": "0.80 较上月 ↑ +0.20",
                 "logic": "观察耐用品消费强弱，辅助判断居民大额消费意愿。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log",
@@ -8304,8 +8279,8 @@
                 "group": "消费需求",
                 "indicator": "个人储蓄率",
                 "code": "PSAVERT",
-                "latest": "3.00",
-                "latest_direction": "flat",
+                "latest": "2.70",
+                "latest_direction": "down",
                 "trend": [
                   4.4,
                   4.3,
@@ -8316,17 +8291,18 @@
                   3.8,
                   3.5,
                   3.0,
-                  3.0
+                  2.8,
+                  2.7
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "score": "-2.08",
+                "score_direction": "up",
+                "state": "缓冲偏弱",
+                "visible_date": "2026-06-30 / 2026-07-30",
                 "type": "补充观察",
-                "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "3.00 前月 3.00 · → +0.00",
-                "score_change_detail": "NA",
+                "status_class": "low",
+                "missing": false,
+                "latest_change_detail": "2.70 前月 2.80 · ↓ -0.10",
+                "score_change_detail": "-2.08 较上月 ↑ +0.13",
                 "logic": "观察居民消费缓冲垫，储蓄偏低说明消费可持续性承压。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "level",
@@ -8524,8 +8500,8 @@
                 "group": "劳动力收入",
                 "indicator": "实际个人收入增速",
                 "code": "W875RX1",
-                "latest": "16,564",
-                "latest_direction": "flat",
+                "latest": "16,606",
+                "latest_direction": "up",
                 "trend": [
                   16699.7,
                   16720.7,
@@ -8535,18 +8511,19 @@
                   16667.0,
                   16601.6,
                   16598.1,
-                  16522.3,
-                  16564.1
+                  16526.5,
+                  16567.0,
+                  16606.1
                 ],
-                "score": "NA",
+                "score": "-0.00",
                 "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "state": "中性",
+                "visible_date": "2026-06-30 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "16,564 前月 16,564 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "16,606 前月 16,567 · ↑ +39.10",
+                "score_change_detail": "-0.00 较上月 → -0.01",
                 "logic": "观察通胀调整后的收入购买力，判断内需基础。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -8560,7 +8537,7 @@
                 "group": "综合销售确认",
                 "indicator": "制造和贸易销售增速",
                 "code": "CMRMTSPLx",
-                "latest": "1,575,604",
+                "latest": "1,586,429",
                 "latest_direction": "flat",
                 "trend": [
                   1562681.0,
@@ -8571,16 +8548,17 @@
                   1581144.0,
                   1592277.0,
                   1589933.0,
-                  1575604.0
+                  1580792.0,
+                  1586429.0
                 ],
                 "score": "NA",
                 "score_direction": "flat",
                 "state": "当月暂缺",
-                "visible_date": "2026-04-30 / 2026-06-25",
+                "visible_date": "2026-05-31 / 2026-07-30",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": true,
-                "latest_change_detail": "1,575,604 前月 1,575,604 · → +0.00",
+                "latest_change_detail": "1,586,429 前月 1,586,429 · → +0.00",
                 "score_change_detail": "NA",
                 "logic": "观察制造、批发、零售链条的综合销售确认。",
                 "include_in_dimension_score": "是",
@@ -8595,11 +8573,11 @@
           {
             "name": "通胀",
             "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-            "score": "0.71",
+            "score": "0.81",
             "label": "压力偏高",
-            "coverage": "4/5",
+            "coverage": "5/5",
             "status_class": "high",
-            "delta_text": "较上月 ↓ -0.50",
+            "delta_text": "较上月 ↓ -0.39",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自油价压力、PPI 成本压力、5Y breakeven 通胀预期。",
             "is_transmission_layer": false,
@@ -8683,31 +8661,31 @@
                 "group": "美联储口径",
                 "indicator": "PCE 通胀率",
                 "code": "PCEPI",
-                "latest": "131.53",
-                "latest_direction": "flat",
+                "latest": "131.39",
+                "latest_direction": "down",
                 "trend": [
-                  128.576,
-                  128.576,
                   129.023,
                   129.023,
                   129.539,
                   129.539,
                   130.403,
                   130.403,
-                  130.938,
-                  130.938,
-                  131.527,
-                  131.527
+                  130.932,
+                  130.932,
+                  131.535,
+                  131.535,
+                  131.392,
+                  131.392
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "score": "1.08",
+                "score_direction": "down",
+                "state": "压力高",
+                "visible_date": "2026-06-30 / 2026-07-30",
                 "type": "主指标",
-                "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "131.53 前月 131.53 · → +0.00",
-                "score_change_detail": "NA",
+                "status_class": "high",
+                "missing": false,
+                "latest_change_detail": "131.39 前月 131.53 · ↓ -0.14",
+                "score_change_detail": "1.08 较上月 ↓ -0.31",
                 "logic": "观察美联储更关注的广义消费价格压力。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -8721,8 +8699,8 @@
                 "group": "美联储口径",
                 "indicator": "核心 PCE 通胀率",
                 "code": "PCEPILFE",
-                "latest": "130.08",
-                "latest_direction": "flat",
+                "latest": "130.27",
+                "latest_direction": "up",
                 "trend": [
                   126.714,
                   126.954,
@@ -8732,18 +8710,19 @@
                   128.455,
                   128.961,
                   129.343,
-                  129.667,
-                  130.082
+                  129.663,
+                  130.094,
+                  130.266
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-05-31 / 2026-06-25",
+                "score": "1.11",
+                "score_direction": "down",
+                "state": "明显高于目标",
+                "visible_date": "2026-06-30 / 2026-07-30",
                 "type": "补充观察",
-                "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "130.08 前月 130.08 · → +0.00",
-                "score_change_detail": "NA",
+                "status_class": "high",
+                "missing": false,
+                "latest_change_detail": "130.27 前月 130.09 · ↑ +0.17",
+                "score_change_detail": "1.11 较上月 ↓ -0.14",
                 "logic": "观察美联储更关注的核心通胀黏性，辅助判断降息约束。",
                 "include_in_dimension_score": "否",
                 "transform_rule": "log_yoy",
@@ -9845,8 +9824,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "汽车销售",
-                "最新值变化": "16.95 前月 16.51 · ↑ +0.44",
-                "规则分变化": "0.77 较上月 ↑ +0.17"
+                "最新值变化": "17.04 前月 16.52 · ↑ +0.52",
+                "规则分变化": "0.80 较上月 ↑ +0.20"
               },
               {
                 "维度": "增长",
@@ -9859,8 +9838,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "个人储蓄率",
-                "最新值变化": "3.00 前月 3.00 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "2.70 前月 2.80 · ↓ -0.10",
+                "规则分变化": "-2.08 较上月 ↑ +0.13"
               },
               {
                 "维度": "增长",
@@ -9901,14 +9880,14 @@
                 "维度": "增长",
                 "分组": "劳动力收入",
                 "指标": "实际个人收入增速",
-                "最新值变化": "16,564 前月 16,564 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "16,606 前月 16,567 · ↑ +39.10",
+                "规则分变化": "-0.00 较上月 → -0.01"
               },
               {
                 "维度": "增长",
                 "分组": "综合销售确认",
                 "指标": "制造和贸易销售增速",
-                "最新值变化": "1,575,604 前月 1,575,604 · → +0.00",
+                "最新值变化": "1,586,429 前月 1,586,429 · → +0.00",
                 "规则分变化": "NA"
               },
               {
@@ -9929,15 +9908,15 @@
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "PCE 通胀率",
-                "最新值变化": "131.53 前月 131.53 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "131.39 前月 131.53 · ↓ -0.14",
+                "规则分变化": "1.08 较上月 ↓ -0.31"
               },
               {
                 "维度": "通胀",
                 "分组": "美联储口径",
                 "指标": "核心 PCE 通胀率",
-                "最新值变化": "130.08 前月 130.08 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "130.27 前月 130.09 · ↑ +0.17",
+                "规则分变化": "1.11 较上月 ↓ -0.14"
               },
               {
                 "维度": "通胀",
@@ -10064,37 +10043,13 @@
             "rows": [
               {
                 "维度": "增长",
-                "指标": "个人储蓄率",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "贸易差额",
                 "状态": "当月值暂缺",
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
               {
                 "维度": "增长",
-                "指标": "实际个人收入增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "制造和贸易销售增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "通胀",
-                "指标": "PCE 通胀率",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "通胀",
-                "指标": "核心 PCE 通胀率",
                 "状态": "当月值暂缺",
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
@@ -10121,11 +10076,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-30T02:02:44.920759+00:00",
+    "generated_at": "2026-07-31T02:03:12.487910+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-30",
-      "run_count": 121
+      "end": "2026-07-31",
+      "run_count": 122
     },
     "target_months": [
       {
@@ -15507,9 +15462,300 @@
               }
             ],
             "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260717_assets_daily_report_29559618009"
+          },
+          {
+            "id": "2026-04__2026-07-31",
+            "as_of": "2026-07-31",
+            "target_month": "2026-04",
+            "kind": "baseline",
+            "states": {
+              "gmm": {
+                "state": "slow_growth",
+                "display": "放缓",
+                "css_class": "slow_growth",
+                "confidence": "0.35",
+                "coverage": "104/104",
+                "distribution": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.34782608700000006,
+                    "score_text": "34.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.34239130430000003,
+                    "score_text": "34.2%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.16304347830000002,
+                    "score_text": "16.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.14673913040000003,
+                    "score_text": "14.7%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "0.66",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.6566332212,
+                    "score_text": "65.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2983424352,
+                    "score_text": "29.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0450243436,
+                    "score_text": "4.5%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "no_consensus",
+                "display": "分歧",
+                "css_class": "no_consensus",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.38768115943333337,
+                    "score_text": "38.8%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.3330081751666667,
+                    "score_text": "33.3%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.21538950739999999,
+                    "score_text": "21.5%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.06392115800000002,
+                    "score_text": "6.4%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": "最高支持：过热 0.39"
+              }
+            },
+            "reason_type": "基准记录",
+            "reason": "该运行日作为本目标月的比较起点。",
+            "gmm_candidates": [
+              {
+                "state": "slow_growth",
+                "display": "放缓",
+                "score": 0.34782608700000006,
+                "score_text": "34.8%",
+                "css_class": "slow_growth"
+              },
+              {
+                "state": "goldilocks",
+                "display": "温和",
+                "score": 0.34239130430000003,
+                "score_text": "34.2%",
+                "css_class": "goldilocks"
+              },
+              {
+                "state": "heating_up",
+                "display": "过热",
+                "score": 0.16304347830000002,
+                "score_text": "16.3%",
+                "css_class": "heating_up"
+              },
+              {
+                "state": "stagflation",
+                "display": "滞胀",
+                "score": 0.14673913040000003,
+                "score_text": "14.7%",
+                "css_class": "stagflation"
+              }
+            ],
+            "gmm_boundary": true,
+            "gmm_coverage": "104/104",
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "放缓",
+                "state_after": "放缓",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "104/104",
+                "coverage": "104/104",
+                "candidates": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.34782608700000006,
+                    "score_text": "34.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.34239130430000003,
+                    "score_text": "34.2%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.16304347830000002,
+                    "score_text": "16.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.14673913040000003,
+                    "score_text": "14.7%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.6566332212,
+                    "score_text": "65.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2983424352,
+                    "score_text": "29.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0450243436,
+                    "score_text": "4.5%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "changes": []
+              }
+            ],
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260731_assets_daily_report_30597845594"
           }
         ],
-        "default_event_id": "2026-04__2026-07-17",
+        "default_event_id": "2026-04__2026-07-31",
         "eligibility_note": "",
         "stable": true
       },
@@ -19268,9 +19514,300 @@
               }
             ],
             "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260716_assets_daily_report_29465519699"
+          },
+          {
+            "id": "2026-05__2026-07-31",
+            "as_of": "2026-07-31",
+            "target_month": "2026-05",
+            "kind": "baseline",
+            "states": {
+              "gmm": {
+                "state": "slow_growth",
+                "display": "放缓",
+                "css_class": "slow_growth",
+                "confidence": "0.34",
+                "coverage": "102/104",
+                "distribution": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.3385826772,
+                    "score_text": "33.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2440944882,
+                    "score_text": "24.4%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2125984252,
+                    "score_text": "21.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.2047244094,
+                    "score_text": "20.5%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "0.52",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.518871515551887,
+                    "score_text": "51.9%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2710862107271086,
+                    "score_text": "27.1%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.15639953611563992,
+                    "score_text": "15.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.05364273760536427,
+                    "score_text": "5.4%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "no_consensus",
+                "display": "分歧",
+                "css_class": "no_consensus",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.4563326537718799,
+                    "score_text": "45.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.25432200125062904,
+                    "score_text": "25.4%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.20322296264236953,
+                    "score_text": "20.3%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.08612238233512143,
+                    "score_text": "8.6%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": "最高支持：过热 0.46"
+              }
+            },
+            "reason_type": "基准记录",
+            "reason": "该运行日作为本目标月的比较起点。",
+            "gmm_candidates": [
+              {
+                "state": "slow_growth",
+                "display": "放缓",
+                "score": 0.3385826772,
+                "score_text": "33.9%",
+                "css_class": "slow_growth"
+              },
+              {
+                "state": "goldilocks",
+                "display": "温和",
+                "score": 0.2440944882,
+                "score_text": "24.4%",
+                "css_class": "goldilocks"
+              },
+              {
+                "state": "heating_up",
+                "display": "过热",
+                "score": 0.2125984252,
+                "score_text": "21.3%",
+                "css_class": "heating_up"
+              },
+              {
+                "state": "stagflation",
+                "display": "滞胀",
+                "score": 0.2047244094,
+                "score_text": "20.5%",
+                "css_class": "stagflation"
+              }
+            ],
+            "gmm_boundary": false,
+            "gmm_coverage": "102/104",
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "放缓",
+                "state_after": "放缓",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "102/104",
+                "coverage": "102/104",
+                "candidates": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.3385826772,
+                    "score_text": "33.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2440944882,
+                    "score_text": "24.4%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2125984252,
+                    "score_text": "21.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.2047244094,
+                    "score_text": "20.5%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.518871515551887,
+                    "score_text": "51.9%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2710862107271086,
+                    "score_text": "27.1%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.15639953611563992,
+                    "score_text": "15.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.05364273760536427,
+                    "score_text": "5.4%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "changes": []
+              }
+            ],
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260731_assets_daily_report_30597845594"
           }
         ],
-        "default_event_id": "2026-05__2026-07-16",
+        "default_event_id": "2026-05__2026-07-31",
         "eligibility_note": "",
         "stable": true
       },
@@ -19570,7 +20107,7 @@
           }
         ],
         "default_event_id": "2026-06__2026-07-15",
-        "eligibility_note": "轻量模型先行观察，GMM 尚未完全成熟。",
+        "eligibility_note": "",
         "stable": true
       }
     }
