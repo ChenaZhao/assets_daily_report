@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-07-31 10:03 北京时间",
+  "run_time": "2026-08-01 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "850ee64ba1c92dab23d1c5002b626ed79f4cc9915be1f5fee2e622237f96bdf5",
-    "model_update": "15158cbf2f1c5b8fefa3a2f1b56fc725061eeb467118a1fba5769aa756e61726"
+    "explain": "2a69aa32a4197dd76ee84fd91e34c4a5acd4ade6ce5dda15b0e75cebb5c4113b",
+    "model_update": "4010eb08ba06acadd9f2592a751796dae460849c8babda507b7ac3181da3ceed"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-06",
-    "data_cutoff_time": "2026-07-31",
+    "data_cutoff_time": "2026-08-01",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -100,7 +100,8 @@
           0.168,
           -0.032,
           -0.133,
-          -0.32
+          -0.32,
+          0.862
         ]
       },
       {
@@ -140,7 +141,8 @@
           0.34,
           -0.094,
           -0.265,
-          -0.24
+          -0.24,
+          -0.254
         ]
       }
     ],
@@ -254,7 +256,7 @@
             "score": "-2.53",
             "score_direction": "up",
             "state": "偏弱",
-            "visible_date": "2026-06-30 / 2026-06-30",
+            "visible_date": "2026-06-30 / 2026-07-31",
             "type": "补充观察",
             "status_class": "low",
             "missing": false,
@@ -2086,7 +2088,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-03",
-        "data_cutoff_time": "2026-07-31",
+        "data_cutoff_time": "2026-08-01",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2166,7 +2168,8 @@
               0.168,
               -0.032,
               -0.133,
-              -0.32
+              -0.32,
+              0.862
             ]
           },
           {
@@ -2206,7 +2209,8 @@
               0.34,
               -0.094,
               -0.265,
-              -0.24
+              -0.24,
+              -0.254
             ]
           }
         ],
@@ -4037,7 +4041,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-04",
-        "data_cutoff_time": "2026-07-31",
+        "data_cutoff_time": "2026-08-01",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4117,7 +4121,8 @@
               0.168,
               -0.032,
               -0.133,
-              -0.32
+              -0.32,
+              0.862
             ]
           },
           {
@@ -4157,7 +4162,8 @@
               0.34,
               -0.094,
               -0.265,
-              -0.24
+              -0.24,
+              -0.254
             ]
           }
         ],
@@ -6017,7 +6023,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-07-31",
+        "data_cutoff_time": "2026-08-01",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6097,7 +6103,8 @@
               0.168,
               -0.032,
               -0.133,
-              -0.32
+              -0.32,
+              0.862
             ]
           },
           {
@@ -6137,7 +6144,8 @@
               0.34,
               -0.094,
               -0.265,
-              -0.24
+              -0.24,
+              -0.254
             ]
           }
         ],
@@ -8026,7 +8034,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-07-31",
+        "data_cutoff_time": "2026-08-01",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8106,7 +8114,8 @@
               0.168,
               -0.032,
               -0.133,
-              -0.32
+              -0.32,
+              0.862
             ]
           },
           {
@@ -8146,7 +8155,8 @@
               0.34,
               -0.094,
               -0.265,
-              -0.24
+              -0.24,
+              -0.254
             ]
           }
         ],
@@ -8260,7 +8270,7 @@
                 "score": "-2.53",
                 "score_direction": "up",
                 "state": "偏弱",
-                "visible_date": "2026-06-30 / 2026-06-30",
+                "visible_date": "2026-06-30 / 2026-07-31",
                 "type": "补充观察",
                 "status_class": "low",
                 "missing": false,
@@ -10076,11 +10086,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；HTML 只展示压缩后的变化事件和原因摘要。",
-    "generated_at": "2026-07-31T02:03:12.487910+00:00",
+    "generated_at": "2026-08-01T02:03:05.469487+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-07-31",
-      "run_count": 122
+      "end": "2026-08-01",
+      "run_count": 123
     },
     "target_months": [
       {
@@ -15753,9 +15763,300 @@
               }
             ],
             "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260731_assets_daily_report_30597845594"
+          },
+          {
+            "id": "2026-04__2026-08-01",
+            "as_of": "2026-08-01",
+            "target_month": "2026-04",
+            "kind": "baseline",
+            "states": {
+              "gmm": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "0.35",
+                "coverage": "104/104",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.3480662983,
+                    "score_text": "34.8%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.3370165746,
+                    "score_text": "33.7%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1657458564,
+                    "score_text": "16.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.1491712707,
+                    "score_text": "14.9%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "0.66",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.6566332212,
+                    "score_text": "65.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2983424352,
+                    "score_text": "29.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0450243436,
+                    "score_text": "4.5%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.38858195213333335,
+                    "score_text": "38.9%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.3348998398333333,
+                    "score_text": "33.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.21178633659999999,
+                    "score_text": "21.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.06473187143333332,
+                    "score_text": "6.5%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": "0.33"
+              }
+            },
+            "reason_type": "基准记录",
+            "reason": "该运行日作为本目标月的比较起点。",
+            "gmm_candidates": [
+              {
+                "state": "goldilocks",
+                "display": "温和",
+                "score": 0.3480662983,
+                "score_text": "34.8%",
+                "css_class": "goldilocks"
+              },
+              {
+                "state": "slow_growth",
+                "display": "放缓",
+                "score": 0.3370165746,
+                "score_text": "33.7%",
+                "css_class": "slow_growth"
+              },
+              {
+                "state": "heating_up",
+                "display": "过热",
+                "score": 0.1657458564,
+                "score_text": "16.6%",
+                "css_class": "heating_up"
+              },
+              {
+                "state": "stagflation",
+                "display": "滞胀",
+                "score": 0.1491712707,
+                "score_text": "14.9%",
+                "css_class": "stagflation"
+              }
+            ],
+            "gmm_boundary": true,
+            "gmm_coverage": "104/104",
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "104/104",
+                "coverage": "104/104",
+                "candidates": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.3480662983,
+                    "score_text": "34.8%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.3370165746,
+                    "score_text": "33.7%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1657458564,
+                    "score_text": "16.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.1491712707,
+                    "score_text": "14.9%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": false,
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.6566332212,
+                    "score_text": "65.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2983424352,
+                    "score_text": "29.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0450243436,
+                    "score_text": "4.5%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "changes": []
+              }
+            ],
+            "package_dir": "/home/runner/work/macro_scene_classification/macro_scene_classification/macro_quant_framework/files/output/us/20260801_assets_daily_report_30679128892"
           }
         ],
-        "default_event_id": "2026-04__2026-07-31",
+        "default_event_id": "2026-04__2026-08-01",
         "eligibility_note": "",
         "stable": true
       },
