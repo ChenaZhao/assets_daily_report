@@ -318,7 +318,7 @@ details { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 <body>
 
 <div class="wrapper">
-<header><div><h1>中国宏观场景状态</h1></div><div class="meta"><strong id="observation-month-label">观察月 2026-06</strong>运行日 2026-08-08</div></header>
+<header><div><h1>中国宏观场景状态</h1></div><div class="meta"><strong id="observation-month-label">观察月 2026-06</strong>运行日 2026-08-11</div></header>
 <nav class="month-tabs" aria-label="观察月"><button aria-selected="false" class="month-tab" data-month-label="2026-04" data-month-tab="2026-04" type="button">2026-04</button><button aria-selected="false" class="month-tab" data-month-label="2026-05" data-month-tab="2026-05" type="button">2026-05</button><button aria-selected="true" class="month-tab is-active" data-month-label="2026-06" data-month-tab="2026-06" type="button">2026-06</button></nav><div class="month-panel" data-month-panel="2026-04" hidden>
 <section class="layer-heading"><h2>一、当前宏观状态</h2><p>采用两层读法：第一层只看增长与通胀如何闭合主状态；第二层只展示辅助模块分数和触发项，不额外加入表外推断。</p></section>
 <section class="state-layers">
@@ -341,9 +341,9 @@ details { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 <section class="layer-heading"><h2>四、数据与规则附录</h2><p>附录保留观察月换月制度、六模块最小门槛、26 个指标阈值、较上月变化和 snapshot visible date 口径，便于审计但不打断主阅读路径。</p></section>
 <details><summary>观察月换月制度与六模块最小门槛</summary><div class="appendix-rule-summary">
 <div class="appendix-rule-card"><strong>每日候选月</strong><span>2026-07</span></div>
-<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（1/6 个模块达标）</span></div>
+<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（2/6 个模块达标）</span></div>
 <div class="appendix-rule-card"><strong>主页面保留</strong><span>2026-04 / 2026-05 / 2026-06</span></div>
-<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、通胀压力、信用条件、政策组合、地产压力</span></div>
+<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、信用条件、政策组合、地产压力</span></div>
 </div><table><thead><tr><th>环节</th><th>制度</th></tr></thead><tbody><tr><td>候选月</td><td>每日以 snapshot visible date 所在月份的上一个完整自然月为候选；不展示尚未结束的当月。</td></tr><tr><td>达标判定</td><td>增长、通胀、信用、政策组合、外需和地产压力六个模块必须同时达到下表门槛，且模块分均已生成。</td></tr><tr><td>页面切换</td><td>候选月达标后自动成为默认观察月；主页面只保留最近三个达标月，并移出最早月份。</td></tr><tr><td>未达标月份</td><td>不进入主页面；只在本附录显示候选月状态及仍待补齐的模块。</td></tr><tr><td>1 月处理</td><td>若 1 月没有独立月度数据，不强行生成；待 1—2 月合并数据满足门槛后，由 2 月进入候选。</td></tr><tr><td>数据口径</td><td>多个观察月均由同一最新 snapshot 回看，不代表历史 PIT，也不声明为 true vintage。</td></tr></tbody></table><table><thead><tr><th>模块</th><th>最小门槛</th><th>模块分生成</th></tr></thead><tbody><tr><td>增长动能</td><td>至少 4/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>通胀压力</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>信用条件</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>政策组合</td><td>货币子块至少 1/3；财政子块至少 1/2；两个子块均可用（2/2）</td><td>先分别形成货币与财政子分，再等权合成政策组合分。</td></tr><tr><td>外需环境</td><td>至少 2/3 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>地产压力</td><td>至少 3/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr></tbody></table></details>
 <details class="judgement-chain-details"><summary>本月判定链与模型计算链路</summary><section class="judgement-chain">
 <h2>本月判定链</h2>
@@ -387,9 +387,9 @@ details { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 <section class="layer-heading"><h2>四、数据与规则附录</h2><p>附录保留观察月换月制度、六模块最小门槛、26 个指标阈值、较上月变化和 snapshot visible date 口径，便于审计但不打断主阅读路径。</p></section>
 <details><summary>观察月换月制度与六模块最小门槛</summary><div class="appendix-rule-summary">
 <div class="appendix-rule-card"><strong>每日候选月</strong><span>2026-07</span></div>
-<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（1/6 个模块达标）</span></div>
+<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（2/6 个模块达标）</span></div>
 <div class="appendix-rule-card"><strong>主页面保留</strong><span>2026-04 / 2026-05 / 2026-06</span></div>
-<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、通胀压力、信用条件、政策组合、地产压力</span></div>
+<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、信用条件、政策组合、地产压力</span></div>
 </div><table><thead><tr><th>环节</th><th>制度</th></tr></thead><tbody><tr><td>候选月</td><td>每日以 snapshot visible date 所在月份的上一个完整自然月为候选；不展示尚未结束的当月。</td></tr><tr><td>达标判定</td><td>增长、通胀、信用、政策组合、外需和地产压力六个模块必须同时达到下表门槛，且模块分均已生成。</td></tr><tr><td>页面切换</td><td>候选月达标后自动成为默认观察月；主页面只保留最近三个达标月，并移出最早月份。</td></tr><tr><td>未达标月份</td><td>不进入主页面；只在本附录显示候选月状态及仍待补齐的模块。</td></tr><tr><td>1 月处理</td><td>若 1 月没有独立月度数据，不强行生成；待 1—2 月合并数据满足门槛后，由 2 月进入候选。</td></tr><tr><td>数据口径</td><td>多个观察月均由同一最新 snapshot 回看，不代表历史 PIT，也不声明为 true vintage。</td></tr></tbody></table><table><thead><tr><th>模块</th><th>最小门槛</th><th>模块分生成</th></tr></thead><tbody><tr><td>增长动能</td><td>至少 4/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>通胀压力</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>信用条件</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>政策组合</td><td>货币子块至少 1/3；财政子块至少 1/2；两个子块均可用（2/2）</td><td>先分别形成货币与财政子分，再等权合成政策组合分。</td></tr><tr><td>外需环境</td><td>至少 2/3 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>地产压力</td><td>至少 3/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr></tbody></table></details>
 <details class="judgement-chain-details"><summary>本月判定链与模型计算链路</summary><section class="judgement-chain">
 <h2>本月判定链</h2>
@@ -433,9 +433,9 @@ details { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 <section class="layer-heading"><h2>四、数据与规则附录</h2><p>附录保留观察月换月制度、六模块最小门槛、26 个指标阈值、较上月变化和 snapshot visible date 口径，便于审计但不打断主阅读路径。</p></section>
 <details><summary>观察月换月制度与六模块最小门槛</summary><div class="appendix-rule-summary">
 <div class="appendix-rule-card"><strong>每日候选月</strong><span>2026-07</span></div>
-<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（1/6 个模块达标）</span></div>
+<div class="appendix-rule-card"><strong>候选月状态</strong><span>暂未达标（2/6 个模块达标）</span></div>
 <div class="appendix-rule-card"><strong>主页面保留</strong><span>2026-04 / 2026-05 / 2026-06</span></div>
-<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、通胀压力、信用条件、政策组合、地产压力</span></div>
+<div class="appendix-rule-card"><strong>候选月待补模块</strong><span>增长动能、信用条件、政策组合、地产压力</span></div>
 </div><table><thead><tr><th>环节</th><th>制度</th></tr></thead><tbody><tr><td>候选月</td><td>每日以 snapshot visible date 所在月份的上一个完整自然月为候选；不展示尚未结束的当月。</td></tr><tr><td>达标判定</td><td>增长、通胀、信用、政策组合、外需和地产压力六个模块必须同时达到下表门槛，且模块分均已生成。</td></tr><tr><td>页面切换</td><td>候选月达标后自动成为默认观察月；主页面只保留最近三个达标月，并移出最早月份。</td></tr><tr><td>未达标月份</td><td>不进入主页面；只在本附录显示候选月状态及仍待补齐的模块。</td></tr><tr><td>1 月处理</td><td>若 1 月没有独立月度数据，不强行生成；待 1—2 月合并数据满足门槛后，由 2 月进入候选。</td></tr><tr><td>数据口径</td><td>多个观察月均由同一最新 snapshot 回看，不代表历史 PIT，也不声明为 true vintage。</td></tr></tbody></table><table><thead><tr><th>模块</th><th>最小门槛</th><th>模块分生成</th></tr></thead><tbody><tr><td>增长动能</td><td>至少 4/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>通胀压力</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>信用条件</td><td>至少 3/4 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>政策组合</td><td>货币子块至少 1/3；财政子块至少 1/2；两个子块均可用（2/2）</td><td>先分别形成货币与财政子分，再等权合成政策组合分。</td></tr><tr><td>外需环境</td><td>至少 2/3 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr><tr><td>地产压力</td><td>至少 3/5 个指标可用</td><td>达到门槛后，对当月可用规则信号等权平均。</td></tr></tbody></table></details>
 <details class="judgement-chain-details"><summary>本月判定链与模型计算链路</summary><section class="judgement-chain">
 <h2>本月判定链</h2>
