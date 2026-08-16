@@ -750,7 +750,7 @@ function renderReport(){
   const P=D.picks||{cur:{week:'',rows:[]},prev:{week:'',rows:[]}};
   const nc=P.cur.rows.length,np=(P.prev&&P.prev.rows||[]).length;
   let h=`<div class="export-page"><div class="hd"><div class="page-title">精选研报 <span class="sub">本周 ${nc} 篇 · 上周 ${np} 篇 · 可点开原文</span>
-   <a href="research_library.html" style="float:right;font-size:11px;font-weight:400" target="_blank">研报库（宏观策略 / 利率外汇 / 重要行业）›</a></div>`;
+   <a href="research_library.html" style="float:right;font-size:11px;font-weight:400" target="_blank">研报库（宏观策略 / 利率外汇 / 重要行业）›</a><a href="institutions.html" style="float:right;font-size:11px;font-weight:400;margin-right:12px" target="_blank">机构库（按机构与组的观点时序）›</a></div>`;
   h+=`<div class="judge">按三类归口：宏观策略（政策·增长·信用·量化）、利率外汇、重要行业观点。★ 为精读。标题可点开原文 PDF 或从外资 feed 摘录的单篇 txt；本周与上周对照看主线切换。</div></div>`;
   h+=`<div class="card"><div class="ct">本周精选<span class="wkbadge">${P.cur.week}</span></div>${pickTable(P.cur.rows)}</div>`;
   if(np) h+=`<div class="card"><div class="ct">上周精选（对比）<span class="wkbadge prev">${P.prev.week}</span></div>${pickTable(P.prev.rows)}</div>`;
