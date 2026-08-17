@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-08-16 10:03 北京时间",
+  "run_time": "2026-08-17 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "1173f185317cac33bf15f3a5fe174c4a2abb28b74b67fdb904ccfed6147a0e4c",
-    "model_update": "8c2260a28e7a45b32293f94bba944e746eb96e23800a843e38e846300f7caae5"
+    "explain": "1c46451ab23c6595b1738dd4150ae0ff42f998c089101e4dc796071f9ff8d21f",
+    "model_update": "725b8157c57a9d424efc2d8caaecc123ad131ed53044deeaa316c1d27e15ea81"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-07",
-    "data_cutoff_time": "2026-08-16",
+    "data_cutoff_time": "2026-08-17",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -2169,7 +2169,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-05",
-        "data_cutoff_time": "2026-08-16",
+        "data_cutoff_time": "2026-08-17",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4181,7 +4181,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-06",
-        "data_cutoff_time": "2026-08-16",
+        "data_cutoff_time": "2026-08-17",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6227,7 +6227,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-07",
-        "data_cutoff_time": "2026-08-16",
+        "data_cutoff_time": "2026-08-17",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8364,11 +8364,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；保留状态变化与证据成熟节点，并始终补上最新运行状态。",
-    "generated_at": "2026-08-16T02:03:16.763112+00:00",
+    "generated_at": "2026-08-17T02:02:56.612682+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-08-16",
-      "run_count": 138
+      "end": "2026-08-17",
+      "run_count": 139
     },
     "target_months": [
       {
@@ -12541,10 +12541,10 @@
             "comparison_replayed": true
           },
           {
-            "id": "2026-05__2026-08-16",
-            "as_of": "2026-08-16",
+            "id": "2026-05__2026-08-17",
+            "as_of": "2026-08-17",
             "target_month": "2026-05",
-            "comparison_as_of": "2026-08-15",
+            "comparison_as_of": "2026-08-16",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
             "comparison_status": "comparable",
             "kind": "stable_latest",
@@ -12913,11 +12913,11 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-05__2026-08-16",
+        "default_event_id": "2026-05__2026-08-17",
         "eligibility_note": "",
         "stable": true,
         "lifecycle": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "state": "分歧",
           "state_css_class": "no_consensus",
           "evidence_mature": true,
@@ -12944,7 +12944,7 @@
           ]
         },
         "latest_comparison_source": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "inputs": [
             {
               "model_key": "gmm",
@@ -13950,7 +13950,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 0.3372904420241495,
+              "value": 0.3372904420241496,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -13959,7 +13959,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 0.0036507463642941,
+              "value": 0.0036507463642942,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -14031,7 +14031,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 0.3372904420241495,
+              "value": 0.3372904420241496,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -14040,7 +14040,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 0.0036507463642941,
+              "value": 0.0036507463642942,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -15755,10 +15755,10 @@
             ]
           },
           {
-            "id": "2026-06__2026-08-16",
-            "as_of": "2026-08-16",
+            "id": "2026-06__2026-08-17",
+            "as_of": "2026-08-17",
             "target_month": "2026-06",
-            "comparison_as_of": "2026-08-15",
+            "comparison_as_of": "2026-08-16",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
             "comparison_status": "comparable",
             "kind": "stable_latest",
@@ -16127,10 +16127,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-06__2026-08-16",
+        "default_event_id": "2026-06__2026-08-17",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "state": "放缓",
           "state_css_class": "slow_growth",
           "evidence_mature": true,
@@ -16158,7 +16158,7 @@
         },
         "stable": true,
         "latest_comparison_source": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "inputs": [
             {
               "model_key": "gmm",
@@ -18809,10 +18809,10 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-07__2026-08-16",
-            "as_of": "2026-08-16",
+            "id": "2026-07__2026-08-17",
+            "as_of": "2026-08-17",
             "target_month": "2026-07",
-            "comparison_as_of": "2026-08-15",
+            "comparison_as_of": "2026-08-16",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
             "comparison_status": "comparable",
             "kind": "stable_latest",
@@ -19181,10 +19181,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-07__2026-08-16",
+        "default_event_id": "2026-07__2026-08-17",
         "eligibility_note": "轻量模型先行观察，GMM 尚未完全成熟。",
         "lifecycle": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "state": "放缓",
           "state_css_class": "slow_growth",
           "evidence_mature": false,
@@ -19211,7 +19211,7 @@
           ]
         },
         "latest_comparison_source": {
-          "as_of": "2026-08-16",
+          "as_of": "2026-08-17",
           "inputs": [
             {
               "model_key": "gmm",
@@ -20208,7 +20208,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.892071580189852,
+              "value": 1.8920715801898524,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -20217,7 +20217,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.749892780678606,
+              "value": -0.7498927806786058,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -20289,7 +20289,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.892071580189852,
+              "value": 1.8920715801898524,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -20298,7 +20298,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.749892780678606,
+              "value": -0.7498927806786058,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -20343,7 +20343,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.892071580189852,
+              "value": 1.8920715801898524,
               "last_valid": "2026-07",
               "used_in_run": true
             },
