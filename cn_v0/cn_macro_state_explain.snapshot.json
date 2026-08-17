@@ -5,22 +5,22 @@
   "observation_label": "2026-07 · 预览",
   "display_status": "preview",
   "coverage_summary": {
-    "available_indicators": 12,
+    "available_indicators": 16,
     "total_indicators": 26,
-    "passed_modules": 2,
+    "passed_modules": 3,
     "total_modules": 6,
     "scored_modules": [
       "通胀压力",
+      "信用条件",
       "外需环境"
     ],
     "pending_modules": [
       "增长动能",
-      "信用条件",
       "政策组合",
       "地产压力"
     ]
   },
-  "data_cutoff_time": "2026-08-14",
+  "data_cutoff_time": "2026-08-17",
   "primary_label": "cn_v0.preview",
   "secondary_labels": "",
   "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -71,11 +71,24 @@
     },
     {
       "name": "信用条件",
-      "label": "暂不评分",
-      "score": "NA",
-      "coverage": "0/4",
-      "status_class": "neutral",
-      "trend": []
+      "label": "中性",
+      "score": "-0.50",
+      "coverage": "4/4",
+      "status_class": "low",
+      "trend": [
+        -0.25,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.75,
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25,
+        -0.25,
+        -0.75,
+        -0.5
+      ]
     },
     {
       "name": "政策组合",
@@ -502,17 +515,30 @@
       "key": "credit",
       "name": "信用条件",
       "semantics": "越高 = 信用扩张越强；越低 = 信用收缩压力越大。",
-      "score": "NA",
-      "label": "暂不评分",
-      "delta_text": "等待数据",
-      "delta_direction": "flat",
-      "driver_note": "本月已有 0/4 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-      "status_class": "neutral",
-      "trend": [],
-      "coverage": "0/4",
-      "indicator_count": 0,
+      "score": "-0.50",
+      "label": "中性",
+      "delta_text": "较上期 +0.25",
+      "delta_direction": "up",
+      "driver_note": "信用链条读法：流动性底盘与融资实现同步偏弱，货币活化未明显改善；信用传导缺少总量支撑。",
+      "status_class": "low",
+      "trend": [
+        -0.25,
+        -0.5,
+        -0.5,
+        -0.5,
+        -0.75,
+        -0.5,
+        -0.25,
+        -0.5,
+        -0.25,
+        -0.25,
+        -0.75,
+        -0.5
+      ],
+      "coverage": "4/4",
+      "indicator_count": 4,
       "indicator_total": 4,
-      "indicator_coverage": "0/4",
+      "indicator_coverage": "4/4",
       "rows": [
         {
           "module": "credit",
@@ -522,7 +548,6 @@
           "latest": "4",
           "latest_direction": "flat",
           "trend": [
-            5.6,
             6.0,
             7.2,
             6.2,
@@ -533,18 +558,19 @@
             5.1,
             5.0,
             5.5,
+            4.0,
             4.0
           ],
-          "score": "NA",
+          "score": "0.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-07-16",
+          "state": "中性",
+          "visible_date": "2026-08-17",
           "target_period": "2026-07",
-          "display_period": "2026-06",
-          "display_is_fallback": true,
+          "display_period": "2026-07",
+          "display_is_fallback": false,
           "type": "主指标",
           "status_class": "neutral",
-          "missing": true,
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 8.0；0: 3.0 < x < 8.0；-1: x <= 3.0",
           "role": "核心"
@@ -554,10 +580,9 @@
           "group": "流动性底盘",
           "indicator": "M2 同比",
           "code": "CN_CREDIT_M2_YOY",
-          "latest": "8",
-          "latest_direction": "flat",
+          "latest": "7.7",
+          "latest_direction": "down",
           "trend": [
-            8.8,
             8.8,
             8.4,
             8.2,
@@ -568,18 +593,19 @@
             8.5,
             8.6,
             8.6,
-            8.0
+            8.0,
+            7.7
           ],
-          "score": "NA",
+          "score": "-1.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-07-16",
+          "state": "收缩",
+          "visible_date": "2026-08-17",
           "target_period": "2026-07",
-          "display_period": "2026-06",
-          "display_is_fallback": true,
+          "display_period": "2026-07",
+          "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
-          "missing": true,
+          "status_class": "low",
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 10.5；0: 8.5 < x < 10.5；-1: x <= 8.5",
           "role": "核心"
@@ -592,7 +618,6 @@
           "latest": "7.4",
           "latest_direction": "flat",
           "trend": [
-            9.0,
             8.8,
             8.7,
             8.5,
@@ -603,18 +628,19 @@
             7.9,
             7.8,
             7.7,
+            7.4,
             7.4
           ],
-          "score": "NA",
+          "score": "-1.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-07-16",
+          "state": "收缩",
+          "visible_date": "2026-08-17",
           "target_period": "2026-07",
-          "display_period": "2026-06",
-          "display_is_fallback": true,
+          "display_period": "2026-07",
+          "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
-          "missing": true,
+          "status_class": "low",
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 11.5；0: 9.5 < x < 11.5；-1: x <= 9.5",
           "role": "核心"
@@ -624,10 +650,9 @@
           "group": "货币活化",
           "indicator": "M1-M2 剪刀差",
           "code": "CN_CREDIT_M1_M2_SPREAD",
-          "latest": "-4",
-          "latest_direction": "flat",
+          "latest": "-3.7",
+          "latest_direction": "up",
           "trend": [
-            -3.2,
             -2.8,
             -1.2,
             -2.0,
@@ -638,18 +663,19 @@
             -3.4,
             -3.6,
             -3.1,
-            -4.0
+            -4.0,
+            -3.7
           ],
-          "score": "NA",
-          "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-07-16",
+          "score": "0.00",
+          "score_direction": "up",
+          "state": "中性",
+          "visible_date": "2026-08-17",
           "target_period": "2026-07",
-          "display_period": "2026-06",
-          "display_is_fallback": true,
+          "display_period": "2026-07",
+          "display_is_fallback": false,
           "type": "主指标",
           "status_class": "neutral",
-          "missing": true,
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 0.0；0: -4.0 < x < 0.0；-1: x <= -4.0",
           "role": "辅助"
@@ -659,11 +685,11 @@
       "gate": {
         "key": "credit",
         "module": "信用条件",
-        "available": 0,
+        "available": 4,
         "minimum": 3,
-        "met": false
+        "met": true
       },
-      "display_mode": "muted_preview"
+      "display_mode": "normal"
     },
     {
       "key": "policy_mix",
@@ -1367,8 +1393,8 @@
           "代码": "CN_CREDIT_M1_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "0.00",
+          "状态": "中性"
         },
         {
           "模块": "信用条件",
@@ -1377,8 +1403,8 @@
           "代码": "CN_CREDIT_M2_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "-1.00",
+          "状态": "收缩"
         },
         {
           "模块": "信用条件",
@@ -1387,8 +1413,8 @@
           "代码": "CN_CREDIT_TSF_STOCK_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "-1.00",
+          "状态": "收缩"
         },
         {
           "模块": "信用条件",
@@ -1397,8 +1423,8 @@
           "代码": "CN_CREDIT_M1_M2_SPREAD",
           "角色": "辅助",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "0.00",
+          "状态": "中性"
         },
         {
           "模块": "政策组合",
@@ -1561,7 +1587,7 @@
         },
         {
           "字段": "reasoning",
-          "值": "primary=cn_v0.not_run; growth=nan; inflation=-0.5; credit=nan; policy_mix=nan; external=0.667; housing=nan; missing_required_scores"
+          "值": "primary=cn_v0.not_run; growth=nan; inflation=-0.5; credit=-0.5; policy_mix=nan; external=0.667; housing=nan; missing_required_scores"
         }
       ]
     }
@@ -1611,7 +1637,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-14",
+      "data_cutoff_time": "2026-08-17",
       "primary_label": "cn_v0.stagflation_pressure",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3278,7 +3304,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-14",
+      "data_cutoff_time": "2026-08-17",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -4945,7 +4971,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-14",
+      "data_cutoff_time": "2026-08-17",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6598,22 +6624,22 @@
       "observation_label": "2026-07 · 预览",
       "display_status": "preview",
       "coverage_summary": {
-        "available_indicators": 12,
+        "available_indicators": 16,
         "total_indicators": 26,
-        "passed_modules": 2,
+        "passed_modules": 3,
         "total_modules": 6,
         "scored_modules": [
           "通胀压力",
+          "信用条件",
           "外需环境"
         ],
         "pending_modules": [
           "增长动能",
-          "信用条件",
           "政策组合",
           "地产压力"
         ]
       },
-      "data_cutoff_time": "2026-08-14",
+      "data_cutoff_time": "2026-08-17",
       "primary_label": "cn_v0.preview",
       "secondary_labels": "",
       "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -6664,11 +6690,24 @@
         },
         {
           "name": "信用条件",
-          "label": "暂不评分",
-          "score": "NA",
-          "coverage": "0/4",
-          "status_class": "neutral",
-          "trend": []
+          "label": "中性",
+          "score": "-0.50",
+          "coverage": "4/4",
+          "status_class": "low",
+          "trend": [
+            -0.25,
+            -0.5,
+            -0.5,
+            -0.5,
+            -0.75,
+            -0.5,
+            -0.25,
+            -0.5,
+            -0.25,
+            -0.25,
+            -0.75,
+            -0.5
+          ]
         },
         {
           "name": "政策组合",
@@ -7095,17 +7134,30 @@
           "key": "credit",
           "name": "信用条件",
           "semantics": "越高 = 信用扩张越强；越低 = 信用收缩压力越大。",
-          "score": "NA",
-          "label": "暂不评分",
-          "delta_text": "等待数据",
-          "delta_direction": "flat",
-          "driver_note": "本月已有 0/4 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-          "status_class": "neutral",
-          "trend": [],
-          "coverage": "0/4",
-          "indicator_count": 0,
+          "score": "-0.50",
+          "label": "中性",
+          "delta_text": "较上期 +0.25",
+          "delta_direction": "up",
+          "driver_note": "信用链条读法：流动性底盘与融资实现同步偏弱，货币活化未明显改善；信用传导缺少总量支撑。",
+          "status_class": "low",
+          "trend": [
+            -0.25,
+            -0.5,
+            -0.5,
+            -0.5,
+            -0.75,
+            -0.5,
+            -0.25,
+            -0.5,
+            -0.25,
+            -0.25,
+            -0.75,
+            -0.5
+          ],
+          "coverage": "4/4",
+          "indicator_count": 4,
           "indicator_total": 4,
-          "indicator_coverage": "0/4",
+          "indicator_coverage": "4/4",
           "rows": [
             {
               "module": "credit",
@@ -7115,7 +7167,6 @@
               "latest": "4",
               "latest_direction": "flat",
               "trend": [
-                5.6,
                 6.0,
                 7.2,
                 6.2,
@@ -7126,18 +7177,19 @@
                 5.1,
                 5.0,
                 5.5,
+                4.0,
                 4.0
               ],
-              "score": "NA",
+              "score": "0.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-07-16",
+              "state": "中性",
+              "visible_date": "2026-08-17",
               "target_period": "2026-07",
-              "display_period": "2026-06",
-              "display_is_fallback": true,
+              "display_period": "2026-07",
+              "display_is_fallback": false,
               "type": "主指标",
               "status_class": "neutral",
-              "missing": true,
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 8.0；0: 3.0 < x < 8.0；-1: x <= 3.0",
               "role": "核心"
@@ -7147,10 +7199,9 @@
               "group": "流动性底盘",
               "indicator": "M2 同比",
               "code": "CN_CREDIT_M2_YOY",
-              "latest": "8",
-              "latest_direction": "flat",
+              "latest": "7.7",
+              "latest_direction": "down",
               "trend": [
-                8.8,
                 8.8,
                 8.4,
                 8.2,
@@ -7161,18 +7212,19 @@
                 8.5,
                 8.6,
                 8.6,
-                8.0
+                8.0,
+                7.7
               ],
-              "score": "NA",
+              "score": "-1.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-07-16",
+              "state": "收缩",
+              "visible_date": "2026-08-17",
               "target_period": "2026-07",
-              "display_period": "2026-06",
-              "display_is_fallback": true,
+              "display_period": "2026-07",
+              "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
-              "missing": true,
+              "status_class": "low",
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 10.5；0: 8.5 < x < 10.5；-1: x <= 8.5",
               "role": "核心"
@@ -7185,7 +7237,6 @@
               "latest": "7.4",
               "latest_direction": "flat",
               "trend": [
-                9.0,
                 8.8,
                 8.7,
                 8.5,
@@ -7196,18 +7247,19 @@
                 7.9,
                 7.8,
                 7.7,
+                7.4,
                 7.4
               ],
-              "score": "NA",
+              "score": "-1.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-07-16",
+              "state": "收缩",
+              "visible_date": "2026-08-17",
               "target_period": "2026-07",
-              "display_period": "2026-06",
-              "display_is_fallback": true,
+              "display_period": "2026-07",
+              "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
-              "missing": true,
+              "status_class": "low",
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 11.5；0: 9.5 < x < 11.5；-1: x <= 9.5",
               "role": "核心"
@@ -7217,10 +7269,9 @@
               "group": "货币活化",
               "indicator": "M1-M2 剪刀差",
               "code": "CN_CREDIT_M1_M2_SPREAD",
-              "latest": "-4",
-              "latest_direction": "flat",
+              "latest": "-3.7",
+              "latest_direction": "up",
               "trend": [
-                -3.2,
                 -2.8,
                 -1.2,
                 -2.0,
@@ -7231,18 +7282,19 @@
                 -3.4,
                 -3.6,
                 -3.1,
-                -4.0
+                -4.0,
+                -3.7
               ],
-              "score": "NA",
-              "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-07-16",
+              "score": "0.00",
+              "score_direction": "up",
+              "state": "中性",
+              "visible_date": "2026-08-17",
               "target_period": "2026-07",
-              "display_period": "2026-06",
-              "display_is_fallback": true,
+              "display_period": "2026-07",
+              "display_is_fallback": false,
               "type": "主指标",
               "status_class": "neutral",
-              "missing": true,
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 0.0；0: -4.0 < x < 0.0；-1: x <= -4.0",
               "role": "辅助"
@@ -7252,11 +7304,11 @@
           "gate": {
             "key": "credit",
             "module": "信用条件",
-            "available": 0,
+            "available": 4,
             "minimum": 3,
-            "met": false
+            "met": true
           },
-          "display_mode": "muted_preview"
+          "display_mode": "normal"
         },
         {
           "key": "policy_mix",
@@ -7960,8 +8012,8 @@
               "代码": "CN_CREDIT_M1_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "0.00",
+              "状态": "中性"
             },
             {
               "模块": "信用条件",
@@ -7970,8 +8022,8 @@
               "代码": "CN_CREDIT_M2_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "-1.00",
+              "状态": "收缩"
             },
             {
               "模块": "信用条件",
@@ -7980,8 +8032,8 @@
               "代码": "CN_CREDIT_TSF_STOCK_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "-1.00",
+              "状态": "收缩"
             },
             {
               "模块": "信用条件",
@@ -7990,8 +8042,8 @@
               "代码": "CN_CREDIT_M1_M2_SPREAD",
               "角色": "辅助",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "0.00",
+              "状态": "中性"
             },
             {
               "模块": "政策组合",
@@ -8154,7 +8206,7 @@
             },
             {
               "字段": "reasoning",
-              "值": "primary=cn_v0.not_run; growth=nan; inflation=-0.5; credit=nan; policy_mix=nan; external=0.667; housing=nan; missing_required_scores"
+              "值": "primary=cn_v0.not_run; growth=nan; inflation=-0.5; credit=-0.5; policy_mix=nan; external=0.667; housing=nan; missing_required_scores"
             }
           ]
         }
@@ -8165,10 +8217,9 @@
   "default_month": "2026-07",
   "month_switch_policy": {
     "candidate_month": "2026-07",
-    "candidate_status": "预览中（12/26 个指标已到；2/6 个模块已按门槛评分）",
+    "candidate_status": "预览中（16/26 个指标已到；3/6 个模块已按门槛评分）",
     "pending_modules": [
       "增长动能",
-      "信用条件",
       "政策组合",
       "地产压力"
     ],
@@ -8184,9 +8235,9 @@
       "2026-07"
     ],
     "preview_month": "2026-07",
-    "available_indicators": 12,
+    "available_indicators": 16,
     "total_indicators": 26,
-    "passed_modules": 2,
+    "passed_modules": 3,
     "total_modules": 6,
     "minimum_visible_indicators": 1,
     "formal_month_window": 3,
@@ -8223,5 +8274,5 @@
       }
     ]
   },
-  "run_date": "2026-08-15"
+  "run_date": "2026-08-18"
 }
