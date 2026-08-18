@@ -18,3 +18,14 @@ CLAUDE.md
 
 # 公开发布目录: asset/macro(本宏观条线)。asset/equity、asset/futures 为别的系统, 本脚本不动。
 # 这些不在忽略列表中, 即正常跟踪发布。
+
+# 2.0规划(私有源码/数据/RiskMacro研读笔记/示例截图)：非根目录锚定的规则覆盖不到子目录，
+# 单独排除，防止误用 git add -A 把CFTC/GPR/FRED数据或规划文档推到公开仓库。
+/2.0/
+
+# 宏观月度数据看板(私有)：整目录含 Wind 原始 xlsx 与打包 zip。
+# *.xlsx 那条规则挡得住散装 xlsx，挡不住把 xlsx 打进去的 zip，故整目录排除。
+/MacroWeekly/
+
+# 内部权威操作手册(含事故复盘/审计史/凭证路径), 绝不公开
+SKILL_完整工作流手册.md
