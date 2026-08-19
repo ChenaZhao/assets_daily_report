@@ -20,7 +20,7 @@
       "政策组合"
     ]
   },
-  "data_cutoff_time": "2026-08-18",
+  "data_cutoff_time": "2026-08-19",
   "primary_label": "cn_v0.preview",
   "secondary_labels": "",
   "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -978,8 +978,8 @@
             39.6,
             2.5,
             14.0,
-            19.3,
-            27.0,
+            19.2,
+            26.9,
             23.9
           ],
           "score": "1.00",
@@ -1001,7 +1001,7 @@
           "group": "出口趋势",
           "indicator": "出口同比 3 个月均值",
           "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-          "latest": "23.4",
+          "latest": "23.33",
           "latest_direction": "up",
           "trend": [
             5.6265,
@@ -1013,14 +1013,14 @@
             18.6776,
             17.3667,
             18.7,
-            11.9333,
-            20.1,
-            23.4
+            11.9,
+            20.0333,
+            23.3333
           ],
           "score": "1.00",
           "score_direction": "flat",
           "state": "偏强",
-          "visible_date": "2026-08-07",
+          "visible_date": "2026-08-19",
           "target_period": "2026-07",
           "display_period": "2026-07",
           "display_is_fallback": false,
@@ -1689,7 +1689,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-18",
+      "data_cutoff_time": "2026-08-19",
       "primary_label": "cn_v0.stagflation_pressure",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3356,7 +3356,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-18",
+      "data_cutoff_time": "2026-08-19",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -4324,7 +4324,7 @@
               "group": "当月出口",
               "indicator": "出口金额当月同比",
               "code": "CN_EXTERNAL_EXPORT_YOY",
-              "latest": "19.3",
+              "latest": "19.2",
               "latest_direction": "up",
               "trend": [
                 5.6573,
@@ -4338,12 +4338,12 @@
                 39.6,
                 2.5,
                 14.0,
-                19.3
+                19.2
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "偏强",
-              "visible_date": "2026-07-20",
+              "visible_date": "2026-08-19",
               "target_period": "2026-05",
               "display_period": "2026-05",
               "display_is_fallback": false,
@@ -4359,7 +4359,7 @@
               "group": "出口趋势",
               "indicator": "出口同比 3 个月均值",
               "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-              "latest": "11.93",
+              "latest": "11.9",
               "latest_direction": "down",
               "trend": [
                 6.1099,
@@ -4373,12 +4373,12 @@
                 18.6776,
                 17.3667,
                 18.7,
-                11.9333
+                11.9
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "偏强",
-              "visible_date": "2026-07-20",
+              "visible_date": "2026-08-19",
               "target_period": "2026-05",
               "display_period": "2026-05",
               "display_is_fallback": false,
@@ -5023,7 +5023,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-18",
+      "data_cutoff_time": "2026-08-19",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -5991,7 +5991,7 @@
               "group": "当月出口",
               "indicator": "出口金额当月同比",
               "code": "CN_EXTERNAL_EXPORT_YOY",
-              "latest": "27",
+              "latest": "26.9",
               "latest_direction": "up",
               "trend": [
                 6.9922,
@@ -6004,13 +6004,13 @@
                 39.6,
                 2.5,
                 14.0,
-                19.3,
-                27.0
+                19.2,
+                26.9
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "偏强",
-              "visible_date": "2026-07-15",
+              "visible_date": "2026-08-19",
               "target_period": "2026-06",
               "display_period": "2026-06",
               "display_is_fallback": false,
@@ -6026,7 +6026,7 @@
               "group": "出口趋势",
               "indicator": "出口同比 3 个月均值",
               "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-              "latest": "20.1",
+              "latest": "20.03",
               "latest_direction": "up",
               "trend": [
                 5.7669,
@@ -6039,13 +6039,13 @@
                 18.6776,
                 17.3667,
                 18.7,
-                11.9333,
-                20.1
+                11.9,
+                20.0333
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "偏强",
-              "visible_date": "2026-07-20",
+              "visible_date": "2026-08-19",
               "target_period": "2026-06",
               "display_period": "2026-06",
               "display_is_fallback": false,
@@ -6691,7 +6691,7 @@
           "政策组合"
         ]
       },
-      "data_cutoff_time": "2026-08-18",
+      "data_cutoff_time": "2026-08-19",
       "primary_label": "cn_v0.preview",
       "secondary_labels": "",
       "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -7649,8 +7649,8 @@
                 39.6,
                 2.5,
                 14.0,
-                19.3,
-                27.0,
+                19.2,
+                26.9,
                 23.9
               ],
               "score": "1.00",
@@ -7672,7 +7672,7 @@
               "group": "出口趋势",
               "indicator": "出口同比 3 个月均值",
               "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-              "latest": "23.4",
+              "latest": "23.33",
               "latest_direction": "up",
               "trend": [
                 5.6265,
@@ -7684,14 +7684,14 @@
                 18.6776,
                 17.3667,
                 18.7,
-                11.9333,
-                20.1,
-                23.4
+                11.9,
+                20.0333,
+                23.3333
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "偏强",
-              "visible_date": "2026-08-07",
+              "visible_date": "2026-08-19",
               "target_period": "2026-07",
               "display_period": "2026-07",
               "display_is_fallback": false,
@@ -8376,5 +8376,5 @@
       }
     ]
   },
-  "run_date": "2026-08-19"
+  "run_date": "2026-08-20"
 }
