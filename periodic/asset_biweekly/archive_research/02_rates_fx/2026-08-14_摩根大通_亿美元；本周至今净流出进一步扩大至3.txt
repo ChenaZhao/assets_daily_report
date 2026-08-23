@@ -1,0 +1,16 @@
+标题：亿美元；本周至今净流出进一步扩大至3
+原题：Cryptocurrency Markets-Aug 13 Spot ETP Flows: Daily Net Redemptions Continue and Totaled $125mn Yesterday; WTD Net Outflows Deepen to $327mn实时 加密货币市场——8月13日现货ETP资金流向：昨日连续单日净赎回，总额达1
+机构：摩根大通
+日期：2026-08-14
+分类：利率外汇
+所属周：2026-08-16
+类型：外资 feed 单篇摘录
+引用来源（为什么在库里）：观点溯源·美元
+摘自：Merged_Report_2026-08-14.txt
+定位：Merged_Report_2026-08-14.txt 第 145/704 篇，字符区间 597967–600145（原片段 讯兔科技 - 2026-08-15T101459.836.txt，取「中文观点」段，约 113 字）
+原 merged 文件（相对本页路径）：../2026-08-16/Merged_Report_2026-08-14.txt
+
+【原文摘录（仅该篇对应段落，非整份 merged 文件）】
+我们估算，2026年8月13日周四，美国现货比特币ETP初步净赎回金额为1.31亿美元，美国现货以太坊ETP初步净申购金额为600万美元。此外，美国现货Solana ETP昨日资金变动净额为零，没有出现净流入也没有出现净流出。
+
+说明：merged 文件约 6.1 MB 且无法跳转到单篇，故只摘取该篇段落入库。
