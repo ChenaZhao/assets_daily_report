@@ -19,7 +19,7 @@
     ],
     "pending_modules": []
   },
-  "data_cutoff_time": "2026-08-28",
+  "data_cutoff_time": "2026-08-31",
   "primary_label": "cn_v0.deflation_recession",
   "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
   "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -1703,7 +1703,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-28",
+      "data_cutoff_time": "2026-08-31",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3370,7 +3370,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-28",
+      "data_cutoff_time": "2026-08-31",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -5037,7 +5037,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-08-28",
+      "data_cutoff_time": "2026-08-31",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6739,5 +6739,5 @@
       }
     ]
   },
-  "run_date": "2026-09-01"
+  "run_date": "2026-09-02"
 }
