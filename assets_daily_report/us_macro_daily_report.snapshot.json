@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-09-01 10:03 北京时间",
+  "run_time": "2026-09-01 10:27 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -14,7 +14,7 @@
   ],
   "fingerprints": {
     "explain": "66fe525348c0294a76d48bdabadd66912594bdd636cca7d721e9a39d95bafead",
-    "model_update": "78a95f9c3e373b450b888ee7c1eb879fb266f2173f43683865cebbfd67e07f79"
+    "model_update": "31e1c5a6fc761fefe5eedda7bbc9fc1b5432a1e3e2cc67c5b67d8d5c2833ec8b"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
@@ -8129,7 +8129,7 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；保留状态变化与证据成熟节点，并始终补上最新运行状态。",
-    "generated_at": "2026-09-01T02:03:11.277869+00:00",
+    "generated_at": "2026-09-01T02:27:07.315138+00:00",
     "as_of_range": {
       "start": "2026-04-01",
       "end": "2026-09-01",
@@ -13047,9 +13047,9 @@
             "target_month": "2026-05",
             "comparison_as_of": "2026-07-01",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+              "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -13083,7 +13083,7 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "b5a3b313d167c38ad203c4f509df6942395cef20",
-              "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+              "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
@@ -16887,7 +16887,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 0.3488066521998583,
+              "value": 0.3488066521998582,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -16896,7 +16896,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 0.0151669565400029,
+              "value": 0.0151669565400028,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -16968,7 +16968,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 0.3488066521998583,
+              "value": 0.3488066521998582,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -16977,7 +16977,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 0.0151669565400029,
+              "value": 0.0151669565400028,
               "last_valid": "2026-05",
               "used_in_run": true
             },
@@ -17182,7 +17182,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+            "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
             "git_dirty": true,
             "data_sources": [
               {
@@ -17212,7 +17212,7 @@
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}"
         }
       },
       "2026-06": {
@@ -18843,9 +18843,9 @@
             "target_month": "2026-06",
             "comparison_as_of": "2026-07-31",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+              "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -21277,7 +21277,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -2.16889045819145,
+              "value": -2.1688904581914503,
               "last_valid": "2026-06",
               "used_in_run": true
             },
@@ -21286,7 +21286,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -2.818161488904714,
+              "value": -2.8181614889047144,
               "last_valid": "2026-06",
               "used_in_run": true
             },
@@ -21358,7 +21358,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -2.16889045819145,
+              "value": -2.1688904581914503,
               "last_valid": "2026-06",
               "used_in_run": true
             },
@@ -21367,7 +21367,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -2.818161488904714,
+              "value": -2.8181614889047144,
               "last_valid": "2026-06",
               "used_in_run": true
             },
@@ -21572,7 +21572,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+            "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
             "git_dirty": true,
             "data_sources": [
               {
@@ -21602,7 +21602,7 @@
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}"
         },
         "comparison_anchor_source": {
           "as_of": "2026-07-31",
@@ -24205,9 +24205,9 @@
             "target_month": "2026-07",
             "comparison_as_of": "2026-08-27",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+              "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -24241,7 +24241,7 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "f35c5db641b022b29da2c93778a3fc5165026601",
-              "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+              "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
@@ -27072,7 +27072,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -1.31864088913879,
+              "value": -1.3186408891387895,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -27153,7 +27153,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -1.31864088913879,
+              "value": -1.3186408891387895,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -27348,7 +27348,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "0dc3fecd7fd9aa6413be05f440e01f2f1ddff282",
+            "git_commit": "e9f6be92e702371b83d98c9d634ca1e223a7c9e7",
             "git_dirty": true,
             "data_sources": [
               {
@@ -27378,7 +27378,7 @@
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0dc3fecd7fd9aa6413be05f440e01f2f1ddff282\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"a9202824713a7e4000887baf67379595f59cb6b3e96e1b5db02a0ec86bd04020\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"2723cf4282c9226b08f202370f559a0e6dc543d5f58eff48b5d494f50ddea4fa\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"0454a42c63a96f042bbf032d0005942ddbc88642fe770f963e3ea63891d8eabf\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"f979925bf96d86c6a3e19146c2db751668ae54d802e45d009c77bda7ac9356e6\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"e9f6be92e702371b83d98c9d634ca1e223a7c9e7\", \"git_dirty\": true}"
         }
       }
     }
