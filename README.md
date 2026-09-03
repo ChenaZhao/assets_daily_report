@@ -68,6 +68,7 @@ Bloomberg 15分钟价格(手动) ─┐
 汇总各周期性/事件驱动策略的**最新结果**看板，无历史存档需求：
 
 - `ashare_timing.html` — A股择时（2.1.1框架·连续档），周度覆盖式替换
+- `style_rotation.html` — 大小盘风格轮动（300 vs 1000，12因子周频），周度覆盖式替换（源：PYCoding\【风格轮动】 run.py all）
 - `calendar_flow.html` — 事件驱动策略·美债期货日历效应
 - `dc1d_trade_curve_monthly_latest_result.html` — CTA中低频趋势（Donchian Channel）
 - 链接至 `assets_daily_report/`（宏观场景状态）
