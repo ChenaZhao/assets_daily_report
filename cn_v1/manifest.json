@@ -3,7 +3,7 @@
   "model_id": "cn_v1",
   "contract_version": "0.8-candidate",
   "rule_version": "cn_v1_candidate_b_0_8",
-  "source_commit": "a07a0775fe9f2424eac70391e0394c64dfc76fec",
+  "source_commit": "a4d8f31174deb90f71cbc47ed6f2d7d20afd8a83",
   "method_contract": {
     "ordinary_direction_formula": "component_direction_score = level_score",
     "side_score_role": "audit_only_zero_direction_weight",
@@ -181,6 +181,7 @@
     "end": "2026-08-31"
   },
   "as_of_cutoff": "2026-09-02",
+  "run_date": "2026-09-04",
   "availability_convention": "current_snapshot_no_vintage",
   "data_policy": "current_snapshot_history_not_pit_or_true_vintage",
   "turning_event_ledger": {
@@ -281,12 +282,12 @@
     },
     "state_snapshot": {
       "path": "cn_v1_state.snapshot.json",
-      "sha256": "79df2c4ce0283f0d417c6c2f4ea1b794c17ff77e33e65ce9a059c3cb98e952fa",
+      "sha256": "919f36a1ad162ed6ebd6916db50fd54473412de25b19d64c8aa670fe0932dd8a",
       "bytes": 1193938
     },
     "state_html": {
       "path": "cn_v1_state.html",
-      "sha256": "619d9eec5d977de0dace5c004d6dbebb56580af5b62411b0a7f8048f41e9f51b",
+      "sha256": "88aa0481c89b6935dc9f240c909ad91b1fdd5ee1f24f1d6d5477209847cece05",
       "bytes": 479300
     }
   }

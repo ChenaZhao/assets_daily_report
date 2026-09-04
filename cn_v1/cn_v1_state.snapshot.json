@@ -2045,7 +2045,7 @@
   "model_id": "cn_v1",
   "rule_version": "cn_v1_candidate_b_0_8",
   "month_switch_policy": null,
-  "run_date": "2026-09-02",
+  "run_date": "2026-09-04",
   "view_version": "cn_v1_reader",
   "score_note": "模块分和普通主指标方向分均为连续值。",
   "v1_model_facts": {
@@ -2215,7 +2215,7 @@
     },
     "period": "2026-08-31",
     "as_of_cutoff": "2026-09-02",
-    "generated_at": "2026-09-04T05:50:40.676294+00:00",
+    "generated_at": "2026-09-04T06:33:03.216675+00:00",
     "headline": {
       "state": "cn_v1.data_insufficient",
       "label": "关键数据不足",
@@ -8456,7 +8456,7 @@
       "model_id": "cn_v1",
       "rule_version": "cn_v1_candidate_b_0_8",
       "month_switch_policy": null,
-      "run_date": "2026-09-02",
+      "run_date": "2026-09-04",
       "view_version": "cn_v1_reader",
       "score_note": "模块分和普通主指标方向分均为连续值。",
       "v1_model_facts": {
@@ -8626,7 +8626,7 @@
         },
         "period": "2026-05-31",
         "as_of_cutoff": "2026-09-02",
-        "generated_at": "2026-09-04T05:50:40.610173+00:00",
+        "generated_at": "2026-09-04T06:33:03.150355+00:00",
         "headline": {
           "state": "cn_v1.growth_weak_inflation_high",
           "label": "增长偏弱 · 价格压力偏高",
@@ -15726,7 +15726,7 @@
       "model_id": "cn_v1",
       "rule_version": "cn_v1_candidate_b_0_8",
       "month_switch_policy": null,
-      "run_date": "2026-09-02",
+      "run_date": "2026-09-04",
       "view_version": "cn_v1_reader",
       "score_note": "模块分和普通主指标方向分均为连续值。",
       "v1_model_facts": {
@@ -15896,7 +15896,7 @@
         },
         "period": "2026-06-30",
         "as_of_cutoff": "2026-09-02",
-        "generated_at": "2026-09-04T05:50:40.627888+00:00",
+        "generated_at": "2026-09-04T06:33:03.168362+00:00",
         "headline": {
           "state": "cn_v1.growth_weak_inflation_low",
           "label": "增长偏弱 · 价格压力偏低",
@@ -23028,7 +23028,7 @@
       "model_id": "cn_v1",
       "rule_version": "cn_v1_candidate_b_0_8",
       "month_switch_policy": null,
-      "run_date": "2026-09-02",
+      "run_date": "2026-09-04",
       "view_version": "cn_v1_reader",
       "score_note": "模块分和普通主指标方向分均为连续值。",
       "v1_model_facts": {
@@ -23198,7 +23198,7 @@
         },
         "period": "2026-07-31",
         "as_of_cutoff": "2026-09-02",
-        "generated_at": "2026-09-04T05:50:40.650432+00:00",
+        "generated_at": "2026-09-04T06:33:03.190587+00:00",
         "headline": {
           "state": "cn_v1.growth_weak_inflation_low",
           "label": "增长偏弱 · 价格压力偏低",
@@ -28399,7 +28399,7 @@
       "model_id": "cn_v1",
       "rule_version": "cn_v1_candidate_b_0_8",
       "month_switch_policy": null,
-      "run_date": "2026-09-02",
+      "run_date": "2026-09-04",
       "view_version": "cn_v1_reader",
       "score_note": "模块分和普通主指标方向分均为连续值。",
       "v1_model_facts": {
@@ -28569,7 +28569,7 @@
         },
         "period": "2026-08-31",
         "as_of_cutoff": "2026-09-02",
-        "generated_at": "2026-09-04T05:50:40.676294+00:00",
+        "generated_at": "2026-09-04T06:33:03.216675+00:00",
         "headline": {
           "state": "cn_v1.data_insufficient",
           "label": "关键数据不足",
