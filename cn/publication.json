@@ -1,7 +1,7 @@
 {
   "schema_version": "cn_version_publication_v1",
-  "run_date": "2026-09-04",
-  "data_cutoff": "2026-09-02",
+  "run_date": "2026-09-05",
+  "data_cutoff": "2026-09-03",
   "v0": {
     "published_this_run": true,
     "freeze_on": "2026-10-04",
