@@ -1,14 +1,17 @@
 【大类资产观点 · 原文溯源索引】周 2026-08-28
 观点表（中间结果）：外资行大类资产观点_2026-08-28.xlsx
-溯源命中：5/6 条　·　被引用原始文档：7 篇
+溯源命中：5/6 条　·　被引用原始文档：8 篇
 
 —— 一、被引用的原始文档清单（按名字即可找到并打开）——
-  [PDF] 26/8/29  CITI  《US Rates Strategy_ Remain long 20s after Chair Warsh‘s speech》
-     支撑：美债（Rates）
-     打开：../2026-08-28/2026-08-29-Citi-US Rates Strategy_ Remain long 20s after Chair Warsh‘s speech.pdf
   [PDF] 26/8/29  CITI  《US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication》
      支撑：美股（Equity）
      打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication.pdf
+  [PDF] 26/8/28  CITI  《美国利率策略：沃什主席讲话后维持做多20年期国债》
+     支撑：美债（Rates）
+     打开：../2026-08-28/花旗 - 美国利率策略：沃什主席讲话后维持做多20年期国债 - 2026-08-28_Jason Williams,Raghav Datla(原文).pdf
+  [PDF] 26/8/28  CITI  《美股市场展望（第49期）：杰克逊霍尔会议观点及启示》
+     支撑：美股（Equity）
+     打开：../2026-08-28/花旗 - 美股市场展望（第49期）：杰克逊霍尔会议观点及启示 - 2026-08-28_Scott T Chronert(原文).pdf
   [PDF] 26/8/26  CITI  《美国利率策略：5年期国债拍卖——需求强劲》
      支撑：美债（Rates）
      打开：../2026-08-28/花旗 - 美国利率策略：5年期国债拍卖——需求强劲 - 2026-08-26_Jason Williams(原文).pdf
@@ -29,12 +32,14 @@
 ▍美债（Rates）（观点里提及机构：CITI/MS/JPM/GS）
     - [花旗 26/8/26] 美国利率策略：5年期国债拍卖——需求强劲
       打开：../2026-08-28/花旗 - 美国利率策略：5年期国债拍卖——需求强劲 - 2026-08-26_Jason Williams(原文).pdf
-    - [花旗 26/8/29] US Rates Strategy_ Remain long 20s after Chair Warsh‘s speech
-      打开：../2026-08-28/2026-08-29-Citi-US Rates Strategy_ Remain long 20s after Chair Warsh‘s speech.pdf
+    - [花旗 26/8/28] 美国利率策略：沃什主席讲话后维持做多20年期国债
+      打开：../2026-08-28/花旗 - 美国利率策略：沃什主席讲话后维持做多20年期国债 - 2026-08-28_Jason Williams,Raghav Datla(原文).pdf
 ▍美元（FX）（观点里提及机构：BofA）
     - [美银 26/8/24] 外汇量化洞察：杰克逊霍尔会议前瞻——看涨欧元兑美元
       打开：../2026-08-28/美银证券 - 外汇量化洞察：杰克逊霍尔会议前瞻——看涨欧元兑美元 - 2026-08-24_Marcus Boman,Bruno Braizinha(原文).pdf
 ▍美股（Equity）（观点里提及机构：MS/BofA/CITI）
+    - [花旗 26/8/28] 美股市场展望（第49期）：杰克逊霍尔会议观点及启示
+      打开：../2026-08-28/花旗 - 美股市场展望（第49期）：杰克逊霍尔会议观点及启示 - 2026-08-28_Scott T Chronert(原文).pdf
     - [花旗 26/8/29] US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication
       打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication.pdf
 ▍商品（Commodities）（观点里提及机构：GS）
