@@ -5,21 +5,22 @@
   "observation_label": "2026-08 · 预览",
   "display_status": "preview",
   "coverage_summary": {
-    "available_indicators": 8,
+    "available_indicators": 10,
     "total_indicators": 26,
-    "passed_modules": 0,
+    "passed_modules": 1,
     "total_modules": 6,
-    "scored_modules": [],
+    "scored_modules": [
+      "外需环境"
+    ],
     "pending_modules": [
       "增长动能",
       "通胀压力",
       "信用条件",
       "政策组合",
-      "外需环境",
       "地产压力"
     ]
   },
-  "data_cutoff_time": "2026-09-08",
+  "data_cutoff_time": "2026-09-09",
   "primary_label": "cn_v0.preview",
   "secondary_labels": "",
   "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -73,11 +74,24 @@
     },
     {
       "name": "外需环境",
-      "label": "暂不评分",
-      "score": "NA",
-      "coverage": "1/3",
-      "status_class": "neutral",
-      "trend": []
+      "label": "偏强",
+      "score": "1.00",
+      "coverage": "3/3",
+      "status_class": "high",
+      "trend": [
+        0.0,
+        -0.3333,
+        0.0,
+        0.0,
+        0.3333,
+        0.3333,
+        0.3333,
+        1.0,
+        0.6667,
+        1.0,
+        0.6667,
+        1.0
+      ]
     },
     {
       "name": "地产压力",
@@ -831,27 +845,39 @@
       "key": "external",
       "name": "外需环境",
       "semantics": "越高 = 出口和外需订单越强。",
-      "score": "NA",
-      "label": "暂不评分",
-      "delta_text": "等待数据",
-      "delta_direction": "flat",
-      "driver_note": "本月已有 1/3 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-      "status_class": "neutral",
-      "trend": [],
-      "coverage": "1/3",
-      "indicator_count": 1,
+      "score": "1.00",
+      "label": "偏强",
+      "delta_text": "较上期 +0.33",
+      "delta_direction": "up",
+      "driver_note": "外需链条读法：当月出口、三个月趋势和外需订单同步偏强；已实现出口与后续订单共同支撑外需。",
+      "status_class": "high",
+      "trend": [
+        0.0,
+        -0.3333,
+        0.0,
+        0.0,
+        0.3333,
+        0.3333,
+        0.3333,
+        1.0,
+        0.6667,
+        1.0,
+        0.6667,
+        1.0
+      ],
+      "coverage": "3/3",
+      "indicator_count": 3,
       "indicator_total": 3,
-      "indicator_coverage": "1/3",
+      "indicator_coverage": "3/3",
       "rows": [
         {
           "module": "external",
           "group": "当月出口",
           "indicator": "出口金额当月同比",
           "code": "CN_EXTERNAL_EXPORT_YOY",
-          "latest": "23.9",
-          "latest_direction": "flat",
+          "latest": "25",
+          "latest_direction": "up",
           "trend": [
-            4.23,
             8.1671,
             -1.2755,
             5.8079,
@@ -862,18 +888,19 @@
             14.0,
             19.2,
             26.9,
-            23.9
+            23.9,
+            25.0
           ],
-          "score": "NA",
+          "score": "1.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-08-07",
+          "state": "偏强",
+          "visible_date": "2026-09-09",
           "target_period": "2026-08",
-          "display_period": "2026-07",
-          "display_is_fallback": true,
+          "display_period": "2026-08",
+          "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
-          "missing": true,
+          "status_class": "high",
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 10.0；0: -8.0 < x < 10.0；-1: x <= -8.0",
           "role": "核心"
@@ -883,10 +910,9 @@
           "group": "出口趋势",
           "indicator": "出口同比 3 个月均值",
           "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-          "latest": "23.33",
-          "latest_direction": "flat",
+          "latest": "25.27",
+          "latest_direction": "up",
           "trend": [
-            5.6265,
             6.4631,
             3.7072,
             4.2332,
@@ -897,18 +923,19 @@
             18.7,
             11.9,
             20.0333,
-            23.3333
+            23.3333,
+            25.2667
           ],
-          "score": "NA",
+          "score": "1.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-08-19",
+          "state": "偏强",
+          "visible_date": "2026-09-09",
           "target_period": "2026-08",
-          "display_period": "2026-07",
-          "display_is_fallback": true,
+          "display_period": "2026-08",
+          "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
-          "missing": true,
+          "status_class": "high",
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 8.0；0: -5.0 < x < 8.0；-1: x <= -5.0",
           "role": "核心"
@@ -934,15 +961,15 @@
             49.6,
             50.1
           ],
-          "score": "NA",
-          "score_direction": "flat",
-          "state": "暂不评分",
+          "score": "1.00",
+          "score_direction": "up",
+          "state": "偏强",
           "visible_date": "2026-09-01",
           "target_period": "2026-08",
           "display_period": "2026-08",
           "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
+          "status_class": "high",
           "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 50.0；0: 47.0 < x < 50.0；-1: x <= 47.0",
@@ -953,11 +980,11 @@
       "gate": {
         "key": "external",
         "module": "外需环境",
-        "available": 1,
+        "available": 3,
         "minimum": 2,
-        "met": false
+        "met": true
       },
-      "display_mode": "muted_preview"
+      "display_mode": "normal"
     },
     {
       "key": "housing_stress",
@@ -1404,8 +1431,8 @@
           "代码": "CN_EXTERNAL_EXPORT_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "1.00",
+          "状态": "偏强"
         },
         {
           "模块": "外需环境",
@@ -1414,8 +1441,8 @@
           "代码": "CN_EXTERNAL_EXPORT_YOY_MA3",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "1.00",
+          "状态": "偏强"
         },
         {
           "模块": "外需环境",
@@ -1424,8 +1451,8 @@
           "代码": "CN_EXTERNAL_PMI_EXPORT_ORDERS",
           "角色": "辅助",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "1.00",
+          "状态": "偏强"
         },
         {
           "模块": "地产压力",
@@ -1508,7 +1535,7 @@
         },
         {
           "字段": "reasoning",
-          "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=nan; housing=nan; missing_required_scores"
+          "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
         }
       ]
     }
@@ -1558,7 +1585,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-08",
+      "data_cutoff_time": "2026-09-09",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3225,7 +3252,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-08",
+      "data_cutoff_time": "2026-09-09",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -4892,7 +4919,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-08",
+      "data_cutoff_time": "2026-09-09",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6545,21 +6572,22 @@
       "observation_label": "2026-08 · 预览",
       "display_status": "preview",
       "coverage_summary": {
-        "available_indicators": 8,
+        "available_indicators": 10,
         "total_indicators": 26,
-        "passed_modules": 0,
+        "passed_modules": 1,
         "total_modules": 6,
-        "scored_modules": [],
+        "scored_modules": [
+          "外需环境"
+        ],
         "pending_modules": [
           "增长动能",
           "通胀压力",
           "信用条件",
           "政策组合",
-          "外需环境",
           "地产压力"
         ]
       },
-      "data_cutoff_time": "2026-09-08",
+      "data_cutoff_time": "2026-09-09",
       "primary_label": "cn_v0.preview",
       "secondary_labels": "",
       "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -6613,11 +6641,24 @@
         },
         {
           "name": "外需环境",
-          "label": "暂不评分",
-          "score": "NA",
-          "coverage": "1/3",
-          "status_class": "neutral",
-          "trend": []
+          "label": "偏强",
+          "score": "1.00",
+          "coverage": "3/3",
+          "status_class": "high",
+          "trend": [
+            0.0,
+            -0.3333,
+            0.0,
+            0.0,
+            0.3333,
+            0.3333,
+            0.3333,
+            1.0,
+            0.6667,
+            1.0,
+            0.6667,
+            1.0
+          ]
         },
         {
           "name": "地产压力",
@@ -7371,27 +7412,39 @@
           "key": "external",
           "name": "外需环境",
           "semantics": "越高 = 出口和外需订单越强。",
-          "score": "NA",
-          "label": "暂不评分",
-          "delta_text": "等待数据",
-          "delta_direction": "flat",
-          "driver_note": "本月已有 1/3 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-          "status_class": "neutral",
-          "trend": [],
-          "coverage": "1/3",
-          "indicator_count": 1,
+          "score": "1.00",
+          "label": "偏强",
+          "delta_text": "较上期 +0.33",
+          "delta_direction": "up",
+          "driver_note": "外需链条读法：当月出口、三个月趋势和外需订单同步偏强；已实现出口与后续订单共同支撑外需。",
+          "status_class": "high",
+          "trend": [
+            0.0,
+            -0.3333,
+            0.0,
+            0.0,
+            0.3333,
+            0.3333,
+            0.3333,
+            1.0,
+            0.6667,
+            1.0,
+            0.6667,
+            1.0
+          ],
+          "coverage": "3/3",
+          "indicator_count": 3,
           "indicator_total": 3,
-          "indicator_coverage": "1/3",
+          "indicator_coverage": "3/3",
           "rows": [
             {
               "module": "external",
               "group": "当月出口",
               "indicator": "出口金额当月同比",
               "code": "CN_EXTERNAL_EXPORT_YOY",
-              "latest": "23.9",
-              "latest_direction": "flat",
+              "latest": "25",
+              "latest_direction": "up",
               "trend": [
-                4.23,
                 8.1671,
                 -1.2755,
                 5.8079,
@@ -7402,18 +7455,19 @@
                 14.0,
                 19.2,
                 26.9,
-                23.9
+                23.9,
+                25.0
               ],
-              "score": "NA",
+              "score": "1.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-08-07",
+              "state": "偏强",
+              "visible_date": "2026-09-09",
               "target_period": "2026-08",
-              "display_period": "2026-07",
-              "display_is_fallback": true,
+              "display_period": "2026-08",
+              "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
-              "missing": true,
+              "status_class": "high",
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 10.0；0: -8.0 < x < 10.0；-1: x <= -8.0",
               "role": "核心"
@@ -7423,10 +7477,9 @@
               "group": "出口趋势",
               "indicator": "出口同比 3 个月均值",
               "code": "CN_EXTERNAL_EXPORT_YOY_MA3",
-              "latest": "23.33",
-              "latest_direction": "flat",
+              "latest": "25.27",
+              "latest_direction": "up",
               "trend": [
-                5.6265,
                 6.4631,
                 3.7072,
                 4.2332,
@@ -7437,18 +7490,19 @@
                 18.7,
                 11.9,
                 20.0333,
-                23.3333
+                23.3333,
+                25.2667
               ],
-              "score": "NA",
+              "score": "1.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-08-19",
+              "state": "偏强",
+              "visible_date": "2026-09-09",
               "target_period": "2026-08",
-              "display_period": "2026-07",
-              "display_is_fallback": true,
+              "display_period": "2026-08",
+              "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
-              "missing": true,
+              "status_class": "high",
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 8.0；0: -5.0 < x < 8.0；-1: x <= -5.0",
               "role": "核心"
@@ -7474,15 +7528,15 @@
                 49.6,
                 50.1
               ],
-              "score": "NA",
-              "score_direction": "flat",
-              "state": "暂不评分",
+              "score": "1.00",
+              "score_direction": "up",
+              "state": "偏强",
               "visible_date": "2026-09-01",
               "target_period": "2026-08",
               "display_period": "2026-08",
               "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
+              "status_class": "high",
               "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 50.0；0: 47.0 < x < 50.0；-1: x <= 47.0",
@@ -7493,11 +7547,11 @@
           "gate": {
             "key": "external",
             "module": "外需环境",
-            "available": 1,
+            "available": 3,
             "minimum": 2,
-            "met": false
+            "met": true
           },
-          "display_mode": "muted_preview"
+          "display_mode": "normal"
         },
         {
           "key": "housing_stress",
@@ -7944,8 +7998,8 @@
               "代码": "CN_EXTERNAL_EXPORT_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "1.00",
+              "状态": "偏强"
             },
             {
               "模块": "外需环境",
@@ -7954,8 +8008,8 @@
               "代码": "CN_EXTERNAL_EXPORT_YOY_MA3",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "1.00",
+              "状态": "偏强"
             },
             {
               "模块": "外需环境",
@@ -7964,8 +8018,8 @@
               "代码": "CN_EXTERNAL_PMI_EXPORT_ORDERS",
               "角色": "辅助",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "1.00",
+              "状态": "偏强"
             },
             {
               "模块": "地产压力",
@@ -8048,7 +8102,7 @@
             },
             {
               "字段": "reasoning",
-              "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=nan; housing=nan; missing_required_scores"
+              "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
             }
           ]
         }
@@ -8059,13 +8113,12 @@
   "default_month": "2026-08",
   "month_switch_policy": {
     "candidate_month": "2026-08",
-    "candidate_status": "预览中（8/26 个指标已到；0/6 个模块已按门槛评分）",
+    "candidate_status": "预览中（10/26 个指标已到；1/6 个模块已按门槛评分）",
     "pending_modules": [
       "增长动能",
       "通胀压力",
       "信用条件",
       "政策组合",
-      "外需环境",
       "地产压力"
     ],
     "selected_months": [
@@ -8080,9 +8133,9 @@
       "2026-08"
     ],
     "preview_month": "2026-08",
-    "available_indicators": 8,
+    "available_indicators": 10,
     "total_indicators": 26,
-    "passed_modules": 0,
+    "passed_modules": 1,
     "total_modules": 6,
     "minimum_visible_indicators": 1,
     "formal_month_window": 3,
