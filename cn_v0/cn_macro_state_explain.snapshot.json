@@ -5,22 +5,22 @@
   "observation_label": "2026-08 · 预览",
   "display_status": "preview",
   "coverage_summary": {
-    "available_indicators": 10,
+    "available_indicators": 12,
     "total_indicators": 26,
-    "passed_modules": 1,
+    "passed_modules": 2,
     "total_modules": 6,
     "scored_modules": [
+      "通胀压力",
       "外需环境"
     ],
     "pending_modules": [
       "增长动能",
-      "通胀压力",
       "信用条件",
       "政策组合",
       "地产压力"
     ]
   },
-  "data_cutoff_time": "2026-09-09",
+  "data_cutoff_time": "2026-09-10",
   "primary_label": "cn_v0.preview",
   "secondary_labels": "",
   "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -50,11 +50,24 @@
     },
     {
       "name": "通胀压力",
-      "label": "暂不评分",
-      "score": "NA",
-      "coverage": "2/4",
-      "status_class": "neutral",
-      "trend": []
+      "label": "中性",
+      "score": "0.25",
+      "coverage": "4/4",
+      "status_class": "high",
+      "trend": [
+        -0.5,
+        -0.75,
+        -0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.25,
+        0.0,
+        -0.5,
+        0.25
+      ]
     },
     {
       "name": "信用条件",
@@ -309,27 +322,39 @@
       "key": "inflation",
       "name": "通胀压力",
       "semantics": "越高 = 价格和成本压力越强。",
-      "score": "NA",
-      "label": "暂不评分",
-      "delta_text": "等待数据",
-      "delta_direction": "flat",
-      "driver_note": "本月已有 2/4 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-      "status_class": "neutral",
-      "trend": [],
-      "coverage": "2/4",
-      "indicator_count": 2,
+      "score": "0.25",
+      "label": "中性",
+      "delta_text": "较上期 +0.75",
+      "delta_direction": "up",
+      "driver_note": "价格链条读法：上游成本偏高，但出厂报价、PPI 和 CPI 未同步偏高；压力主要停留在成本端，更接近利润挤压风险，不是全面通胀。",
+      "status_class": "high",
+      "trend": [
+        -0.5,
+        -0.75,
+        -0.25,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.5,
+        0.25,
+        0.0,
+        -0.5,
+        0.25
+      ],
+      "coverage": "4/4",
+      "indicator_count": 4,
       "indicator_total": 4,
-      "indicator_coverage": "2/4",
+      "indicator_coverage": "4/4",
       "rows": [
         {
           "module": "inflation",
           "group": "终端价格",
           "indicator": "CPI 当月同比",
           "code": "CN_INFLATION_CPI_YOY",
-          "latest": "0.5",
-          "latest_direction": "flat",
+          "latest": "0.8",
+          "latest_direction": "up",
           "trend": [
-            -0.4,
             -0.3,
             0.2,
             0.7,
@@ -340,18 +365,19 @@
             1.2,
             1.2,
             1.0,
-            0.5
+            0.5,
+            0.8
           ],
-          "score": "NA",
-          "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-08-10",
+          "score": "0.00",
+          "score_direction": "up",
+          "state": "中性",
+          "visible_date": "2026-09-10",
           "target_period": "2026-08",
-          "display_period": "2026-07",
-          "display_is_fallback": true,
+          "display_period": "2026-08",
+          "display_is_fallback": false,
           "type": "主指标",
           "status_class": "neutral",
-          "missing": true,
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 3.0；0: 0.5 < x < 3.0；-1: x <= 0.5",
           "role": "核心"
@@ -361,10 +387,9 @@
           "group": "工业品价格",
           "indicator": "PPI 当月同比",
           "code": "CN_INFLATION_PPI_YOY",
-          "latest": "3.5",
-          "latest_direction": "flat",
+          "latest": "3.8",
+          "latest_direction": "up",
           "trend": [
-            -2.9,
             -2.3,
             -2.1,
             -2.2,
@@ -375,18 +400,19 @@
             2.8,
             3.9,
             4.1,
-            3.5
+            3.5,
+            3.8
           ],
-          "score": "NA",
+          "score": "0.00",
           "score_direction": "flat",
-          "state": "暂不评分",
-          "visible_date": "2026-08-10",
+          "state": "中性",
+          "visible_date": "2026-09-10",
           "target_period": "2026-08",
-          "display_period": "2026-07",
-          "display_is_fallback": true,
+          "display_period": "2026-08",
+          "display_is_fallback": false,
           "type": "主指标",
           "status_class": "neutral",
-          "missing": true,
+          "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 5.0；0: -2.0 < x < 5.0；-1: x <= -2.0",
           "role": "核心"
@@ -412,15 +438,15 @@
             53.2,
             56.6
           ],
-          "score": "NA",
-          "score_direction": "flat",
-          "state": "暂不评分",
+          "score": "1.00",
+          "score_direction": "up",
+          "state": "偏强",
           "visible_date": "2026-09-01",
           "target_period": "2026-08",
           "display_period": "2026-08",
           "display_is_fallback": false,
           "type": "主指标",
-          "status_class": "neutral",
+          "status_class": "high",
           "missing": false,
           "direction_rule": "higher_is_positive",
           "threshold_rule": "+1: x >= 55.0；0: 48.0 < x < 55.0；-1: x <= 48.0",
@@ -447,9 +473,9 @@
             47.8,
             50.4
           ],
-          "score": "NA",
-          "score_direction": "flat",
-          "state": "暂不评分",
+          "score": "0.00",
+          "score_direction": "up",
+          "state": "中性",
           "visible_date": "2026-09-01",
           "target_period": "2026-08",
           "display_period": "2026-08",
@@ -466,11 +492,11 @@
       "gate": {
         "key": "inflation",
         "module": "通胀压力",
-        "available": 2,
+        "available": 4,
         "minimum": 3,
-        "met": false
+        "met": true
       },
-      "display_mode": "muted_preview"
+      "display_mode": "normal"
     },
     {
       "key": "credit",
@@ -1301,8 +1327,8 @@
           "代码": "CN_INFLATION_CPI_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "0.00",
+          "状态": "中性"
         },
         {
           "模块": "通胀压力",
@@ -1311,8 +1337,8 @@
           "代码": "CN_INFLATION_PPI_YOY",
           "角色": "核心",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "0.00",
+          "状态": "中性"
         },
         {
           "模块": "通胀压力",
@@ -1321,8 +1347,8 @@
           "代码": "CN_INFLATION_PMI_INPUT_PRICE",
           "角色": "成本压力",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "1.00",
+          "状态": "偏强"
         },
         {
           "模块": "通胀压力",
@@ -1331,8 +1357,8 @@
           "代码": "CN_INFLATION_PMI_OUTPUT_PRICE",
           "角色": "成本压力",
           "方向规则": "higher_is_positive",
-          "规则分": "NA",
-          "状态": "暂不评分"
+          "规则分": "0.00",
+          "状态": "中性"
         },
         {
           "模块": "信用条件",
@@ -1535,7 +1561,7 @@
         },
         {
           "字段": "reasoning",
-          "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
+          "值": "primary=cn_v0.not_run; growth=nan; inflation=0.25; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
         }
       ]
     }
@@ -1585,7 +1611,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-09",
+      "data_cutoff_time": "2026-09-10",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3252,7 +3278,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-09",
+      "data_cutoff_time": "2026-09-10",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -4919,7 +4945,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-09",
+      "data_cutoff_time": "2026-09-10",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6572,22 +6598,22 @@
       "observation_label": "2026-08 · 预览",
       "display_status": "preview",
       "coverage_summary": {
-        "available_indicators": 10,
+        "available_indicators": 12,
         "total_indicators": 26,
-        "passed_modules": 1,
+        "passed_modules": 2,
         "total_modules": 6,
         "scored_modules": [
+          "通胀压力",
           "外需环境"
         ],
         "pending_modules": [
           "增长动能",
-          "通胀压力",
           "信用条件",
           "政策组合",
           "地产压力"
         ]
       },
-      "data_cutoff_time": "2026-09-09",
+      "data_cutoff_time": "2026-09-10",
       "primary_label": "cn_v0.preview",
       "secondary_labels": "",
       "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -6617,11 +6643,24 @@
         },
         {
           "name": "通胀压力",
-          "label": "暂不评分",
-          "score": "NA",
-          "coverage": "2/4",
-          "status_class": "neutral",
-          "trend": []
+          "label": "中性",
+          "score": "0.25",
+          "coverage": "4/4",
+          "status_class": "high",
+          "trend": [
+            -0.5,
+            -0.75,
+            -0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.5,
+            0.25,
+            0.0,
+            -0.5,
+            0.25
+          ]
         },
         {
           "name": "信用条件",
@@ -6876,27 +6915,39 @@
           "key": "inflation",
           "name": "通胀压力",
           "semantics": "越高 = 价格和成本压力越强。",
-          "score": "NA",
-          "label": "暂不评分",
-          "delta_text": "等待数据",
-          "delta_direction": "flat",
-          "driver_note": "本月已有 2/4 个指标可见；模块门槛待补。当前不生成模块方向结论。",
-          "status_class": "neutral",
-          "trend": [],
-          "coverage": "2/4",
-          "indicator_count": 2,
+          "score": "0.25",
+          "label": "中性",
+          "delta_text": "较上期 +0.75",
+          "delta_direction": "up",
+          "driver_note": "价格链条读法：上游成本偏高，但出厂报价、PPI 和 CPI 未同步偏高；压力主要停留在成本端，更接近利润挤压风险，不是全面通胀。",
+          "status_class": "high",
+          "trend": [
+            -0.5,
+            -0.75,
+            -0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.5,
+            0.5,
+            0.25,
+            0.0,
+            -0.5,
+            0.25
+          ],
+          "coverage": "4/4",
+          "indicator_count": 4,
           "indicator_total": 4,
-          "indicator_coverage": "2/4",
+          "indicator_coverage": "4/4",
           "rows": [
             {
               "module": "inflation",
               "group": "终端价格",
               "indicator": "CPI 当月同比",
               "code": "CN_INFLATION_CPI_YOY",
-              "latest": "0.5",
-              "latest_direction": "flat",
+              "latest": "0.8",
+              "latest_direction": "up",
               "trend": [
-                -0.4,
                 -0.3,
                 0.2,
                 0.7,
@@ -6907,18 +6958,19 @@
                 1.2,
                 1.2,
                 1.0,
-                0.5
+                0.5,
+                0.8
               ],
-              "score": "NA",
-              "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-08-10",
+              "score": "0.00",
+              "score_direction": "up",
+              "state": "中性",
+              "visible_date": "2026-09-10",
               "target_period": "2026-08",
-              "display_period": "2026-07",
-              "display_is_fallback": true,
+              "display_period": "2026-08",
+              "display_is_fallback": false,
               "type": "主指标",
               "status_class": "neutral",
-              "missing": true,
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 3.0；0: 0.5 < x < 3.0；-1: x <= 0.5",
               "role": "核心"
@@ -6928,10 +6980,9 @@
               "group": "工业品价格",
               "indicator": "PPI 当月同比",
               "code": "CN_INFLATION_PPI_YOY",
-              "latest": "3.5",
-              "latest_direction": "flat",
+              "latest": "3.8",
+              "latest_direction": "up",
               "trend": [
-                -2.9,
                 -2.3,
                 -2.1,
                 -2.2,
@@ -6942,18 +6993,19 @@
                 2.8,
                 3.9,
                 4.1,
-                3.5
+                3.5,
+                3.8
               ],
-              "score": "NA",
+              "score": "0.00",
               "score_direction": "flat",
-              "state": "暂不评分",
-              "visible_date": "2026-08-10",
+              "state": "中性",
+              "visible_date": "2026-09-10",
               "target_period": "2026-08",
-              "display_period": "2026-07",
-              "display_is_fallback": true,
+              "display_period": "2026-08",
+              "display_is_fallback": false,
               "type": "主指标",
               "status_class": "neutral",
-              "missing": true,
+              "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 5.0；0: -2.0 < x < 5.0；-1: x <= -2.0",
               "role": "核心"
@@ -6979,15 +7031,15 @@
                 53.2,
                 56.6
               ],
-              "score": "NA",
-              "score_direction": "flat",
-              "state": "暂不评分",
+              "score": "1.00",
+              "score_direction": "up",
+              "state": "偏强",
               "visible_date": "2026-09-01",
               "target_period": "2026-08",
               "display_period": "2026-08",
               "display_is_fallback": false,
               "type": "主指标",
-              "status_class": "neutral",
+              "status_class": "high",
               "missing": false,
               "direction_rule": "higher_is_positive",
               "threshold_rule": "+1: x >= 55.0；0: 48.0 < x < 55.0；-1: x <= 48.0",
@@ -7014,9 +7066,9 @@
                 47.8,
                 50.4
               ],
-              "score": "NA",
-              "score_direction": "flat",
-              "state": "暂不评分",
+              "score": "0.00",
+              "score_direction": "up",
+              "state": "中性",
               "visible_date": "2026-09-01",
               "target_period": "2026-08",
               "display_period": "2026-08",
@@ -7033,11 +7085,11 @@
           "gate": {
             "key": "inflation",
             "module": "通胀压力",
-            "available": 2,
+            "available": 4,
             "minimum": 3,
-            "met": false
+            "met": true
           },
-          "display_mode": "muted_preview"
+          "display_mode": "normal"
         },
         {
           "key": "credit",
@@ -7868,8 +7920,8 @@
               "代码": "CN_INFLATION_CPI_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "0.00",
+              "状态": "中性"
             },
             {
               "模块": "通胀压力",
@@ -7878,8 +7930,8 @@
               "代码": "CN_INFLATION_PPI_YOY",
               "角色": "核心",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "0.00",
+              "状态": "中性"
             },
             {
               "模块": "通胀压力",
@@ -7888,8 +7940,8 @@
               "代码": "CN_INFLATION_PMI_INPUT_PRICE",
               "角色": "成本压力",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "1.00",
+              "状态": "偏强"
             },
             {
               "模块": "通胀压力",
@@ -7898,8 +7950,8 @@
               "代码": "CN_INFLATION_PMI_OUTPUT_PRICE",
               "角色": "成本压力",
               "方向规则": "higher_is_positive",
-              "规则分": "NA",
-              "状态": "暂不评分"
+              "规则分": "0.00",
+              "状态": "中性"
             },
             {
               "模块": "信用条件",
@@ -8102,7 +8154,7 @@
             },
             {
               "字段": "reasoning",
-              "值": "primary=cn_v0.not_run; growth=nan; inflation=nan; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
+              "值": "primary=cn_v0.not_run; growth=nan; inflation=0.25; credit=nan; policy_mix=nan; external=1; housing=nan; missing_required_scores"
             }
           ]
         }
@@ -8113,10 +8165,9 @@
   "default_month": "2026-08",
   "month_switch_policy": {
     "candidate_month": "2026-08",
-    "candidate_status": "预览中（10/26 个指标已到；1/6 个模块已按门槛评分）",
+    "candidate_status": "预览中（12/26 个指标已到；2/6 个模块已按门槛评分）",
     "pending_modules": [
       "增长动能",
-      "通胀压力",
       "信用条件",
       "政策组合",
       "地产压力"
@@ -8133,9 +8184,9 @@
       "2026-08"
     ],
     "preview_month": "2026-08",
-    "available_indicators": 10,
+    "available_indicators": 12,
     "total_indicators": 26,
-    "passed_modules": 1,
+    "passed_modules": 2,
     "total_modules": 6,
     "minimum_visible_indicators": 1,
     "formal_month_window": 3,
@@ -8172,5 +8223,5 @@
       }
     ]
   },
-  "run_date": "2026-09-10"
+  "run_date": "2026-09-11"
 }
