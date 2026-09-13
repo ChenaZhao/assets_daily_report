@@ -1,0 +1,47 @@
+【大类资产观点 · 原文溯源索引】周 2026-09-11
+观点表（中间结果）：外资行大类资产观点_2026-09-11.xlsx
+溯源命中：4/6 条　·　被引用原始文档：6 篇
+
+—— 一、被引用的原始文档清单（按名字即可找到并打开）——
+  [PDF] 26/9/10  CITI  《US Rates Strategy_ Are buybacks catching a cold or a fever_》
+     支撑：美债（Rates）
+     打开：../2026-09-11/2026-09-10-Citi-US Rates Strategy_ Are buybacks catching a cold or a fever_.pdf
+  [PDF] 26/9/10  CITI  《美国信用策略：美国企业共同基金资金流向》
+     支撑：信用债（Credit）
+     打开：../2026-09-11/花旗 - 美国信用策略：美国企业共同基金资金流向 - 2026-09-10_Daniel Sorid,Mathew Jacob(原文).pdf
+  [PDF] 26/9/10  BofA  《流动性洞察：美国国债回购——不要低估其影响》
+     支撑：美债（Rates）
+     打开：../2026-09-11/美银证券 - 流动性洞察：美国国债回购——不要低估其影响 - 2026-09-10_Katie Craig,Ralph Axel(原文).pdf
+  [PDF] 26/9/9  Barclays  《U.S. Equity Strategy_ 2Q26 Earnings Learnings_ Raise S&P 500 PT & EPS, Yet Again》
+     支撑：美股（Equity）
+     打开：../2026-09-11/2026-09-09-Barclays-U.S. Equity Strategy_ 2Q26 Earnings Learnings_ Raise S&P 500 PT & EPS, Yet Again.pdf
+  [PDF] 26/9/7  Nomura  《外汇主题 - 美元（短期信号）2026年9月4日》
+     支撑：美元（FX）
+     打开：../2026-09-11/野村证券 - 外汇主题 - 美元（短期信号）2026年9月4日 - 2026-09-07_Craig Chan,Wee Choon Teo(原文).pdf
+  [PDF] 26/9/7  BofA  《外汇量化洞察：日元走强，量化策略跟进》
+     支撑：美元（FX）
+     打开：../2026-09-11/美银证券 - 外汇量化洞察：日元走强，量化策略跟进 - 2026-09-07_Marcus Boman,Bruno Braizinha(原文).pdf
+
+—— 二、逐条观点 → 出处 ——
+▍美债（Rates）（观点里提及机构：CITI/BofA/MS/JPM/GS）
+    - [花旗 26/9/10] US Rates Strategy_ Are buybacks catching a cold or a fever_
+      打开：../2026-09-11/2026-09-10-Citi-US Rates Strategy_ Are buybacks catching a cold or a fever_.pdf
+    - [美银 26/9/10] 流动性洞察：美国国债回购——不要低估其影响
+      打开：../2026-09-11/美银证券 - 流动性洞察：美国国债回购——不要低估其影响 - 2026-09-10_Katie Craig,Ralph Axel(原文).pdf
+▍美元（FX）（观点里提及机构：JPM/MS/BofA/CITI/Nomura）
+    - [美银 26/9/7] 外汇量化洞察：日元走强，量化策略跟进
+      打开：../2026-09-11/美银证券 - 外汇量化洞察：日元走强，量化策略跟进 - 2026-09-07_Marcus Boman,Bruno Braizinha(原文).pdf
+    - [野村 26/9/7] 外汇主题 - 美元（短期信号）2026年9月4日
+      打开：../2026-09-11/野村证券 - 外汇主题 - 美元（短期信号）2026年9月4日 - 2026-09-07_Craig Chan,Wee Choon Teo(原文).pdf
+▍美股（Equity）（观点里提及机构：Barclays/MS/CITI/GS/JPM）
+    - [巴克莱 26/9/9] U.S. Equity Strategy_ 2Q26 Earnings Learnings_ Raise S&P 500 PT & EPS, Yet Again
+      打开：../2026-09-11/2026-09-09-Barclays-U.S. Equity Strategy_ 2Q26 Earnings Learnings_ Raise S&P 500 PT & EPS, Yet Again.pdf
+▍商品（Commodities）（观点里提及机构：JPM/GS/CITI）
+    未匹配到当周对应机构的相关报告（如实留空，不编造）
+▍中国资产（观点里提及机构：JPM/MS）
+    未匹配到当周对应机构的相关报告（如实留空，不编造）
+▍信用债（Credit）（观点里提及机构：BofA/GS/CITI/JPM）
+    - [花旗 26/9/10] 美国信用策略：美国企业共同基金资金流向
+      打开：../2026-09-11/花旗 - 美国信用策略：美国企业共同基金资金流向 - 2026-09-10_Daniel Sorid,Mathew Jacob(原文).pdf
+
+（Excel 观点汇总为中间结果，已在周报页呈现一次，不在此重复）
