@@ -20,7 +20,7 @@
       "政策组合"
     ]
   },
-  "data_cutoff_time": "2026-09-17",
+  "data_cutoff_time": "2026-09-18",
   "primary_label": "cn_v0.preview",
   "secondary_labels": "",
   "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -1125,12 +1125,12 @@
             -11.3132,
             -12.4555,
             -12.6823,
-            -12.9553
+            -12.9557
           ],
           "score": "0.00",
           "score_direction": "flat",
           "state": "中性",
-          "visible_date": "2026-09-16",
+          "visible_date": "2026-09-18",
           "target_period": "2026-08",
           "display_period": "2026-08",
           "display_is_fallback": false,
@@ -1160,12 +1160,12 @@
             -13.8604,
             -14.2326,
             -13.8148,
-            -13.715
+            -13.7141
           ],
           "score": "0.00",
           "score_direction": "flat",
           "state": "中性",
-          "visible_date": "2026-09-16",
+          "visible_date": "2026-09-18",
           "target_period": "2026-08",
           "display_period": "2026-08",
           "display_is_fallback": false,
@@ -1181,7 +1181,7 @@
           "group": "开发投资",
           "indicator": "房地产开发投资累计同比",
           "code": "CN_HOUSING_INVESTMENT_YTD_YOY",
-          "latest": "-20.44",
+          "latest": "-20.45",
           "latest_direction": "down",
           "trend": [
             -12.9531,
@@ -1195,12 +1195,12 @@
             -16.2228,
             -18.3976,
             -19.7291,
-            -20.445
+            -20.4452
           ],
           "score": "1.00",
           "score_direction": "flat",
           "state": "压力高",
-          "visible_date": "2026-09-16",
+          "visible_date": "2026-09-18",
           "target_period": "2026-08",
           "display_period": "2026-08",
           "display_is_fallback": false,
@@ -1689,7 +1689,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-17",
+      "data_cutoff_time": "2026-09-18",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -3356,7 +3356,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-17",
+      "data_cutoff_time": "2026-09-18",
       "primary_label": "cn_v0.stable_expansion",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -5023,7 +5023,7 @@
         ],
         "pending_modules": []
       },
-      "data_cutoff_time": "2026-09-17",
+      "data_cutoff_time": "2026-09-18",
       "primary_label": "cn_v0.deflation_recession",
       "secondary_labels": "cn_v0.credit_contraction;cn_v0.housing_stress_acute",
       "notice": "中国 V0 当前读取 current_snapshot_no_vintage 数据口径；本页不称为 true vintage，不改变冻结分数规则或 26 个 feature contract。",
@@ -6691,7 +6691,7 @@
           "政策组合"
         ]
       },
-      "data_cutoff_time": "2026-09-17",
+      "data_cutoff_time": "2026-09-18",
       "primary_label": "cn_v0.preview",
       "secondary_labels": "",
       "notice": "本月为模块级预览：达到冻结门槛的模块按正常形态展示；未达门槛的模块淡化展示数据并暂不评分，主状态和辅助标签仍不判定。",
@@ -7796,12 +7796,12 @@
                 -11.3132,
                 -12.4555,
                 -12.6823,
-                -12.9553
+                -12.9557
               ],
               "score": "0.00",
               "score_direction": "flat",
               "state": "中性",
-              "visible_date": "2026-09-16",
+              "visible_date": "2026-09-18",
               "target_period": "2026-08",
               "display_period": "2026-08",
               "display_is_fallback": false,
@@ -7831,12 +7831,12 @@
                 -13.8604,
                 -14.2326,
                 -13.8148,
-                -13.715
+                -13.7141
               ],
               "score": "0.00",
               "score_direction": "flat",
               "state": "中性",
-              "visible_date": "2026-09-16",
+              "visible_date": "2026-09-18",
               "target_period": "2026-08",
               "display_period": "2026-08",
               "display_is_fallback": false,
@@ -7852,7 +7852,7 @@
               "group": "开发投资",
               "indicator": "房地产开发投资累计同比",
               "code": "CN_HOUSING_INVESTMENT_YTD_YOY",
-              "latest": "-20.44",
+              "latest": "-20.45",
               "latest_direction": "down",
               "trend": [
                 -12.9531,
@@ -7866,12 +7866,12 @@
                 -16.2228,
                 -18.3976,
                 -19.7291,
-                -20.445
+                -20.4452
               ],
               "score": "1.00",
               "score_direction": "flat",
               "state": "压力高",
-              "visible_date": "2026-09-16",
+              "visible_date": "2026-09-18",
               "target_period": "2026-08",
               "display_period": "2026-08",
               "display_is_fallback": false,
@@ -8376,5 +8376,5 @@
       }
     ]
   },
-  "run_date": "2026-09-18"
+  "run_date": "2026-09-19"
 }
