@@ -39,7 +39,16 @@ a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--acc
 .entry .desc,.mod-desc,.card .desc,.card p,.entry-body p{color:var(--soft);font-size:12px;margin:0}
 .mod-arrow,.card .arrow{margin-top:auto;padding-top:6px;align-self:flex-end;color:var(--accent,var(--gold));font-weight:800;font-size:13px}
 .home .grid{grid-template-columns:1fr}
-.entry.row{flex-direction:row;align-items:center;gap:20px;padding:17px 20px}
+.entry.row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;column-gap:18px;align-items:center;padding:17px 20px}
+.ico{display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:#fff;border:1px solid var(--accent,var(--deep));color:var(--accent,var(--deep));flex-shrink:0}
+.ico svg{width:22px;height:22px}
+.entry.row .ico{width:48px;height:48px}.entry.row .ico svg{width:26px;height:26px}
+.ico.sm{width:28px;height:28px}.ico.sm svg{width:17px;height:17px}
+.rgroup .section-title{align-items:center}
+.section-title>.ico{color:var(--accent,var(--deep));font-size:inherit}
+.has-ico{flex-direction:row!important;gap:14px!important;align-items:stretch}
+.has-ico>.ico{align-self:flex-start}
+.cbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
 .entry.row .main{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
 .entry.row .side{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;font-size:11px;color:var(--muted)}
 .entry.row .title{font-size:17px}
@@ -70,7 +79,7 @@ a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--acc
 
 .sub{color:var(--muted);font-size:11px}
 .foot{margin-top:28px;border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:10px;letter-spacing:.04em}
-@media(max-width:760px){.entry.row{flex-direction:column;align-items:stretch;gap:10px}.entry.row .side{flex-direction:row;justify-content:space-between;align-items:center}.page{padding:14px 14px 40px}.masthead{flex-direction:column;align-items:flex-start;gap:4px}.brand{font-size:22px}.mh-meta{text-align:left}.stack,.grid{grid-template-columns:1fr}.intro h1{font-size:22px}.crumb{font-size:13px}.crumb a{display:inline-block;padding:6px 0}.report-list a{padding:12px 4px}.more-btn{padding:12px 4px}.mod-arrow,.card .arrow{padding-top:2px}.rgroup{padding:2px 12px 8px}}
+@media(max-width:760px){.entry.row{grid-template-columns:44px minmax(0,1fr);row-gap:10px;column-gap:14px}.entry.row .ico{width:44px;height:44px}.entry.row .side{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}.page{padding:14px 14px 40px}.masthead{flex-direction:column;align-items:flex-start;gap:4px}.brand{font-size:22px}.mh-meta{text-align:left}.stack,.grid{grid-template-columns:1fr}.intro h1{font-size:22px}.crumb{font-size:13px}.crumb a{display:inline-block;padding:6px 0}.report-list a{padding:12px 4px}.more-btn{padding:12px 4px}.mod-arrow,.card .arrow{padding-top:2px}.rgroup{padding:2px 12px 8px}}
 </style>
 </head>
 <body class="l-eqcta">
@@ -87,6 +96,7 @@ a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--acc
 </div>
 <script>
 (function(){
+  var I={"asset": "<path d='M3 21h18'/><path d='M6 17v-6M11 17V6M16 17v-4M20 17V8'/>", "strategy": "<circle cx='12' cy='12' r='8'/><circle cx='12' cy='12' r='3.5'/><path d='M12 2v4M12 18v4M2 12h4M18 12h4'/>", "data": "<ellipse cx='12' cy='5' rx='8' ry='3'/><path d='M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5'/><path d='M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3'/>", "doc": "<path d='M6 2h9l5 5v15H6z'/><path d='M15 2v5h5M9 12h8M9 16h8M9 8h3'/>", "more": "<rect x='3' y='3' width='18' height='18'/><path d='M12 8v8M8 12h8'/>", "trend": "<path d='M3 17l6-6 4 4 8-8'/><path d='M15 7h6v6'/>", "bank": "<path d='M3 10l9-6 9 6'/><path d='M5 10v8M10 10v8M14 10v8M19 10v8M3 21h18'/>", "candle": "<path d='M7 3v4M7 17v4M17 5v4M17 15v4'/><rect x='5' y='7' width='4' height='10'/><rect x='15' y='9' width='4' height='6'/>", "layers": "<path d='M12 3l9 5-9 5-9-5z'/><path d='M3 13l9 5 9-5'/>", "globe": "<circle cx='12' cy='12' r='9'/><path d='M3 12h18'/><path d='M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18'/>", "drop": "<path d='M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z'/>", "calendar": "<rect x='3' y='5' width='18' height='16'/><path d='M3 10h18M8 3v4M16 3v4'/>", "line": "<path d='M3 3v18h18'/><path d='M7 14l4-4 3 3 5-6'/>", "shield": "<path d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/>", "eye": "<path d='M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z'/><circle cx='12' cy='12' r='3'/>"};var KI={"A股": "trend", "美债": "bank", "CTA": "candle", "权益CTA": "layers", "期权": "layers", "宏观": "globe", "asset_biweekly": "doc", "usd_liquidity": "drop", "macro_event_calendar": "calendar", "QIS": "layers", "FUT": "candle", "TCode": "line", "稳定基线": "shield", "候选观察": "eye"};var SH="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'>";
   var P={navy:['#17366f','#eef3fa'],blue:['#1d4ed8','#eef2fd'],gold:['#b8860b','#faf5e8'],purple:['#6d28d9','#f3effc'],teal:['#0f766e','#ebf6f4'],green:['#00873c','#edf6f0'],maroon:['#9f1239','#fbf0f3']};
   var K={'A股':'navy','美债':'maroon','CTA':'gold','权益CTA':'purple','期权':'purple','宏观':'teal',
          'asset_biweekly':'navy','usd_liquidity':'teal','macro_event_calendar':'gold','QIS':'purple','FUT':'gold','TCode':'teal'};
@@ -97,6 +107,7 @@ a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--acc
     else{var seg=(el.getAttribute('href')||'').split('/').filter(function(s){return s&&s!=='index.html';});key=seg[seg.length-1]||'';}
     var c=K[key]||used[key]||(used[key]=order[n++%order.length]);
     el.style.setProperty('--accent',P[c][0]);el.style.setProperty('--tint',P[c][1]);
+    var ic=document.createElement('span');ic.className='ico';ic.innerHTML=SH+(I[KI[key]]||I.line)+'</svg>';var cb=document.createElement('div');cb.className='cbody';Array.from(el.childNodes).forEach(function(ch){if(!(ch.classList&&(ch.classList.contains('mod-icon')||ch.classList.contains('icon'))))cb.appendChild(ch);});el.appendChild(ic);el.appendChild(cb);el.classList.add('has-ico');
   });
 })();
 </script>
