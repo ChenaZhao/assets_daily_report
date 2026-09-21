@@ -1,0 +1,52 @@
+【大类资产观点 · 原文溯源索引】周 2026-09-18
+观点表（中间结果）：外资行大类资产观点_2026-09-18.xlsx
+溯源命中：4/6 条　·　被引用原始文档：7 篇
+
+—— 一、被引用的原始文档清单（按名字即可找到并打开）——
+  [PDF] 26/9/18  CITI  《外汇资金流向周报：美元与新兴市场资金流入》
+     支撑：美元（FX）
+     打开：../2026-09-18/花旗 - 外汇资金流向周报：美元与新兴市场资金流入 - 2026-09-18_Alex Saunders,Dirk Willer(原文).pdf
+  [PDF] 26/9/18  CITI  《全球宏观策略：日元走弱消退——6个月USDJPY下跌与JPY 20年期TONAR下跌双数字期权》
+     支撑：美元（FX）
+     打开：../2026-09-18/花旗 - 全球宏观策略：日元走弱消退——6个月USDJPY下跌与JPY 20年期TONAR下跌双数字期权 - 2026-09-18_Giammarco Miani,Adam Pickett(原文).pdf
+  [PDF] 26/9/18  BofA  《全球外汇周报：Raise you a hawk》
+     支撑：美元（FX）
+     打开：../2026-09-18/美银证券 - 全球外汇周报：Raise you a hawk - 2026-09-18_Michalis Rousakis,Claudio Piron(原文).pdf
+  [PDF] 26/9/17  CITI  《US Economics_ FOMC – Hawkish 25bp rate hike》
+     支撑：美债（Rates）
+     打开：../2026-09-18/2026-09-17-Citi-US Economics_ FOMC – Hawkish 25bp rate hike.pdf
+  [PDF] 26/9/17  BofA  《周度资金流向：793亿美元流入股票，98亿美元流入债券，31亿美元流入黄金，8亿美元流出加密货币，759亿美元流出现金》
+     支撑：商品（Commodities）
+     打开：../2026-09-18/美银证券 - 周度资金流向：793亿美元流入股票，98亿美元流入债券，31亿美元流入黄金，8亿美元流出加密货币，759亿美元流出现金 - 2026-09-17_Jared Woodard,Michael Hartnett(原文).pdf
+  [PDF] 26/9/17  BofA  《新兴市场洞察：墨西哥——投资级评级岌岌可危（调研纪要）》
+     支撑：信用债（Credit）
+     打开：../2026-09-18/美银证券 - 新兴市场洞察：墨西哥——投资级评级岌岌可危（调研纪要） - 2026-09-17_Carlos Capistran,David Hauner(原文).pdf
+  [PDF] 26/9/14  CITI  《US Economics_ FOMC Preview—One hike, not a cycle》
+     支撑：美债（Rates）
+     打开：../2026-09-18/2026-09-14-Citi-US Economics_ FOMC Preview—One hike, not a cycle.pdf
+
+—— 二、逐条观点 → 出处 ——
+▍美债（Rates）（观点里提及机构：CITI/JPM/MS/GS）
+    - [花旗 26/9/14] US Economics_ FOMC Preview—One hike, not a cycle
+      打开：../2026-09-18/2026-09-14-Citi-US Economics_ FOMC Preview—One hike, not a cycle.pdf
+    - [花旗 26/9/17] US Economics_ FOMC – Hawkish 25bp rate hike
+      打开：../2026-09-18/2026-09-17-Citi-US Economics_ FOMC – Hawkish 25bp rate hike.pdf
+▍美元（FX）（观点里提及机构：GS/CITI/JPM/BofA）
+    - [花旗 26/9/18] 外汇资金流向周报：美元与新兴市场资金流入
+      打开：../2026-09-18/花旗 - 外汇资金流向周报：美元与新兴市场资金流入 - 2026-09-18_Alex Saunders,Dirk Willer(原文).pdf
+    - [花旗 26/9/18] 全球宏观策略：日元走弱消退——6个月USDJPY下跌与JPY 20年期TONAR下跌双数字期权
+      打开：../2026-09-18/花旗 - 全球宏观策略：日元走弱消退——6个月USDJPY下跌与JPY 20年期TONAR下跌双数字期权 - 2026-09-18_Giammarco Miani,Adam Pickett(原文).pdf
+    - [美银 26/9/18] 全球外汇周报：Raise you a hawk
+      打开：../2026-09-18/美银证券 - 全球外汇周报：Raise you a hawk - 2026-09-18_Michalis Rousakis,Claudio Piron(原文).pdf
+▍美股（Equity）（观点里提及机构：JPM/GS/BofA/MS）
+    未匹配到当周对应机构的相关报告（如实留空，不编造）
+▍商品（Commodities）（观点里提及机构：MS/BofA）
+    - [美银 26/9/17] 周度资金流向：793亿美元流入股票，98亿美元流入债券，31亿美元流入黄金，8亿美元流出加密货币，759亿美元流出现金
+      打开：../2026-09-18/美银证券 - 周度资金流向：793亿美元流入股票，98亿美元流入债券，31亿美元流入黄金，8亿美元流出加密货币，759亿美元流出现金 - 2026-09-17_Jared Woodard,Michael Hartnett(原文).pdf
+▍中国资产（观点里提及机构：GS）
+    未匹配到当周对应机构的相关报告（如实留空，不编造）
+▍信用债（Credit）（观点里提及机构：JPM/BofA/GS/MS）
+    - [美银 26/9/17] 新兴市场洞察：墨西哥——投资级评级岌岌可危（调研纪要）
+      打开：../2026-09-18/美银证券 - 新兴市场洞察：墨西哥——投资级评级岌岌可危（调研纪要） - 2026-09-17_Carlos Capistran,David Hauner(原文).pdf
+
+（Excel 观点汇总为中间结果，已在周报页呈现一次，不在此重复）
