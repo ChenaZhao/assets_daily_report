@@ -1,110 +1,89 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数据及因子库</title>
-<style>
-:root{--ink:#0b1f3a;--soft:#40536f;--muted:#6c7f98;--line:#c9d5e4;--surface:#f4f7fb;--blue:#1d4ed8;--deep:#17366f;--gold:#b8860b;--up:#c8102e;--down:#00873c}
-*{box-sizing:border-box}
-html,body{margin:0;background:#fff;color:var(--ink);font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",-apple-system,"Segoe UI",sans-serif;font-size:14px;line-height:1.55;font-variant-numeric:tabular-nums}
-.page{max-width:980px;margin:auto;padding:22px 34px 60px}
-.masthead{border-top:4px solid var(--deep);border-bottom:1px solid var(--ink);display:flex;justify-content:space-between;gap:24px;align-items:flex-end;padding:13px 0}
-.brand{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;font-size:28px;font-weight:900;color:var(--deep);text-decoration:none;line-height:1.2}
-.brand i{font-style:normal;color:var(--gold)}
-.mh-meta{text-align:right;color:var(--muted);font-size:11px;letter-spacing:.06em}
-.mh-meta b{color:var(--ink)}
-.crumb{margin:10px 0 0;font-size:12px;color:var(--muted)}
-.crumb a{color:var(--soft);text-decoration:none}.crumb a:hover{color:var(--blue)}.crumb b{color:var(--ink);font-weight:600}
-.intro{margin:22px 0 4px}
-.eyebrow{display:block;color:var(--accent,var(--blue));font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
-.intro h1{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;font-size:26px;font-weight:900;color:var(--deep);margin:0;line-height:1.3}
-.intro p{color:var(--soft);margin:6px 0 0;font-size:13px}
-.asof-strip{margin:12px 0 0;border-left:3px solid var(--gold);background:var(--surface);padding:8px 12px;color:var(--soft);font-size:12px}
-.section-title{display:flex;align-items:baseline;gap:10px;border-bottom:2px solid var(--deep);margin:26px 0 0;padding-bottom:5px}
-.section-title>span{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;color:var(--gold);font-size:18px;font-weight:900}
-.section-title h2{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","STSong","SimSun",serif;margin:0;font-size:18px;color:var(--deep)}
-.section-title small{margin-left:auto;color:var(--muted);font-size:11px}
-
-/* 卡片栅格与统一卡片：首页 entry、策略层 mod、定期报告与中国宏观 card、数据库 entry-card */
-.stack,.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:16px}
-.l-asset{--accent:#17366f;--tint:#eef3fa}.l-strategy{--accent:#00873c;--tint:#edf6f0}.l-data{--accent:#b8860b;--tint:#faf5e8}.l-periodic{--accent:#1d4ed8;--tint:#eef2fd}.l-none{--accent:#6c7f98;--tint:#f4f7fb}.l-eqcta{--accent:#6d28d9;--tint:#f3effc}.l-macro{--accent:#0f766e;--tint:#ebf6f4}
-.entry,.mod,.card,.entry-card{display:flex;flex-direction:column;gap:5px;border:1px solid var(--line);border-left:3px solid var(--accent,var(--deep));background:var(--tint,var(--surface));padding:15px 17px 13px;text-decoration:none;color:inherit;min-width:0;transition:border-color .15s,box-shadow .15s}
-a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--accent,var(--deep));box-shadow:0 3px 12px rgba(11,31,58,.10)}
-.page>.card{margin-top:10px}
-.mod-icon,.card>.icon{display:none}
-.mod-body,.card>.body,.entry-body{display:flex;flex-direction:column;gap:5px;min-width:0}
-.entry .tag,.mod-tag,.card .tag,.entry-label{color:var(--accent,var(--blue));font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.entry .title,.mod-title,.card .title,.card h2,.card h3,.entry-body h2{font-size:16px;font-weight:800;color:var(--ink);margin:0;line-height:1.35}
-.entry .desc,.mod-desc,.card .desc,.card p,.entry-body p{color:var(--soft);font-size:12px;margin:0}
-.mod-arrow,.card .arrow{margin-top:auto;padding-top:6px;align-self:flex-end;color:var(--accent,var(--gold));font-weight:800;font-size:13px}
-.home .grid{grid-template-columns:1fr}
-.entry.row{display:grid;grid-template-columns:48px minmax(0,1fr) auto;column-gap:18px;align-items:center;padding:17px 20px}
-.ico{display:flex;align-items:center;justify-content:center;width:40px;height:40px;background:#fff;border:1px solid var(--accent,var(--deep));color:var(--accent,var(--deep));flex-shrink:0}
-.ico svg{width:22px;height:22px}
-.entry.row .ico{width:48px;height:48px}.entry.row .ico svg{width:26px;height:26px}
-.ico.sm{width:28px;height:28px}.ico.sm svg{width:17px;height:17px}
-.rgroup .section-title{align-items:center}
-.section-title>.ico{color:var(--accent,var(--deep));font-size:inherit}
-.has-ico{flex-direction:row!important;gap:14px!important;align-items:stretch}
-.has-ico>.ico{align-self:flex-start}
-.cbody{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
-.entry.row .main{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px}
-.entry.row .side{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex-shrink:0;font-size:11px;color:var(--muted)}
-.entry.row .title{font-size:17px}
-.entry .go{color:var(--accent,var(--gold));font-weight:800;font-size:13px}
-.status{border:1px solid var(--down);color:var(--down);padding:0 6px;font-size:10px}
-.status.off{border-color:var(--line);color:var(--muted)}
-.entry.inactive{background:var(--surface)}
-.card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
-.chip{border:1px solid var(--line);background:var(--surface);color:var(--soft);padding:0 6px;font-size:10px}
-.entry-metrics{display:flex;flex-wrap:wrap;gap:6px 18px;border-top:1px solid var(--line);padding-top:8px;margin-top:6px}
-.entry-metrics strong{display:block;font-size:13px;color:var(--deep)}
-.entry-metrics span{font-size:10px;color:var(--muted)}
-
-/* 资产层日报：报告清单 */
-.report-list a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:13px}
-.report-list a:hover{background:var(--surface);color:var(--deep)}
-.report-list a .arrow{color:var(--gold);font-weight:800}
-.more-wrap{display:none}
-.more-btn{width:100%;padding:8px 4px;background:none;border:0;border-bottom:1px solid var(--line);color:var(--blue);font-size:12px;text-align:left;cursor:pointer;font-family:inherit}
-.more-btn:hover{background:var(--surface)}
-.empty{padding:12px 4px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}
-.g-macro{--accent:#17366f;--tint:#eef3fa}.g-equity{--accent:#00873c;--tint:#edf6f0}.g-futures{--accent:#b8860b;--tint:#faf5e8}
-.rgroup{margin-top:14px;border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--tint);padding:2px 16px 8px}
-.rgroup .section-title{margin-top:10px;border-bottom-color:var(--accent)}
-.rgroup .section-title h2{color:var(--accent)}
-.rgroup .report-list a:hover,.rgroup .more-btn:hover{background:#fff}
-.rgroup .more-btn{color:var(--accent)}
-
-.sub{color:var(--muted);font-size:11px}
-.foot{margin-top:28px;border-top:1px solid var(--line);padding-top:10px;color:var(--muted);font-size:10px;letter-spacing:.04em}
-@media(max-width:760px){.entry.row{grid-template-columns:44px minmax(0,1fr);row-gap:10px;column-gap:14px}.entry.row .ico{width:44px;height:44px}.entry.row .side{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}.page{padding:14px 14px 40px}.masthead{flex-direction:column;align-items:flex-start;gap:4px}.brand{font-size:22px}.mh-meta{text-align:left}.stack,.grid{grid-template-columns:1fr}.intro h1{font-size:22px}.crumb{font-size:13px}.crumb a{display:inline-block;padding:6px 0}.report-list a{padding:12px 4px}.more-btn{padding:12px 4px}.mod-arrow,.card .arrow{padding-top:2px}.rgroup{padding:2px 12px 8px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>数据及因子库</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f4f6f2;
+      color: #17211c;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    .page { max-width: 980px; margin: 0 auto; padding: 34px 22px 54px; }
+    .back { color: #707a74; text-decoration: none; font-size: 13px; font-weight: 700; }
+    .back:hover { color: #198b2d; }
+    header { margin: 20px 0 22px; }
+    .eyebrow { margin: 0 0 7px; color: #707a74; font-size: 13px; font-weight: 700; }
+    h1 { margin: 0; font-size: 34px; line-height: 1.12; }
+    .meta { margin: 9px 0 0; color: #707a74; font-size: 13px; }
+    .stack { display: grid; gap: 14px; }
+    .entry-card {
+      display: grid;
+      grid-template-columns: 72px minmax(0, 1fr) auto;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      border: 1px solid #dce3dc;
+      border-radius: 8px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(31, 40, 34, 0.07);
+    }
+    .entry-card:hover { border-color: #9ec6a5; transform: translateY(-1px); transition: .16s ease; }
+    .entry-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      border-radius: 8px;
+      background: #e6f3e9;
+      color: #198b2d;
+      font-weight: 900;
+      font-size: 15px;
+    }
+    h2 { margin: 0 0 5px; font-size: 19px; line-height: 1.25; }
+    p { margin: 0; color: #707a74; font-size: 13px; line-height: 1.55; }
+    .entry-metrics { display: flex; gap: 18px; align-items: center; border-left: 1px solid #dce3dc; padding-left: 20px; }
+    .entry-metrics div { min-width: 86px; }
+    .entry-metrics strong { display: block; font-size: 20px; line-height: 1.1; }
+    .entry-metrics span { display: block; margin-top: 5px; color: #707a74; font-size: 11.5px; font-weight: 700; }
+    @media (max-width: 720px) {
+      .entry-card { grid-template-columns: 1fr; gap: 12px; }
+      .entry-label { width: max-content; padding: 0 16px; }
+      .entry-metrics { border-left: 0; border-top: 1px solid #dce3dc; padding: 12px 0 0; flex-wrap: wrap; }
+    }
+  </style>
 </head>
-<body class="l-data">
-<div class="page">
-<header class="masthead"><a class="brand" href="../">Research <i>Hub</i></a><div class="mh-meta"><b>Internal Use Only</b></div></header>
-<div class="crumb"><a href="../">← 返回首页</a></div>
-<section class="intro"><span class="eyebrow">data_factor</span><h1>数据及因子库</h1><p>数据源：bbg_data_etl · 生成时间：2026-09-21 10:00:41</p></section>
-<div class="stack">
-<a class="entry-card" href="qis.html">
+<body>
+  <main class="page">
+    <a class="back" href="../">← 返回首页</a>
+    <header>
+      <p class="eyebrow">data_factor</p>
+      <h1>数据及因子库</h1>
+      <p class="meta">数据源：bbg_data_etl · 生成时间：2026-09-22 10:00:36</p>
+    </header>
+    <section class="stack" aria-label="数据页面入口">
+      <a class="entry-card" href="qis.html">
           <div class="entry-label">QIS</div>
           <div class="entry-body">
             <h2>QIS 策略库</h2>
             <p>策略指数表现、回撤、滚动风险与近期表现。</p>
           </div>
-          <div class="entry-metrics"><div><strong>64/109</strong><span>最新覆盖</span></div><div><strong>2026-09-18</strong><span>最新日期</span></div></div>
+          <div class="entry-metrics"><div><strong>65/109</strong><span>最新覆盖</span></div><div><strong>2026-09-21</strong><span>最新日期</span></div></div>
         </a>
-<a class="entry-card" href="futures.html">
+        <a class="entry-card" href="futures.html">
           <div class="entry-label">FUT</div>
           <div class="entry-body">
             <h2>连续期货</h2>
             <p>连续合约价格走势、最新行情与区间涨跌。</p>
           </div>
-          <div class="entry-metrics"><div><strong>89/93</strong><span>最新覆盖</span></div><div><strong>2026-09-18</strong><span>最新日期</span></div></div>
+          <div class="entry-metrics"><div><strong>63/93</strong><span>最新覆盖</span></div><div><strong>2026-09-22</strong><span>最新日期</span></div></div>
         </a>
-<a class="entry-card" href="macro_tcode.html">
+        <a class="entry-card" href="macro_tcode.html">
           <div class="entry-label">TCode</div>
           <div class="entry-body">
             <h2>Macro TCode</h2>
@@ -112,25 +91,7 @@ a.entry:hover,a.mod:hover,a.card:hover,a.entry-card:hover{border-color:var(--acc
           </div>
           <div class="entry-metrics"><div><strong>129/167</strong><span>最新覆盖</span></div><div><strong>2026-08-31</strong><span>最新目标日期</span></div><div><strong>2026-09-18</strong><span>最新更新日期</span></div></div>
         </a>
-</div>
-<div class="foot">Internal Research Platform · 请勿外传</div>
-</div>
-<script>
-(function(){
-  var I={"asset": "<path d='M3 21h18'/><path d='M6 17v-6M11 17V6M16 17v-4M20 17V8'/>", "strategy": "<circle cx='12' cy='12' r='8'/><circle cx='12' cy='12' r='3.5'/><path d='M12 2v4M12 18v4M2 12h4M18 12h4'/>", "data": "<ellipse cx='12' cy='5' rx='8' ry='3'/><path d='M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5'/><path d='M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3'/>", "doc": "<path d='M6 2h9l5 5v15H6z'/><path d='M15 2v5h5M9 12h8M9 16h8M9 8h3'/>", "more": "<rect x='3' y='3' width='18' height='18'/><path d='M12 8v8M8 12h8'/>", "trend": "<path d='M3 17l6-6 4 4 8-8'/><path d='M15 7h6v6'/>", "bank": "<path d='M3 10l9-6 9 6'/><path d='M5 10v8M10 10v8M14 10v8M19 10v8M3 21h18'/>", "candle": "<path d='M7 3v4M7 17v4M17 5v4M17 15v4'/><rect x='5' y='7' width='4' height='10'/><rect x='15' y='9' width='4' height='6'/>", "layers": "<path d='M12 3l9 5-9 5-9-5z'/><path d='M3 13l9 5 9-5'/>", "globe": "<circle cx='12' cy='12' r='9'/><path d='M3 12h18'/><path d='M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18'/>", "drop": "<path d='M12 3c4 5 6 8 6 11a6 6 0 0 1-12 0c0-3 2-6 6-11z'/>", "calendar": "<rect x='3' y='5' width='18' height='16'/><path d='M3 10h18M8 3v4M16 3v4'/>", "line": "<path d='M3 3v18h18'/><path d='M7 14l4-4 3 3 5-6'/>", "shield": "<path d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/>", "eye": "<path d='M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z'/><circle cx='12' cy='12' r='3'/>"};var KI={"A股": "trend", "美债": "bank", "CTA": "candle", "权益CTA": "layers", "期权": "layers", "宏观": "globe", "asset_biweekly": "doc", "usd_liquidity": "drop", "macro_event_calendar": "calendar", "QIS": "layers", "FUT": "candle", "TCode": "line", "稳定基线": "shield", "候选观察": "eye"};var SH="<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'>";
-  var P={navy:['#17366f','#eef3fa'],blue:['#1d4ed8','#eef2fd'],gold:['#b8860b','#faf5e8'],purple:['#6d28d9','#f3effc'],teal:['#0f766e','#ebf6f4'],green:['#00873c','#edf6f0'],maroon:['#9f1239','#fbf0f3']};
-  var K={'A股':'navy','美债':'maroon','CTA':'gold','权益CTA':'purple','期权':'purple','宏观':'teal',
-         'asset_biweekly':'navy','usd_liquidity':'teal','macro_event_calendar':'gold','QIS':'purple','FUT':'gold','TCode':'teal'};
-  var order=['navy','gold','teal','purple','blue','green'],used={},n=0;
-  document.querySelectorAll('.mod,.card,.entry-card').forEach(function(el){
-    var t=el.querySelector('.mod-tag,.tag,.entry-label'),key;
-    if(t){key=t.textContent.split('·')[0].trim();}
-    else{var seg=(el.getAttribute('href')||'').split('/').filter(function(s){return s&&s!=='index.html';});key=seg[seg.length-1]||'';}
-    var c=K[key]||used[key]||(used[key]=order[n++%order.length]);
-    el.style.setProperty('--accent',P[c][0]);el.style.setProperty('--tint',P[c][1]);
-    var ic=document.createElement('span');ic.className='ico';ic.innerHTML=SH+(I[KI[key]]||I.line)+'</svg>';var cb=document.createElement('div');cb.className='cbody';Array.from(el.childNodes).forEach(function(ch){if(!(ch.classList&&(ch.classList.contains('mod-icon')||ch.classList.contains('icon'))))cb.appendChild(ch);});el.appendChild(ic);el.appendChild(cb);el.classList.add('has-ico');
-  });
-})();
-</script>
+    </section>
+  </main>
 </body>
 </html>
