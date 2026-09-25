@@ -181,7 +181,7 @@
     "end": "2026-08-31"
   },
   "as_of_cutoff": "2026-09-23",
-  "run_date": "2026-09-25",
+  "run_date": "2026-09-26",
   "availability_convention": "current_snapshot_no_vintage",
   "data_policy": "current_snapshot_history_not_pit_or_true_vintage",
   "turning_event_ledger": {
@@ -282,12 +282,12 @@
     },
     "state_snapshot": {
       "path": "cn_v1_state.snapshot.json",
-      "sha256": "f5aba91341111963cc50066058bfa9e5c8f3996a5c8944dac3aab75d31fbe2f7",
+      "sha256": "66c6981887688a1cf496d9daec9b337eb1bb5bba19a0851c214bf0487b07ed2f",
       "bytes": 1094813
     },
     "state_html": {
       "path": "cn_v1_state.html",
-      "sha256": "788782d28721ab3807bda1b4351f91976b6b22076a8161c9aa3957f8e7f9e168",
+      "sha256": "3c0948fda9dc7002006409530cc14615b6e64ac6e27a18a03366de45441b9d7b",
       "bytes": 309672
     }
   }
