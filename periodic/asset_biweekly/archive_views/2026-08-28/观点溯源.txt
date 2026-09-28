@@ -5,7 +5,7 @@
 —— 一、被引用的原始文档清单（按名字即可找到并打开）——
   [PDF] 26/8/29  CITI  《US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication》
      支撑：美股（Equity）
-     打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication.pdf
+     打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post %2349)_ Jackson Hole Perspective and Implication.pdf
   [PDF] 26/8/28  CITI  《美国利率策略：沃什主席讲话后维持做多20年期国债》
      支撑：美债（Rates）
      打开：../2026-08-28/花旗 - 美国利率策略：沃什主席讲话后维持做多20年期国债 - 2026-08-28_Jason Williams,Raghav Datla(原文).pdf
@@ -41,7 +41,7 @@
     - [花旗 26/8/28] 美股市场展望（第49期）：杰克逊霍尔会议观点及启示
       打开：../2026-08-28/花旗 - 美股市场展望（第49期）：杰克逊霍尔会议观点及启示 - 2026-08-28_Scott T Chronert(原文).pdf
     - [花旗 26/8/29] US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication
-      打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post #49)_ Jackson Hole Perspective and Implication.pdf
+      打开：../2026-08-28/2026-08-29-Citi-US Equity Market Outlook (Post %2349)_ Jackson Hole Perspective and Implication.pdf
 ▍商品（Commodities）（观点里提及机构：GS）
     未匹配到当周对应机构的相关报告（如实留空，不编造）
 ▍中国资产（观点里提及机构：Nomura）
