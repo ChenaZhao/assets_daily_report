@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-10-15 10:03 北京时间",
+  "run_time": "2026-10-16 10:02 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "8964a4f89c684e8fcd155937f67e35932267633ec583745cb23733e2dcf911af",
-    "model_update": "d2d65424658066942a5badb2dfe87277c5839da2e8823b239ab332d41a1e5c29"
+    "explain": "2531e7cfc99b660b32eae70fac8e8a7801a7f31307fad3ff2c7a5d803d295875",
+    "model_update": "7a141ac50aab36b02dd90f4c66e473fee6a45e4dc6d21e62448987498f08d73d"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-09",
-    "data_cutoff_time": "2026-10-15",
+    "data_cutoff_time": "2026-10-16",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -47,7 +47,7 @@
         "name": "增长",
         "label": "insufficient_coverage",
         "score": "NA",
-        "coverage": "0/7",
+        "coverage": "1/7",
         "status_class": "neutral",
         "trend": [
           0.297,
@@ -58,15 +58,15 @@
           0.584,
           -0.364,
           0.007,
-          -0.001,
-          -0.092
+          0.003,
+          -0.075
         ]
       },
       {
         "name": "通胀",
         "label": "压力偏高",
-        "score": "0.91",
-        "coverage": "3/5",
+        "score": "1.00",
+        "coverage": "4/5",
         "status_class": "high",
         "trend": [
           0.178,
@@ -76,10 +76,10 @@
           0.577,
           0.93,
           1.153,
-          0.765,
-          0.65,
+          0.766,
+          0.651,
           0.764,
-          0.913
+          0.996
         ]
       },
       {
@@ -148,11 +148,11 @@
         "semantics": "越高 = 实体活动与需求订单动能越强",
         "score": "NA",
         "label": "insufficient_coverage",
-        "coverage": "0/7",
+        "coverage": "1/7",
         "status_class": "neutral",
         "delta_text": "较上月 → NA",
         "delta_direction": "flat",
-        "driver_note": "较上月：整体稳定；主要变化来自消费者信心、汽车销售。",
+        "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、汽车销售。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -160,8 +160,8 @@
             "group": "消费需求",
             "indicator": "零售销售增速",
             "code": "RETAILx",
-            "latest": "737,763",
-            "latest_direction": "flat",
+            "latest": "745,021",
+            "latest_direction": "up",
             "trend": [
               705453.0,
               706264.0,
@@ -171,18 +171,19 @@
               723921.0,
               731415.0,
               732898.0,
-              729538.0,
-              737763.0
+              729915.0,
+              739322.0,
+              745021.0
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-08-31 / 2026-09-29",
+            "score": "0.19",
+            "score_direction": "down",
+            "state": "中性",
+            "visible_date": "2026-09-30 / 2026-10-15",
             "type": "主指标",
             "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "737,763 前月 737,763 · → +0.00",
-            "score_change_detail": "NA",
+            "missing": false,
+            "latest_change_detail": "745,021 前月 739,322 · ↑ +5699.00",
+            "score_change_detail": "0.19 较上月 ↓ -0.33",
             "logic": "观察已经发生的商品和餐饮消费，是消费需求的硬数据。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -557,13 +558,13 @@
       {
         "name": "通胀",
         "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-        "score": "0.91",
+        "score": "1.00",
         "label": "压力偏高",
-        "coverage": "3/5",
+        "coverage": "4/5",
         "status_class": "high",
-        "delta_text": "较上月 ↑ +0.15",
+        "delta_text": "较上月 ↑ +0.23",
         "delta_direction": "up",
-        "driver_note": "较上月：边际走强；主要变化来自油价压力、核心 CPI 通胀率、CPI 通胀率。",
+        "driver_note": "较上月：边际走强；主要变化来自PPI 成本压力、油价压力、核心 CPI 通胀率。",
         "is_transmission_layer": false,
         "rows": [
           {
@@ -720,8 +721,8 @@
             "group": "成本压力",
             "indicator": "PPI 成本压力",
             "code": "WPSFD49207",
-            "latest": "279.86",
-            "latest_direction": "flat",
+            "latest": "287.45",
+            "latest_direction": "up",
             "trend": [
               266.434,
               266.271,
@@ -729,20 +730,21 @@
               267.162,
               271.82,
               276.189,
-              282.666,
-              278.518,
-              277.418,
-              279.855
+              282.691,
+              278.555,
+              277.639,
+              279.847,
+              287.454
             ],
-            "score": "NA",
-            "score_direction": "flat",
-            "state": "当月暂缺",
-            "visible_date": "2026-08-31 / 2026-09-10",
+            "score": "1.71",
+            "score_direction": "up",
+            "state": "压力高",
+            "visible_date": "2026-09-30 / 2026-10-15",
             "type": "主指标",
-            "status_class": "neutral",
-            "missing": true,
-            "latest_change_detail": "279.86 前月 279.86 · → +0.00",
-            "score_change_detail": "NA",
+            "status_class": "high",
+            "missing": false,
+            "latest_change_detail": "287.45 前月 279.85 · ↑ +7.61",
+            "score_change_detail": "1.71 较上月 ↑ +0.55",
             "logic": "观察上游和中间投入成本是否向通胀传导。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_yoy",
@@ -1798,8 +1800,8 @@
             "维度": "增长",
             "分组": "消费需求",
             "指标": "零售销售增速",
-            "最新值变化": "737,763 前月 737,763 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "745,021 前月 739,322 · ↑ +5699.00",
+            "规则分变化": "0.19 较上月 ↓ -0.33"
           },
           {
             "维度": "增长",
@@ -1903,8 +1905,8 @@
             "维度": "通胀",
             "分组": "成本压力",
             "指标": "PPI 成本压力",
-            "最新值变化": "279.86 前月 279.86 · → +0.00",
-            "规则分变化": "NA"
+            "最新值变化": "287.45 前月 279.85 · ↑ +7.61",
+            "规则分变化": "1.71 较上月 ↑ +0.55"
           },
           {
             "维度": "通胀",
@@ -2024,12 +2026,6 @@
         "rows": [
           {
             "维度": "增长",
-            "指标": "零售销售增速",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
-            "维度": "增长",
             "指标": "个人储蓄率",
             "状态": "当月值暂缺",
             "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -2089,12 +2085,6 @@
             "处理": "当月值发布/进入 explain 明细后自动读入。"
           },
           {
-            "维度": "通胀",
-            "指标": "PPI 成本压力",
-            "状态": "当月值暂缺",
-            "处理": "当月值发布/进入 explain 明细后自动读入。"
-          },
-          {
             "维度": "地产",
             "指标": "新屋销售",
             "状态": "当月值暂缺",
@@ -2147,7 +2137,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-07",
-        "data_cutoff_time": "2026-10-15",
+        "data_cutoff_time": "2026-10-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2173,7 +2163,7 @@
           {
             "name": "增长",
             "label": "中性",
-            "score": "-0.00",
+            "score": "0.00",
             "coverage": "7/7",
             "status_class": "neutral",
             "trend": [
@@ -2185,8 +2175,8 @@
               0.584,
               -0.364,
               0.007,
-              -0.001,
-              -0.092
+              0.003,
+              -0.075
             ]
           },
           {
@@ -2203,10 +2193,10 @@
               0.577,
               0.93,
               1.153,
-              0.765,
-              0.65,
+              0.766,
+              0.651,
               0.764,
-              0.913
+              0.996
             ]
           },
           {
@@ -2273,13 +2263,13 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.00",
+            "score": "0.00",
             "label": "中性",
             "coverage": "7/7",
             "status_class": "neutral",
-            "delta_text": "较上月 → -0.01",
+            "delta_text": "较上月 → -0.00",
             "delta_direction": "flat",
-            "driver_note": "较上月：整体稳定；主要变化来自贸易差额、个人储蓄率、零售销售增速。",
+            "driver_note": "较上月：整体稳定；主要变化来自贸易差额、个人储蓄率、消费者信心。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -2287,7 +2277,7 @@
                 "group": "消费需求",
                 "indicator": "零售销售增速",
                 "code": "RETAILx",
-                "latest": "729,538",
+                "latest": "729,915",
                 "latest_direction": "down",
                 "trend": [
                   705453.0,
@@ -2298,17 +2288,17 @@
                   723921.0,
                   731415.0,
                   732898.0,
-                  729538.0
+                  729915.0
                 ],
-                "score": "-0.60",
+                "score": "-0.56",
                 "score_direction": "down",
                 "state": "偏弱",
-                "visible_date": "2026-07-31 / 2026-09-29",
+                "visible_date": "2026-07-31 / 2026-10-15",
                 "type": "主指标",
                 "status_class": "low",
                 "missing": false,
-                "latest_change_detail": "729,538 前月 732,898 · ↓ -3360.00",
-                "score_change_detail": "-0.60 较上月 ↓ -0.43",
+                "latest_change_detail": "729,915 前月 732,898 · ↓ -2983.00",
+                "score_change_detail": "-0.56 较上月 ↓ -0.39",
                 "logic": "观察已经发生的商品和餐饮消费，是消费需求的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -2832,7 +2822,7 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "277.42",
+                "latest": "277.64",
                 "latest_direction": "down",
                 "trend": [
                   266.434,
@@ -2841,19 +2831,19 @@
                   267.162,
                   271.82,
                   276.189,
-                  282.666,
-                  278.518,
-                  277.418
+                  282.691,
+                  278.555,
+                  277.639
                 ],
-                "score": "0.94",
+                "score": "0.96",
                 "score_direction": "down",
                 "state": "压力高",
-                "visible_date": "2026-07-31 / 2026-09-10",
+                "visible_date": "2026-07-31 / 2026-10-15",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "277.42 前月 278.52 · ↓ -1.10",
-                "score_change_detail": "0.94 较上月 ↓ -0.25",
+                "latest_change_detail": "277.64 前月 278.56 · ↓ -0.92",
+                "score_change_detail": "0.96 较上月 ↓ -0.23",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -3882,8 +3872,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "零售销售增速",
-                "最新值变化": "729,538 前月 732,898 · ↓ -3360.00",
-                "规则分变化": "-0.60 较上月 ↓ -0.43"
+                "最新值变化": "729,915 前月 732,898 · ↓ -2983.00",
+                "规则分变化": "-0.56 较上月 ↓ -0.39"
               },
               {
                 "维度": "增长",
@@ -3987,8 +3977,8 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "277.42 前月 278.52 · ↓ -1.10",
-                "规则分变化": "0.94 较上月 ↓ -0.25"
+                "最新值变化": "277.64 前月 278.56 · ↓ -0.92",
+                "规则分变化": "0.96 较上月 ↓ -0.23"
               },
               {
                 "维度": "通胀",
@@ -4127,7 +4117,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-08",
-        "data_cutoff_time": "2026-10-15",
+        "data_cutoff_time": "2026-10-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4153,7 +4143,7 @@
           {
             "name": "增长",
             "label": "中性",
-            "score": "-0.09",
+            "score": "-0.07",
             "coverage": "6/7",
             "status_class": "neutral",
             "trend": [
@@ -4165,8 +4155,8 @@
               0.584,
               -0.364,
               0.007,
-              -0.001,
-              -0.092
+              0.003,
+              -0.075
             ]
           },
           {
@@ -4183,10 +4173,10 @@
               0.577,
               0.93,
               1.153,
-              0.765,
-              0.65,
+              0.766,
+              0.651,
               0.764,
-              0.913
+              0.996
             ]
           },
           {
@@ -4253,11 +4243,11 @@
           {
             "name": "增长",
             "semantics": "越高 = 实体活动与需求订单动能越强",
-            "score": "-0.09",
+            "score": "-0.07",
             "label": "中性",
             "coverage": "6/7",
             "status_class": "neutral",
-            "delta_text": "较上月 ↓ -0.09",
+            "delta_text": "较上月 ↓ -0.08",
             "delta_direction": "down",
             "driver_note": "较上月：边际走弱；主要变化来自零售销售增速、个人储蓄率、贸易差额。",
             "is_transmission_layer": false,
@@ -4267,7 +4257,7 @@
                 "group": "消费需求",
                 "indicator": "零售销售增速",
                 "code": "RETAILx",
-                "latest": "737,763",
+                "latest": "739,322",
                 "latest_direction": "up",
                 "trend": [
                   705453.0,
@@ -4278,18 +4268,18 @@
                   723921.0,
                   731415.0,
                   732898.0,
-                  729538.0,
-                  737763.0
+                  729915.0,
+                  739322.0
                 ],
-                "score": "0.42",
+                "score": "0.52",
                 "score_direction": "up",
-                "state": "中性",
-                "visible_date": "2026-08-31 / 2026-09-29",
+                "state": "偏强",
+                "visible_date": "2026-08-31 / 2026-10-15",
                 "type": "主指标",
-                "status_class": "neutral",
+                "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "737,763 前月 729,538 · ↑ +8225.00",
-                "score_change_detail": "0.42 较上月 ↑ +1.02",
+                "latest_change_detail": "739,322 前月 729,915 · ↑ +9407.00",
+                "score_change_detail": "0.52 较上月 ↑ +1.09",
                 "logic": "观察已经发生的商品和餐饮消费，是消费需求的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4824,7 +4814,7 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "279.86",
+                "latest": "279.85",
                 "latest_direction": "up",
                 "trend": [
                   266.434,
@@ -4833,20 +4823,20 @@
                   267.162,
                   271.82,
                   276.189,
-                  282.666,
-                  278.518,
-                  277.418,
-                  279.855
+                  282.691,
+                  278.555,
+                  277.639,
+                  279.847
                 ],
                 "score": "1.16",
                 "score_direction": "up",
                 "state": "压力高",
-                "visible_date": "2026-08-31 / 2026-09-10",
+                "visible_date": "2026-08-31 / 2026-10-15",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "279.86 前月 277.42 · ↑ +2.44",
-                "score_change_detail": "1.16 较上月 ↑ +0.22",
+                "latest_change_detail": "279.85 前月 277.64 · ↑ +2.21",
+                "score_change_detail": "1.16 较上月 ↑ +0.19",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -5890,8 +5880,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "零售销售增速",
-                "最新值变化": "737,763 前月 729,538 · ↑ +8225.00",
-                "规则分变化": "0.42 较上月 ↑ +1.02"
+                "最新值变化": "739,322 前月 729,915 · ↑ +9407.00",
+                "规则分变化": "0.52 较上月 ↑ +1.09"
               },
               {
                 "维度": "增长",
@@ -5995,8 +5985,8 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "279.86 前月 277.42 · ↑ +2.44",
-                "规则分变化": "1.16 较上月 ↑ +0.22"
+                "最新值变化": "279.85 前月 277.64 · ↑ +2.21",
+                "规则分变化": "1.16 较上月 ↑ +0.19"
               },
               {
                 "维度": "通胀",
@@ -6141,7 +6131,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-09",
-        "data_cutoff_time": "2026-10-15",
+        "data_cutoff_time": "2026-10-16",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6168,7 +6158,7 @@
             "name": "增长",
             "label": "insufficient_coverage",
             "score": "NA",
-            "coverage": "0/7",
+            "coverage": "1/7",
             "status_class": "neutral",
             "trend": [
               0.297,
@@ -6179,15 +6169,15 @@
               0.584,
               -0.364,
               0.007,
-              -0.001,
-              -0.092
+              0.003,
+              -0.075
             ]
           },
           {
             "name": "通胀",
             "label": "压力偏高",
-            "score": "0.91",
-            "coverage": "3/5",
+            "score": "1.00",
+            "coverage": "4/5",
             "status_class": "high",
             "trend": [
               0.178,
@@ -6197,10 +6187,10 @@
               0.577,
               0.93,
               1.153,
-              0.765,
-              0.65,
+              0.766,
+              0.651,
               0.764,
-              0.913
+              0.996
             ]
           },
           {
@@ -6269,11 +6259,11 @@
             "semantics": "越高 = 实体活动与需求订单动能越强",
             "score": "NA",
             "label": "insufficient_coverage",
-            "coverage": "0/7",
+            "coverage": "1/7",
             "status_class": "neutral",
             "delta_text": "较上月 → NA",
             "delta_direction": "flat",
-            "driver_note": "较上月：整体稳定；主要变化来自消费者信心、汽车销售。",
+            "driver_note": "较上月：整体稳定；主要变化来自零售销售增速、消费者信心、汽车销售。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -6281,8 +6271,8 @@
                 "group": "消费需求",
                 "indicator": "零售销售增速",
                 "code": "RETAILx",
-                "latest": "737,763",
-                "latest_direction": "flat",
+                "latest": "745,021",
+                "latest_direction": "up",
                 "trend": [
                   705453.0,
                   706264.0,
@@ -6292,18 +6282,19 @@
                   723921.0,
                   731415.0,
                   732898.0,
-                  729538.0,
-                  737763.0
+                  729915.0,
+                  739322.0,
+                  745021.0
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-08-31 / 2026-09-29",
+                "score": "0.19",
+                "score_direction": "down",
+                "state": "中性",
+                "visible_date": "2026-09-30 / 2026-10-15",
                 "type": "主指标",
                 "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "737,763 前月 737,763 · → +0.00",
-                "score_change_detail": "NA",
+                "missing": false,
+                "latest_change_detail": "745,021 前月 739,322 · ↑ +5699.00",
+                "score_change_detail": "0.19 较上月 ↓ -0.33",
                 "logic": "观察已经发生的商品和餐饮消费，是消费需求的硬数据。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6678,13 +6669,13 @@
           {
             "name": "通胀",
             "semantics": "越高 = 主通胀与成本压力越强；通胀动量不参与主读数",
-            "score": "0.91",
+            "score": "1.00",
             "label": "压力偏高",
-            "coverage": "3/5",
+            "coverage": "4/5",
             "status_class": "high",
-            "delta_text": "较上月 ↑ +0.15",
+            "delta_text": "较上月 ↑ +0.23",
             "delta_direction": "up",
-            "driver_note": "较上月：边际走强；主要变化来自油价压力、核心 CPI 通胀率、CPI 通胀率。",
+            "driver_note": "较上月：边际走强；主要变化来自PPI 成本压力、油价压力、核心 CPI 通胀率。",
             "is_transmission_layer": false,
             "rows": [
               {
@@ -6841,8 +6832,8 @@
                 "group": "成本压力",
                 "indicator": "PPI 成本压力",
                 "code": "WPSFD49207",
-                "latest": "279.86",
-                "latest_direction": "flat",
+                "latest": "287.45",
+                "latest_direction": "up",
                 "trend": [
                   266.434,
                   266.271,
@@ -6850,20 +6841,21 @@
                   267.162,
                   271.82,
                   276.189,
-                  282.666,
-                  278.518,
-                  277.418,
-                  279.855
+                  282.691,
+                  278.555,
+                  277.639,
+                  279.847,
+                  287.454
                 ],
-                "score": "NA",
-                "score_direction": "flat",
-                "state": "当月暂缺",
-                "visible_date": "2026-08-31 / 2026-09-10",
+                "score": "1.71",
+                "score_direction": "up",
+                "state": "压力高",
+                "visible_date": "2026-09-30 / 2026-10-15",
                 "type": "主指标",
-                "status_class": "neutral",
-                "missing": true,
-                "latest_change_detail": "279.86 前月 279.86 · → +0.00",
-                "score_change_detail": "NA",
+                "status_class": "high",
+                "missing": false,
+                "latest_change_detail": "287.45 前月 279.85 · ↑ +7.61",
+                "score_change_detail": "1.71 较上月 ↑ +0.55",
                 "logic": "观察上游和中间投入成本是否向通胀传导。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_yoy",
@@ -7919,8 +7911,8 @@
                 "维度": "增长",
                 "分组": "消费需求",
                 "指标": "零售销售增速",
-                "最新值变化": "737,763 前月 737,763 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "745,021 前月 739,322 · ↑ +5699.00",
+                "规则分变化": "0.19 较上月 ↓ -0.33"
               },
               {
                 "维度": "增长",
@@ -8024,8 +8016,8 @@
                 "维度": "通胀",
                 "分组": "成本压力",
                 "指标": "PPI 成本压力",
-                "最新值变化": "279.86 前月 279.86 · → +0.00",
-                "规则分变化": "NA"
+                "最新值变化": "287.45 前月 279.85 · ↑ +7.61",
+                "规则分变化": "1.71 较上月 ↑ +0.55"
               },
               {
                 "维度": "通胀",
@@ -8145,12 +8137,6 @@
             "rows": [
               {
                 "维度": "增长",
-                "指标": "零售销售增速",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
-                "维度": "增长",
                 "指标": "个人储蓄率",
                 "状态": "当月值暂缺",
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
@@ -8210,12 +8196,6 @@
                 "处理": "当月值发布/进入 explain 明细后自动读入。"
               },
               {
-                "维度": "通胀",
-                "指标": "PPI 成本压力",
-                "状态": "当月值暂缺",
-                "处理": "当月值发布/进入 explain 明细后自动读入。"
-              },
-              {
                 "维度": "地产",
                 "指标": "新屋销售",
                 "状态": "当月值暂缺",
@@ -8256,11 +8236,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；保留状态变化与证据成熟节点，并始终补上最新运行状态。",
-    "generated_at": "2026-10-15T02:03:36.031649+00:00",
+    "generated_at": "2026-10-16T02:02:59.947860+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-10-15",
-      "run_count": 149
+      "end": "2026-10-16",
+      "run_count": 150
     },
     "target_months": [
       {
@@ -13051,12 +13031,12 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-07__2026-10-15",
-            "as_of": "2026-10-15",
+            "id": "2026-07__2026-10-16",
+            "as_of": "2026-10-16",
             "target_month": "2026-07",
             "comparison_as_of": "2026-10-03",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}",
             "comparison_provenance": {
               "git_commit": "0e54241898d1b5dbf7a3423af596aead034c279c",
               "git_dirty": true,
@@ -13069,22 +13049,22 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "exists": true,
-                  "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c"
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441"
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485"
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0"
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
                 }
               ]
             },
@@ -13099,28 +13079,28 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "before_sha256": "5830762e566ab3d60df205c8379f90ea7983939218b67cf22726e168ef18cd62",
-                  "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c",
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "49f2b3a4625c889051a1e1163065a5bf92403c239d6e84b8edd6998ca789c140",
-                  "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441",
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "24dd955c14970ef3a43d0f1aa32ba2e1fbfae64f1b7ca85e5e7f68cb0a14cbc5",
-                  "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485",
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "7e6ce9c82729f1e1c7407fa76b09a4084b169ca8413179c9e1a0c8f9e68d5f75",
-                  "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0",
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2",
                   "before_exists": true,
                   "exists": true
                 }
@@ -13133,36 +13113,36 @@
                 "state": "stagflation",
                 "display": "滞胀",
                 "css_class": "stagflation",
-                "confidence": "0.31",
+                "confidence": "0.30",
                 "coverage": "104/104",
                 "distribution": [
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.3116883117,
-                    "score_text": "31.2%",
+                    "score": 0.30379746836962024,
+                    "score_text": "30.4%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.2857142857,
-                    "score_text": "28.6%",
+                    "score": 0.27848101267215186,
+                    "score_text": "27.8%",
                     "css_class": "slow_growth"
-                  },
-                  {
-                    "state": "goldilocks",
-                    "display": "温和",
-                    "score": 0.2207792208,
-                    "score_text": "22.1%",
-                    "css_class": "goldilocks"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.1818181818,
-                    "score_text": "18.2%",
+                    "score": 0.2278481012772152,
+                    "score_text": "22.8%",
                     "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.18987341768101265,
+                    "score_text": "19.0%",
+                    "css_class": "goldilocks"
                   }
                 ],
                 "support": ""
@@ -13215,28 +13195,28 @@
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.6491081694,
-                    "score_text": "64.9%",
+                    "score": 0.6498589155,
+                    "score_text": "65.0%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.1819621759,
+                    "score": 0.1816525269,
                     "score_text": "18.2%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.0936359635,
-                    "score_text": "9.4%",
+                    "score": 0.0934699937,
+                    "score_text": "9.3%",
                     "css_class": "goldilocks"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.0752936912,
+                    "score": 0.0750185639,
                     "score_text": "7.5%",
                     "css_class": "heating_up"
                   }
@@ -13253,30 +13233,30 @@
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.4892254872000001,
-                    "score_text": "48.9%",
+                    "score": 0.486711179857384,
+                    "score_text": "48.7%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.3202654937,
-                    "score_text": "32.0%",
+                    "score": 0.3178854612898734,
+                    "score_text": "31.8%",
                     "css_class": "stagflation"
-                  },
-                  {
-                    "state": "goldilocks",
-                    "display": "温和",
-                    "score": 0.10480506143333335,
-                    "score_text": "10.5%",
-                    "css_class": "goldilocks"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.08570395766666666,
-                    "score_text": "8.6%",
+                    "score": 0.10095555505907172,
+                    "score_text": "10.1%",
                     "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.09444780379367089,
+                    "score_text": "9.4%",
+                    "css_class": "goldilocks"
                   }
                 ],
                 "support": "0.32"
@@ -13351,30 +13331,30 @@
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.3116883117,
-                    "score_text": "31.2%",
+                    "score": 0.30379746836962024,
+                    "score_text": "30.4%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.2857142857,
-                    "score_text": "28.6%",
+                    "score": 0.27848101267215186,
+                    "score_text": "27.8%",
                     "css_class": "slow_growth"
-                  },
-                  {
-                    "state": "goldilocks",
-                    "display": "温和",
-                    "score": 0.2207792208,
-                    "score_text": "22.1%",
-                    "css_class": "goldilocks"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.1818181818,
-                    "score_text": "18.2%",
+                    "score": 0.2278481012772152,
+                    "score_text": "22.8%",
                     "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.18987341768101265,
+                    "score_text": "19.0%",
+                    "css_class": "goldilocks"
                   }
                 ],
                 "probability_changed": true,
@@ -13382,7 +13362,7 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 5
+                  "input_revised": 13
                 },
                 "coverage_only_factors": [],
                 "changes": [
@@ -13392,11 +13372,107 @@
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.1458",
                     "before_period": "2026-07",
                     "after": "0.1346",
                     "change_text": "0.1458(202607) -> 0.1346"
+                  },
+                  {
+                    "factor": "ISRATIOx",
+                    "description": "库存销售比",
+                    "group": "库存周期",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0",
+                    "before_period": "2026-07",
+                    "after": "0.01",
+                    "change_text": "0(202607) -> 0.01"
+                  },
+                  {
+                    "factor": "WPSID62",
+                    "description": "PPI中间能源品",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0743",
+                    "before_period": "2026-07",
+                    "after": "0.0649",
+                    "change_text": "0.0743(202607) -> 0.0649"
+                  },
+                  {
+                    "factor": "PPICMM",
+                    "description": "PPI核心材料",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.096",
+                    "before_period": "2026-07",
+                    "after": "-0.0903",
+                    "change_text": "-0.096(202607) -> -0.0903"
+                  },
+                  {
+                    "factor": "WPSFD49502",
+                    "description": "PPI成品资本设备",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0138",
+                    "before_period": "2026-07",
+                    "after": "0.0146",
+                    "change_text": "0.0138(202607) -> 0.0146"
+                  },
+                  {
+                    "factor": "BUSINVx",
+                    "description": "商业库存",
+                    "group": "库存周期",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0081",
+                    "before_period": "2026-07",
+                    "after": "0.0088",
+                    "change_text": "0.0081(202607) -> 0.0088"
+                  },
+                  {
+                    "factor": "WPSFD49207",
+                    "description": "PPI成品消费品",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0108",
+                    "before_period": "2026-07",
+                    "after": "0.0114",
+                    "change_text": "0.0108(202607) -> 0.0114"
+                  },
+                  {
+                    "factor": "RETAILx",
+                    "description": "零售销售",
+                    "group": "消费需求",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.0046",
+                    "before_period": "2026-07",
+                    "after": "-0.0041",
+                    "change_text": "-0.0046(202607) -> -0.0041"
+                  },
+                  {
+                    "factor": "WPSID61",
+                    "description": "PPI中间材料",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0066",
+                    "before_period": "2026-07",
+                    "after": "0.0069",
+                    "change_text": "0.0066(202607) -> 0.0069"
                   },
                   {
                     "factor": "NONREVSL",
@@ -13404,7 +13480,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0019",
                     "before_period": "2026-07",
                     "after": "0.0017",
@@ -13416,7 +13492,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0073",
                     "before_period": "2026-07",
                     "after": "-0.0073",
@@ -13428,7 +13504,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.001",
@@ -13440,7 +13516,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.003",
                     "before_period": "2026-07",
                     "after": "0.003",
@@ -13465,10 +13541,83 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 0
+                  "input_revised": 6
                 },
                 "coverage_only_factors": [],
-                "changes": []
+                "changes": [
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS",
+                    "description": "增长-需求订单",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0339",
+                    "before_period": "2026-07",
+                    "after": "0.0481",
+                    "change_text": "0.0339(202607) -> 0.0481"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
+                    "description": "需求订单长周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.1471",
+                    "before_period": "2026-07",
+                    "after": "-0.1424",
+                    "change_text": "-0.1471(202607) -> -0.1424"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
+                    "description": "需求订单短周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.372",
+                    "before_period": "2026-07",
+                    "after": "-0.3674",
+                    "change_text": "-0.372(202607) -> -0.3674"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.6007",
+                    "before_period": "2026-07",
+                    "after": "1.6047",
+                    "change_text": "1.6007(202607) -> 1.6047"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
+                    "description": "通胀压力长周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.8463",
+                    "before_period": "2026-07",
+                    "after": "-0.8448",
+                    "change_text": "-0.8463(202607) -> -0.8448"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
+                    "description": "通胀压力短周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-1.4365",
+                    "before_period": "2026-07",
+                    "after": "-1.435",
+                    "change_text": "-1.4365(202607) -> -1.435"
+                  }
+                ]
               },
               {
                 "model_key": "sa_alex_full",
@@ -13514,50 +13663,75 @@
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.6491081694,
-                    "score_text": "64.9%",
+                    "score": 0.6498589155,
+                    "score_text": "65.0%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.1819621759,
+                    "score": 0.1816525269,
                     "score_text": "18.2%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.0936359635,
-                    "score_text": "9.4%",
+                    "score": 0.0934699937,
+                    "score_text": "9.3%",
                     "css_class": "goldilocks"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.0752936912,
+                    "score": 0.0750185639,
                     "score_text": "7.5%",
                     "css_class": "heating_up"
                   }
                 ],
-                "probability_changed": false,
+                "probability_changed": true,
                 "input_comparison_available": true,
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 0
+                  "input_revised": 2
                 },
                 "coverage_only_factors": [],
-                "changes": []
+                "changes": [
+                  {
+                    "factor": "INFLATION_PRESSURE_DIFF_12M",
+                    "description": "通胀压力12个月变化",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.9625",
+                    "before_period": "2026-07",
+                    "after": "1.9665",
+                    "change_text": "1.9625(202607) -> 1.9665"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.6007",
+                    "before_period": "2026-07",
+                    "after": "1.6047",
+                    "change_text": "1.6007(202607) -> 1.6047"
+                  }
+                ]
               }
             ],
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-07__2026-10-15",
+        "default_event_id": "2026-07__2026-10-16",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "state": "滞胀",
           "state_css_class": "stagflation",
           "evidence_mature": true,
@@ -14918,7 +15092,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"5830762e566ab3d60df205c8379f90ea7983939218b67cf22726e168ef18cd62\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"49f2b3a4625c889051a1e1163065a5bf92403c239d6e84b8edd6998ca789c140\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"24dd955c14970ef3a43d0f1aa32ba2e1fbfae64f1b7ca85e5e7f68cb0a14cbc5\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"7e6ce9c82729f1e1c7407fa76b09a4084b169ca8413179c9e1a0c8f9e68d5f75\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"8f0a0879bd7d3b0ebef009e14bd9852d71bd7dd0\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "inputs": [
             {
               "model_key": "gmm",
@@ -14979,7 +15153,7 @@
               "factor": "BUSINVx",
               "description": "商业库存",
               "group": "库存周期",
-              "value": 0.0080530776993672,
+              "value": 0.0088107967689818,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15438,7 +15612,7 @@
               "factor": "ISRATIOx",
               "description": "库存销售比",
               "group": "库存周期",
-              "value": 0.0,
+              "value": 0.01,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15582,7 +15756,7 @@
               "factor": "PPICMM",
               "description": "PPI核心材料",
               "group": "成本压力",
-              "value": -0.0959838059373732,
+              "value": -0.0902579667988989,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15600,7 +15774,7 @@
               "factor": "RETAILx",
               "description": "零售销售",
               "group": "消费需求",
-              "value": -0.0045950809637247,
+              "value": -0.0040784490360294,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15816,7 +15990,7 @@
               "factor": "WPSFD49207",
               "description": "PPI成品消费品",
               "group": "成本压力",
-              "value": 0.0108260041826522,
+              "value": 0.0114450841938724,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15825,7 +15999,7 @@
               "factor": "WPSFD49502",
               "description": "PPI成品资本设备",
               "group": "成本压力",
-              "value": 0.013788428190339,
+              "value": 0.0145916303422666,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15834,7 +16008,7 @@
               "factor": "WPSID61",
               "description": "PPI中间材料",
               "group": "成本压力",
-              "value": 0.0065709837612519,
+              "value": 0.0069277813677066,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15843,7 +16017,7 @@
               "factor": "WPSID62",
               "description": "PPI中间能源品",
               "group": "成本压力",
-              "value": 0.0742679487374982,
+              "value": 0.0648690793987647,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15852,7 +16026,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.033924034765449,
+              "value": 0.0480733116019001,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15861,7 +16035,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": -0.1471089851405677,
+              "value": -0.1423674843941155,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15870,7 +16044,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.3720253024832473,
+              "value": -0.3673668356275498,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15915,7 +16089,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.6006803828824825,
+              "value": 1.6046928568542402,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15924,7 +16098,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.8463421587622433,
+              "value": -0.8448190392589962,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15933,7 +16107,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -1.4365408444293095,
+              "value": -1.4350177249260625,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15942,7 +16116,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.033924034765449,
+              "value": 0.0480733116019001,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15951,7 +16125,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": -0.1471089851405677,
+              "value": -0.1423674843941155,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15960,7 +16134,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.3720253024832473,
+              "value": -0.3673668356275498,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -15996,7 +16170,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.6006803828824825,
+              "value": 1.6046928568542402,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -16005,7 +16179,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.8463421587622433,
+              "value": -0.8448190392589962,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -16014,7 +16188,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -1.4365408444293095,
+              "value": -1.4350177249260625,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -16050,7 +16224,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.6006803828824825,
+              "value": 1.6046928568542402,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -16059,7 +16233,7 @@
               "factor": "INFLATION_PRESSURE_DIFF_12M",
               "description": "通胀压力12个月变化",
               "group": "通胀-压力",
-              "value": 1.962477524917694,
+              "value": 1.966489998889452,
               "last_valid": "2026-07",
               "used_in_run": true
             },
@@ -16230,26 +16404,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c"
+                "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441"
+                "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485"
+                "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0"
+                "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
         }
       },
       "2026-08": {
@@ -20313,12 +20487,12 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-08__2026-10-15",
-            "as_of": "2026-10-15",
+            "id": "2026-08__2026-10-16",
+            "as_of": "2026-10-16",
             "target_month": "2026-08",
             "comparison_as_of": "2026-10-01",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}",
             "comparison_provenance": {
               "git_commit": "0e54241898d1b5dbf7a3423af596aead034c279c",
               "git_dirty": true,
@@ -20331,22 +20505,22 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "exists": true,
-                  "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c"
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441"
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485"
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0"
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
                 }
               ]
             },
@@ -20361,28 +20535,28 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "before_sha256": "5add8e63505a02c58bc01bdda188124dfd85bba9f6bbe2c8036e787e3e5e789d",
-                  "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c",
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "70394bf818d363e78c21f20551c918b9d1d6643e6799a5bcbad4b227de0a5e38",
-                  "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441",
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "53eae7283b25a528c1c97e0cae92239f54d5a930f4532e3e873841bcb4754b21",
-                  "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485",
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "84a8c7308665ab1e0bfc728e08f1c75cc8c25c57f294c64a499b833cd801be70",
-                  "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0",
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2",
                   "before_exists": true,
                   "exists": true
                 }
@@ -20395,36 +20569,36 @@
                 "state": "stagflation",
                 "display": "滞胀",
                 "css_class": "stagflation",
-                "confidence": "0.34",
-                "coverage": "99/104",
+                "confidence": "0.32",
+                "coverage": "101/104",
                 "distribution": [
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.3389830508,
-                    "score_text": "33.9%",
+                    "score": 0.3225806452,
+                    "score_text": "32.3%",
                     "css_class": "stagflation"
-                  },
-                  {
-                    "state": "slow_growth",
-                    "display": "放缓",
-                    "score": 0.2372881356,
-                    "score_text": "23.7%",
-                    "css_class": "slow_growth"
-                  },
-                  {
-                    "state": "heating_up",
-                    "display": "过热",
-                    "score": 0.2203389831,
-                    "score_text": "22.0%",
-                    "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.2033898305,
-                    "score_text": "20.3%",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
                     "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
+                    "css_class": "slow_growth"
                   }
                 ],
                 "support": ""
@@ -20477,29 +20651,29 @@
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.4835908189,
+                    "score": 0.4837213609,
                     "score_text": "48.4%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.3145861842,
+                    "score": 0.3145955476,
                     "score_text": "31.5%",
                     "css_class": "goldilocks"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.1499248789,
+                    "score": 0.1502303025,
                     "score_text": "15.0%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.051898118,
-                    "score_text": "5.2%",
+                    "score": 0.051452789,
+                    "score_text": "5.1%",
                     "css_class": "stagflation"
                   }
                 ],
@@ -20515,29 +20689,29 @@
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.4624043381666667,
-                    "score_text": "46.2%",
+                    "score": 0.4586789180333333,
+                    "score_text": "45.9%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.23464326733333332,
-                    "score_text": "23.5%",
+                    "score": 0.2365092708333333,
+                    "score_text": "23.7%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.17265867156666667,
-                    "score_text": "17.3%",
+                    "score": 0.18013399973333333,
+                    "score_text": "18.0%",
                     "css_class": "goldilocks"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.13029372293333333,
-                    "score_text": "13.0%",
+                    "score": 0.1246778114,
+                    "score_text": "12.5%",
                     "css_class": "stagflation"
                   }
                 ],
@@ -20551,7 +20725,7 @@
               "sa_alex_full_ready": true,
               "counts": {
                 "gmm": {
-                  "available": 99,
+                  "available": 101,
                   "total": 104
                 },
                 "rule_based": {
@@ -20578,7 +20752,7 @@
                 "has_previous": true,
                 "comparison_status": "comparable",
                 "coverage_before": "96/104",
-                "coverage": "99/104",
+                "coverage": "101/104",
                 "candidates_before": [
                   {
                     "state": "stagflation",
@@ -20613,38 +20787,38 @@
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.3389830508,
-                    "score_text": "33.9%",
+                    "score": 0.3225806452,
+                    "score_text": "32.3%",
                     "css_class": "stagflation"
-                  },
-                  {
-                    "state": "slow_growth",
-                    "display": "放缓",
-                    "score": 0.2372881356,
-                    "score_text": "23.7%",
-                    "css_class": "slow_growth"
-                  },
-                  {
-                    "state": "heating_up",
-                    "display": "过热",
-                    "score": 0.2203389831,
-                    "score_text": "22.0%",
-                    "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.2033898305,
-                    "score_text": "20.3%",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
                     "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2258064516,
+                    "score_text": "22.6%",
+                    "css_class": "slow_growth"
                   }
                 ],
                 "probability_changed": true,
                 "input_comparison_available": true,
                 "change_counts": {
-                  "coverage_added": 3,
-                  "input_added": 2,
-                  "input_revised": 24
+                  "coverage_added": 5,
+                  "input_added": 4,
+                  "input_revised": 30
                 },
                 "coverage_only_factors": [
                   {
@@ -20655,16 +20829,40 @@
                 ],
                 "changes": [
                   {
+                    "factor": "ISRATIOx",
+                    "description": "库存销售比",
+                    "group": "库存周期",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0",
+                    "before_period": "2026-07",
+                    "after": "-0.01",
+                    "change_text": "0(202607) -> -0.01"
+                  },
+                  {
                     "factor": "CONSPI",
                     "description": "非循环消费信贷/个人收入",
                     "group": "消费信贷",
                     "change_type": "added",
                     "change_type_label": "新增指标",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.1458",
                     "before_period": "2026-07",
                     "after": "0.1379",
                     "change_text": "0.1458(202607) -> 0.1379"
+                  },
+                  {
+                    "factor": "BUSINVx",
+                    "description": "商业库存",
+                    "group": "库存周期",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0081",
+                    "before_period": "2026-07",
+                    "after": "0.0042",
+                    "change_text": "0.0081(202607) -> 0.0042"
                   },
                   {
                     "factor": "NONREVSL",
@@ -20672,7 +20870,7 @@
                     "group": "信贷条件",
                     "change_type": "added",
                     "change_type_label": "新增指标",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0019",
                     "before_period": "2026-07",
                     "after": "-0.0005",
@@ -20684,7 +20882,7 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0",
                     "before_period": "2026-08",
                     "after": "0.1",
@@ -20696,11 +20894,47 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "41.7",
                     "before_period": "2026-08",
                     "after": "41.8",
                     "change_text": "41.7(202608) -> 41.8"
+                  },
+                  {
+                    "factor": "PPICMM",
+                    "description": "PPI核心材料",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0884",
+                    "before_period": "2026-08",
+                    "after": "0.1137",
+                    "change_text": "0.0884(202608) -> 0.1137"
+                  },
+                  {
+                    "factor": "WPSID62",
+                    "description": "PPI中间能源品",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0031",
+                    "before_period": "2026-08",
+                    "after": "0.0108",
+                    "change_text": "0.0031(202608) -> 0.0108"
+                  },
+                  {
+                    "factor": "WPSFD49502",
+                    "description": "PPI成品资本设备",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0179",
+                    "before_period": "2026-08",
+                    "after": "0.0158",
+                    "change_text": "0.0179(202608) -> 0.0158"
                   },
                   {
                     "factor": "BUSLOANS",
@@ -20708,11 +20942,23 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0176",
                     "before_period": "2026-08",
                     "after": "0.0193",
                     "change_text": "0.0176(202608) -> 0.0193"
+                  },
+                  {
+                    "factor": "RETAILx",
+                    "description": "零售销售",
+                    "group": "消费需求",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0112",
+                    "before_period": "2026-08",
+                    "after": "0.0128",
+                    "change_text": "0.0112(202608) -> 0.0128"
                   },
                   {
                     "factor": "CES2000000008",
@@ -20720,11 +20966,23 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0013",
                     "before_period": "2026-08",
                     "after": "0.0003",
                     "change_text": "-0.0013(202608) -> 0.0003"
+                  },
+                  {
+                    "factor": "WPSFD49207",
+                    "description": "PPI成品消费品",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0127",
+                    "before_period": "2026-08",
+                    "after": "0.0112",
+                    "change_text": "0.0127(202608) -> 0.0112"
                   },
                   {
                     "factor": "CES0600000008",
@@ -20732,7 +20990,7 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0006",
                     "before_period": "2026-08",
                     "after": "0.0009",
@@ -20744,7 +21002,7 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0007",
                     "before_period": "2026-08",
                     "after": "0.002",
@@ -20756,7 +21014,7 @@
                     "group": "工时与薪资",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0053",
                     "before_period": "2026-08",
                     "after": "0.0044",
@@ -20768,7 +21026,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0026",
                     "before_period": "2026-08",
                     "after": "0.0019",
@@ -20780,11 +21038,23 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0002",
                     "before_period": "2026-08",
                     "after": "-0.0007",
                     "change_text": "-0.0002(202608) -> -0.0007"
+                  },
+                  {
+                    "factor": "WPSID61",
+                    "description": "PPI中间材料",
+                    "group": "成本压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0213",
+                    "before_period": "2026-08",
+                    "after": "0.0217",
+                    "change_text": "0.0213(202608) -> 0.0217"
                   },
                   {
                     "factor": "USTRADE",
@@ -20792,7 +21062,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0001",
                     "before_period": "2026-08",
                     "after": "-0.0003",
@@ -20804,7 +21074,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0011",
                     "before_period": "2026-08",
                     "after": "0.0015",
@@ -20816,7 +21086,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0015",
                     "before_period": "2026-08",
                     "after": "0.0019",
@@ -20828,7 +21098,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0019",
                     "before_period": "2026-08",
                     "after": "0.0016",
@@ -20840,7 +21110,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0006",
                     "before_period": "2026-08",
                     "after": "0.0003",
@@ -20852,7 +21122,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0118",
                     "before_period": "2026-08",
                     "after": "0.0115",
@@ -20864,7 +21134,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0012",
                     "before_period": "2026-08",
                     "after": "-0.001",
@@ -20876,7 +21146,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.001",
                     "before_period": "2026-08",
                     "after": "0.0008",
@@ -20888,7 +21158,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0009",
                     "before_period": "2026-08",
                     "after": "0.0007",
@@ -20900,7 +21170,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0019",
                     "before_period": "2026-08",
                     "after": "0.0018",
@@ -20912,7 +21182,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0013",
                     "before_period": "2026-08",
                     "after": "0.0012",
@@ -20924,7 +21194,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0118",
                     "before_period": "2026-08",
                     "after": "-0.0119",
@@ -20936,7 +21206,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0061",
                     "before_period": "2026-08",
                     "after": "0.0062",
@@ -20948,7 +21218,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0013",
                     "before_period": "2026-08",
                     "after": "0.0013",
@@ -20960,7 +21230,7 @@
                     "group": "就业创造",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.0002",
                     "before_period": "2026-08",
                     "after": "0.0002",
@@ -20985,7 +21255,7 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 6
+                  "input_revised": 9
                 },
                 "coverage_only_factors": [],
                 "changes": [
@@ -20995,11 +21265,23 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0717",
                     "before_period": "2026-08",
                     "after": "-0.1436",
                     "change_text": "-0.0717(202608) -> -0.1436"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS",
+                    "description": "增长-需求订单",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.3301",
+                    "before_period": "2026-08",
+                    "after": "0.3823",
+                    "change_text": "0.3301(202608) -> 0.3823"
                   },
                   {
                     "factor": "GROWTH_REAL_ACTIVITY_LONG_SIGNAL",
@@ -21007,7 +21289,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.2777",
                     "before_period": "2026-08",
                     "after": "0.2284",
@@ -21019,35 +21301,11 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.1146",
                     "before_period": "2026-08",
                     "after": "-0.164",
                     "change_text": "-0.1146(202608) -> -0.164"
-                  },
-                  {
-                    "factor": "GROWTH_DEMAND_ORDERS",
-                    "description": "增长-需求订单",
-                    "group": "增长-需求订单",
-                    "change_type": "revised",
-                    "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
-                    "before": "0.3301",
-                    "before_period": "2026-08",
-                    "after": "0.3255",
-                    "change_text": "0.3301(202608) -> 0.3255"
-                  },
-                  {
-                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
-                    "description": "需求订单长周期信号",
-                    "group": "增长-需求订单",
-                    "change_type": "revised",
-                    "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
-                    "before": "0.422",
-                    "before_period": "2026-08",
-                    "after": "0.4209",
-                    "change_text": "0.422(202608) -> 0.4209"
                   },
                   {
                     "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
@@ -21055,11 +21313,59 @@
                     "group": "增长-需求订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0344",
                     "before_period": "2026-08",
-                    "after": "-0.0355",
-                    "change_text": "-0.0344(202608) -> -0.0355"
+                    "after": "-0.012",
+                    "change_text": "-0.0344(202608) -> -0.012"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
+                    "description": "需求订单长周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.422",
+                    "before_period": "2026-08",
+                    "after": "0.4427",
+                    "change_text": "0.422(202608) -> 0.4427"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.3209",
+                    "before_period": "2026-08",
+                    "after": "1.3107",
+                    "change_text": "1.3209(202608) -> 1.3107"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
+                    "description": "通胀压力短周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.4499",
+                    "before_period": "2026-08",
+                    "after": "-0.4523",
+                    "change_text": "-0.4499(202608) -> -0.4523"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
+                    "description": "通胀压力长周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.3879",
+                    "before_period": "2026-08",
+                    "after": "-0.39",
+                    "change_text": "-0.3879(202608) -> -0.39"
                   }
                 ]
               },
@@ -21107,29 +21413,29 @@
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.4835908189,
+                    "score": 0.4837213609,
                     "score_text": "48.4%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.3145861842,
+                    "score": 0.3145955476,
                     "score_text": "31.5%",
                     "css_class": "goldilocks"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.1499248789,
+                    "score": 0.1502303025,
                     "score_text": "15.0%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.051898118,
-                    "score_text": "5.2%",
+                    "score": 0.051452789,
+                    "score_text": "5.1%",
                     "css_class": "stagflation"
                   }
                 ],
@@ -21138,7 +21444,7 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 2
+                  "input_revised": 4
                 },
                 "coverage_only_factors": [],
                 "changes": [
@@ -21148,7 +21454,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "0.8988",
                     "before_period": "2026-08",
                     "after": "0.8269",
@@ -21160,11 +21466,35 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-15",
+                    "changed_as_of": "2026-10-16",
                     "before": "-0.0717",
                     "before_period": "2026-08",
                     "after": "-0.1436",
                     "change_text": "-0.0717(202608) -> -0.1436"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.3209",
+                    "before_period": "2026-08",
+                    "after": "1.3107",
+                    "change_text": "1.3209(202608) -> 1.3107"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_DIFF_12M",
+                    "description": "通胀压力12个月变化",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.9111",
+                    "before_period": "2026-08",
+                    "after": "0.9009",
+                    "change_text": "0.9111(202608) -> 0.9009"
                   }
                 ]
               }
@@ -21172,10 +21502,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-08__2026-10-15",
+        "default_event_id": "2026-08__2026-10-16",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "state": "分歧",
           "state_css_class": "no_consensus",
           "evidence_mature": true,
@@ -21187,7 +21517,7 @@
             {
               "key": "gmm",
               "label": "GMM",
-              "value": "99/104"
+              "value": "101/104"
             },
             {
               "key": "rule_based",
@@ -22528,7 +22858,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"5add8e63505a02c58bc01bdda188124dfd85bba9f6bbe2c8036e787e3e5e789d\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"70394bf818d363e78c21f20551c918b9d1d6643e6799a5bcbad4b227de0a5e38\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"53eae7283b25a528c1c97e0cae92239f54d5a930f4532e3e873841bcb4754b21\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"84a8c7308665ab1e0bfc728e08f1c75cc8c25c57f294c64a499b833cd801be70\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"8f0a0879bd7d3b0ebef009e14bd9852d71bd7dd0\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "inputs": [
             {
               "model_key": "gmm",
@@ -22589,8 +22919,8 @@
               "factor": "BUSINVx",
               "description": "商业库存",
               "group": "库存周期",
-              "value": 0.0080530776993672,
-              "last_valid": "2026-07",
+              "value": 0.0041501417586573,
+              "last_valid": "2026-08",
               "used_in_run": true
             },
             {
@@ -23048,8 +23378,8 @@
               "factor": "ISRATIOx",
               "description": "库存销售比",
               "group": "库存周期",
-              "value": 0.0,
-              "last_valid": "2026-07",
+              "value": -0.01,
+              "last_valid": "2026-08",
               "used_in_run": true
             },
             {
@@ -23192,7 +23522,7 @@
               "factor": "PPICMM",
               "description": "PPI核心材料",
               "group": "成本压力",
-              "value": 0.0883872866031554,
+              "value": 0.1137307616992995,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23210,7 +23540,7 @@
               "factor": "RETAILx",
               "description": "零售销售",
               "group": "消费需求",
-              "value": 0.0112111777340668,
+              "value": 0.0128054609925722,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23426,7 +23756,7 @@
               "factor": "WPSFD49207",
               "description": "PPI成品消费品",
               "group": "成本压力",
-              "value": 0.0127035130805728,
+              "value": 0.0112151342989506,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23435,7 +23765,7 @@
               "factor": "WPSFD49502",
               "description": "PPI成品资本设备",
               "group": "成本压力",
-              "value": 0.0178540900280328,
+              "value": 0.0157845123643571,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23444,7 +23774,7 @@
               "factor": "WPSID61",
               "description": "PPI中间材料",
               "group": "成本压力",
-              "value": 0.021264085106524,
+              "value": 0.0217259626262498,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23453,7 +23783,7 @@
               "factor": "WPSID62",
               "description": "PPI中间能源品",
               "group": "成本压力",
-              "value": 0.0031282808312766,
+              "value": 0.0107826758374551,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23462,7 +23792,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.3255457803929671,
+              "value": 0.3822924611944877,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23471,7 +23801,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.4209073923598216,
+              "value": 0.4426546449012729,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23480,7 +23810,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0355444958254275,
+              "value": -0.0119974148934318,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23525,7 +23855,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.3208653749871746,
+              "value": 1.310719307098789,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23534,7 +23864,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.3878725135733204,
+              "value": -0.3899726926510605,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23543,7 +23873,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -0.4499119304097243,
+              "value": -0.45225338543899,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23552,7 +23882,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.3255457803929671,
+              "value": 0.3822924611944877,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23561,7 +23891,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.4209073923598216,
+              "value": 0.4426546449012729,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23570,7 +23900,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0355444958254275,
+              "value": -0.0119974148934318,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23606,7 +23936,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.3208653749871746,
+              "value": 1.310719307098789,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23615,7 +23945,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": -0.3878725135733204,
+              "value": -0.3899726926510605,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23624,7 +23954,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": -0.4499119304097243,
+              "value": -0.45225338543899,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23660,7 +23990,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 1.3208653749871746,
+              "value": 1.310719307098789,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23669,7 +23999,7 @@
               "factor": "INFLATION_PRESSURE_DIFF_12M",
               "description": "通胀压力12个月变化",
               "group": "通胀-压力",
-              "value": 0.9110901245522908,
+              "value": 0.9009440566639052,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -23698,6 +24028,7 @@
               "AWHMAN",
               "AWOTMAN",
               "BOGMBASE",
+              "BUSINVx",
               "BUSLOANS",
               "CE16OV",
               "CES0600000007",
@@ -23745,6 +24076,7 @@
               "IPMAT",
               "IPNCONGD",
               "IPNMAT",
+              "ISRATIOx",
               "M1SL",
               "M2REAL",
               "M2SL",
@@ -23835,26 +24167,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c"
+                "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441"
+                "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485"
+                "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0"
+                "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
         }
       },
       "2026-09": {
@@ -24267,12 +24599,649 @@
                 "changes": []
               }
             ]
+          },
+          {
+            "id": "2026-09__2026-10-16",
+            "as_of": "2026-10-16",
+            "target_month": "2026-09",
+            "comparison_as_of": "2026-10-15",
+            "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}",
+            "comparison_provenance": {
+              "git_commit": "0e54241898d1b5dbf7a3423af596aead034c279c",
+              "git_dirty": true,
+              "data_sources": [
+                {
+                  "source": "label_path:nber_recession_monthly.csv",
+                  "exists": false,
+                  "sha256": ""
+                },
+                {
+                  "source": "macro_data_path:tcode_all_versions.csv",
+                  "exists": true,
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
+                },
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "exists": true,
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
+                }
+              ]
+            },
+            "comparison_provenance_changes": {
+              "status": "changed",
+              "code_changed": false,
+              "git_commit_before": "0e54241898d1b5dbf7a3423af596aead034c279c",
+              "git_commit": "0e54241898d1b5dbf7a3423af596aead034c279c",
+              "git_dirty_before": true,
+              "git_dirty": true,
+              "data_source_changes": [
+                {
+                  "source": "macro_data_path:tcode_all_versions.csv",
+                  "before_sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c",
+                  "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "before_sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441",
+                  "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485",
+                  "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0",
+                  "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2",
+                  "before_exists": true,
+                  "exists": true
+                }
+              ]
+            },
+            "comparison_status": "comparable",
+            "kind": "stable_latest",
+            "states": {
+              "gmm": {
+                "state": "slow_growth",
+                "display": "放缓",
+                "css_class": "slow_growth",
+                "confidence": "0.30",
+                "coverage": "54/104",
+                "distribution": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2954545454704545,
+                    "score_text": "29.5%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.2613636363738636,
+                    "score_text": "26.1%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.22727272727727274,
+                    "score_text": "22.7%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.21590909087840907,
+                    "score_text": "21.6%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "stagflation",
+                "display": "滞胀",
+                "css_class": "stagflation",
+                "confidence": "",
+                "coverage": "7/10",
+                "distribution": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "stagflation",
+                "display": "滞胀",
+                "css_class": "stagflation",
+                "confidence": "0.59",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.5913036433,
+                    "score_text": "59.1%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1707079385,
+                    "score_text": "17.1%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.1485147776,
+                    "score_text": "14.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0894736406,
+                    "score_text": "8.9%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "stagflation",
+                "display": "滞胀",
+                "css_class": "stagflation",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.6175557598912879,
+                    "score_text": "61.8%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.14798977435681818,
+                    "score_text": "14.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.13266022192575758,
+                    "score_text": "13.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.10179424382613635,
+                    "score_text": "10.2%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "support": "0.62"
+              }
+            },
+            "evidence": {
+              "mature": false,
+              "gmm_ready": false,
+              "rule_based_ready": true,
+              "sa_alex_full_ready": true,
+              "counts": {
+                "gmm": {
+                  "available": 54,
+                  "total": 104
+                },
+                "rule_based": {
+                  "available": 7,
+                  "total": 10
+                },
+                "sa_alex_full": {
+                  "available": 5,
+                  "total": 5
+                }
+              }
+            },
+            "milestones": [],
+            "reason_type": "概率 / 输入变化",
+            "reason": "本次模型结论未变，但四状态概率分布、输入覆盖度、底层模型输入发生变化；具体差异见下方。",
+            "gmm_boundary": true,
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "放缓",
+                "state_after": "放缓",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "48/104",
+                "coverage": "54/104",
+                "candidates_before": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.30232558136976745,
+                    "score_text": "30.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.26744186047325585,
+                    "score_text": "26.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.22093023257790698,
+                    "score_text": "22.1%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.20930232557906978,
+                    "score_text": "20.9%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2954545454704545,
+                    "score_text": "29.5%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.2613636363738636,
+                    "score_text": "26.1%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.22727272727727274,
+                    "score_text": "22.7%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.21590909087840907,
+                    "score_text": "21.6%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "probability_changed": true,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 6,
+                  "input_added": 6,
+                  "input_revised": 2
+                },
+                "coverage_only_factors": [],
+                "changes": [
+                  {
+                    "factor": "PPICMM",
+                    "description": "PPI核心材料",
+                    "group": "成本压力",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0884",
+                    "before_period": "2026-08",
+                    "after": "-0.0311",
+                    "change_text": "0.0884(202608) -> -0.0311"
+                  },
+                  {
+                    "factor": "WPSID62",
+                    "description": "PPI中间能源品",
+                    "group": "成本压力",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0031",
+                    "before_period": "2026-08",
+                    "after": "0.0717",
+                    "change_text": "0.0031(202608) -> 0.0717"
+                  },
+                  {
+                    "factor": "WPSID61",
+                    "description": "PPI中间材料",
+                    "group": "成本压力",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0213",
+                    "before_period": "2026-08",
+                    "after": "0.0069",
+                    "change_text": "0.0213(202608) -> 0.0069"
+                  },
+                  {
+                    "factor": "WPSFD49502",
+                    "description": "PPI成品资本设备",
+                    "group": "成本压力",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0179",
+                    "before_period": "2026-08",
+                    "after": "0.0258",
+                    "change_text": "0.0179(202608) -> 0.0258"
+                  },
+                  {
+                    "factor": "WPSFD49207",
+                    "description": "PPI成品消费品",
+                    "group": "成本压力",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0127",
+                    "before_period": "2026-08",
+                    "after": "0.0189",
+                    "change_text": "0.0127(202608) -> 0.0189"
+                  },
+                  {
+                    "factor": "RETAILx",
+                    "description": "零售销售",
+                    "group": "消费需求",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0112",
+                    "before_period": "2026-08",
+                    "after": "0.0077",
+                    "change_text": "0.0112(202608) -> 0.0077"
+                  },
+                  {
+                    "factor": "ISRATIOx",
+                    "description": "库存销售比",
+                    "group": "库存周期",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0",
+                    "before_period": "2026-07",
+                    "after": "-0.01",
+                    "change_text": "0(202607) -> -0.01"
+                  },
+                  {
+                    "factor": "BUSINVx",
+                    "description": "商业库存",
+                    "group": "库存周期",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.0081",
+                    "before_period": "2026-07",
+                    "after": "0.0042",
+                    "change_text": "0.0081(202607) -> 0.0042"
+                  }
+                ]
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "滞胀",
+                "state_after": "滞胀",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "7/10",
+                "coverage": "7/10",
+                "candidates_before": [],
+                "candidates": [],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 6
+                },
+                "coverage_only_factors": [],
+                "changes": [
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS",
+                    "description": "增长-需求订单",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.3255",
+                    "before_period": "2026-08",
+                    "after": "0.3823",
+                    "change_text": "0.3255(202608) -> 0.3823"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.9858",
+                    "before_period": "2026-09",
+                    "after": "1.033",
+                    "change_text": "0.9858(202609) -> 1.033"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
+                    "description": "需求订单短周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "-0.0355",
+                    "before_period": "2026-08",
+                    "after": "-0.012",
+                    "change_text": "-0.0355(202608) -> -0.012"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
+                    "description": "需求订单长周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.4209",
+                    "before_period": "2026-08",
+                    "after": "0.4427",
+                    "change_text": "0.4209(202608) -> 0.4427"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
+                    "description": "通胀压力长周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "1.2761",
+                    "before_period": "2026-09",
+                    "after": "1.2898",
+                    "change_text": "1.2761(202609) -> 1.2898"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
+                    "description": "通胀压力短周期信号",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "3.12",
+                    "before_period": "2026-09",
+                    "after": "3.1335",
+                    "change_text": "3.12(202609) -> 3.1335"
+                  }
+                ]
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "滞胀",
+                "state_after": "滞胀",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates_before": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.598969928840103,
+                    "score_text": "59.9%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1793208669820679,
+                    "score_text": "17.9%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.1391751631860825,
+                    "score_text": "13.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0825340409917466,
+                    "score_text": "8.3%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.5913036433,
+                    "score_text": "59.1%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.1707079385,
+                    "score_text": "17.1%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.1485147776,
+                    "score_text": "14.9%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0894736406,
+                    "score_text": "8.9%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "probability_changed": true,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 2
+                },
+                "coverage_only_factors": [],
+                "changes": [
+                  {
+                    "factor": "INFLATION_PRESSURE",
+                    "description": "通胀-压力",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.9858",
+                    "before_period": "2026-09",
+                    "after": "1.033",
+                    "change_text": "0.9858(202609) -> 1.033"
+                  },
+                  {
+                    "factor": "INFLATION_PRESSURE_DIFF_12M",
+                    "description": "通胀压力12个月变化",
+                    "group": "通胀-压力",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-10-16",
+                    "before": "0.9548",
+                    "before_period": "2026-09",
+                    "after": "1.0019",
+                    "change_text": "0.9548(202609) -> 1.0019"
+                  }
+                ]
+              }
+            ],
+            "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-09__2026-10-15",
+        "default_event_id": "2026-09__2026-10-16",
         "eligibility_note": "轻量模型先行观察，GMM 尚未完全成熟。",
         "lifecycle": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "state": "滞胀",
           "state_css_class": "stagflation",
           "evidence_mature": false,
@@ -24284,7 +25253,7 @@
             {
               "key": "gmm",
               "label": "GMM",
-              "value": "48/104"
+              "value": "54/104"
             },
             {
               "key": "rule_based",
@@ -25571,7 +26540,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-15",
+          "as_of": "2026-10-16",
           "inputs": [
             {
               "model_key": "gmm",
@@ -25632,8 +26601,8 @@
               "factor": "BUSINVx",
               "description": "商业库存",
               "group": "库存周期",
-              "value": 0.0080530776993672,
-              "last_valid": "2026-07",
+              "value": 0.0041501417586573,
+              "last_valid": "2026-08",
               "used_in_run": true
             },
             {
@@ -26091,8 +27060,8 @@
               "factor": "ISRATIOx",
               "description": "库存销售比",
               "group": "库存周期",
-              "value": 0.0,
-              "last_valid": "2026-07",
+              "value": -0.01,
+              "last_valid": "2026-08",
               "used_in_run": true
             },
             {
@@ -26235,8 +27204,8 @@
               "factor": "PPICMM",
               "description": "PPI核心材料",
               "group": "成本压力",
-              "value": 0.0883872866031554,
-              "last_valid": "2026-08",
+              "value": -0.0310843860644647,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26253,8 +27222,8 @@
               "factor": "RETAILx",
               "description": "零售销售",
               "group": "消费需求",
-              "value": 0.0112111777340668,
-              "last_valid": "2026-08",
+              "value": 0.0076788559023786,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26469,8 +27438,8 @@
               "factor": "WPSFD49207",
               "description": "PPI成品消费品",
               "group": "成本压力",
-              "value": 0.0127035130805728,
-              "last_valid": "2026-08",
+              "value": 0.0188985056118067,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26478,8 +27447,8 @@
               "factor": "WPSFD49502",
               "description": "PPI成品资本设备",
               "group": "成本压力",
-              "value": 0.0178540900280328,
-              "last_valid": "2026-08",
+              "value": 0.0258165136807466,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26487,8 +27456,8 @@
               "factor": "WPSID61",
               "description": "PPI中间材料",
               "group": "成本压力",
-              "value": 0.021264085106524,
-              "last_valid": "2026-08",
+              "value": 0.0069207924096987,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26496,8 +27465,8 @@
               "factor": "WPSID62",
               "description": "PPI中间能源品",
               "group": "成本压力",
-              "value": 0.0031282808312766,
-              "last_valid": "2026-08",
+              "value": 0.0717235894102428,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -26505,7 +27474,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.3255457803929671,
+              "value": 0.3822924611944877,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26514,7 +27483,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.4209073923598216,
+              "value": 0.4426546449012729,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26523,7 +27492,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0355444958254275,
+              "value": -0.0119974148934318,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26568,7 +27537,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 0.98584075846408,
+              "value": 1.033017055382092,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26577,7 +27546,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 1.2761110781495528,
+              "value": 1.289791979150014,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26586,7 +27555,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 3.1199747260064754,
+              "value": 3.1334699988276085,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26595,7 +27564,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.3255457803929671,
+              "value": 0.3822924611944877,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26604,7 +27573,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.4209073923598216,
+              "value": 0.4426546449012729,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26613,7 +27582,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0355444958254275,
+              "value": -0.0119974148934318,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26649,7 +27618,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 0.98584075846408,
+              "value": 1.033017055382092,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26658,7 +27627,7 @@
               "factor": "INFLATION_PRESSURE_LONG_SIGNAL",
               "description": "通胀压力长周期信号",
               "group": "通胀-压力",
-              "value": 1.2761110781495528,
+              "value": 1.289791979150014,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26667,7 +27636,7 @@
               "factor": "INFLATION_PRESSURE_SHORT_SIGNAL",
               "description": "通胀压力短周期信号",
               "group": "通胀-压力",
-              "value": 3.1199747260064754,
+              "value": 3.1334699988276085,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26703,7 +27672,7 @@
               "factor": "INFLATION_PRESSURE",
               "description": "通胀-压力",
               "group": "通胀-压力",
-              "value": 0.98584075846408,
+              "value": 1.033017055382092,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26712,7 +27681,7 @@
               "factor": "INFLATION_PRESSURE_DIFF_12M",
               "description": "通胀压力12个月变化",
               "group": "通胀-压力",
-              "value": 0.954765584978674,
+              "value": 1.0019418818966856,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -26761,7 +27730,9 @@
               "NDMANEMP",
               "OILPRICEx",
               "PAYEMS",
+              "PPICMM",
               "REALLN",
+              "RETAILx",
               "S&P 500",
               "S&P PE ratio",
               "S&P div yield",
@@ -26781,7 +27752,11 @@
               "USTPU",
               "USTRADE",
               "USWTRADE",
-              "VIXCLSx"
+              "VIXCLSx",
+              "WPSFD49207",
+              "WPSFD49502",
+              "WPSID61",
+              "WPSID62"
             ],
             "rule_based": [
               "GROWTH_REAL_ACTIVITY",
@@ -26821,26 +27796,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c"
+                "sha256": "b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441"
+                "sha256": "688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485"
+                "sha256": "c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0"
+                "sha256": "06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"e32a94ea94811f4c200f7fea9d7b75bd287bc3b44d14f56be9d38bc3a48b662c\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"34ee4081deccacaa058a0699a7211fe8b500d70e07a1696ff459cc906c3dd441\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a3560a5f152255116cb8cee183b3883c06e13d325baee8ff86e4da0970eb8485\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"2e5152f9713aa5da8d0f4beb8b0df7694e62a160c675870e6382bdab0b1fb1f0\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"b7d18aa8646cda837851638de96d01275fc1051dced15211b307fa1a35c70114\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"688dfa97c0f2b08609ee4ec9d69151587c86e2d77b1880b77cb0d81926f1175b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c348cdbbec4069f099101dcca32a9211ab404d022a6cab08cb30e3da4a1f60fc\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"06fa1c98045ec36b941e221274f8c6cbc1ae18c8ac6fcab56b65734da40c42b2\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"0e54241898d1b5dbf7a3423af596aead034c279c\", \"git_dirty\": true}"
         }
       }
     }
