@@ -3,7 +3,7 @@
   "model_id": "cn_v1",
   "contract_version": "0.8-candidate",
   "rule_version": "cn_v1_candidate_b_0_8",
-  "source_commit": "2d228b452b90bf7a163fee07f74a6fba7309532e",
+  "source_commit": "61df1f4a458d7e38f04a74cbf804f1597c53aa15",
   "method_contract": {
     "ordinary_direction_formula": "component_direction_score = level_score",
     "side_score_role": "audit_only_zero_direction_weight",
@@ -180,8 +180,8 @@
     "start": "2020-01-31",
     "end": "2026-09-30"
   },
-  "as_of_cutoff": "2026-10-23",
-  "run_date": "2026-10-24",
+  "as_of_cutoff": "2026-10-26",
+  "run_date": "2026-10-27",
   "availability_convention": "current_snapshot_no_vintage",
   "data_policy": "current_snapshot_history_not_pit_or_true_vintage",
   "turning_event_ledger": {
@@ -237,16 +237,16 @@
   "latest_primary_label": "cn_v1.growth_weak_inflation_low",
   "reader_source": {
     "path": "/home/runner/work/_temp/cn_v0_model",
-    "as_of_date": "2026-10-23",
+    "as_of_date": "2026-10-26",
     "manifest": {
       "path": "manifest.json",
-      "sha256": "5b909a9f4ea28ef6e0d18129d8b829403ac0194d212c0183fc4a6c02bfe859dd",
+      "sha256": "a2db3e08a43e3b71fd551dfadeead3eb1de2c8259def6fc1d93423509cfd0062",
       "bytes": 1269
     },
     "model_output": {
       "path": "cn_v0_model_output.csv",
-      "sha256": "f742710afa4f28813b4ef5ecefc5fb2fc9b44920048f07e7de8595dbcebe7de6",
-      "bytes": 267744
+      "sha256": "82e307b43fdd75e24a021b619955a88522613cc555ed8624e07fa6d05d3680a8",
+      "bytes": 267764
     }
   },
   "artifacts": {
@@ -282,13 +282,13 @@
     },
     "state_snapshot": {
       "path": "cn_v1_state.snapshot.json",
-      "sha256": "7ea4d2fe1edfab8dfd78d471326582572263893c6935587c50d676a47ba110f1",
-      "bytes": 1359792
+      "sha256": "7be0b8a46754187f491aba801dc0e7cf323f4e226b18506305d13de0122e6b28",
+      "bytes": 1093819
     },
     "state_html": {
       "path": "cn_v1_state.html",
-      "sha256": "e5648a3827afd8d4baeb754e2072b8bc445fc082e9a363809b7df61a59664d3b",
-      "bytes": 393498
+      "sha256": "873497762d0ee699fd9b44dbab69053e4076bdb86fd1c9ce26586e343f1986a1",
+      "bytes": 308585
     }
   }
 }
