@@ -3,7 +3,7 @@
   "model_id": "cn_v1",
   "contract_version": "0.8-candidate",
   "rule_version": "cn_v1_candidate_b_0_8",
-  "source_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+  "source_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
   "method_contract": {
     "ordinary_direction_formula": "component_direction_score = level_score",
     "side_score_role": "audit_only_zero_direction_weight",
@@ -180,8 +180,8 @@
     "start": "2020-01-31",
     "end": "2026-09-30"
   },
-  "as_of_cutoff": "2026-10-27",
-  "run_date": "2026-10-28",
+  "as_of_cutoff": "2026-10-28",
+  "run_date": "2026-10-29",
   "availability_convention": "current_snapshot_no_vintage",
   "data_policy": "current_snapshot_history_not_pit_or_true_vintage",
   "turning_event_ledger": {
@@ -237,10 +237,10 @@
   "latest_primary_label": "cn_v1.growth_weak_inflation_low",
   "reader_source": {
     "path": "/home/runner/work/_temp/cn_v0_model",
-    "as_of_date": "2026-10-27",
+    "as_of_date": "2026-10-28",
     "manifest": {
       "path": "manifest.json",
-      "sha256": "6fb23c00aea4fed5f91fc99047822ffed9eff416bb67f6b8072f25917d63d63f",
+      "sha256": "81f4a57c8c9c6bb75c085dc752c73edd2037729ab4dd3253de56aac977e0f4fb",
       "bytes": 1269
     },
     "model_output": {
@@ -282,13 +282,13 @@
     },
     "state_snapshot": {
       "path": "cn_v1_state.snapshot.json",
-      "sha256": "574c849867b511825f8cdb6f8a86644a37d9164a6bde84e463994013b6d80b88",
-      "bytes": 1093819
+      "sha256": "db1a7932ad9ab0e77e3e006efc15ffbc495490df556072037d79efda921bf15f",
+      "bytes": 1106400
     },
     "state_html": {
       "path": "cn_v1_state.html",
-      "sha256": "f023684c12c178fe0e5149682ac1ad5973aca6463efa6f80ca8bec7e49f73fe1",
-      "bytes": 308585
+      "sha256": "b9505e4eab9ec738b6ba8891bcde2d0232a0969b943d702bc4ec17bec72f87d5",
+      "bytes": 311656
     }
   }
 }
