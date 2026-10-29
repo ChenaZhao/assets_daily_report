@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-10-28 10:02 北京时间",
+  "run_time": "2026-10-29 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "216b19952fcf202ec0bae5384f8b5ef8a00b47df4eefc9ea9b76da03684117a5",
-    "model_update": "f80eb544ece04251f3ee196c10d5e855902cb461f3d567c2336d2bfeb4b87507"
+    "explain": "9e8eaf072db7bd5d6fbfc405a8a1e47890e0a87dbb2650bf227e0b2517280675",
+    "model_update": "a98a1c6be4156565932369ccebdc04e6dc635458647d65103204ca556fda7d46"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-09",
-    "data_cutoff_time": "2026-10-28",
+    "data_cutoff_time": "2026-10-29",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -2104,7 +2104,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-07",
-        "data_cutoff_time": "2026-10-28",
+        "data_cutoff_time": "2026-10-29",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4086,7 +4086,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-08",
-        "data_cutoff_time": "2026-10-28",
+        "data_cutoff_time": "2026-10-29",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6102,7 +6102,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-09",
-        "data_cutoff_time": "2026-10-28",
+        "data_cutoff_time": "2026-10-29",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -8174,11 +8174,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；保留状态变化与证据成熟节点，并始终补上最新运行状态。",
-    "generated_at": "2026-10-28T02:02:43.692563+00:00",
+    "generated_at": "2026-10-29T02:03:06.461851+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-10-28",
-      "run_count": 161
+      "end": "2026-10-29",
+      "run_count": 162
     },
     "target_months": [
       {
@@ -13894,14 +13894,14 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-07__2026-10-28",
-            "as_of": "2026-10-28",
+            "id": "2026-07__2026-10-29",
+            "as_of": "2026-10-29",
             "target_month": "2026-07",
             "comparison_as_of": "2026-10-17",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -13917,17 +13917,17 @@
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b"
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14"
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504"
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
                 }
               ]
             },
@@ -13935,7 +13935,7 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "fbcc15d423c659181d29f2bddc1e9108e9ec8475",
-              "git_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
@@ -13949,21 +13949,21 @@
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "73a632415b018862266074da7b5babc71a2a3dc3be28da558a092d60764bc557",
-                  "sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b",
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "c802ff5ea9b525c0ad5b3370264a8ddcc32e5eb9e883ade743e409612decef33",
-                  "sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14",
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "83e1457929a316d7731ac798c0063cdb13a697720fff9056cea4304d928acc49",
-                  "sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504",
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4",
                   "before_exists": true,
                   "exists": true
                 }
@@ -14235,7 +14235,7 @@
                     "group": "地产建设",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "5.1533",
                     "before_period": "2026-07",
                     "after": "5.3033",
@@ -14247,7 +14247,7 @@
                     "group": "地产建设",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "6.5028",
                     "before_period": "2026-07",
                     "after": "6.5497",
@@ -14259,7 +14259,7 @@
                     "group": "当前建设活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "7.177",
                     "before_period": "2026-07",
                     "after": "7.2218",
@@ -14271,7 +14271,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.0012",
@@ -14283,7 +14283,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "0.003",
                     "before_period": "2026-07",
                     "after": "0.0032",
@@ -14295,7 +14295,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "0.0037",
                     "before_period": "2026-07",
                     "after": "0.0036",
@@ -14307,7 +14307,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "0.0001",
                     "before_period": "2026-07",
                     "after": "0.0001",
@@ -14319,7 +14319,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "0.0005",
                     "before_period": "2026-07",
                     "after": "0.0005",
@@ -14331,7 +14331,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-10-28",
+                    "changed_as_of": "2026-10-29",
                     "before": "-0.0073",
                     "before_period": "2026-07",
                     "after": "-0.0074",
@@ -14445,10 +14445,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-07__2026-10-28",
+        "default_event_id": "2026-07__2026-10-29",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "state": "滞胀",
           "state_css_class": "stagflation",
           "evidence_mature": true,
@@ -15809,7 +15809,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"8797d02ac6be5a42855e444ab5be73236a05b8d055dbeb11005555ced2ba1b85\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"73a632415b018862266074da7b5babc71a2a3dc3be28da558a092d60764bc557\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c802ff5ea9b525c0ad5b3370264a8ddcc32e5eb9e883ade743e409612decef33\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"83e1457929a316d7731ac798c0063cdb13a697720fff9056cea4304d928acc49\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"fbcc15d423c659181d29f2bddc1e9108e9ec8475\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "inputs": [
             {
               "model_key": "gmm",
@@ -17110,7 +17110,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+            "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
             "git_dirty": true,
             "data_sources": [
               {
@@ -17126,21 +17126,21 @@
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b"
+                "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14"
+                "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504"
+                "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}"
         }
       },
       "2026-08": {
@@ -22481,12 +22481,447 @@
               }
             ],
             "comparison_anchor_replayed": false
+          },
+          {
+            "id": "2026-08__2026-10-29",
+            "as_of": "2026-10-29",
+            "target_month": "2026-08",
+            "comparison_as_of": "2026-10-28",
+            "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}",
+            "comparison_provenance": {
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
+              "git_dirty": true,
+              "data_sources": [
+                {
+                  "source": "label_path:nber_recession_monthly.csv",
+                  "exists": false,
+                  "sha256": ""
+                },
+                {
+                  "source": "macro_data_path:tcode_all_versions.csv",
+                  "exists": true,
+                  "sha256": "f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380"
+                },
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "exists": true,
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
+                }
+              ]
+            },
+            "comparison_provenance_changes": {
+              "status": "changed",
+              "code_changed": true,
+              "git_commit_before": "f2f17261995301b4845b41d333b784ab3959ae10",
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
+              "git_dirty_before": true,
+              "git_dirty": true,
+              "data_source_changes": [
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "before_sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b",
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14",
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504",
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4",
+                  "before_exists": true,
+                  "exists": true
+                }
+              ]
+            },
+            "comparison_status": "comparable",
+            "kind": "stable_latest",
+            "states": {
+              "gmm": {
+                "state": "stagflation",
+                "display": "滞胀",
+                "css_class": "stagflation",
+                "confidence": "0.33",
+                "coverage": "101/104",
+                "distribution": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3333333333,
+                    "score_text": "33.3%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2333333333,
+                    "score_text": "23.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "goldilocks",
+                "display": "温和",
+                "css_class": "goldilocks",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "0.48",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.48370879075162904,
+                    "score_text": "48.4%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.31460329176853963,
+                    "score_text": "31.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.15024329958497562,
+                    "score_text": "15.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.05144461789485553,
+                    "score_text": "5.1%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "no_consensus",
+                "display": "分歧",
+                "css_class": "no_consensus",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.5104233194895132,
+                    "score_text": "51.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.23901404135054302,
+                    "score_text": "23.9%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.12825931706495183,
+                    "score_text": "12.8%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.12230332209499188,
+                    "score_text": "12.2%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "support": "最高支持：温和 0.51"
+              }
+            },
+            "evidence": {
+              "mature": true,
+              "gmm_ready": true,
+              "rule_based_ready": true,
+              "sa_alex_full_ready": true,
+              "counts": {
+                "gmm": {
+                  "available": 101,
+                  "total": 104
+                },
+                "rule_based": {
+                  "available": 10,
+                  "total": 10
+                },
+                "sa_alex_full": {
+                  "available": 5,
+                  "total": 5
+                }
+              }
+            },
+            "milestones": [],
+            "reason_type": "近期稳定",
+            "reason": "本次较上一轨迹事件未出现结论变化，保留为最新状态。",
+            "gmm_boundary": false,
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "滞胀",
+                "state_after": "滞胀",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "101/104",
+                "coverage": "101/104",
+                "candidates_before": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3333333333,
+                    "score_text": "33.3%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2333333333,
+                    "score_text": "23.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3333333333,
+                    "score_text": "33.3%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2333333333,
+                    "score_text": "23.3%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2166666667,
+                    "score_text": "21.7%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "温和",
+                "state_after": "温和",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates_before": [],
+                "candidates": [],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates_before": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.48370879075162904,
+                    "score_text": "48.4%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.31460329176853963,
+                    "score_text": "31.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.15024329958497562,
+                    "score_text": "15.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.05144461789485553,
+                    "score_text": "5.1%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.48370879075162904,
+                    "score_text": "48.4%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.31460329176853963,
+                    "score_text": "31.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.15024329958497562,
+                    "score_text": "15.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.05144461789485553,
+                    "score_text": "5.1%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              }
+            ],
+            "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-08__2026-10-28",
+        "default_event_id": "2026-08__2026-10-29",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "state": "分歧",
           "state_css_class": "no_consensus",
           "evidence_mature": true,
@@ -23844,7 +24279,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "inputs": [
             {
               "model_key": "gmm",
@@ -25142,7 +25577,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+            "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
             "git_dirty": true,
             "data_sources": [
               {
@@ -25158,21 +25593,21 @@
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b"
+                "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14"
+                "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504"
+                "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}"
         }
       },
       "2026-09": {
@@ -27230,12 +27665,447 @@
               }
             ],
             "comparison_anchor_replayed": false
+          },
+          {
+            "id": "2026-09__2026-10-29",
+            "as_of": "2026-10-29",
+            "target_month": "2026-09",
+            "comparison_as_of": "2026-10-28",
+            "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}",
+            "comparison_provenance": {
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
+              "git_dirty": true,
+              "data_sources": [
+                {
+                  "source": "label_path:nber_recession_monthly.csv",
+                  "exists": false,
+                  "sha256": ""
+                },
+                {
+                  "source": "macro_data_path:tcode_all_versions.csv",
+                  "exists": true,
+                  "sha256": "f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380"
+                },
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "exists": true,
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "exists": true,
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
+                }
+              ]
+            },
+            "comparison_provenance_changes": {
+              "status": "changed",
+              "code_changed": true,
+              "git_commit_before": "f2f17261995301b4845b41d333b784ab3959ae10",
+              "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
+              "git_dirty_before": true,
+              "git_dirty": true,
+              "data_source_changes": [
+                {
+                  "source": "path:ES1_A_00_0_R_Index.csv",
+                  "before_sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b",
+                  "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:SFR1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14",
+                  "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c",
+                  "before_exists": true,
+                  "exists": true
+                },
+                {
+                  "source": "path:TY1_A_00_0_R_Comdty.csv",
+                  "before_sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504",
+                  "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4",
+                  "before_exists": true,
+                  "exists": true
+                }
+              ]
+            },
+            "comparison_status": "comparable",
+            "kind": "stable_latest",
+            "states": {
+              "gmm": {
+                "state": "slow_growth",
+                "display": "放缓",
+                "css_class": "slow_growth",
+                "confidence": "0.28",
+                "coverage": "87/104",
+                "distribution": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2823529412282353,
+                    "score_text": "28.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.24705882352470587,
+                    "score_text": "24.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "support": ""
+              },
+              "rule_based": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "",
+                "coverage": "10/10",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 1.0,
+                    "score_text": "100.0%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.0,
+                    "score_text": "0.0%",
+                    "css_class": "stagflation"
+                  }
+                ],
+                "support": ""
+              },
+              "sa_alex_full": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "0.57",
+                "coverage": "5/5",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.5667613524,
+                    "score_text": "56.7%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3136272746,
+                    "score_text": "31.4%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0765376449,
+                    "score_text": "7.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0430737281,
+                    "score_text": "4.3%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "support": ""
+              },
+              "consensus": {
+                "state": "heating_up",
+                "display": "过热",
+                "css_class": "heating_up",
+                "confidence": "",
+                "coverage": "",
+                "distribution": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.6006851566745098,
+                    "score_text": "60.1%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.18689536604156864,
+                    "score_text": "18.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.10847555644274509,
+                    "score_text": "10.8%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.10394392084117647,
+                    "score_text": "10.4%",
+                    "css_class": "goldilocks"
+                  }
+                ],
+                "support": "0.60"
+              }
+            },
+            "evidence": {
+              "mature": false,
+              "gmm_ready": false,
+              "rule_based_ready": true,
+              "sa_alex_full_ready": true,
+              "counts": {
+                "gmm": {
+                  "available": 87,
+                  "total": 104
+                },
+                "rule_based": {
+                  "available": 10,
+                  "total": 10
+                },
+                "sa_alex_full": {
+                  "available": 5,
+                  "total": 5
+                }
+              }
+            },
+            "milestones": [],
+            "reason_type": "近期稳定",
+            "reason": "本次较上一轨迹事件未出现结论变化，保留为最新状态。",
+            "gmm_boundary": true,
+            "input_change_models": [
+              {
+                "model_key": "gmm",
+                "model_label": "GMM",
+                "state_before": "放缓",
+                "state_after": "放缓",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "87/104",
+                "coverage": "87/104",
+                "candidates_before": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2823529412282353,
+                    "score_text": "28.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.24705882352470587,
+                    "score_text": "24.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.2823529412282353,
+                    "score_text": "28.2%",
+                    "css_class": "slow_growth"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.24705882352470587,
+                    "score_text": "24.7%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.2352941176235294,
+                    "score_text": "23.5%",
+                    "css_class": "heating_up"
+                  }
+                ],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              },
+              {
+                "model_key": "rule_based",
+                "model_label": "Rule-Based",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "10/10",
+                "coverage": "10/10",
+                "candidates_before": [],
+                "candidates": [],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              },
+              {
+                "model_key": "sa_alex_full",
+                "model_label": "Sa/Alex Full",
+                "state_before": "过热",
+                "state_after": "过热",
+                "state_changed": false,
+                "has_previous": true,
+                "comparison_status": "comparable",
+                "coverage_before": "5/5",
+                "coverage": "5/5",
+                "candidates_before": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.5667613524,
+                    "score_text": "56.7%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3136272746,
+                    "score_text": "31.4%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0765376449,
+                    "score_text": "7.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0430737281,
+                    "score_text": "4.3%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "candidates": [
+                  {
+                    "state": "heating_up",
+                    "display": "过热",
+                    "score": 0.5667613524,
+                    "score_text": "56.7%",
+                    "css_class": "heating_up"
+                  },
+                  {
+                    "state": "stagflation",
+                    "display": "滞胀",
+                    "score": 0.3136272746,
+                    "score_text": "31.4%",
+                    "css_class": "stagflation"
+                  },
+                  {
+                    "state": "goldilocks",
+                    "display": "温和",
+                    "score": 0.0765376449,
+                    "score_text": "7.7%",
+                    "css_class": "goldilocks"
+                  },
+                  {
+                    "state": "slow_growth",
+                    "display": "放缓",
+                    "score": 0.0430737281,
+                    "score_text": "4.3%",
+                    "css_class": "slow_growth"
+                  }
+                ],
+                "probability_changed": false,
+                "input_comparison_available": true,
+                "change_counts": {
+                  "coverage_added": 0,
+                  "input_added": 0,
+                  "input_revised": 0
+                },
+                "coverage_only_factors": [],
+                "changes": []
+              }
+            ],
+            "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-09__2026-10-28",
+        "default_event_id": "2026-09__2026-10-29",
         "eligibility_note": "轻量模型先行观察，GMM 尚未完全成熟。",
         "lifecycle": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "state": "过热",
           "state_css_class": "heating_up",
           "evidence_mature": false,
@@ -28579,7 +29449,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-10-28",
+          "as_of": "2026-10-29",
           "inputs": [
             {
               "model_key": "gmm",
@@ -29863,7 +30733,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "f2f17261995301b4845b41d333b784ab3959ae10",
+            "git_commit": "3a0011483be21adf55909d40b2a2129c069e9a9a",
             "git_dirty": true,
             "data_sources": [
               {
@@ -29879,21 +30749,21 @@
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b"
+                "sha256": "b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14"
+                "sha256": "a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504"
+                "sha256": "c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"11ba0c93981754c08b64e03a6919b88108f23169a9faafd5f437bef928e9573b\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"3dc15adbad7a7c5fcd8f7d9906755d6f86977be4372f9de7067af5813111da14\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdb8cdf0028752300e2e1a7f76bd142d45699c55e709ba0c9b57bc906917d504\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"f2f17261995301b4845b41d333b784ab3959ae10\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"f3d6e9ee5497945b21ff8bb84a6b9cba3482efd1aae2db5c567e10164ee94380\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b97add9a4689b78ebf38b2c3e0e65026749d7b518c6d10da081eab1004b933e1\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a2a3ee99305e55b27c4769b220a460fb7d59d9037dffe5fc48ba63156ebc8d9c\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"c0b315f23cbfdf94b1a386fa9fad02ef83d07d9598b45e04e4565c3f14e31df4\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"3a0011483be21adf55909d40b2a2129c069e9a9a\", \"git_dirty\": true}"
         }
       }
     }
