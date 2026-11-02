@@ -3,7 +3,7 @@
   "model_id": "cn_v1",
   "contract_version": "0.8-candidate",
   "rule_version": "cn_v1_candidate_b_0_8",
-  "source_commit": "26f6f86775007dab43bf722aefe8588d5575a931",
+  "source_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
   "method_contract": {
     "ordinary_direction_formula": "component_direction_score = level_score",
     "side_score_role": "audit_only_zero_direction_weight",
@@ -169,19 +169,19 @@
   "run_type": "current_snapshot_history",
   "input_start_date": "2011-01-31",
   "state_start_date": "2020-01-31",
-  "end_date": "2026-09-30",
+  "end_date": "2026-10-31",
   "observation_period": {
     "convention": "each monthly source uses its final non-null observation within the calendar month; policy is daily rate data aggregated to its calendar month",
     "input_start": "2011-01-31",
-    "input_end": "2026-09-30"
+    "input_end": "2026-10-31"
   },
   "state_period": {
     "convention": "monthly month-end state index",
     "start": "2020-01-31",
-    "end": "2026-09-30"
+    "end": "2026-10-31"
   },
-  "as_of_cutoff": "2026-10-30",
-  "run_date": "2026-10-31",
+  "as_of_cutoff": "2026-11-02",
+  "run_date": "2026-11-03",
   "availability_convention": "current_snapshot_no_vintage",
   "data_policy": "current_snapshot_history_not_pit_or_true_vintage",
   "turning_event_ledger": {
@@ -217,9 +217,9 @@
     "proxy_kind": "daily_rate_change_not_official_announcement",
     "official_announcement_date_used": false
   },
-  "input_row_count": 189,
+  "input_row_count": 190,
   "component_column_count": 258,
-  "model_row_count": 81,
+  "model_row_count": 82,
   "first_eligible_periods": {
     "g1": "2020-04-30",
     "g2": "2020-01-31",
@@ -232,48 +232,48 @@
     "x1": "2020-01-31",
     "g1_full_form": "2020-09-30"
   },
-  "latest_date": "2026-09-30",
-  "latest_label": "cn_v1.growth_weak_inflation_low",
-  "latest_primary_label": "cn_v1.growth_weak_inflation_low",
+  "latest_date": "2026-10-31",
+  "latest_label": "cn_v1.data_insufficient",
+  "latest_primary_label": "cn_v1.data_insufficient",
   "reader_source": {
     "path": "/home/runner/work/_temp/cn_v0_model",
-    "as_of_date": "2026-10-30",
+    "as_of_date": "2026-11-02",
     "manifest": {
       "path": "manifest.json",
-      "sha256": "7104616c969afa513101cfedecbed92698be9e7c7c7bb7ddbe334942960a9353",
-      "bytes": 1269
+      "sha256": "b0bc94b7ce979cd06c7033d66dece9aae8801be70db5b549deab618aa2d3bff2",
+      "bytes": 1205
     },
     "model_output": {
       "path": "cn_v0_model_output.csv",
-      "sha256": "82e307b43fdd75e24a021b619955a88522613cc555ed8624e07fa6d05d3680a8",
-      "bytes": 267764
+      "sha256": "79595b7faa5d248846a1334e360c73c6453234fda50e18f3b64ededda90fe14c",
+      "bytes": 269044
     }
   },
   "artifacts": {
     "input_panel": {
       "path": "cn_v1_input_panel.csv",
-      "sha256": "6fd7c491579cdc080183e179c9efeb3699d08091c54a72bbd7183a42dcd9ec8f",
-      "bytes": 24960
+      "sha256": "72c0652ac31c253db72d2b4c1b601d9539e6db93279c8b3bd13726c929563978",
+      "bytes": 25003
     },
     "component_panel": {
       "path": "cn_v1_component_panel.csv",
-      "sha256": "f920e9f8ec93f0aab9b975d021ef3437524ec3e8e7cead1ece4d02829bfe1b0b",
-      "bytes": 219266
+      "sha256": "81765d3c9d285f545d6d2ee1486171bb68854017f4133f77486e67d41b08110e",
+      "bytes": 220382
     },
     "model_output": {
       "path": "cn_v1_model_output.csv",
-      "sha256": "1ea7df875c7ad0f3168d3c5e96276a04066f3f9f8f8dcd6066b33ead0677e783",
-      "bytes": 282372
+      "sha256": "cc563569dac0d4afae829559229a83f115ddfa4aa487dc1eebc4c0a0ec58edb6",
+      "bytes": 284283
     },
     "model_recent": {
       "path": "cn_v1_model_recent.csv",
-      "sha256": "00be0cdfe55077207d8ec5ee12748ed4bb884b56323e3889fcd67e95e9cb6750",
-      "bytes": 47676
+      "sha256": "1b0aab00bdfa8d87491f584c6010a5c9c3eec902be0927320dd5da2d22fa95a8",
+      "bytes": 45887
     },
     "turning_event_ledger": {
       "path": "cn_v1_turning_event_ledger.csv",
-      "sha256": "e8d68c962d0ead582fa3f3b5450d67231f8e65306489e4df8105b4758befcb2b",
-      "bytes": 6326
+      "sha256": "c9b3e6b1691a12dc3da5108a98f186c6ab4e3e39c6fccc3b8b40dc40cca5bf3f",
+      "bytes": 6333
     },
     "turning_reassessments": {
       "path": "cn_v1_turning_reassessments.csv",
@@ -282,13 +282,13 @@
     },
     "state_snapshot": {
       "path": "cn_v1_state.snapshot.json",
-      "sha256": "166a02e6ef7a74aa6d10c473311b73b4299e939c9dc0ba8504da6635b1b57503",
-      "bytes": 1106495
+      "sha256": "555fdbd7b112634edb63f72be57a791cf3ee109231583e971e95546c80b8d633",
+      "bytes": 1169878
     },
     "state_html": {
       "path": "cn_v1_state.html",
-      "sha256": "d63920051fdcbf42545dd93d8d1cc85804499e4a87cfb07297e28234aa7f25f4",
-      "bytes": 311617
+      "sha256": "0a03a8c2930d678315b856d037a6b0baacc5e26ef32986bf210d87c52776f595",
+      "bytes": 360982
     }
   }
 }
