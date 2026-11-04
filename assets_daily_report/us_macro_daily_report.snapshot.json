@@ -1,7 +1,7 @@
 {
   "title": "美国宏观场景状态",
   "subtitle": "",
-  "run_time": "2026-11-03 10:03 北京时间",
+  "run_time": "2026-11-04 10:03 北京时间",
   "tabs": [
     {
       "key": "model_update",
@@ -13,14 +13,14 @@
     }
   ],
   "fingerprints": {
-    "explain": "7b61c51dd9fb7ad06f551170b8cee5762a21c772d778d4e0d2d3a0b8c030a487",
-    "model_update": "777da701c125588297699c08378ad4d8bae9f1dd2f738a070df19ef5f9b6f133"
+    "explain": "24d41b04eb5b4f3025e1b4a6804184bea409f4d13f51fe2a888b8893a405f907",
+    "model_update": "5a54172070afbc5461be8bb9abe6aaab2dc5677f39f752d597c4bc5611062a81"
   },
   "explain": {
     "title": "美国宏观场景状态-解释层",
     "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
     "observation_month": "2026-09",
-    "data_cutoff_time": "2026-11-03",
+    "data_cutoff_time": "2026-11-04",
     "layers": [
       {
         "title": "一、宏观状态",
@@ -60,7 +60,7 @@
           0.022,
           0.046,
           -0.048,
-          0.179
+          0.184
         ]
       },
       {
@@ -312,7 +312,7 @@
             "group": "投资需求 / 企业订单",
             "indicator": "耐用品新订单增速",
             "code": "AMDMNOx",
-            "latest": "345,371",
+            "latest": "345,672",
             "latest_direction": "up",
             "trend": [
               324305.0,
@@ -324,18 +324,18 @@
               333842.0,
               335779.0,
               338700.0,
-              339117.0,
-              345371.0
+              339185.0,
+              345672.0
             ],
-            "score": "0.36",
+            "score": "0.38",
             "score_direction": "up",
             "state": "中性",
-            "visible_date": "2026-09-30 / 2026-10-27",
+            "visible_date": "2026-09-30 / 2026-11-03",
             "type": "主指标",
             "status_class": "neutral",
             "missing": false,
-            "latest_change_detail": "345,371 前月 339,117 · ↑ +6254.00",
-            "score_change_detail": "0.36 较上月 ↑ +0.43",
+            "latest_change_detail": "345,672 前月 339,185 · ↑ +6487.00",
+            "score_change_detail": "0.38 较上月 ↑ +0.44",
             "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -349,7 +349,7 @@
             "group": "投资需求 / 企业订单",
             "indicator": "非国防资本品新订单增速",
             "code": "ANDENOx",
-            "latest": "107,775",
+            "latest": "107,889",
             "latest_direction": "up",
             "trend": [
               108609.0,
@@ -361,18 +361,18 @@
               96592.0,
               97144.0,
               99378.0,
-              101479.0,
-              107775.0
+              101459.0,
+              107889.0
             ],
-            "score": "0.63",
+            "score": "0.65",
             "score_direction": "up",
             "state": "偏强",
-            "visible_date": "2026-09-30 / 2026-10-27",
+            "visible_date": "2026-09-30 / 2026-11-03",
             "type": "主指标",
             "status_class": "high",
             "missing": false,
-            "latest_change_detail": "107,775 前月 101,479 · ↑ +6296.00",
-            "score_change_detail": "0.63 较上月 ↑ +0.44",
+            "latest_change_detail": "107,889 前月 101,459 · ↑ +6430.00",
+            "score_change_detail": "0.65 较上月 ↑ +0.46",
             "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
             "include_in_dimension_score": "是",
             "transform_rule": "log_diff",
@@ -1843,15 +1843,15 @@
             "维度": "增长",
             "分组": "投资需求 / 企业订单",
             "指标": "耐用品新订单增速",
-            "最新值变化": "345,371 前月 339,117 · ↑ +6254.00",
-            "规则分变化": "0.36 较上月 ↑ +0.43"
+            "最新值变化": "345,672 前月 339,185 · ↑ +6487.00",
+            "规则分变化": "0.38 较上月 ↑ +0.44"
           },
           {
             "维度": "增长",
             "分组": "投资需求 / 企业订单",
             "指标": "非国防资本品新订单增速",
-            "最新值变化": "107,775 前月 101,479 · ↑ +6296.00",
-            "规则分变化": "0.63 较上月 ↑ +0.44"
+            "最新值变化": "107,889 前月 101,459 · ↑ +6430.00",
+            "规则分变化": "0.65 较上月 ↑ +0.46"
           },
           {
             "维度": "增长",
@@ -2086,7 +2086,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-07",
-        "data_cutoff_time": "2026-11-03",
+        "data_cutoff_time": "2026-11-04",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -2126,7 +2126,7 @@
               0.022,
               0.046,
               -0.048,
-              0.179
+              0.184
             ]
           },
           {
@@ -4070,7 +4070,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-08",
-        "data_cutoff_time": "2026-11-03",
+        "data_cutoff_time": "2026-11-04",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -4110,7 +4110,7 @@
               0.022,
               0.046,
               -0.048,
-              0.179
+              0.184
             ]
           },
           {
@@ -4358,7 +4358,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "耐用品新订单增速",
                 "code": "AMDMNOx",
-                "latest": "339,117",
+                "latest": "339,185",
                 "latest_direction": "up",
                 "trend": [
                   324305.0,
@@ -4370,17 +4370,17 @@
                   333842.0,
                   335779.0,
                   338700.0,
-                  339117.0
+                  339185.0
                 ],
-                "score": "-0.07",
+                "score": "-0.06",
                 "score_direction": "down",
                 "state": "中性",
-                "visible_date": "2026-08-31 / 2026-10-27",
+                "visible_date": "2026-08-31 / 2026-11-03",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "339,117 前月 338,700 · ↑ +417.00",
-                "score_change_detail": "-0.07 较上月 ↓ -0.19",
+                "latest_change_detail": "339,185 前月 338,700 · ↑ +485.00",
+                "score_change_detail": "-0.06 较上月 ↓ -0.18",
                 "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -4394,7 +4394,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "非国防资本品新订单增速",
                 "code": "ANDENOx",
-                "latest": "101,479",
+                "latest": "101,459",
                 "latest_direction": "up",
                 "trend": [
                   108609.0,
@@ -4406,16 +4406,16 @@
                   96592.0,
                   97144.0,
                   99378.0,
-                  101479.0
+                  101459.0
                 ],
                 "score": "0.19",
                 "score_direction": "flat",
                 "state": "中性",
-                "visible_date": "2026-08-31 / 2026-10-27",
+                "visible_date": "2026-08-31 / 2026-11-03",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "101,479 前月 99,378 · ↑ +2101.00",
+                "latest_change_detail": "101,459 前月 99,378 · ↑ +2081.00",
                 "score_change_detail": "0.19 较上月 → -0.02",
                 "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
                 "include_in_dimension_score": "是",
@@ -5866,14 +5866,14 @@
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "耐用品新订单增速",
-                "最新值变化": "339,117 前月 338,700 · ↑ +417.00",
-                "规则分变化": "-0.07 较上月 ↓ -0.19"
+                "最新值变化": "339,185 前月 338,700 · ↑ +485.00",
+                "规则分变化": "-0.06 较上月 ↓ -0.18"
               },
               {
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "非国防资本品新订单增速",
-                "最新值变化": "101,479 前月 99,378 · ↑ +2101.00",
+                "最新值变化": "101,459 前月 99,378 · ↑ +2081.00",
                 "规则分变化": "0.19 较上月 → -0.02"
               },
               {
@@ -6083,7 +6083,7 @@
         "title": "美国宏观场景状态-解释层",
         "subtitle": "31 行指标展示：18 个主评分指标 + 13 个补充观察指标。维度分数 = 主评分指标的方向z-score在维度内按预设权重加权平均（增长、就业、地产、市场风险等权，通胀对 CPI / 核心 CPI / PCE 权重更高）",
         "observation_month": "2026-09",
-        "data_cutoff_time": "2026-11-03",
+        "data_cutoff_time": "2026-11-04",
         "layers": [
           {
             "title": "一、宏观状态",
@@ -6123,7 +6123,7 @@
               0.022,
               0.046,
               -0.048,
-              0.179
+              0.184
             ]
           },
           {
@@ -6375,7 +6375,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "耐用品新订单增速",
                 "code": "AMDMNOx",
-                "latest": "345,371",
+                "latest": "345,672",
                 "latest_direction": "up",
                 "trend": [
                   324305.0,
@@ -6387,18 +6387,18 @@
                   333842.0,
                   335779.0,
                   338700.0,
-                  339117.0,
-                  345371.0
+                  339185.0,
+                  345672.0
                 ],
-                "score": "0.36",
+                "score": "0.38",
                 "score_direction": "up",
                 "state": "中性",
-                "visible_date": "2026-09-30 / 2026-10-27",
+                "visible_date": "2026-09-30 / 2026-11-03",
                 "type": "主指标",
                 "status_class": "neutral",
                 "missing": false,
-                "latest_change_detail": "345,371 前月 339,117 · ↑ +6254.00",
-                "score_change_detail": "0.36 较上月 ↑ +0.43",
+                "latest_change_detail": "345,672 前月 339,185 · ↑ +6487.00",
+                "score_change_detail": "0.38 较上月 ↑ +0.44",
                 "logic": "观察企业和耐用品订单需求，是投资与制造业需求的前置信号。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -6412,7 +6412,7 @@
                 "group": "投资需求 / 企业订单",
                 "indicator": "非国防资本品新订单增速",
                 "code": "ANDENOx",
-                "latest": "107,775",
+                "latest": "107,889",
                 "latest_direction": "up",
                 "trend": [
                   108609.0,
@@ -6424,18 +6424,18 @@
                   96592.0,
                   97144.0,
                   99378.0,
-                  101479.0,
-                  107775.0
+                  101459.0,
+                  107889.0
                 ],
-                "score": "0.63",
+                "score": "0.65",
                 "score_direction": "up",
                 "state": "偏强",
-                "visible_date": "2026-09-30 / 2026-10-27",
+                "visible_date": "2026-09-30 / 2026-11-03",
                 "type": "主指标",
                 "status_class": "high",
                 "missing": false,
-                "latest_change_detail": "107,775 前月 101,479 · ↑ +6296.00",
-                "score_change_detail": "0.63 较上月 ↑ +0.44",
+                "latest_change_detail": "107,889 前月 101,459 · ↑ +6430.00",
+                "score_change_detail": "0.65 较上月 ↑ +0.46",
                 "logic": "观察企业资本开支订单，反映投资意愿和设备需求。",
                 "include_in_dimension_score": "是",
                 "transform_rule": "log_diff",
@@ -7906,15 +7906,15 @@
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "耐用品新订单增速",
-                "最新值变化": "345,371 前月 339,117 · ↑ +6254.00",
-                "规则分变化": "0.36 较上月 ↑ +0.43"
+                "最新值变化": "345,672 前月 339,185 · ↑ +6487.00",
+                "规则分变化": "0.38 较上月 ↑ +0.44"
               },
               {
                 "维度": "增长",
                 "分组": "投资需求 / 企业订单",
                 "指标": "非国防资本品新订单增速",
-                "最新值变化": "107,775 前月 101,479 · ↑ +6296.00",
-                "规则分变化": "0.63 较上月 ↑ +0.44"
+                "最新值变化": "107,889 前月 101,459 · ↑ +6430.00",
+                "规则分变化": "0.65 较上月 ↑ +0.46"
               },
               {
                 "维度": "增长",
@@ -8137,11 +8137,11 @@
   "model_update": {
     "title": "美国模型更新轨迹",
     "subtitle": "最近三个目标月的运行日状态轨迹；保留状态变化与证据成熟节点，并始终补上最新运行状态。",
-    "generated_at": "2026-11-03T02:03:42.587384+00:00",
+    "generated_at": "2026-11-04T02:03:41.189964+00:00",
     "as_of_range": {
       "start": "2026-04-01",
-      "end": "2026-11-03",
-      "run_count": 167
+      "end": "2026-11-04",
+      "run_count": 168
     },
     "target_months": [
       {
@@ -13857,14 +13857,14 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-07__2026-11-03",
-            "as_of": "2026-11-03",
+            "id": "2026-07__2026-11-04",
+            "as_of": "2026-11-04",
             "target_month": "2026-07",
             "comparison_as_of": "2026-10-17",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -13875,22 +13875,22 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "exists": true,
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
                 }
               ]
             },
@@ -13898,35 +13898,35 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "fbcc15d423c659181d29f2bddc1e9108e9ec8475",
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "before_sha256": "8797d02ac6be5a42855e444ab5be73236a05b8d055dbeb11005555ced2ba1b85",
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7",
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "73a632415b018862266074da7b5babc71a2a3dc3be28da558a092d60764bc557",
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3",
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "c802ff5ea9b525c0ad5b3370264a8ddcc32e5eb9e883ade743e409612decef33",
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f",
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "83e1457929a316d7731ac798c0063cdb13a697720fff9056cea4304d928acc49",
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a",
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365",
                   "before_exists": true,
                   "exists": true
                 }
@@ -14198,7 +14198,7 @@
                     "group": "地产建设",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "5.1533",
                     "before_period": "2026-07",
                     "after": "5.3033",
@@ -14210,7 +14210,7 @@
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.1346",
                     "before_period": "2026-07",
                     "after": "0.0857",
@@ -14222,7 +14222,7 @@
                     "group": "地产建设",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "6.5028",
                     "before_period": "2026-07",
                     "after": "6.5497",
@@ -14234,7 +14234,7 @@
                     "group": "当前建设活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "7.177",
                     "before_period": "2026-07",
                     "after": "7.2218",
@@ -14246,7 +14246,7 @@
                     "group": "消费需求",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0005",
                     "before_period": "2026-07",
                     "after": "0.0017",
@@ -14258,7 +14258,7 @@
                     "group": "劳动力收入",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0021",
                     "before_period": "2026-07",
                     "after": "0.0026",
@@ -14270,7 +14270,7 @@
                     "group": "劳动力收入",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0024",
                     "before_period": "2026-07",
                     "after": "0.0027",
@@ -14282,7 +14282,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.0012",
@@ -14294,7 +14294,7 @@
                     "group": "消费需求",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0003",
                     "before_period": "2026-07",
                     "after": "-0.0001",
@@ -14306,7 +14306,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.003",
                     "before_period": "2026-07",
                     "after": "0.0032",
@@ -14318,7 +14318,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0037",
                     "before_period": "2026-07",
                     "after": "0.0036",
@@ -14330,7 +14330,7 @@
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.0011",
@@ -14342,7 +14342,7 @@
                     "group": "美联储口径",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0015",
                     "before_period": "2026-07",
                     "after": "0.0016",
@@ -14354,7 +14354,7 @@
                     "group": "综合销售确认",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0058",
                     "before_period": "2026-07",
                     "after": "0.0059",
@@ -14366,7 +14366,7 @@
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0007",
                     "before_period": "2026-07",
                     "after": "-0.0007",
@@ -14378,7 +14378,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0001",
                     "before_period": "2026-07",
                     "after": "0.0001",
@@ -14390,7 +14390,7 @@
                     "group": "货币流动性",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0005",
                     "before_period": "2026-07",
                     "after": "0.0005",
@@ -14402,7 +14402,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0073",
                     "before_period": "2026-07",
                     "after": "-0.0074",
@@ -14414,7 +14414,7 @@
                     "group": "消费需求",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.005",
                     "before_period": "2026-07",
                     "after": "0.005",
@@ -14426,7 +14426,7 @@
                     "group": "消费需求",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0058",
                     "before_period": "2026-07",
                     "after": "0.0059",
@@ -14461,7 +14461,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0085",
                     "before_period": "2026-07",
                     "after": "0.0391",
@@ -14473,7 +14473,7 @@
                     "group": "通胀-主读数",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "1.6698",
                     "before_period": "2026-07",
                     "after": "1.6914",
@@ -14485,7 +14485,7 @@
                     "group": "通胀-压力",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "1.6047",
                     "before_period": "2026-07",
                     "after": "1.623",
@@ -14497,7 +14497,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0377",
                     "before_period": "2026-07",
                     "after": "0.0536",
@@ -14509,7 +14509,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.2887",
                     "before_period": "2026-07",
                     "after": "0.3046",
@@ -14521,7 +14521,7 @@
                     "group": "通胀-压力",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.8448",
                     "before_period": "2026-07",
                     "after": "-0.8387",
@@ -14533,7 +14533,7 @@
                     "group": "通胀-压力",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-1.435",
                     "before_period": "2026-07",
                     "after": "-1.4289",
@@ -14545,7 +14545,7 @@
                     "group": "增长-需求订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0481",
                     "before_period": "2026-07",
                     "after": "0.0507",
@@ -14557,7 +14557,7 @@
                     "group": "增长-需求订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.1424",
                     "before_period": "2026-07",
                     "after": "-0.1415",
@@ -14569,7 +14569,7 @@
                     "group": "增长-需求订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.3674",
                     "before_period": "2026-07",
                     "after": "-0.3665",
@@ -14662,7 +14662,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.4365",
                     "before_period": "2026-07",
                     "after": "-0.389",
@@ -14674,7 +14674,7 @@
                     "group": "增长-实体活动",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0085",
                     "before_period": "2026-07",
                     "after": "0.0391",
@@ -14686,7 +14686,7 @@
                     "group": "通胀-压力",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "1.6047",
                     "before_period": "2026-07",
                     "after": "1.623",
@@ -14698,7 +14698,7 @@
                     "group": "通胀-压力",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "1.9665",
                     "before_period": "2026-07",
                     "after": "1.9848",
@@ -14710,10 +14710,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-07__2026-11-03",
+        "default_event_id": "2026-07__2026-11-04",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "state": "滞胀",
           "state_css_class": "stagflation",
           "evidence_mature": true,
@@ -16074,7 +16074,7 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"8797d02ac6be5a42855e444ab5be73236a05b8d055dbeb11005555ced2ba1b85\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"73a632415b018862266074da7b5babc71a2a3dc3be28da558a092d60764bc557\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"c802ff5ea9b525c0ad5b3370264a8ddcc32e5eb9e883ade743e409612decef33\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"83e1457929a316d7731ac798c0063cdb13a697720fff9056cea4304d928acc49\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"fbcc15d423c659181d29f2bddc1e9108e9ec8475\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "inputs": [
             {
               "model_key": "gmm",
@@ -17375,7 +17375,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+            "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
             "git_dirty": true,
             "data_sources": [
               {
@@ -17386,26 +17386,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}"
         }
       },
       "2026-08": {
@@ -23469,14 +23469,14 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-08__2026-11-03",
-            "as_of": "2026-11-03",
+            "id": "2026-08__2026-11-04",
+            "as_of": "2026-11-04",
             "target_month": "2026-08",
             "comparison_as_of": "2026-10-30",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -23487,22 +23487,22 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "exists": true,
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
                 }
               ]
             },
@@ -23510,35 +23510,35 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "8d0356af143d9025a726a3acc22b8908cf9d7dad",
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "before_sha256": "ef8744dde0f1554a760a7eb49bd2cabd724d6efb6c6455f38fdfc583a9a80fe5",
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7",
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "7fffc404aa1e4c0e05ea83af50fd11f48a664a2422ecaba7b0fa65b381796ff0",
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3",
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "4c3b00159a33ed4ba3b13388db4208a5af99ede9e44dcabf67115659091e6d71",
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f",
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "cdaf77450546d2e58d97f54a77ada3c78f62f8b35996c2ac08b11f2ee3c165cc",
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a",
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365",
                   "before_exists": true,
                   "exists": true
                 }
@@ -23800,7 +23800,7 @@
                 "change_counts": {
                   "coverage_added": 2,
                   "input_added": 2,
-                  "input_revised": 3
+                  "input_revised": 8
                 },
                 "coverage_only_factors": [],
                 "changes": [
@@ -23810,7 +23810,7 @@
                     "group": "消费信贷",
                     "change_type": "added",
                     "change_type_label": "新增指标",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.0018",
@@ -23822,11 +23822,71 @@
                     "group": "消费信贷",
                     "change_type": "added",
                     "change_type_label": "新增指标",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0007",
                     "before_period": "2026-07",
                     "after": "-0.0009",
                     "change_text": "-0.0007(202607) -> -0.0009"
+                  },
+                  {
+                    "factor": "HWI",
+                    "description": "招聘广告指数",
+                    "group": "招聘需求",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "-256",
+                    "before_period": "2026-08",
+                    "after": "-145",
+                    "change_text": "-256(202608) -> -145"
+                  },
+                  {
+                    "factor": "HWIURATIO",
+                    "description": "招聘广告/失业人数",
+                    "group": "招聘需求",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "-0.0538",
+                    "before_period": "2026-08",
+                    "after": "-0.038",
+                    "change_text": "-0.0538(202608) -> -0.038"
+                  },
+                  {
+                    "factor": "AMDMNOx",
+                    "description": "制造业新订单-耐用品",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0012",
+                    "before_period": "2026-08",
+                    "after": "0.0014",
+                    "change_text": "0.0012(202608) -> 0.0014"
+                  },
+                  {
+                    "factor": "ANDENOx",
+                    "description": "新订单-非国防资本品剔除飞机",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0209",
+                    "before_period": "2026-08",
+                    "after": "0.0207",
+                    "change_text": "0.0209(202608) -> 0.0207"
+                  },
+                  {
+                    "factor": "AMDMUOx",
+                    "description": "制造业未完成订单-耐用品",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0065",
+                    "before_period": "2026-08",
+                    "after": "0.0065",
+                    "change_text": "0.0065(202608) -> 0.0065"
                   },
                   {
                     "factor": "REALLN",
@@ -23834,7 +23894,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0019",
                     "before_period": "2026-08",
                     "after": "0.0019",
@@ -23846,7 +23906,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0121",
                     "before_period": "2026-08",
                     "after": "-0.0121",
@@ -23858,7 +23918,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "0.0192",
                     "before_period": "2026-08",
                     "after": "0.0192",
@@ -23883,10 +23943,47 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 0
+                  "input_revised": 3
                 },
                 "coverage_only_factors": [],
-                "changes": []
+                "changes": [
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS",
+                    "description": "增长-需求订单",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.2285",
+                    "before_period": "2026-08",
+                    "after": "0.2293",
+                    "change_text": "0.2285(202608) -> 0.2293"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
+                    "description": "需求订单短周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "-0.0624",
+                    "before_period": "2026-08",
+                    "after": "-0.0621",
+                    "change_text": "-0.0624(202608) -> -0.0621"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
+                    "description": "需求订单长周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.3923",
+                    "before_period": "2026-08",
+                    "after": "0.3925",
+                    "change_text": "0.3923(202608) -> 0.3925"
+                  }
+                ]
               },
               {
                 "model_key": "sa_alex_full",
@@ -23972,10 +24069,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-08__2026-11-03",
+        "default_event_id": "2026-08__2026-11-04",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "state": "分歧",
           "state_css_class": "no_consensus",
           "evidence_mature": true,
@@ -25334,14 +25431,14 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"ef8744dde0f1554a760a7eb49bd2cabd724d6efb6c6455f38fdfc583a9a80fe5\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"7fffc404aa1e4c0e05ea83af50fd11f48a664a2422ecaba7b0fa65b381796ff0\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"4c3b00159a33ed4ba3b13388db4208a5af99ede9e44dcabf67115659091e6d71\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdaf77450546d2e58d97f54a77ada3c78f62f8b35996c2ac08b11f2ee3c165cc\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"8d0356af143d9025a726a3acc22b8908cf9d7dad\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "inputs": [
             {
               "model_key": "gmm",
               "factor": "AMDMNOx",
               "description": "制造业新订单-耐用品",
               "group": "投资需求 / 企业订单",
-              "value": 0.0012304207554816,
+              "value": 0.0014309214181,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -25350,7 +25447,7 @@
               "factor": "AMDMUOx",
               "description": "制造业未完成订单-耐用品",
               "group": "投资需求 / 企业订单",
-              "value": 0.0064709416091552,
+              "value": 0.0064535508556957,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -25359,7 +25456,7 @@
               "factor": "ANDENOx",
               "description": "新订单-非国防资本品剔除飞机",
               "group": "投资需求 / 企业订单",
-              "value": 0.020921119326001,
+              "value": 0.0207240147909733,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -25710,7 +25807,7 @@
               "factor": "HWI",
               "description": "招聘广告指数",
               "group": "招聘需求",
-              "value": -256.0,
+              "value": -145.0,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -25719,7 +25816,7 @@
               "factor": "HWIURATIO",
               "description": "招聘广告/失业人数",
               "group": "招聘需求",
-              "value": -0.0537572432881923,
+              "value": -0.0379700152978639,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26268,7 +26365,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.228507964319466,
+              "value": 0.2292520566373502,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26277,7 +26374,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.392275736938544,
+              "value": 0.3925237677111721,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26286,7 +26383,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0623763228561608,
+              "value": -0.0621282920835327,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26358,7 +26455,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.228507964319466,
+              "value": 0.2292520566373502,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26367,7 +26464,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.392275736938544,
+              "value": 0.3925237677111721,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26376,7 +26473,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": -0.0623763228561608,
+              "value": -0.0621282920835327,
               "last_valid": "2026-08",
               "used_in_run": true
             },
@@ -26635,7 +26732,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+            "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
             "git_dirty": true,
             "data_sources": [
               {
@@ -26646,26 +26743,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}"
         }
       },
       "2026-09": {
@@ -29436,14 +29533,14 @@
             "comparison_anchor_replayed": false
           },
           {
-            "id": "2026-09__2026-11-03",
-            "as_of": "2026-11-03",
+            "id": "2026-09__2026-11-04",
+            "as_of": "2026-11-04",
             "target_month": "2026-09",
             "comparison_as_of": "2026-10-30",
             "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
-            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}",
+            "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}",
             "comparison_provenance": {
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty": true,
               "data_sources": [
                 {
@@ -29454,22 +29551,22 @@
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "exists": true,
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "exists": true,
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "exists": true,
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
                 }
               ]
             },
@@ -29477,35 +29574,35 @@
               "status": "changed",
               "code_changed": true,
               "git_commit_before": "8d0356af143d9025a726a3acc22b8908cf9d7dad",
-              "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+              "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
               "git_dirty_before": true,
               "git_dirty": true,
               "data_source_changes": [
                 {
                   "source": "macro_data_path:tcode_all_versions.csv",
                   "before_sha256": "ef8744dde0f1554a760a7eb49bd2cabd724d6efb6c6455f38fdfc583a9a80fe5",
-                  "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7",
+                  "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:ES1_A_00_0_R_Index.csv",
                   "before_sha256": "7fffc404aa1e4c0e05ea83af50fd11f48a664a2422ecaba7b0fa65b381796ff0",
-                  "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3",
+                  "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:SFR1_A_00_0_R_Comdty.csv",
                   "before_sha256": "4c3b00159a33ed4ba3b13388db4208a5af99ede9e44dcabf67115659091e6d71",
-                  "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f",
+                  "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496",
                   "before_exists": true,
                   "exists": true
                 },
                 {
                   "source": "path:TY1_A_00_0_R_Comdty.csv",
                   "before_sha256": "cdaf77450546d2e58d97f54a77ada3c78f62f8b35996c2ac08b11f2ee3c165cc",
-                  "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a",
+                  "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365",
                   "before_exists": true,
                   "exists": true
                 }
@@ -29519,34 +29616,34 @@
                 "display": "放缓",
                 "css_class": "slow_growth",
                 "confidence": "0.29",
-                "coverage": "94/104",
+                "coverage": "97/104",
                 "distribution": [
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.2873563218,
-                    "score_text": "28.7%",
+                    "score": 0.2888888889,
+                    "score_text": "28.9%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.2643678161,
-                    "score_text": "26.4%",
+                    "score": 0.2555555556,
+                    "score_text": "25.6%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.2298850575,
-                    "score_text": "23.0%",
+                    "score": 0.2333333333,
+                    "score_text": "23.3%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.2183908046,
-                    "score_text": "21.8%",
+                    "score": 0.2222222222,
+                    "score_text": "22.2%",
                     "css_class": "goldilocks"
                   }
                 ],
@@ -29638,29 +29735,29 @@
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.45512454502881705,
-                    "score_text": "45.5%",
+                    "score": 0.4562739702954837,
+                    "score_text": "45.6%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.2426806913845442,
-                    "score_text": "24.3%",
+                    "score": 0.23974327121787753,
+                    "score_text": "24.0%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.18392410832451947,
+                    "score": 0.18443496402451945,
                     "score_text": "18.4%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.11827065526211929,
-                    "score_text": "11.8%",
+                    "score": 0.11954779446211931,
+                    "score_text": "12.0%",
                     "css_class": "goldilocks"
                   }
                 ],
@@ -29674,7 +29771,7 @@
               "sa_alex_full_ready": true,
               "counts": {
                 "gmm": {
-                  "available": 94,
+                  "available": 97,
                   "total": 104
                 },
                 "rule_based": {
@@ -29689,7 +29786,7 @@
             },
             "milestones": [],
             "reason_type": "概率 / 输入变化",
-            "reason": "本次模型结论未变，但四状态概率分布、底层模型输入发生变化；具体差异见下方。",
+            "reason": "本次模型结论未变，但四状态概率分布、输入覆盖度、底层模型输入发生变化；具体差异见下方。",
             "gmm_boundary": true,
             "input_change_models": [
               {
@@ -29701,7 +29798,7 @@
                 "has_previous": true,
                 "comparison_status": "comparable",
                 "coverage_before": "94/104",
-                "coverage": "94/104",
+                "coverage": "97/104",
                 "candidates_before": [
                   {
                     "state": "slow_growth",
@@ -29736,52 +29833,106 @@
                   {
                     "state": "slow_growth",
                     "display": "放缓",
-                    "score": 0.2873563218,
-                    "score_text": "28.7%",
+                    "score": 0.2888888889,
+                    "score_text": "28.9%",
                     "css_class": "slow_growth"
                   },
                   {
                     "state": "stagflation",
                     "display": "滞胀",
-                    "score": 0.2643678161,
-                    "score_text": "26.4%",
+                    "score": 0.2555555556,
+                    "score_text": "25.6%",
                     "css_class": "stagflation"
                   },
                   {
                     "state": "heating_up",
                     "display": "过热",
-                    "score": 0.2298850575,
-                    "score_text": "23.0%",
+                    "score": 0.2333333333,
+                    "score_text": "23.3%",
                     "css_class": "heating_up"
                   },
                   {
                     "state": "goldilocks",
                     "display": "温和",
-                    "score": 0.2183908046,
-                    "score_text": "21.8%",
+                    "score": 0.2222222222,
+                    "score_text": "22.2%",
                     "css_class": "goldilocks"
                   }
                 ],
                 "probability_changed": true,
                 "input_comparison_available": true,
                 "change_counts": {
-                  "coverage_added": 0,
-                  "input_added": 0,
-                  "input_revised": 5
+                  "coverage_added": 3,
+                  "input_added": 2,
+                  "input_revised": 8
                 },
-                "coverage_only_factors": [],
+                "coverage_only_factors": [
+                  {
+                    "factor": "ACOGNO",
+                    "description": "新订单-非国防资本品",
+                    "used_in_run": false
+                  }
+                ],
                 "changes": [
+                  {
+                    "factor": "HWI",
+                    "description": "招聘广告指数",
+                    "group": "招聘需求",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-11-04",
+                    "before": "-256",
+                    "before_period": "2026-08",
+                    "after": "333",
+                    "change_text": "-256(202608) -> 333"
+                  },
+                  {
+                    "factor": "HWIURATIO",
+                    "description": "招聘广告/失业人数",
+                    "group": "招聘需求",
+                    "change_type": "added",
+                    "change_type_label": "新增指标",
+                    "changed_as_of": "2026-11-04",
+                    "before": "-0.0538",
+                    "before_period": "2026-08",
+                    "after": "0.0356",
+                    "change_text": "-0.0538(202608) -> 0.0356"
+                  },
+                  {
+                    "factor": "ANDENOx",
+                    "description": "新订单-非国防资本品剔除飞机",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0602",
+                    "before_period": "2026-09",
+                    "after": "0.0614",
+                    "change_text": "0.0602(202609) -> 0.0614"
+                  },
                   {
                     "factor": "DTCOLNVHFNM",
                     "description": "非循环消费信贷",
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.001",
                     "before_period": "2026-07",
                     "after": "-0.0018",
                     "change_text": "-0.001(202607) -> -0.0018"
+                  },
+                  {
+                    "factor": "AMDMNOx",
+                    "description": "制造业新订单-耐用品",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0183",
+                    "before_period": "2026-09",
+                    "after": "0.0189",
+                    "change_text": "0.0183(202609) -> 0.0189"
                   },
                   {
                     "factor": "DTCTHFNM",
@@ -29789,11 +29940,23 @@
                     "group": "消费信贷",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0007",
                     "before_period": "2026-07",
                     "after": "-0.0009",
                     "change_text": "-0.0007(202607) -> -0.0009"
+                  },
+                  {
+                    "factor": "AMDMUOx",
+                    "description": "制造业未完成订单-耐用品",
+                    "group": "投资需求 / 企业订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.0084",
+                    "before_period": "2026-09",
+                    "after": "0.0085",
+                    "change_text": "0.0084(202609) -> 0.0085"
                   },
                   {
                     "factor": "REALLN",
@@ -29801,7 +29964,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0004",
                     "before_period": "2026-09",
                     "after": "-0.0004",
@@ -29813,7 +29976,7 @@
                     "group": "信贷条件",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0075",
                     "before_period": "2026-09",
                     "after": "-0.0076",
@@ -29825,7 +29988,7 @@
                     "group": "投资需求 / 企业订单",
                     "change_type": "revised",
                     "change_type_label": "指标修正",
-                    "changed_as_of": "2026-11-03",
+                    "changed_as_of": "2026-11-04",
                     "before": "-0.0015",
                     "before_period": "2026-09",
                     "after": "-0.0015",
@@ -29850,10 +30013,47 @@
                 "change_counts": {
                   "coverage_added": 0,
                   "input_added": 0,
-                  "input_revised": 0
+                  "input_revised": 3
                 },
                 "coverage_only_factors": [],
-                "changes": []
+                "changes": [
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS",
+                    "description": "增长-需求订单",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.457",
+                    "before_period": "2026-09",
+                    "after": "0.4648",
+                    "change_text": "0.457(202609) -> 0.4648"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
+                    "description": "需求订单长周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.3453",
+                    "before_period": "2026-09",
+                    "after": "0.3481",
+                    "change_text": "0.3453(202609) -> 0.3481"
+                  },
+                  {
+                    "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
+                    "description": "需求订单短周期信号",
+                    "group": "增长-需求订单",
+                    "change_type": "revised",
+                    "change_type_label": "指标修正",
+                    "changed_as_of": "2026-11-04",
+                    "before": "0.1224",
+                    "before_period": "2026-09",
+                    "after": "0.1253",
+                    "change_text": "0.1224(202609) -> 0.1253"
+                  }
+                ]
               },
               {
                 "model_key": "sa_alex_full",
@@ -29939,10 +30139,10 @@
             "comparison_anchor_replayed": false
           }
         ],
-        "default_event_id": "2026-09__2026-11-03",
+        "default_event_id": "2026-09__2026-11-04",
         "eligibility_note": "",
         "lifecycle": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "state": "分歧",
           "state_css_class": "no_consensus",
           "evidence_mature": true,
@@ -29954,7 +30154,7 @@
             {
               "key": "gmm",
               "label": "GMM",
-              "value": "94/104"
+              "value": "97/104"
             },
             {
               "key": "rule_based",
@@ -31293,14 +31493,14 @@
           "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"ef8744dde0f1554a760a7eb49bd2cabd724d6efb6c6455f38fdfc583a9a80fe5\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"7fffc404aa1e4c0e05ea83af50fd11f48a664a2422ecaba7b0fa65b381796ff0\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"4c3b00159a33ed4ba3b13388db4208a5af99ede9e44dcabf67115659091e6d71\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"cdaf77450546d2e58d97f54a77ada3c78f62f8b35996c2ac08b11f2ee3c165cc\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"8d0356af143d9025a726a3acc22b8908cf9d7dad\", \"git_dirty\": true}"
         },
         "latest_comparison_source": {
-          "as_of": "2026-11-03",
+          "as_of": "2026-11-04",
           "inputs": [
             {
               "model_key": "gmm",
               "factor": "AMDMNOx",
               "description": "制造业新订单-耐用品",
               "group": "投资需求 / 企业订单",
-              "value": 0.0182740209831173,
+              "value": 0.0189446673230317,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -31309,7 +31509,7 @@
               "factor": "AMDMUOx",
               "description": "制造业未完成订单-耐用品",
               "group": "投资需求 / 企业订单",
-              "value": 0.0083922960296209,
+              "value": 0.0085230063950092,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -31318,7 +31518,7 @@
               "factor": "ANDENOx",
               "description": "新订单-非国防资本品剔除飞机",
               "group": "投资需求 / 企业订单",
-              "value": 0.0601938401091253,
+              "value": 0.0614481448316475,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -31669,8 +31869,8 @@
               "factor": "HWI",
               "description": "招聘广告指数",
               "group": "招聘需求",
-              "value": -256.0,
-              "last_valid": "2026-08",
+              "value": 333.0,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -31678,8 +31878,8 @@
               "factor": "HWIURATIO",
               "description": "招聘广告/失业人数",
               "group": "招聘需求",
-              "value": -0.0537572432881923,
-              "last_valid": "2026-08",
+              "value": 0.0356219014324743,
+              "last_valid": "2026-09",
               "used_in_run": true
             },
             {
@@ -32227,7 +32427,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.456969194775182,
+              "value": 0.4648470781029958,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32236,7 +32436,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.3452532987669002,
+              "value": 0.3481272906487995,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32245,7 +32445,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": 0.1224498657109453,
+              "value": 0.1253238575928446,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32317,7 +32517,7 @@
               "factor": "GROWTH_DEMAND_ORDERS",
               "description": "增长-需求订单",
               "group": "增长-需求订单",
-              "value": 0.456969194775182,
+              "value": 0.4648470781029958,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32326,7 +32526,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_LONG_SIGNAL",
               "description": "需求订单长周期信号",
               "group": "增长-需求订单",
-              "value": 0.3452532987669002,
+              "value": 0.3481272906487995,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32335,7 +32535,7 @@
               "factor": "GROWTH_DEMAND_ORDERS_SHORT_SIGNAL",
               "description": "需求订单短周期信号",
               "group": "增长-需求订单",
-              "value": 0.1224498657109453,
+              "value": 0.1253238575928446,
               "last_valid": "2026-09",
               "used_in_run": true
             },
@@ -32444,7 +32644,7 @@
               "description": "新订单-非国防资本品",
               "group": "投资需求 / 企业订单",
               "value": null,
-              "last_valid": "2026-08",
+              "last_valid": "2026-09",
               "used_in_run": false
             }
           ],
@@ -32456,6 +32656,7 @@
           ],
           "available_inputs": {
             "gmm": [
+              "ACOGNO",
               "AMDMNOx",
               "AMDMUOx",
               "ANDENOx",
@@ -32492,6 +32693,8 @@
               "HOUSTNE",
               "HOUSTS",
               "HOUSTW",
+              "HWI",
+              "HWIURATIO",
               "INDPRO",
               "INVEST",
               "IPB51222S",
@@ -32584,7 +32787,7 @@
           },
           "comparison_signature": "{\"comparison_config\": \"us_report_tri_model.yaml\", \"model_window_summary\": {\"gmm\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"rule_based\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": null, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"sa_alex_full\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 12, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}, \"similarity\": {\"data_anchor_start\": \"1959-12-01\", \"first_predictable_date\": \"1963-12-31\", \"lookback_gap_months\": 1, \"min_train_window_months\": 24, \"train_window_start\": \"1962-01-31\"}}}",
           "comparison_provenance": {
-            "git_commit": "787792b3e5bf27a1637302b1725837576e9db5d7",
+            "git_commit": "5a3a2dd069faada5486ce0502f7f8141c82d0270",
             "git_dirty": true,
             "data_sources": [
               {
@@ -32595,26 +32798,26 @@
               {
                 "source": "macro_data_path:tcode_all_versions.csv",
                 "exists": true,
-                "sha256": "89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7"
+                "sha256": "3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0"
               },
               {
                 "source": "path:ES1_A_00_0_R_Index.csv",
                 "exists": true,
-                "sha256": "8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3"
+                "sha256": "b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7"
               },
               {
                 "source": "path:SFR1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f"
+                "sha256": "d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496"
               },
               {
                 "source": "path:TY1_A_00_0_R_Comdty.csv",
                 "exists": true,
-                "sha256": "3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a"
+                "sha256": "d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365"
               }
             ]
           },
-          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"89b209afe86eb09c3d9ff8807868d360cf8bbaf8424526ab7c6e1804e3ed37c7\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"8ca79971d2fc3033efcc73884411a967ad470923f27dc6ad50a235d978837fe3\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"a7025887fb8e4f2a47ba66b231258b15172adbb99ef600069cca6c350898368f\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"3bcef3639aeb0c6829d8b77492e276ca06c39ef19bdfeb223dd94f8adee8312a\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"787792b3e5bf27a1637302b1725837576e9db5d7\", \"git_dirty\": true}"
+          "comparison_provenance_signature": "{\"data_sources\": [{\"exists\": false, \"sha256\": \"\", \"source\": \"label_path:nber_recession_monthly.csv\"}, {\"exists\": true, \"sha256\": \"3c78b7bbb47688ca72c386a9efb2a0521be50406fd9ef958bfad0440cb9509c0\", \"source\": \"macro_data_path:tcode_all_versions.csv\"}, {\"exists\": true, \"sha256\": \"b44267ba483982da22243be2ebb12c1976aafdfb4fbe8e22d780f503d7bd0fc7\", \"source\": \"path:ES1_A_00_0_R_Index.csv\"}, {\"exists\": true, \"sha256\": \"d947eb0055190cf0ce1879953502ec4965c95d37cb7ecebf8c6fb99bafb82496\", \"source\": \"path:SFR1_A_00_0_R_Comdty.csv\"}, {\"exists\": true, \"sha256\": \"d28e67dd5c2ad2369b3c8ff757ffab87e045d3f89169ef08914ea194f89e7365\", \"source\": \"path:TY1_A_00_0_R_Comdty.csv\"}], \"git_commit\": \"5a3a2dd069faada5486ce0502f7f8141c82d0270\", \"git_dirty\": true}"
         }
       }
     }
