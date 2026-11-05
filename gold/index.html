@@ -21,6 +21,7 @@ table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}th,td{b
 <body><main class="wrap">
 <h1>黄金月度涨跌解释 <span class="en">MONTHLY GOLD RETURN EXPLANATION</span></h1>
 <p class="sub" id="modelLabel"></p><p class="sub" id="scopeNote"></p>
+<p class="note" id="provisionalNotice" role="status" hidden style="padding:12px;border:1px solid #c6a469;background:#fff8e8;border-radius:6px;color:#73541c"></p>
 <h2>① 本月怎么看 <span class="en">MONTHLY VIEW</span><span class="mselbox"><label for="msel">选择模型月份</label><select id="msel"></select></span></h2>
 <div class="model-controls"><span>历史图、区间成绩与本月贡献，统一使用所选月份的同一套模型。</span></div>
 <div class="summary-panels">
@@ -116,7 +117,8 @@ let historyRows=[], startMonth='', endMonth='', rangePreset='ytd', chartMode='fi
 const selectedMonth = () => $('msel').value;
 const selectedVintage = () => D.vintages[selectedMonth()];
 const segment = () => historyRows.filter(row => row.month >= startMonth && row.month <= endMonth);
-const basisText = () => `全部历史使用所选${selectedMonth()}模型的同一套系数`;
+const isProvisional = () => D.provisional?.month === selectedMonth();
+const basisText = () => `全部历史使用所选${selectedMonth()}${isProvisional()?'暂估':''}模型的同一套系数`;
 const scoreCard = (key,title,value,note) => `<div class="card" data-metric="${esc(key)}"><div class="k">${esc(title)}</div><div class="v">${value}</div><div class="s">${note}</div></div>`;
 function scores(rows){
   const valid=rows.filter(row => [row.actual_log_pp,row.fitted_log_pp,row.residual_log_pp].every(finite));
@@ -150,17 +152,20 @@ function selectContext(){
   setRange();
   $('modelLabel').textContent=`${D.meta.model_name ?? '—'} · ${D.meta.model_id ?? '—'}`;
   $('scopeNote').textContent=D.meta.estimation_description || `方法：${D.meta.estimator}。使用已存当月系数作同期解释。`;
+  const preview=isProvisional()?D.provisional:null;
+  $('provisionalNotice').hidden=!preview;
+  $('provisionalNotice').textContent=preview?`${preview.month} 暂估版：BUS5经济悲观占比尚未公布，沿用${preview.source_month}的${num(preview.assumed_share_pct,1)}%，暂假定当月占比不变，入模变化为0。ETF等其他输入采用当月真值，H36规格不变。本版系数、驱动贡献与历史拟合成绩均基于该假设，真值到齐后自动重算并转正式；暂估不写入正式历史。`:'';
   renderOverview();renderMonth();renderTrend();renderAppendix();
 }
 function renderOverview(){
   const m=scores(historyRows),first=historyRows[0]?.month,last=historyRows[historyRows.length-1]?.month;
   $('historyLabel').textContent=`${first ?? '—'}—${last ?? '—'} · ${m.n}个月`;
-  $('overviewCards').innerHTML=scoreCard('history_r2','所选版本 · 历史拟合 R²',pct(m.r2_pct),`系数版本：${selectedMonth()}`)+scoreCard('history_rmse','均方根误差 RMSE',points(m.rmse_log_pp),'对少数大偏差更敏感')+scoreCard('history_mae','平均绝对误差 MAE',points(m.mae_log_pp),'每月差额绝对值的平均');
+  $('overviewCards').innerHTML=scoreCard('history_r2',`${isProvisional()?'暂估':'所选'}版本 · 历史拟合 R²`,pct(m.r2_pct),`系数版本：${selectedMonth()}`)+scoreCard('history_rmse','均方根误差 RMSE',points(m.rmse_log_pp),'对少数大偏差更敏感')+scoreCard('history_mae','平均绝对误差 MAE',points(m.mae_log_pp),'每月差额绝对值的平均');
   $('overviewNote').textContent=`${basisText()}；此卡覆盖${first ?? '—'}—${last ?? '—'}，按普通未加权口径计算。${m.n<m.total?`有效配对${m.n}／${m.total}个月，缺值未补0。`:''}`;
 }
 function renderMonth(){
   const row=monthMap.get(selectedMonth()),contributions=row.contributions_log_pp;
-  $('selectedMonthLabel').textContent=row.month;
+  $('selectedMonthLabel').textContent=row.month+(isProvisional()?'（暂估）':'');
   $('cards').innerHTML=[['实际涨跌',row.actual_log_pp,'黄金月度对数收益'],['模型拟合',row.fitted_log_pp,'所选月因素贡献合计'],['残差',row.residual_log_pp,'实际涨跌减模型拟合']].map(([title,value,note]) => scoreCard('month_'+title,title,finite(value)?`${signed(value)}<span class="en">点</span>`:'—',note)).join('');
   const categories=D.groups.map(group => ({...group,value:row.group_contributions_log_pp[group.id],members:D.factors.filter(factor => factor.group===group.id)}));
   const leading=categories.filter(group => finite(group.value)).sort((a,b) => Math.abs(b.value)-Math.abs(a.value)).slice(0,3);
@@ -177,7 +182,7 @@ function renderMonth(){
   $('barchart').innerHTML='<p class="group-guide">点击大类整行展开或收起，查看各指标如何合成该类贡献。</p><div class="barhead"><span>大类合计</span><span style="text-align:center">← 负贡献　0　正贡献 →</span><span style="text-align:right">点</span></div>'+categories.map(group => {
     const values=group.members.map(factor => contributions[factor.id]);
     const mixed=values.some(value => finite(value)&&value>0)&&values.some(value => finite(value)&&value<0);
-    return `<details class="month-group" data-group="${esc(group.id)}" ${expandedGroups.has(group.id)?'open':''} style="--bar-color:${color(group.color)}"><summary class="brow group-summary"><div class="lb group-label"><span>${esc(group.name)}<small>${group.members.length}项${mixed?' · 含正负抵消':''}</small></span></div>${bar(group.value)}</summary><div class="group-children">${group.members.map(factor => `<div class="brow factor-row" data-factor="${esc(factor.id)}"><div class="lb">${esc(factor.name)}</div>${bar(contributions[factor.id])}</div>`).join('')}</div></details>`;
+    return `<details class="month-group" data-group="${esc(group.id)}" ${expandedGroups.has(group.id)?'open':''} style="--bar-color:${color(group.color)}"><summary class="brow group-summary"><div class="lb group-label"><span>${esc(group.name)}<small>${group.members.length}项${mixed?' · 含正负抵消':''}</small></span></div>${bar(group.value)}</summary><div class="group-children">${group.members.map(factor => `<div class="brow factor-row" data-factor="${esc(factor.id)}"><div class="lb">${esc(factor.name)}${isProvisional()&&factor.id==='bus5_bad_times_diff'?'<small>待公布，暂按占比不变</small>':''}</div>${bar(contributions[factor.id])}</div>`).join('')}</div></details>`;
   }).join('')+`<div class="brow residual-row" style="--bar-color:var(--res)"><div class="lb">残差<small>实际−拟合</small></div>${bar(row.residual_log_pp)}</div><div class="sumchk${allPresent&&!closed?' warn':''}">${esc(check)} 全部${D.factors.length}项贡献 ${signed(factorTotal)} ＝ 模型 ${signed(row.fitted_log_pp)}；模型＋残差 ${signed(row.residual_log_pp)} ＝ 实际 ${signed(row.actual_log_pp)} 点。<br>合计使用未舍入值，显示值保留两位小数。</div>`;
   document.querySelectorAll('#barchart details.month-group').forEach(detail => detail.addEventListener('toggle',() => {if(detail.open)expandedGroups.add(detail.dataset.group);else expandedGroups.delete(detail.dataset.group);}));
   $('provenance').textContent=jsonDisplay({month:row.month,coefficient_as_of:row.coefficient_as_of,actual_log_pp:row.actual_log_pp,fitted_log_pp:row.fitted_log_pp,residual_log_pp:row.residual_log_pp,contributions_log_pp:row.contributions_log_pp,group_contributions_log_pp:row.group_contributions_log_pp});
@@ -244,9 +249,9 @@ function renderAppendix(){
   $('methodNote').textContent=(D.meta.estimation_description || `方法：${D.meta.estimator}。`)+(Number.isFinite(D.meta.half_life_calendar_months)?` 估计权重 w=2^(−距所选月的日历月数/${D.meta.half_life_calendar_months})；半衰期不是滚动窗口长度，较早历史仍参与估计。`:'')+' R²、RMSE和MAE按所示月份普通未加权计算。'+' 当前页面消费已生成模型包；新增月份或替换模型后，由包提供版本、贡献与日期。';
   $('trainingScores').textContent=`所选月模型的估计历史：${training.first_month ?? '—'}—${training.last_month ?? '—'}，${num(training.n,0)}月；R² ${pct(training.n>1?training.r2_pct:null)}，RMSE ${num(training.rmse_log_pp,3)}点，MAE ${num(training.mae_log_pp,3)}点。`;
   $('sourceMetadata').textContent=jsonDisplay({model_id:D.meta.model_id,model_name:D.meta.model_name,method_version:D.meta.method_version,estimator:D.meta.estimator,half_life_calendar_months:D.meta.half_life_calendar_months,selected_month:selectedMonth(),history_view:'selected_month_fixed_coefficients',source_month_count:D.meta.source_month_count,first_history_month:D.meta.first_history_month,last_package_month:D.meta.last_month,model_package_sha256:D.source.model_package_sha256,data_cutoff:D.source.data_cutoff,source_matrix_sha256:D.source.source_matrix_sha256,source_target_sha256:D.source.source_target_sha256});
-  $('foot').textContent=`生成日 ${D.meta.generated_on ?? '—'} · 数据截止 ${D.source.data_cutoff ?? '—'} · 所选模型月 ${selectedMonth()} · 方法版本 ${D.meta.method_version ?? '—'} · 单位：${D.meta.unit_label ?? '对数收益百分点'}`;
+  $('foot').textContent=`生成日 ${D.meta.generated_on ?? '—'} · ${D.provisional?`正式数据截止 ${D.provisional.formal_data_cutoff}，暂估月份 ${D.provisional.month}`:`数据截止 ${D.source.data_cutoff ?? '—'}`} · 所选模型月 ${selectedMonth()} · 方法版本 ${D.meta.method_version ?? '—'} · 单位：${D.meta.unit_label ?? '对数收益百分点'}`;
 }
-$('msel').innerHTML=orderedMonths.map(row => `<option value="${esc(row.month)}">${esc(row.month)}</option>`).join('');
+$('msel').innerHTML=orderedMonths.map(row => `<option value="${esc(row.month)}">${esc(row.month)}${D.provisional?.month===row.month?'（暂估）':''}</option>`).join('');
 $('msel').value=monthMap.has(D.meta.last_month)?D.meta.last_month:orderedMonths[orderedMonths.length-1].month;
 $('msel').addEventListener('change',selectContext);
 document.querySelectorAll('[data-r]').forEach(button => button.addEventListener('click',() => {rangePreset=button.dataset.r;$('rangeNotice').hidden=true;setRange();renderTrend();}));
